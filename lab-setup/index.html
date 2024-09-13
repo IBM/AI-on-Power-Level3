@@ -581,13 +581,30 @@
 <ol>
 <li>In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link</li>
 <li>This will open up a new browser tab/window and opens up the OpenShift console login page
-   * If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue.</li>
+   * If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue. This is ok as we are in a lab/demo environment and using self-signed certificates.</li>
 <li>On the OpenShift console page, select the <strong>htpasswd</strong> login option.</li>
 <li>Use Username: <code>cecuser</code> and Password: <code>&lt;as provided in the TechZone Reservation Details page&gt;</code>
    * TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window</li>
 </ol>
 <p><img alt="image" src="https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f">
-   <img alt="image" src="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473"></p></div>
+   <img alt="image" src="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473"></p>
+<ol start="5">
+<li>You have logged in successfully and should be able to see the dashboard of your OpenShift console.</li>
+</ol>
+<h2 id="accessing-openshift-cli-oc">Accessing OpenShift CLI <code>oc</code></h2>
+<ol>
+<li>Go back to the "Reservation Details" section of the TechZone environment details page.</li>
+<li>Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.
+   * <code>ssh -l cecuser &lt;your bastion hostname/IP as provided in Reservation Details section&gt;</code>
+   * If <code>ssh</code> gives any warning, type <code>yes</code> and continue
+   * When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window</li>
+<li>You have logged in successfully to the bastion node of your OpenShift cluster.</li>
+<li><code>oc</code> CLI is pre-installed on the bastion node and must be working already. You can check by running <code>oc version</code> command.
+   * Ignore the error part of the <code>oc version</code> for now. Its as expected since you have not yet logged into the cluster from the CLI.</li>
+</ol>
+<p><img alt="image" src="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb">
+   <img alt="image" src="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604">
+   <img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6"></p></div>
 
 
 
