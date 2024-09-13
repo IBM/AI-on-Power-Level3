@@ -33,7 +33,6 @@ plugins:
     - mkdocs-video
     - macros
     - search
-    - toc-sidebar
     - toggle-sidebar
 
 markdown_extensions:
