@@ -1,6 +1,6 @@
 The following are the pre-requisites for this course:
 
-* AI on Power - Level 2 course
+* [AI on Power - Level 2 course](https://yourlearning.ibm.com/activity/PLAN-95E47B97CBB5)
 
 * Basic understanding of GenAI and LLM
 
