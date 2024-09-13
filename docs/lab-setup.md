@@ -22,11 +22,12 @@ Follow the steps below:
 
 1. In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link
 2. This will open up a new browser tab/window and opens up the OpenShift console login page
-   - If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue.
+   * If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue.
 3. On the OpenShift console page, select the **htpasswd** login option.
 4. Use Username: `cecuser` and Password: `<as provided in the TechZone Reservation Details page>`
-    - TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window
+   * TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window
 
    ![image](https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f)
-   
+   ![image](https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473)
+
 
