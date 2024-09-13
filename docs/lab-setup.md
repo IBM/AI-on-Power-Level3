@@ -36,12 +36,12 @@ Follow the steps below:
 
 1. Go back to the "Reservation Details" section of the TechZone environment details page.
 2. Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.
-   * `ssh -l cecuser <your bastion hostname/IP as provided in Reservation Details section>`
-   * If `ssh` gives any warning, type `yes` and continue
-   * When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window
+      - `ssh -l cecuser <your bastion hostname/IP as provided in Reservation Details section>`
+      - If `ssh` gives any warning, type `yes` and continue
+      - When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window
 3. You have logged in successfully to the bastion node of your OpenShift cluster.
 4. `oc` CLI is pre-installed on the bastion node and must be working already. You can check by running `oc version` command.
-   * Ignore the error part of the `oc version` for now. Its as expected since you have not yet logged into the cluster from the CLI.
+      - Ignore the error part of the `oc version` for now. Its as expected since you have not yet logged into the cluster from the CLI.
      
    ![image](https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb)
    ![image](https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604)
