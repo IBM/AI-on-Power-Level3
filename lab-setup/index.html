@@ -598,13 +598,17 @@
 <h2 id="accessing-openshift-cli-oc">Accessing OpenShift CLI <code>oc</code></h2>
 <ol>
 <li>Go back to the "Reservation Details" section of the TechZone environment details page.</li>
-<li>Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.
-   * <code>ssh -l cecuser &lt;your bastion hostname/IP as provided in Reservation Details section&gt;</code>
-   * If <code>ssh</code> gives any warning, type <code>yes</code> and continue
-   * When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window</li>
+<li>Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.<ul>
+<li><code>ssh -l cecuser &lt;your bastion hostname/IP as provided in Reservation Details section&gt;</code></li>
+<li>If <code>ssh</code> gives any warning, type <code>yes</code> and continue</li>
+<li>When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window</li>
+</ul>
+</li>
 <li>You have logged in successfully to the bastion node of your OpenShift cluster.</li>
-<li><code>oc</code> CLI is pre-installed on the bastion node and must be working already. You can check by running <code>oc version</code> command.
-   * Ignore the error part of the <code>oc version</code> for now. Its as expected since you have not yet logged into the cluster from the CLI.</li>
+<li><code>oc</code> CLI is pre-installed on the bastion node and must be working already. You can check by running <code>oc version</code> command.<ul>
+<li>Ignore the error part of the <code>oc version</code> for now. Its as expected since you have not yet logged into the cluster from the CLI.</li>
+</ul>
+</li>
 </ol>
 <p><img alt="image" src="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb">
    <img alt="image" src="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604">
