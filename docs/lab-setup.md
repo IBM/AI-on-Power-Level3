@@ -17,3 +17,7 @@ Follow the steps below:
 2. In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.
 3. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
    ![image](https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb)
+
+## Accessing OpenShift GUI/console
+
+1. 
