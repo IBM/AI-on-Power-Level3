@@ -1,4 +1,6 @@
-For the hands-on labs, we will be using the OpenShift on Power10 environment, optimized for AI workloads and hosted on IBM TechZone.
+# Provisioning the environment
+
+For the hands-on labs, we will be using the OpenShift on Power10 on-prem environment, optimized for AI workloads and hosted on IBM TechZone.
 
 Follow the steps below:
 
@@ -9,3 +11,9 @@ Follow the steps below:
 3. Once provisioned, head to [my reservations](https://techzone.ibm.com/my/reservations) page to ensure its ready.
    ![](https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52)
 
+# Accessing the environment
+
+1. Since this is an on-prem environment, make sure you are connected to the IBM network to access the environment.(TODO: add details on VPN)
+2. In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.
+3. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
+   ![image](https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb)
