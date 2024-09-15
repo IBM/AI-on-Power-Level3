@@ -54,16 +54,19 @@ Follow the steps below:
 Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will execute some CLI commands as part of the lab steps.
 
 1. In the OpenShift console, top right section click on `cecuser` and select `Copy login command` option.
+   
    ![image](https://github.com/user-attachments/assets/64cf7f76-5bb1-477b-9f2c-45451fc80fa3)
-2. A new browser window (or tab, depending on your browser setting) opens up.
+   
+3. A new browser window (or tab, depending on your browser setting) opens up.
       - If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue. This is ok as we are in a lab/demo environment and using self-signed certificates.
-3. You will be presented with another login screen. Click **htpasswd** option
+4. You will be presented with another login screen. Click **htpasswd** option
    ![image](https://github.com/user-attachments/assets/c3151615-24ba-44ea-8d71-783d39e4ccfb)
-4. Use Username: `cecuser` and Password: `<as provided in the TechZone Reservation Details page>`
+5. Use Username: `cecuser` and Password: `<as provided in the TechZone Reservation Details page>`
       - TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.
-5. Click **Display token**
+6. Click **Display token**
    
    ![image](https://github.com/user-attachments/assets/4af10efe-22fc-4d01-86a7-44e2fbbdd10d)
+   
 7. Copy the `oc login --token=...` CLI and paste it in the bastion node terminal window.
    ![image](https://github.com/user-attachments/assets/75ad62a0-d0a0-45f6-8797-fedad6e5877a)
    ![image](https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5)
