@@ -1,4 +1,6 @@
-# Provisioning the environment
+# Lab Setup
+
+## Provisioning the environment
 
 For the hands-on labs, we will be using the OpenShift on Power10 on-prem environment, optimized for AI workloads and hosted on IBM TechZone.
 
@@ -11,14 +13,14 @@ Follow the steps below:
 3. Once provisioned, head to [my reservations](https://techzone.ibm.com/my/reservations) page to ensure its ready.
    ![](https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52)
 
-# Accessing the environment
+## Accessing the environment
 
 1. Since this is an on-prem environment, make sure you are connected to the IBM network to access the environment.(TODO: add details on VPN)
 2. In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.
 3. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
    ![image](https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb)
 
-## Accessing OpenShift GUI/console
+### Accessing OpenShift GUI/console
 
 1. In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link
 2. This will open up a new browser tab/window and opens up the OpenShift console login page   
@@ -32,7 +34,7 @@ Follow the steps below:
 
 7. You have logged in successfully and should be able to see the dashboard of your OpenShift console.
 
-## Accessing OpenShift CLI `oc`
+### Accessing OpenShift CLI `oc`
 
 1. Go back to the "Reservation Details" section of the TechZone environment details page.
 2. Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.
@@ -46,7 +48,3 @@ Follow the steps below:
    ![image](https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb)
    ![image](https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604)
    ![image](https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6)
-
-
-
-
