@@ -42,7 +42,8 @@ Follow the steps below:
       - If `ssh` gives any warning, type `yes` and continue
       - When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window
 3. You have logged in successfully to the bastion node of your OpenShift cluster.
-4. `oc` CLI is pre-installed on the bastion node and must be working already. You can check by running `oc version` command.
+      - Keep this terminal window always open as you will be using it frequently to run CLI commands.
+5. `oc` CLI is pre-installed on the bastion node and must be working already. You can check by running `oc version` command.
       - Ignore the error part of the `oc version` for now. Its as expected since you have not yet logged into the cluster from the CLI.
      
    ![image](https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb)
@@ -59,4 +60,13 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
 3. You will be presented with another login screen. Click **htpasswd** option
    ![image](https://github.com/user-attachments/assets/c3151615-24ba-44ea-8d71-783d39e4ccfb)
 4. Use Username: `cecuser` and Password: `<as provided in the TechZone Reservation Details page>`
-      - TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window
+      - TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.
+5. Click **Display token**
+   
+   ![image](https://github.com/user-attachments/assets/4af10efe-22fc-4d01-86a7-44e2fbbdd10d)
+7. Copy the `oc login --token=...` CLI and paste it in the bastion node terminal window.
+   ![image](https://github.com/user-attachments/assets/75ad62a0-d0a0-45f6-8797-fedad6e5877a)
+   ![image](https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5)
+8. You have successfully logged into the OpenShift cluster using the `oc` CLI.
+
+
