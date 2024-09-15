@@ -13,7 +13,7 @@ There are 4 main parts to this demonstration as you can see on the left hand sid
 
 * LAB 3 – Query DB using NL on Power10 - Generate SQL queries for a given DB schema, using NL
 
-# Generative AI and LLMs overview
+## Generative AI and LLMs overview
 
 Large Language Models (LLMs) and Generative AI (GenAI) have revolutionized industries by enabling machines to understand, generate, and interact with human language in ways never seen before. They have disrupted the market by:
 
@@ -27,10 +27,10 @@ Large Language Models (LLMs) and Generative AI (GenAI) have revolutionized indus
 
 In short, LLMs and GenAI are reshaping industries by enhancing efficiency, creativity, and customer engagement, making them indispensable tools in the modern business landscape.
 
-# Why IBM Power for GenAI
+## Why IBM Power for GenAI
 IBM Power platform is a high-performance, enterprise-grade computing solution designed to handle demanding workloads such as AI, analytics, cloud, and mission-critical applications. With unmatched processing power, scalability, and reliability, IBM Power enables organizations to optimize performance, lower costs, and ensure security.
 
-## Key Benefits:
+### Key Benefits:
 
 * **Unmatched Performance**: Optimized for data-intensive applications, AI, and large-scale analytics, delivering faster insights and better decision-making.
 
@@ -42,11 +42,11 @@ IBM Power platform is a high-performance, enterprise-grade computing solution de
 
 IBM Power is the platform of choice for businesses seeking to future-proof their IT infrastructure, handle complex workloads, and accelerate innovation
 
-#  IBM Power10 differentiation
+## IBM Power10 differentiation
 
 IBM Power10 offers several advantages for Generative AI (GenAI) use cases, providing the computational power, security, and efficiency required to support the demanding workloads of AI-driven applications. Here’s how Power10 is uniquely positioned to accelerate GenAI:
 
-## Key Advantages:
+### Key Advantages:
 
 1. **High Performance for AI Workloads:**
 
@@ -77,6 +77,6 @@ IBM Power10 offers several advantages for Generative AI (GenAI) use cases, provi
     * IBM Power10 works seamlessly with AI frameworks like TensorFlow and PyTorch, making it easier for developers to build, train, and deploy GenAI models without needing major infrastructure changes.
     * Support for OpenShift and Kubernetes enhances containerization, allowing efficient orchestration of AI workloads.
 
-**Summary:**
+## **Summary:**
 
 IBM Power10 is designed to meet the specific needs of GenAI use cases by offering high-performance processing, memory scalability, security, and energy efficiency. It empowers enterprises to handle complex AI workloads efficiently while maintaining flexibility and security, making it ideal for industries that rely on AI-driven innovation.
