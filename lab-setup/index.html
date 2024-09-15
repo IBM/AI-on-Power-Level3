@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#provisioning-the-environment" class="md-skip">
+        <a href="#lab-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -278,6 +278,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lab setup instructions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -287,6 +298,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioning the environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-openshift-guiconsole" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing OpenShift GUI/console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-openshift-cli-oc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing OpenShift CLI oc
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -543,6 +615,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioning the environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-openshift-guiconsole" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing OpenShift GUI/console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-openshift-cli-oc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing OpenShift CLI oc
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -556,7 +678,8 @@
                   
 
 
-<div><h1 id="provisioning-the-environment">Provisioning the environment</h1>
+<div><h1 id="lab-setup">Lab Setup</h1>
+<h2 id="provisioning-the-environment">Provisioning the environment</h2>
 <p>For the hands-on labs, we will be using the OpenShift on Power10 on-prem environment, optimized for AI workloads and hosted on IBM TechZone.</p>
 <p>Follow the steps below:</p>
 <ol>
@@ -570,14 +693,14 @@
 <li>Once provisioned, head to <a href="https://techzone.ibm.com/my/reservations">my reservations</a> page to ensure its ready.
    <img alt="" src="https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52"></li>
 </ol>
-<h1 id="accessing-the-environment">Accessing the environment</h1>
+<h2 id="accessing-the-environment">Accessing the environment</h2>
 <ol>
 <li>Since this is an on-prem environment, make sure you are connected to the IBM network to access the environment.(TODO: add details on VPN)</li>
 <li>In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.</li>
 <li>Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
    <img alt="image" src="https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb"></li>
 </ol>
-<h2 id="accessing-openshift-guiconsole">Accessing OpenShift GUI/console</h2>
+<h3 id="accessing-openshift-guiconsole">Accessing OpenShift GUI/console</h3>
 <ol>
 <li>In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link</li>
 <li>This will open up a new browser tab/window and opens up the OpenShift console login page   <ul>
@@ -595,7 +718,7 @@
 <ol start="7">
 <li>You have logged in successfully and should be able to see the dashboard of your OpenShift console.</li>
 </ol>
-<h2 id="accessing-openshift-cli-oc">Accessing OpenShift CLI <code>oc</code></h2>
+<h3 id="accessing-openshift-cli-oc">Accessing OpenShift CLI <code>oc</code></h3>
 <ol>
 <li>Go back to the "Reservation Details" section of the TechZone environment details page.</li>
 <li>Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.<ul>
