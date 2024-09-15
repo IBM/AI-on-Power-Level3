@@ -351,6 +351,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#logging-in-to-openshift-cluster-using-oc-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging in to OpenShift Cluster using oc CLI
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -658,6 +667,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#logging-in-to-openshift-cluster-using-oc-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging in to OpenShift Cluster using oc CLI
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -716,7 +734,7 @@
 <p><img alt="image" src="https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f">
    <img alt="image" src="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473"></p>
 <ol start="7">
-<li>You have logged in successfully and should be able to see the dashboard of your OpenShift console.</li>
+<li>You have logged in successfully and should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console.</li>
 </ol>
 <h3 id="accessing-openshift-cli-oc">Accessing OpenShift CLI <code>oc</code></h3>
 <ol>
@@ -727,7 +745,10 @@
 <li>When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window</li>
 </ul>
 </li>
-<li>You have logged in successfully to the bastion node of your OpenShift cluster.</li>
+<li>You have logged in successfully to the bastion node of your OpenShift cluster.<ul>
+<li>Keep this terminal window always open as you will be using it frequently to run CLI commands.</li>
+</ul>
+</li>
 <li><code>oc</code> CLI is pre-installed on the bastion node and must be working already. You can check by running <code>oc version</code> command.<ul>
 <li>Ignore the error part of the <code>oc version</code> for now. Its as expected since you have not yet logged into the cluster from the CLI.</li>
 </ul>
@@ -735,7 +756,29 @@
 </ol>
 <p><img alt="image" src="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb">
    <img alt="image" src="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604">
-   <img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6"></p></div>
+   <img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6"></p>
+<h3 id="logging-in-to-openshift-cluster-using-oc-cli">Logging in to OpenShift Cluster using <code>oc</code> CLI</h3>
+<p>Let's login to the OpenShift cluster via the <code>oc</code> CLI. This is needed as we will execute some CLI commands as part of the lab steps.</p>
+<ol>
+<li>In the OpenShift console, top right section click on <code>cecuser</code> and select <code>Copy login command</code> option.
+   <img alt="image" src="https://github.com/user-attachments/assets/64cf7f76-5bb1-477b-9f2c-45451fc80fa3"></li>
+<li>A new browser window (or tab, depending on your browser setting) opens up.<ul>
+<li>If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue. This is ok as we are in a lab/demo environment and using self-signed certificates.</li>
+</ul>
+</li>
+<li>You will be presented with another login screen. Click <strong>htpasswd</strong> option
+   <img alt="image" src="https://github.com/user-attachments/assets/c3151615-24ba-44ea-8d71-783d39e4ccfb"></li>
+<li>Use Username: <code>cecuser</code> and Password: <code>&lt;as provided in the TechZone Reservation Details page&gt;</code><ul>
+<li>TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.</li>
+</ul>
+</li>
+<li>Click <strong>Display token</strong></li>
+</ol>
+<p><img alt="image" src="https://github.com/user-attachments/assets/4af10efe-22fc-4d01-86a7-44e2fbbdd10d">
+7. Copy the <code>oc login --token=...</code> CLI and paste it in the bastion node terminal window.
+   <img alt="image" src="https://github.com/user-attachments/assets/75ad62a0-d0a0-45f6-8797-fedad6e5877a">
+   <img alt="image" src="https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5">
+8. You have successfully logged into the OpenShift cluster using the <code>oc</code> CLI.</p></div>
 
 
 
