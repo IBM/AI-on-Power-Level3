@@ -72,4 +72,7 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
    ![image](https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5)
 8. You have successfully logged into the OpenShift cluster using the `oc` CLI.
 
+### Summary
+Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.
+We strive to use OpenShift GUI/console as much possible, but in some scenarios OpenShift console doesn't yet support some functionality in which case we switch to the `oc` CLI. Hence this lab will use OpenShift GUI/console and `oc` CLI both as necessary.
 
