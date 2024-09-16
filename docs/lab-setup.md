@@ -38,7 +38,7 @@ Follow the steps below:
 
     In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
 
-### Accessing OpenShift CLI `oc`
+### Accessing OpenShift `oc` CLI
 
 1. Go back to the "Reservation Details" section of the TechZone environment details page.
 2. Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.
