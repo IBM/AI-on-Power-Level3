@@ -32,7 +32,11 @@ Follow the steps below:
    ![image](https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f)
    ![image](https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473)
 
-7. You have logged in successfully and should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console.
+7. You have successfully logged into the OpenShift cluster using the GUI/console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console.
+
+!!! note "RE-AUTHENTICATING in case you lose GUI/console access"
+
+    In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
 
 ### Accessing OpenShift CLI `oc`
 
@@ -49,11 +53,6 @@ Follow the steps below:
       ![image](https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb)
       ![image](https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604)
       ![image](https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6)
-6. You have successfully logged into the OpenShift cluster using the GUI/console.
-
-!!! note "RE-AUTHENTICATING in case you lose GUI/console access"
-
-    In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
 
 ### Logging in to OpenShift Cluster using `oc` CLI
 Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will execute some CLI commands as part of the lab steps.
