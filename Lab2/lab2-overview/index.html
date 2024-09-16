@@ -722,10 +722,12 @@
 <p>Goal of this lab is to get hands-on experience in deploying a RAG pattern on IBM Power10.
 Before we do that, lets understand what RAG is, its advantages and key usecases.</p>
 <h2 id="what-is-rag">What is RAG?<a class="headerlink" href="#what-is-rag" title="Permanent link">¶</a></h2>
-<p>RAG (Retrieval-Augmented Generation) is an advanced technique that combines retrieval-based and generation-based approaches to improve the performance of language models, especially in question-answering and knowledge-intensive tasks.</p>
-<p>Key Components of RAG:
-1. <strong>Retrieval</strong>: The model first retrieves relevant documents or information from a large knowledge base (like Wikipedia or custom databases) based on the user's query. This helps provide the model with factual and up-to-date information that it may not have learned during training.
-2. <strong>Augmented Generation</strong>: Once the relevant documents are retrieved, the model then generates a response based on the query and the retrieved documents. This ensures the generated answer is both relevant and factual, combining the reasoning power of the language model with the accuracy of external knowledge.</p>
+<p>RAG (Retrieval-Augmented Generation) is an advanced technique that combines retrieval-based and generation-based approaches to improve the performance of large language models, especially in question-answering and knowledge-intensive tasks. In layman terms, clients can use RAG pattern to generate factually accurate output from LLMs, that is grounded in information in a knowledge base.</p>
+<p>Key Components of RAG:</p>
+<ol>
+<li><strong>Retrieval</strong>: The model first retrieves relevant documents or information from a large knowledge base (like Wikipedia or custom databases) based on the user's query. This helps provide the model with factual and up-to-date information that it may not have learned during training.</li>
+<li><strong>Augmented Generation</strong>: Once the relevant documents are retrieved, the model then generates a response based on the query and the retrieved documents. This ensures the generated answer is both relevant and factual, combining the reasoning power of the language model with the accuracy of external knowledge.</li>
+</ol>
 <h2 id="how-rag-works">How RAG works?<a class="headerlink" href="#how-rag-works" title="Permanent link">¶</a></h2>
 <p>RAG is a technique that uses vector databases to retrieve relevant information and improve the accuracy of Large Language Models (LLMs):</p>
 <ol>
@@ -759,8 +761,8 @@ Before we do that, lets understand what RAG is, its advantages and key usecases.
 </ul>
 </li>
 <li><strong>Improved Performance in Specific Domains</strong><ul>
-<li><strong>Specialized knowledge is often needed</strong>: Many applications require access to niche or domain-specific information, such as legal texts, scientific papers, or proprietary company data.
- -<strong>RAG retrieves domain-specific documents</strong>: The retrieval step allows RAG to pull in domain-specific or proprietary documents, making the output more relevant for specialized tasks.</li>
+<li><strong>Specialized knowledge is often needed</strong>: Many applications require access to niche or domain-specific information, such as legal texts, scientific papers, or proprietary company data.</li>
+<li><strong>RAG retrieves domain-specific documents</strong>: The retrieval step allows RAG to pull in domain-specific or proprietary documents, making the output more relevant for specialized tasks.</li>
 </ul>
 </li>
 <li><strong>Efficiency and Adaptability</strong><ul>
