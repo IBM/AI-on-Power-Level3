@@ -59,10 +59,12 @@ nav:
     - 'Lab Overview': 'Lab1/lab1-overview.md'
     - 'Hands-on guide': 'Lab1/lab1-hands-on-guide.md'
   - Lab2 - Deploy RAG on Power10:
-    - 'Tables': 'Part 2/01 Tables.md'
-    - 'Code blocks': 'Part 2/02 Code blocks.md'
+    - 'Lab Overview': 'Lab2/lab2-overview.md'
+    - 'Hands-on guide': 'Lab2/lab2-hands-on-guide.md'
   - Lab3 - Query DB using NL on Power10:
-    - 'Next steps': 'Part 3/01 Next steps.md'
+    - 'Lab Overview': 'Lab3/lab3-overview.md'
+    - 'Hands-on guide': 'Lab3/lab3-hands-on-guide.md'
+  - Credits
 
 extra:
   generator: false
