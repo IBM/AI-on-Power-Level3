@@ -343,9 +343,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#accessing-openshift-cli-oc" class="md-nav__link">
+  <a href="#accessing-openshift-oc-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing OpenShift CLI oc
+      Accessing OpenShift oc CLI
     </span>
   </a>
   
@@ -424,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Lab1/lab1-Overview.md" class="md-nav__link">
+      <a href="../Lab1/lab1-overview.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -668,9 +668,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#accessing-openshift-cli-oc" class="md-nav__link">
+  <a href="#accessing-openshift-oc-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing OpenShift CLI oc
+      Accessing OpenShift oc CLI
     </span>
   </a>
   
@@ -752,9 +752,13 @@
 <p><img alt="image" src="https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f">
    <img alt="image" src="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473"></p>
 <ol start="7">
-<li>You have logged in successfully and should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console.</li>
+<li>You have successfully logged into the OpenShift cluster using the GUI/console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console.</li>
 </ol>
-<h3 id="accessing-openshift-cli-oc">Accessing OpenShift CLI <code>oc</code></h3>
+<div class="admonition note">
+<p class="admonition-title">RE-AUTHENTICATING in case you lose GUI/console access</p>
+<p>In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console</p>
+</div>
+<h3 id="accessing-openshift-oc-cli">Accessing OpenShift <code>oc</code> CLI</h3>
 <ol>
 <li>Go back to the "Reservation Details" section of the TechZone environment details page.</li>
 <li>Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.<ul>
@@ -774,14 +778,9 @@
 </ul>
 <p><img alt="image" src="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb">
   <img alt="image" src="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604">
-  <img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6">
-6. You have successfully logged into the OpenShift cluster using the GUI/console.</p>
+  <img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6"></p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">RE-AUTHENTICATING in case you lose GUI/console access</p>
-<p>In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console</p>
-</div>
 <h3 id="logging-in-to-openshift-cluster-using-oc-cli">Logging in to OpenShift Cluster using <code>oc</code> CLI</h3>
 <p>Let's login to the OpenShift cluster via the <code>oc</code> CLI. This is needed as we will execute some CLI commands as part of the lab steps.</p>
 <ol>
