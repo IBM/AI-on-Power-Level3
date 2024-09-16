@@ -13,23 +13,23 @@
       
       
       
+        <link rel="prev" href="../../lab-setup/">
       
-        <link rel="next" href="pre-req/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>AI on Power - Level 3</title>
+        <title>Lab Overview - AI on Power - Level 3</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#deploy-a-large-language-model-llm-on-ibm-power10" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="AI on Power - Level 3" class="md-header__button md-logo" aria-label="AI on Power - Level 3" data-md-component="logo">
+    <a href="../.." title="AI on Power - Level 3" class="md-header__button md-logo" aria-label="AI on Power - Level 3" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Lab Overview
             
           </span>
         </div>
@@ -211,7 +211,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="AI on Power - Level 3" class="md-nav__button md-logo" aria-label="AI on Power - Level 3" data-md-component="logo">
+    <a href="../.." title="AI on Power - Level 3" class="md-nav__button md-logo" aria-label="AI on Power - Level 3" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -226,30 +226,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -258,92 +238,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generative-ai-and-llms-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generative AI and LLMs overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-ibm-power-for-genai" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why IBM Power for GenAI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Why IBM Power for GenAI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Benefits:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ibm-power10-differentiation" class="md-nav__link">
-    <span class="md-ellipsis">
-      IBM Power10 differentiation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IBM Power10 differentiation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-advantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Advantages:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -355,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pre-req/" class="md-nav__link">
+      <a href="../../pre-req/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -375,7 +269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lab-setup/" class="md-nav__link">
+      <a href="../../lab-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -392,17 +286,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -416,7 +312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Lab1 - Deploy a LLM on Power10
@@ -427,10 +323,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Lab1/lab1-overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -439,6 +344,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -451,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Lab1/lab1-hands-on-guide.md" class="md-nav__link">
+      <a href="../lab1-hands-on-guide.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -514,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Part 2/01 Tables.md" class="md-nav__link">
+      <a href="../../Part 2/01 Tables.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Part 2/02 Code blocks.md" class="md-nav__link">
+      <a href="../../Part 2/02 Code blocks.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -598,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Part 3/01 Next steps.md" class="md-nav__link">
+      <a href="../../Part 3/01 Next steps.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,80 +545,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generative-ai-and-llms-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generative AI and LLMs overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-ibm-power-for-genai" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why IBM Power for GenAI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Why IBM Power for GenAI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Benefits:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ibm-power10-differentiation" class="md-nav__link">
-    <span class="md-ellipsis">
-      IBM Power10 differentiation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IBM Power10 differentiation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-advantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Advantages:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -726,113 +558,21 @@
                   
 
 
-<div><h1 id="introduction">Introduction</h1>
-<p>Welcome to the AI on Power - Level 3 course - seller enablement demonstration.
-This Level 3 course will provide hands-on enablement on how to use Generative AI (GenAI) models on Power10 and will cover few use-cases to help understand the art of the possible.</p>
-<p>There are 4 main parts to this demonstration as you can see on the left hand side navigation pane:</p>
-<ul>
-<li>
-<p>Lab Setup - How to provision and setup the lab env for the hands-on demos</p>
-</li>
-<li>
-<p>LAB 1 – Deploy a LLM on Power10 - Deploy a LLM on Power10 and switch to a diff LLM</p>
-</li>
-<li>
-<p>LAB 2 – Deploy RAG on Power10 - RAG chatbot for domain specific Q&amp;A</p>
-</li>
-<li>
-<p>LAB 3 – Query DB using NL on Power10 - Generate SQL queries for a given DB schema, using NL</p>
-</li>
-</ul>
-<h2 id="generative-ai-and-llms-overview">Generative AI and LLMs overview</h2>
-<p>Large Language Models (LLMs) and Generative AI (GenAI) have revolutionized industries by enabling machines to understand, generate, and interact with human language in ways never seen before. They have disrupted the market by:</p>
-<ul>
-<li>
-<p><strong>Automating Content Creation</strong>: From drafting articles, reports, and code to generating creative content like music and artwork, GenAI has drastically reduced time and costs in creative industries.</p>
-</li>
-<li>
-<p><strong>Enhancing Customer Experience</strong>: LLM-powered chatbots and virtual assistants are offering more personalized, human-like interactions, reshaping customer service and support.</p>
-</li>
-<li>
-<p><strong>Transforming Decision-Making</strong>: With advanced data processing and natural language understanding, businesses are leveraging AI for smarter, faster insights and predictive analytics.</p>
-</li>
-<li>
-<p><strong>Boosting Productivity</strong>: LLMs streamline workflows by handling complex tasks, like writing, summarizing, and translating, allowing professionals to focus on more strategic, creative efforts.</p>
-</li>
-</ul>
-<p>In short, LLMs and GenAI are reshaping industries by enhancing efficiency, creativity, and customer engagement, making them indispensable tools in the modern business landscape.</p>
-<h2 id="why-ibm-power-for-genai">Why IBM Power for GenAI</h2>
-<p>IBM Power platform is a high-performance, enterprise-grade computing solution designed to handle demanding workloads such as AI, analytics, cloud, and mission-critical applications. With unmatched processing power, scalability, and reliability, IBM Power enables organizations to optimize performance, lower costs, and ensure security.</p>
-<h3 id="key-benefits">Key Benefits:</h3>
-<ul>
-<li>
-<p><strong>Unmatched Performance</strong>: Optimized for data-intensive applications, AI, and large-scale analytics, delivering faster insights and better decision-making.</p>
-</li>
-<li>
-<p><strong>Scalability</strong>: Seamlessly scale workloads across on-prem, cloud, and hybrid environments to meet evolving business needs.</p>
-</li>
-<li>
-<p><strong>Enterprise-Grade Security</strong>: Built-in security features provide robust protection for sensitive data and critical operations.</p>
-</li>
-<li>
-<p><strong>Efficiency and Flexibility</strong>: Designed for diverse environments, supporting Linux, AIX, IBM i, and containerized applications, making it versatile for a range of industries.</p>
-</li>
-</ul>
-<p>IBM Power is the platform of choice for businesses seeking to future-proof their IT infrastructure, handle complex workloads, and accelerate innovation</p>
-<h2 id="ibm-power10-differentiation">IBM Power10 differentiation</h2>
-<p>IBM Power10 offers several advantages for Generative AI (GenAI) use cases, providing the computational power, security, and efficiency required to support the demanding workloads of AI-driven applications. Here’s how Power10 is uniquely positioned to accelerate GenAI:</p>
-<h3 id="key-advantages">Key Advantages:</h3>
-<ol>
-<li>
-<p><strong>High Performance for AI Workloads:</strong></p>
-<ul>
-<li>
-<p><strong>AI Acceleration</strong>: IBM Power10 includes AI inference acceleration directly on the chip, allowing faster processing of GenAI tasks such as model training, inference, and real-time AI applications.</p>
-</li>
-<li>
-<p><strong>Massive Scalability</strong>: Power10 is designed to handle large-scale AI models, with enhanced memory bandwidth and processing power to efficiently manage vast datasets used in training LLMs and GenAI systems.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Memory and Bandwidth Optimization:</strong></p>
-<ul>
-<li>The DDR5 memory and faster I/O bandwidth provide a significant performance boost, enabling GenAI models to run more efficiently.</li>
-</ul>
-</li>
-<li>
-<p><strong>Energy Efficiency:</strong></p>
-<ul>
-<li>Power10 processors are highly energy-efficient, offering more performance per watt compared to previous generations. This reduces operational costs and is especially beneficial for the resource-intensive training and deployment of GenAI models.</li>
-</ul>
-</li>
-<li>
-<p><strong>Security:</strong></p>
-<ul>
-<li>
-<p>IBM Power10 comes with end-to-end encryption and advanced memory protection features, ensuring that sensitive AI workloads are secure from potential breaches. This is particularly important in industries like healthcare and finance, where GenAI applications need strong data protection.</p>
-</li>
-<li>
-<p>Quantum-safe encryption helps future-proof AI workloads against quantum computing threats.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Flexible Cloud and Hybrid Deployments:</strong></p>
-<ul>
-<li>Power10 integrates smoothly with hybrid cloud environments, allowing enterprises to run GenAI workloads both on-premises and in the cloud. This flexibility is key for scaling AI applications while maintaining control over data and infrastructure.</li>
-</ul>
-</li>
-<li>
-<p><strong>Support for AI Ecosystems:</strong></p>
-<ul>
-<li>IBM Power10 works seamlessly with AI frameworks like TensorFlow and PyTorch, making it easier for developers to build, train, and deploy GenAI models without needing major infrastructure changes.</li>
-<li>Support for OpenShift and Kubernetes enhances containerization, allowing efficient orchestration of AI workloads.</li>
-</ul>
-</li>
-</ol>
-<h2 id="summary"><strong>Summary:</strong></h2>
-<p>IBM Power10 is designed to meet the specific needs of GenAI use cases by offering high-performance processing, memory scalability, security, and energy efficiency. It empowers enterprises to handle complex AI workloads efficiently while maintaining flexibility and security, making it ideal for industries that rely on AI-driven innovation.</p></div>
+<div><h1 id="deploy-a-large-language-model-llm-on-ibm-power10">Deploy a Large Language Model (LLM) on IBM Power10</h1>
+<p>In this lab, we will deploy 2 LLMs from <a href="https://huggingface.co/">Hugging Face (HF)</a> on IBM Power10 using the on-prem lab environment that has been provisioned.
+Goal of this lab is to showcase the basics (and the ease) of deploying a LLM on Power and how easy it is to switch to a different LLM.</p>
+<div class="admonition note">
+<p class="admonition-title">What is Hugging Face?</p>
+<p>Hugging Face is an AI company that has become a major hub for Natural Language Processing (NLP) and Machine Learning (ML) tools. It is widely known for its open-source library, Transformers, and its collaborative platform, which provides a vast collection of pre-trained models and datasets. Hugging Face has made it easy for developers, researchers, and businesses to access, fine-tune, and deploy state-of-the-art machine learning models, especially those related to NLP tasks like text classification, translation, summarization, and more.</p>
+</div>
+<p>We use HF to access LLMs in this lab as it has a vast collection of pre-trained models which are hosted publicly and can be accessed for free.</p>
+<p>Enterprise clients of IBM will use the <a href="https://www.ibm.com/watsonx">IBM watsonx platform</a>, an enterprise-ready AI and data platform that is designed with the three critical elements of an AI strategy in mind. 
+It empowers enterprises to train, tune, and deploy AI across the business, leveraging critical, trusted data wherever it resides.</p>
+<div class="admonition note">
+<p class="admonition-title">What is IBM watsonx?</p>
+<p>IBM Watsonx is IBM’s next-generation AI and data platform, designed to help enterprises build, train, fine-tune, and deploy large-scale AI models efficiently. Watsonx enables businesses to harness the power of artificial intelligence and machine learning (AI/ML) for various tasks like generative AI, predictive analytics, and decision-making. It integrates advanced capabilities for handling large language models (LLMs), machine learning workflows, and AI governance.</p>
+</div>
+<p>Here is a quick </p></div>
 
 
 
@@ -878,10 +618,10 @@ This Level 3 course will provide hands-on enablement on how to use Generative AI
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy"], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
   </body>
