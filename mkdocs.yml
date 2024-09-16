@@ -52,7 +52,7 @@ nav:
   - Pre-requisites: 'pre-req.md'
   - Lab setup instructions: 'lab-setup.md'
   - Lab1 - Deploy a LLM on Power10:
-    - 'Lab Overview': 'Lab1/lab1-Overview.md'
+    - 'Lab Overview': 'Lab1/lab1-overview.md'
     - 'Hands-on guide': 'Lab1/lab1-hands-on-guide.md'
   - Lab2 - Deploy RAG on Power10:
     - 'Tables': 'Part 2/01 Tables.md'
