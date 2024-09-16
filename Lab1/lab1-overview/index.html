@@ -55,7 +55,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -732,12 +741,12 @@ Watsonx is designed for the enterprise and is targeted for business domains, emp
 <p>Together, Hugging Face provides the models, and watsonx offers the enterprise-ready infrastructure for secure, large-scale, compliant deployment.
 Read <a href="https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-working-together-in-open-source/">this blog</a> to understand more about how IBM and Hugging Face are working to bring open source communities together for enterprise AI.</p>
 <h2 id="ai-and-watsonx-with-ibm-power">AI and watsonx with IBM Power</h2>
-<p>Here is a quick 1-slider on what you can do with AI and watsonx on IBM Power
-<img alt="image" src="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149"></p>
+<p>Here is a quick 1-slider on what you can do with AI and watsonx on IBM Power, today.
+<a class="glightbox" href="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149"></a></p>
 <p>Clients can get started with AI and watsonx with IBM Power today. 
 IBM has made it simple by aligning the common use cases around 4 key areas that we see within our pilots and client activations.</p>
 <ul>
-<li><strong>Pattern 1</strong>: Securely tune, deploy and manage foundation models. When it comes to task-specific use cases, it is a good idea to work with large open-source models in your own workspace that are under your control. Hugging Face is a large repository with over 500,000 pre-trained ML models and a platform where the AI ecosystem collaborates on models, datasets and applications. Download any model from Hugging Face and securely deploy at scale on IBM Power. Then, use best-of-breed software to help you tune, deploy and manage as many models as you need. Some examples of what enterprises can use this capability for: Customer service, knowledge workers to augment staff and fraud reporting.
+<li><strong>Pattern 1</strong>: Securely tune, deploy and manage foundation models. When it comes to task-specific use cases, it is a good idea to work with large open-source models in your own workspace that are under your control. Hugging Face is a large repository with over 950K pre-trained ML models and a platform where the AI ecosystem collaborates on models, datasets and applications. Download any model from Hugging Face and securely deploy at scale on IBM Power. Then, use best-of-breed software to help you tune, deploy and manage as many models as you need. Some examples of what enterprises can use this capability for: Customer service, knowledge workers to augment staff and fraud reporting.
  </li>
 <li><strong>Pattern 2</strong>: There are many new and existing business apps that are using foundation models integrated into the workflows. Deploy your foundation models anywhere, on Power, x86, cloud, and use the watsonx.ai software development kit (SDK) available in Python and embed directly into applications. On Power, enterprises can do this quickly so that services can be released to customers faster on a resilient 24/7 environment. Some examples of clients can embed AI into apps are generating the first draft of reports, citizen services for government end-clients and knowledge management.
  </li>
@@ -796,5 +805,7 @@ IBM has made it simple by aligning the common use cases around 4 key areas that 
       <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
