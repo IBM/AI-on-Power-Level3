@@ -483,9 +483,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advantages-of-rag" class="md-nav__link">
+  <a href="#need-advantages-of-rag" class="md-nav__link">
     <span class="md-ellipsis">
-      Advantages of RAG
+      Need &amp; Advantages of RAG
     </span>
   </a>
   
@@ -686,9 +686,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advantages-of-rag" class="md-nav__link">
+  <a href="#need-advantages-of-rag" class="md-nav__link">
     <span class="md-ellipsis">
-      Advantages of RAG
+      Need &amp; Advantages of RAG
     </span>
   </a>
   
@@ -739,13 +739,42 @@ Before we do that, lets understand what RAG is, its advantages and key usecases.
 <p class="admonition-title">Why use vector database in RAG?</p>
 <p>Vector databases are used in RAG because they store data in a way that makes it easy to search and retrieve. Vector search techniques go beyond keyword matching and focus on semantic relationships, which improves the quality of the retrieved information.</p>
 </div>
-<h2 id="advantages-of-rag">Advantages of RAG<a class="headerlink" href="#advantages-of-rag" title="Permanent link">¶</a></h2>
-<p>Below are the key advantages of RAG:</p>
+<h2 id="need-advantages-of-rag">Need &amp; Advantages of RAG<a class="headerlink" href="#need-advantages-of-rag" title="Permanent link">¶</a></h2>
+<p>The need for Retrieval-Augmented Generation (RAG) arises from the limitations of current large language models (LLMs) and the growing demands for factual accuracy and knowledge scalability in AI applications. </p>
+<p>Here are the key reasons why RAG is necessary and its associated advantages:</p>
 <ol>
-<li><strong>Improved Accuracy</strong>: By retrieving relevant data in real-time, RAG can provide more accurate and up-to-date information.</li>
-<li><strong>Factual Consistency</strong>: It reduces the risk of the model "hallucinating" incorrect facts, as it relies on verified external sources.</li>
-<li><strong>Scalability</strong>: Can work with very large databases, enabling the model to scale its knowledge without requiring retraining.</li>
+<li><strong>Handling Knowledge Gaps</strong><ul>
+<li><strong>LLMs are static</strong>: Traditional language models, once trained, cannot access new or external information. They can only generate text based on the data they were trained on, which means they might miss important or up-to-date knowledge.</li>
+<li><strong>RAG dynamically retrieves information</strong>: By incorporating a retrieval step, RAG can pull in relevant, up-to-date documents from external sources to complement the model's output, making it more accurate and current.</li>
+</ul>
+</li>
+<li><strong>Reducing Hallucinations</strong><ul>
+<li><strong>LLMs sometimes "hallucinate"</strong>: LLMs can generate convincing but incorrect or fabricated answers because they are predicting text based on patterns rather than verifying facts.</li>
+<li><strong>RAG grounds responses in real data</strong>: Since RAG retrieves factual documents before generating a response, it ensures that the output is based on real, verifiable information, reducing the risk of false or misleading content.</li>
+</ul>
+</li>
+<li><strong>Scalability in Knowledge</strong><ul>
+<li><strong>LLMs are limited by training data</strong>: Even the largest models have limitations on how much they can remember from their training data, which might become outdated or incomplete.</li>
+<li><strong>RAG scales with external data</strong>: By leveraging vast external knowledge bases or documents, RAG allows for almost unlimited knowledge expansion without retraining the model. This is particularly useful for enterprises or specific domains where continuous data updates are essential.</li>
+</ul>
+</li>
+<li><strong>Improved Performance in Specific Domains</strong><ul>
+<li><strong>Specialized knowledge is often needed</strong>: Many applications require access to niche or domain-specific information, such as legal texts, scientific papers, or proprietary company data.
+ -<strong>RAG retrieves domain-specific documents</strong>: The retrieval step allows RAG to pull in domain-specific or proprietary documents, making the output more relevant for specialized tasks.</li>
+</ul>
+</li>
+<li><strong>Efficiency and Adaptability</strong><ul>
+<li><strong>Model retraining is costly</strong>: Constantly retraining LLMs with new data is computationally expensive and time-consuming.</li>
+<li><strong>RAG avoids retraining</strong>: By using real-time retrieval, RAG can access the latest information or new content without the need to retrain the entire model, making it more adaptable and cost-efficient.</li>
+</ul>
+</li>
+<li><strong>Better Results for Open-Domain Question Answering</strong><ul>
+<li><strong>Complex queries require precise answers</strong>: In tasks like open-domain question answering, general models might struggle to provide precise answers for complex or rare questions.</li>
+<li><strong>RAG enhances accuracy</strong>: By combining retrieval with generation, RAG can provide more accurate, context-rich answers, drawing from a wide range of documents.</li>
+</ul>
+</li>
 </ol>
+<p>In summary, RAG addresses limitations in current LLMs by improving factual accuracy, scalability, and adaptability, making it particularly useful for knowledge-intensive tasks and dynamic environments.</p>
 <h2 id="common-usecases-of-rag">Common usecases of RAG<a class="headerlink" href="#common-usecases-of-rag" title="Permanent link">¶</a></h2>
 <p>Below are some of the common usecases for RAG:</p>
 <ol>
