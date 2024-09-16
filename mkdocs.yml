@@ -36,6 +36,9 @@ plugins:
     - glightbox
 
 markdown_extensions:
+  - toc:
+     permalink: true
+     toc_depth: 3
   - sane_lists
   - admonition
   - pymdownx.details
