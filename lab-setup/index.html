@@ -725,8 +725,8 @@
                   
 
 
-<div><h1 id="lab-setup">Lab Setup</h1>
-<h2 id="provisioning-the-environment">Provisioning the environment</h2>
+<div><h1 id="lab-setup">Lab Setup<a class="headerlink" href="#lab-setup" title="Permanent link">¶</a></h1>
+<h2 id="provisioning-the-environment">Provisioning the environment<a class="headerlink" href="#provisioning-the-environment" title="Permanent link">¶</a></h2>
 <p>For the hands-on labs, we will be using the OpenShift on Power10 on-prem environment, optimized for AI workloads and hosted on IBM TechZone.</p>
 <p>Follow the steps below:</p>
 <ol>
@@ -740,14 +740,14 @@
 <li>Once provisioned, head to <a href="https://techzone.ibm.com/my/reservations">my reservations</a> page to ensure its ready.
    <a class="glightbox" href="https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52"></a></li>
 </ol>
-<h2 id="accessing-the-environment">Accessing the environment</h2>
+<h2 id="accessing-the-environment">Accessing the environment<a class="headerlink" href="#accessing-the-environment" title="Permanent link">¶</a></h2>
 <ol>
 <li>Since this is an on-prem environment, make sure you are connected to the IBM network to access the environment.(TODO: add details on VPN)</li>
 <li>In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.</li>
 <li>Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
    <a class="glightbox" href="https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb"></a></li>
 </ol>
-<h3 id="accessing-openshift-guiconsole">Accessing OpenShift GUI/console</h3>
+<h3 id="accessing-openshift-guiconsole">Accessing OpenShift GUI/console<a class="headerlink" href="#accessing-openshift-guiconsole" title="Permanent link">¶</a></h3>
 <ol>
 <li>In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link</li>
 <li>This will open up a new browser tab/window and opens up the OpenShift console login page   <ul>
@@ -769,7 +769,7 @@
 <p class="admonition-title">RE-AUTHENTICATING in case you lose GUI/console access</p>
 <p>In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console</p>
 </div>
-<h3 id="accessing-openshift-oc-cli">Accessing OpenShift <code>oc</code> CLI</h3>
+<h3 id="accessing-openshift-oc-cli">Accessing OpenShift <code>oc</code> CLI<a class="headerlink" href="#accessing-openshift-oc-cli" title="Permanent link">¶</a></h3>
 <ol>
 <li>Go back to the "Reservation Details" section of the TechZone environment details page.</li>
 <li>Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.<ul>
@@ -792,7 +792,7 @@
   <a class="glightbox" href="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6"></a></p>
 </li>
 </ol>
-<h3 id="logging-in-to-openshift-cluster-using-oc-cli">Logging in to OpenShift Cluster using <code>oc</code> CLI</h3>
+<h3 id="logging-in-to-openshift-cluster-using-oc-cli">Logging in to OpenShift Cluster using <code>oc</code> CLI<a class="headerlink" href="#logging-in-to-openshift-cluster-using-oc-cli" title="Permanent link">¶</a></h3>
 <p>Let's login to the OpenShift cluster via the <code>oc</code> CLI. This is needed as we will execute some CLI commands as part of the lab steps.</p>
 <ol>
 <li>In the OpenShift console, top right section click on <code>cecuser</code> and select <code>Copy login command</code> option.</li>
@@ -822,7 +822,7 @@
 <p class="admonition-title">RE-AUTHENTICATING in case you lose CLI access</p>
 <p>In case you lose access to the OpenShift cluster and need to re-authenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your <code>oc</code> CLI authenticated to the OpenShift cluster</p>
 </div>
-<h3 id="summary">Summary</h3>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h3>
 <p>Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.
 We strive to use OpenShift GUI/console as much possible, but in some scenarios OpenShift console doesn't yet support some functionality in which case we switch to the <code>oc</code> CLI. Hence this lab will use OpenShift GUI/console and <code>oc</code> CLI both as necessary.</p></div>
 

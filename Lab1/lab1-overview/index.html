@@ -695,11 +695,11 @@
                   
 
 
-<div><h1 id="deploy-a-large-language-model-llm-on-ibm-power10-lab-education">Deploy a Large Language Model (LLM) on IBM Power10 - Lab Education</h1>
+<div><h1 id="deploy-a-large-language-model-llm-on-ibm-power10-lab-education">Deploy a Large Language Model (LLM) on IBM Power10 - Lab Education<a class="headerlink" href="#deploy-a-large-language-model-llm-on-ibm-power10-lab-education" title="Permanent link">¶</a></h1>
 <p>Goal of this lab is to showcase the basics (and the ease) of deploying a LLM (aka foundation models) on Power and how easy it is to switch to a different LLM.
 But before we do that, let's understand the ecosystem around LLMs (aka foundation models or Generative AI) in the context of IBM Power.</p>
 <p>In this lab, we will deploy 2 LLMs from <a href="https://huggingface.co/">Hugging Face (HF)</a> on IBM Power10 using the on-prem lab environment that has been provisioned.</p>
-<h2 id="what-is-hugging-face">What is Hugging Face?</h2>
+<h2 id="what-is-hugging-face">What is Hugging Face?<a class="headerlink" href="#what-is-hugging-face" title="Permanent link">¶</a></h2>
 <p>Hugging Face is an AI company that built an incredibly popular AI community around open source libraries, models, and data sets.
 It's an open source community with a large collection of AI models and datasets that are available for sharing and collaboration.
 The Hugging Face hub now hosts more than 950K models and over 210K data sets, and those numbers are growing quickly.</p>
@@ -708,7 +708,7 @@ The Hugging Face hub now hosts more than 950K models and over 210K data sets, an
 <p>Hugging Face is an AI company that has become a major hub for Natural Language Processing (NLP) and Machine Learning (ML) tools. It is widely known for its open-source library, Transformers, and its collaborative platform, which provides a vast collection of pre-trained models and datasets. Hugging Face has made it easy for developers, researchers, and businesses to access, fine-tune, and deploy state-of-the-art machine learning models, especially those related to NLP tasks like text classification, translation, summarization, and more.</p>
 </div>
 <p>We use HF to access LLMs in this lab as it has a vast collection of pre-trained models which are hosted publicly and can be accessed for free.</p>
-<h2 id="what-is-ibm-watsonx">What is IBM watsonx?</h2>
+<h2 id="what-is-ibm-watsonx">What is IBM watsonx?<a class="headerlink" href="#what-is-ibm-watsonx" title="Permanent link">¶</a></h2>
 <p>Enterprise clients of IBM will use the <a href="https://www.ibm.com/watsonx">IBM watsonx platform</a>, an enterprise-ready AI and data platform.
 Watsonx is designed for the enterprise and is targeted for business domains, empowering value creators to transform business applications into AI-first applications.</p>
 <div class="admonition note">
@@ -719,7 +719,7 @@ Watsonx is designed for the enterprise and is targeted for business domains, emp
 <p class="admonition-title">IBM watsonx support on IBM Power</p>
 <p><strong>NOTE</strong>: At the time of writing this lab, IBM watsonx is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by watsonx on IBM Cloud or running stand-alone on-premise on IBM Power) to infuse and harness the power of (Gen)AI into their on-prem applications running on IBM Power.</p>
 </div>
-<h2 id="ibm-watsonx-vs-hugging-face">IBM watsonx Vs Hugging Face</h2>
+<h2 id="ibm-watsonx-vs-hugging-face">IBM watsonx Vs Hugging Face<a class="headerlink" href="#ibm-watsonx-vs-hugging-face" title="Permanent link">¶</a></h2>
 <p>IBM Watsonx and Hugging Face both offer AI tools, but they serve different purposes:</p>
 <ul>
 <li>
@@ -730,7 +730,7 @@ Watsonx is designed for the enterprise and is targeted for business domains, emp
 </li>
 </ul>
 <p>In essence, IBM watsonx focuses on enterprise-grade AI with strong governance and scalability, while Hugging Face is designed for flexible, community-driven AI development with a focus on rapid prototyping and open access to pre-trained models.</p>
-<h2 id="ibm-watsonx-hugging-face">IBM watsonx &amp; Hugging Face</h2>
+<h2 id="ibm-watsonx-hugging-face">IBM watsonx &amp; Hugging Face<a class="headerlink" href="#ibm-watsonx-hugging-face" title="Permanent link">¶</a></h2>
 <p>With IBM watsonx, clients can run not just IBM-trained foundation models, but also open source models and models from Hugging Face as well!</p>
 <p>IBM watsonx and Hugging Face can work together by combining IBM's enterprise AI capabilities with Hugging Face's vast collection of pre-trained models and tools for rapid AI development:</p>
 <ul>
@@ -740,7 +740,7 @@ Watsonx is designed for the enterprise and is targeted for business domains, emp
 </ul>
 <p>Together, Hugging Face provides the models, and watsonx offers the enterprise-ready infrastructure for secure, large-scale, compliant deployment.
 Read <a href="https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-working-together-in-open-source/">this blog</a> to understand more about how IBM and Hugging Face are working to bring open source communities together for enterprise AI.</p>
-<h2 id="ai-and-watsonx-with-ibm-power">AI and watsonx with IBM Power</h2>
+<h2 id="ai-and-watsonx-with-ibm-power">AI and watsonx with IBM Power<a class="headerlink" href="#ai-and-watsonx-with-ibm-power" title="Permanent link">¶</a></h2>
 <p>Here is a quick 1-slider on what you can do with AI and watsonx on IBM Power, today.
 <a class="glightbox" href="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149"></a></p>
 <p>Clients can get started with AI and watsonx with IBM Power today. 
