@@ -55,7 +55,7 @@ Read [this blog](https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-workin
 
 ## AI and watsonx with IBM Power
 
-Here is a quick 1-slider on what you can do with AI and watsonx on IBM Power
+Here is a quick 1-slider on what you can do with AI and watsonx on IBM Power, today.
 ![image](https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149)
 
 Clients can get started with AI and watsonx with IBM Power today. 
