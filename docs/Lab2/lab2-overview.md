@@ -28,6 +28,7 @@ RAG is a technique that uses vector databases to retrieve relevant information a
 ## Advantages of RAG
 
 Below are the key advantages of RAG:
+
 1. **Improved Accuracy**: By retrieving relevant data in real-time, RAG can provide more accurate and up-to-date information.
 2. **Factual Consistency**: It reduces the risk of the model "hallucinating" incorrect facts, as it relies on verified external sources.
 3. **Scalability**: Can work with very large databases, enabling the model to scale its knowledge without requiring retraining.
@@ -35,6 +36,7 @@ Below are the key advantages of RAG:
 ## Common usecases of RAG
 
 Below are some of the common usecases for RAG:
+
 1. **Open-domain question answering**: Where models need to answer questions about a wide range of topics, potentially beyond the training data.
 2. **Customer support**: Providing accurate answers by retrieving relevant documents from knowledge bases.
 3. **Enterprise AI**: Helping businesses with information retrieval, knowledge management, and research by retrieving and summarizing relevant documents.
