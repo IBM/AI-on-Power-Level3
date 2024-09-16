@@ -17,6 +17,6 @@ Enterprise clients of IBM will use the [IBM watsonx platform](https://www.ibm.co
 
 !!! danger "IBM watsonx support on IBM Power"
 
-    **NOTE**: At the time of writing this lab, IBM watsonx is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by watzonx on IBM Cloud or running stand-alone on-premise on IBM Power) to infuse AI into their applications.
+    **NOTE**: At the time of writing this lab, IBM watsonx is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by watsonx on IBM Cloud or running stand-alone on-premise on IBM Power) to infuse and harness the power of (Gen)AI into their applications.
 
 Here is a quick 
