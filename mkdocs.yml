@@ -36,13 +36,13 @@ plugins:
 
 markdown_extensions:
   - sane_lists
-  - pymdownx.details
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences  
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.snippets  
   - pymdownx.keys
   - attr_list
   - md_in_html
