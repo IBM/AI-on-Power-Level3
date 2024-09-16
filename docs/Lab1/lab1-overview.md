@@ -1,7 +1,9 @@
-# Deploy a Large Language Model (LLM) on IBM Power10
+# Deploy a Large Language Model (LLM) on IBM Power10 - Lab Education
+
+Goal of this lab is to showcase the basics (and the ease) of deploying a LLM (aka foundation models) on Power and how easy it is to switch to a different LLM.
+But before we do that, let's understand the ecosystem around LLMs (aka foundation models or Generative AI) in the context of IBM Power.
 
 In this lab, we will deploy 2 LLMs from [Hugging Face (HF)](https://huggingface.co/) on IBM Power10 using the on-prem lab environment that has been provisioned.
-Goal of this lab is to showcase the basics (and the ease) of deploying a LLM (aka foundation models) on Power and how easy it is to switch to a different LLM.
 
 ## What is Hugging Face?
 
@@ -50,3 +52,22 @@ IBM watsonx and Hugging Face can work together by combining IBM's enterprise AI 
 
 Together, Hugging Face provides the models, and watsonx offers the enterprise-ready infrastructure for secure, large-scale, compliant deployment.
 Read [this blog](https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-working-together-in-open-source/) to understand more about how IBM and Hugging Face are working to bring open source communities together for enterprise AI.
+
+## AI and watsonx with IBM Power
+
+Here is a quick 1-slider on what you can do with AI and watsonx on IBM Power
+![image](https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149)
+
+Clients can get started with AI and watsonx with IBM Power today. 
+IBM has made it simple by aligning the common use cases around 4 key areas that we see within our pilots and client activations.
+
+- **Pattern 1**: Securely tune, deploy and manage foundation models. When it comes to task-specific use cases, it is a good idea to work with large open-source models in your own workspace that are under your control. Hugging Face is a large repository with over 500,000 pre-trained ML models and a platform where the AI ecosystem collaborates on models, datasets and applications. Download any model from Hugging Face and securely deploy at scale on IBM Power. Then, use best-of-breed software to help you tune, deploy and manage as many models as you need. Some examples of what enterprises can use this capability for: Customer service, knowledge workers to augment staff and fraud reporting.
+ 
+- **Pattern 2**: There are many new and existing business apps that are using foundation models integrated into the workflows. Deploy your foundation models anywhere, on Power, x86, cloud, and use the watsonx.ai software development kit (SDK) available in Python and embed directly into applications. On Power, enterprises can do this quickly so that services can be released to customers faster on a resilient 24/7 environment. Some examples of clients can embed AI into apps are generating the first draft of reports, citizen services for government end-clients and knowledge management.
+ 
+- **Pattern 3**: The ecosystem is important to enterprises that have long-standing investments in software that drives their core business workflows. Consume watsonx services from customers customized ecosystem apps. Enterprises can generate code for Ansible playbooks for IBM i or AIX to enhance the Ansible IT management experience. Additionally, SAP applications can be embedded with watsonx services within the SAP ABAP environments. These custom apps help clients deliver services much faster while taking advantage of existing and familiar investments, making this an attractive proposition for many. Some example use cases include asset management, code generation, accounting automation. 
+ 
+- **Pattern 4**: Lastly, we are bringing a full suite of AI capabilities to the Power platform to help clients train, tune and deploy models without purchasing GPUs. The lead time for GPUs is somewhere around a year and clients will miss out on opportunity if they can’t get started today. Some of the popular use cases that enterprises will use are fraud detection, risk underwriting, and demand forecasting.
+
+
+
