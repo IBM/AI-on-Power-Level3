@@ -424,11 +424,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Part 1/01 Markdown basics.md" class="md-nav__link">
+      <a href="../Lab1/lab1-Overview.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Markdown basics
+    Lab Overview
   </span>
   
 
@@ -445,11 +445,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Part 1/02 Callouts.md" class="md-nav__link">
+      <a href="../Lab1/lab1-hands-on-guide.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Callouts
+    Hands-on guide
   </span>
   
 
@@ -767,14 +767,20 @@
 <li>Keep this terminal window always open as you will be using it frequently to run CLI commands.</li>
 </ul>
 </li>
-<li><code>oc</code> CLI is pre-installed on the bastion node and must be working already. You can check by running <code>oc version</code> command.<ul>
+<li>
+<p><code>oc</code> CLI is pre-installed on the bastion node and must be working already. You can check by running <code>oc version</code> command.</p>
+<ul>
 <li>Ignore the error part of the <code>oc version</code> for now. Its as expected since you have not yet logged into the cluster from the CLI.</li>
 </ul>
+<p><img alt="image" src="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb">
+  <img alt="image" src="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604">
+  <img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6">
+6. You have successfully logged into the OpenShift cluster using the GUI/console.</p>
 </li>
 </ol>
-<p><img alt="image" src="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb">
-   <img alt="image" src="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604">
-   <img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6"></p>
+<p>!!! note "RE-AUTHENTICATING in case you lose CLI access"</p>
+<div class="highlight"><pre><span></span><code>   In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
+</code></pre></div>
 <h3 id="logging-in-to-openshift-cluster-using-oc-cli">Logging in to OpenShift Cluster using <code>oc</code> CLI</h3>
 <p>Let's login to the OpenShift cluster via the <code>oc</code> CLI. This is needed as we will execute some CLI commands as part of the lab steps.</p>
 <ol>
@@ -801,6 +807,9 @@
    <img alt="image" src="https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5"></li>
 <li>You have successfully logged into the OpenShift cluster using the <code>oc</code> CLI.</li>
 </ol>
+<p>!!! note "RE-AUTHENTICATING in case you lose CLI access"</p>
+<div class="highlight"><pre><span></span><code>   In case you lose access to the OpenShift cluster and need to re-authenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your `oc` CLI authenticated to the OpenShift cluster
+</code></pre></div>
 <h3 id="summary">Summary</h3>
 <p>Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.
 We strive to use OpenShift GUI/console as much possible, but in some scenarios OpenShift console doesn't yet support some functionality in which case we switch to the <code>oc</code> CLI. Hence this lab will use OpenShift GUI/console and <code>oc</code> CLI both as necessary.</p></div>
