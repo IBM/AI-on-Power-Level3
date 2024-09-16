@@ -52,8 +52,8 @@ nav:
   - Pre-requisites: 'pre-req.md'
   - Lab setup instructions: 'lab-setup.md'
   - Lab1 - Deploy a LLM on Power10:
-    - 'Markdown basics': 'Part 1/01 Markdown basics.md'
-    - 'Callouts': 'Part 1/02 Callouts.md'
+    - 'Lab Overview': 'Lab1/lab1-Overview.md'
+    - 'Hands-on guide': 'Lab1/lab1-hands-on-guide.md'
   - Lab2 - Deploy RAG on Power10:
     - 'Tables': 'Part 2/01 Tables.md'
     - 'Code blocks': 'Part 2/02 Code blocks.md'
