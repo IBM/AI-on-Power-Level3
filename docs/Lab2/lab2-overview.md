@@ -5,9 +5,10 @@ Before we do that, lets understand what RAG is, its advantages and key usecases.
 
 ## What is RAG?
 
-RAG (Retrieval-Augmented Generation) is an advanced technique that combines retrieval-based and generation-based approaches to improve the performance of language models, especially in question-answering and knowledge-intensive tasks.
+RAG (Retrieval-Augmented Generation) is an advanced technique that combines retrieval-based and generation-based approaches to improve the performance of large language models, especially in question-answering and knowledge-intensive tasks. In layman terms, clients can use RAG pattern to generate factually accurate output from LLMs, that is grounded in information in a knowledge base.
 
 Key Components of RAG:
+
 1. **Retrieval**: The model first retrieves relevant documents or information from a large knowledge base (like Wikipedia or custom databases) based on the user's query. This helps provide the model with factual and up-to-date information that it may not have learned during training.
 2. **Augmented Generation**: Once the relevant documents are retrieved, the model then generates a response based on the query and the retrieved documents. This ensures the generated answer is both relevant and factual, combining the reasoning power of the language model with the accuracy of external knowledge.
 
@@ -42,7 +43,7 @@ Here are the key reasons why RAG is necessary and its associated advantages:
     - **RAG scales with external data**: By leveraging vast external knowledge bases or documents, RAG allows for almost unlimited knowledge expansion without retraining the model. This is particularly useful for enterprises or specific domains where continuous data updates are essential.
 4. **Improved Performance in Specific Domains**
     - **Specialized knowledge is often needed**: Many applications require access to niche or domain-specific information, such as legal texts, scientific papers, or proprietary company data.
-     -**RAG retrieves domain-specific documents**: The retrieval step allows RAG to pull in domain-specific or proprietary documents, making the output more relevant for specialized tasks.
+    - **RAG retrieves domain-specific documents**: The retrieval step allows RAG to pull in domain-specific or proprietary documents, making the output more relevant for specialized tasks.
 5. **Efficiency and Adaptability**
     - **Model retraining is costly**: Constantly retraining LLMs with new data is computationally expensive and time-consuming.
     - **RAG avoids retraining**: By using real-time retrieval, RAG can access the latest information or new content without the need to retrain the entire model, making it more adaptable and cost-efficient.
