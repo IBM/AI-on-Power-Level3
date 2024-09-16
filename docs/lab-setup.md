@@ -46,9 +46,14 @@ Follow the steps below:
 5. `oc` CLI is pre-installed on the bastion node and must be working already. You can check by running `oc version` command.
       - Ignore the error part of the `oc version` for now. Its as expected since you have not yet logged into the cluster from the CLI.
      
-   ![image](https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb)
-   ![image](https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604)
-   ![image](https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6)
+      ![image](https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb)
+      ![image](https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604)
+      ![image](https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6)
+6. You have successfully logged into the OpenShift cluster using the GUI/console.
+
+   !!! note "RE-AUTHENTICATING in case you lose CLI access"
+
+       In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
 
 ### Logging in to OpenShift Cluster using `oc` CLI
 Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will execute some CLI commands as part of the lab steps.
@@ -71,6 +76,10 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
    ![image](https://github.com/user-attachments/assets/75ad62a0-d0a0-45f6-8797-fedad6e5877a)
    ![image](https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5)
 8. You have successfully logged into the OpenShift cluster using the `oc` CLI.
+   
+   !!! note "RE-AUTHENTICATING in case you lose CLI access"
+   
+       In case you lose access to the OpenShift cluster and need to re-authenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your `oc` CLI authenticated to the OpenShift cluster
 
 ### Summary
 Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.
