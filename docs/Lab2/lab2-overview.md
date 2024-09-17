@@ -68,7 +68,7 @@ To summarize, RAG allows models to perform better in knowledge-intensive tasks b
 ### IBM Power Systems as Systems of Record
 IBM Power Systems are renowned for their performance, reliability, and scalability, making them ideal for handling systems of record. A system of record (SOR) refers to a trusted source of truth that stores essential business data and transactions, such as financial systems, customer data, and inventory management. IBM Power Systems are often used for mission-critical applications in industries like banking, healthcare, and government due to their ability to manage large volumes of secure, transactional data.
 
-### How IBM Power Systems Play Well with RAG (Retrieval-Augmented Generation)
+### How IBM Power Systems Plays Well with RAG
 Retrieval-Augmented Generation (RAG) is a generative AI framework that enhances the performance of AI models by retrieving relevant documents from external knowledge bases before generating a response. This retrieval step ensures that the generated output is more accurate and fact-based, as it is grounded in real-time data from a reliable source.
 
 IBM Power Systems play exceptionally well with RAG due to the following reasons:
@@ -93,4 +93,5 @@ IBM Power Systems play exceptionally well with RAG due to the following reasons:
       - This feature allows the RAG model to provide contextualized answers based on the latest transactions or data updates from the system of record, improving the relevance of AI-driven outputs.
         
 **Summary**
+
 IBM Power Systems provide the speed, security, and reliability needed to store and manage systems of record that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.
