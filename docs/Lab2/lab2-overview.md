@@ -1,7 +1,7 @@
 # Deploy Retrieval-Augmented Generation (RAG) on IBM Power10 - Lab education
 
 Goal of this lab is to get hands-on experience in deploying a RAG pattern on IBM Power10.
-Before we do that, lets understand what RAG is, its advantages and key usecases.
+Before we do that, lets understand what RAG is, its advantages, key usecases and how it fits in the IBM Power landscape.
 
 ## What is RAG?
 
