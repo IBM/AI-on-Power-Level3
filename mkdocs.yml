@@ -12,6 +12,9 @@ docs_dir: docs
 
 theme:
   name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
   features:
     - navigation.instant
     - navigation.tracking
