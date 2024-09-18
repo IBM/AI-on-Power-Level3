@@ -860,17 +860,23 @@ These models, built on architectures like GPT or similar transformers, are train
 <h2 id="ibm-watsonx-code-assistant">IBM watsonx Code Assistant<a class="headerlink" href="#ibm-watsonx-code-assistant" title="Permanent link">¶</a></h2>
 <p>IBM watsonx™ Code Assistant (WCA) is a family of offerings from IBM that leverages generative AI to accelerate development while maintaining the principles of trust, security and compliance at its core. Developers and IT Operators can speed up application modernization efforts and generate automation to rapidly scale IT environments. </p>
 <p>WCA is powered by the IBM Granite foundation models that include state-of-the-art large language models designed for code, geared to help IT teams create high-quality code using AI-generated recommendations based on natural language requests or existing source code. Built on the Watsonx AI platform, this tool leverages IBM’s expertise in AI and machine learning to enhance productivity across various industries.</p>
-<details class="danger">
-<summary>IBM watsonx Code Assistant (WCA) support on IBM Power</summary>
+<div class="admonition danger">
+<p class="admonition-title">IBM watsonx Code Assistant (WCA) support on IBM Power</p>
 <p>NOTE: At the time of writing this lab, IBM WCA is not available to run on IBM Power yet. However, clients can use code specific foundation models (either hosted by WCA on IBM Cloud or running stand-alone on-premise on IBM Power) to infuse and harness the power of code LLMs into their on-prem applications running on IBM Power.</p>
-</details>
+</div>
 <h3 id="ibm-wca-architecture-offerings">IBM WCA architecture &amp; offerings<a class="headerlink" href="#ibm-wca-architecture-offerings" title="Permanent link">¶</a></h3>
 <p>Here is a high level architecture of IBM WCA:
 <a class="glightbox" href="https://github.com/user-attachments/assets/71decd7c-fc8e-46a0-8765-ecfc38b897d4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/71decd7c-fc8e-46a0-8765-ecfc38b897d4"></a>
 At the bottom-most layer, WCA is powered by IBM Granite code models, specifically trained and fine-tuned by IBM for different programming languages.</p>
-<p>At the time of writing this lab, there are 2 products available under the IBM WCA offering family:
-- <strong>IBM watsonx Code Assistant for Red Hat Ansible Lightspeed</strong>: The Ansible-tuned model forms the basis of this product. This is fine-tuned for Ansible use cases. In addition to x86 endpoints, this supports generating Ansible tasks/playbooks for IBM Power endpoints (running AIX, IBM i and Linux) as well.
-- <strong>IBM watsonx Code Assistant for Z</strong>: The Cobol to Java-tuned model forms the basis of this product. This is fine-tuned for COBOL to Java conversion. It can help with enterprise use cases around IBM Z application modernization.</p>
+<p>At the time of writing this lab, there are 2 products available under the IBM WCA offering family:</p>
+<ul>
+<li>
+<p><strong>IBM watsonx Code Assistant for Red Hat Ansible Lightspeed</strong>: The Ansible-tuned model forms the basis of this product. This is fine-tuned for Ansible use cases. In addition to x86 endpoints, this supports generating Ansible tasks/playbooks for IBM Power endpoints (running AIX, IBM i and Linux) as well.</p>
+</li>
+<li>
+<p><strong>IBM watsonx Code Assistant for Z</strong>: The Cobol to Java-tuned model forms the basis of this product. This is fine-tuned for COBOL to Java conversion. It can help with enterprise use cases around IBM Z application modernization.</p>
+</li>
+</ul>
 <p>More and more programming languages support is being added to WCA over time.</p>
 <h3 id="key-features-of-ibm-wca">Key Features of IBM WCA<a class="headerlink" href="#key-features-of-ibm-wca" title="Permanent link">¶</a></h3>
 <ol>
