@@ -95,3 +95,16 @@ IBM Power Systems play exceptionally well with RAG due to the following reasons:
 **Summary**
 
 IBM Power Systems provide the speed, security, and reliability needed to store and manage systems of record that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.
+
+### RAG + IBM Power10 - typical use case
+
+Here is the high level solution architecture of a typical RAG use case on IBM Power10. This example is deployed on IBM Power10 end-to-end. The foundation model is simply downloaded from watsonx.ai or open-source repositories such as the Hugging Face model hub. The model does not require fine-tuning thanks to a domain adaptation technique called Retrieval Augmented Generation (RAG). 
+
+![image](https://github.com/user-attachments/assets/3476cad1-a743-474f-8535-b70806d8c09f)
+
+1. User asks a domain specific question in natural language.
+2. Q&A app looksup in the knowledge base repository.
+3. Documents relevant to the question is retrieved from the repository.
+4. "Question + Documents" is passed as the context in a prompt to LLM.
+5. LLM generates the domain-specific answer.
+
