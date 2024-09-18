@@ -43,13 +43,25 @@ In essence, Code LLMs bring AI-driven enhancements to the software development p
 
 ## IBM watsonx Code Assistant
 
-IBM watsonx™ Code Assistant (WCA) is an enterprise product offering from IBM that leverages generative AI to accelerate development while maintaining the principles of trust, security and compliance at its core. Developers and IT Operators can speed up application modernization efforts and generate automation to rapidly scale IT environments. 
+IBM watsonx™ Code Assistant (WCA) is a family of offerings from IBM that leverages generative AI to accelerate development while maintaining the principles of trust, security and compliance at its core. Developers and IT Operators can speed up application modernization efforts and generate automation to rapidly scale IT environments. 
 
 WCA is powered by the IBM Granite foundation models that include state-of-the-art large language models designed for code, geared to help IT teams create high-quality code using AI-generated recommendations based on natural language requests or existing source code. Built on the Watsonx AI platform, this tool leverages IBM’s expertise in AI and machine learning to enhance productivity across various industries.
 
 ??? danger "IBM watsonx Code Assistant (WCA) support on IBM Power"
 
-    NOTE: At the time of writing this lab, IBM WCA is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by WCA on IBM Cloud or running stand-alone on-premise on IBM Power) to infuse and harness the power of (Gen)AI into their on-prem applications running on IBM Power.
+    NOTE: At the time of writing this lab, IBM WCA is not available to run on IBM Power yet. However, clients can use code specific foundation models (either hosted by WCA on IBM Cloud or running stand-alone on-premise on IBM Power) to infuse and harness the power of code LLMs into their on-prem applications running on IBM Power.
+
+### IBM WCA architecture & offerings
+
+Here is a high level architecture of IBM WCA:
+![image](https://github.com/user-attachments/assets/71decd7c-fc8e-46a0-8765-ecfc38b897d4)
+At the bottom-most layer, WCA is powered by IBM Granite code models, specifically trained and fine-tuned by IBM for different programming languages.
+
+At the time of writing this lab, there are 2 products available under the IBM WCA offering family:
+- **IBM watsonx Code Assistant for Red Hat Ansible Lightspeed**: The Ansible-tuned model forms the basis of this product. This is fine-tuned for Ansible use cases. In addition to x86 endpoints, this supports generating Ansible tasks/playbooks for IBM Power endpoints (running AIX, IBM i and Linux) as well.
+- **IBM watsonx Code Assistant for Z**: The Cobol to Java-tuned model forms the basis of this product. This is fine-tuned for COBOL to Java conversion. It can help with enterprise use cases around IBM Z application modernization.
+
+More and more programming languages support is being added to WCA over time.
 
 ### Key Features of IBM WCA
 
@@ -58,3 +70,10 @@ WCA is powered by the IBM Granite foundation models that include state-of-the-ar
 3. **Multi-Language Support**: Supports a variety of programming languages, making it versatile for different development environments.
 4. **Security and Compliance**: Designed with a strong focus on enterprise-level security, ensuring that generated code adheres to industry standards and compliance regulations.
 5. **Customization**: Tailors AI recommendations to the specific needs of a project, enabling more accurate code suggestions and personalized developer assistance.
+
+### Benefits of IBM WCA
+
+1. **Increased Developer Productivity**: Automates routine coding tasks, allowing developers to focus on higher-level problem-solving.
+2. **Enhanced Code Quality**: Improves the accuracy of code with AI-powered insights, reducing the chances of errors or vulnerabilities.
+3. **Enterprise-Grade Security**: Ensures that code generation is secure and compliant with regulations, making it suitable for industries like finance and healthcare.
+
