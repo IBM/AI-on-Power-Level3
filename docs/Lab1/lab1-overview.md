@@ -69,5 +69,18 @@ IBM has made it simple by aligning the common use cases around 4 key areas that 
  
 - **Pattern 4**: Lastly, we are bringing a full suite of AI capabilities to the Power platform to help clients train, tune and deploy models without purchasing GPUs. The lead time for GPUs is somewhere around a year and clients will miss out on opportunity if they can’t get started today. Some of the popular use cases that enterprises will use are fraud detection, risk underwriting, and demand forecasting.
 
+## Choosing a foundation model
 
+There are many factors to consider when you choose a foundation model to use for inferencing from a generative AI project.
+Determine which factors are most important for you and your organization.
+
+- Tasks the model can do
+- Languages supported
+- Tuning options for customizing the model
+- License and IP indemnity terms
+- Model attributes, such as size, architecture, and context window length
+
+After you have a short list of models that best fit your needs, you can test the models to see which ones consistently return the results you want.
+
+For more details on choosing a foundation model that support your use case / language / other factors, refer to [this document](https://www.ibm.com/docs/en/watsonx/saas?topic=models-choosing-model). Although this document is part of the watsonx.ai product documentation, the information provided includes both IBM-trained models and open-source models as watsonx.ai support both types of models.
 
