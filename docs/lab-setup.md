@@ -36,9 +36,11 @@ Follow the steps below:
 8. **TIP**: Its a good idea to have 2 browser windows (or tabs per your preference) for OpenShift console access - one with Administrator profile and another with Developer profile because in the hands-on labs we will be needing to switch between these profiles and its easier and efficient to do so with 2 browser windows.
 
      - To do so, copy the URL from the browser address bar, open a new browser window (or tab) and paste the URL there. It should open up one more OpenShift console in the new window (or tab). In the new window/tab, switch to the Developer profile (aka Persona) by going to the top left corner and clicking on **Administrator** and selecting **Developer** (or vice-versa) in the drop down menu. In short, ensure you have 2 browser windows, one each with Administrator and Developer profile (aka Persona).
-     
-     ![type:video](https://github.com/user-attachments/assets/a622a195-00a6-4950-b2e5-686b04fa3401){: style='autoplay: True'}
 
+     <video style="width:50%" muted="true" controls="" alt="type:video">
+        <source src="https://github.com/user-attachments/assets/a622a195-00a6-4950-b2e5-686b04fa3401" type="video/mp4">
+     </video>
+     
 !!! note "RE-AUTHENTICATING in case you lose GUI/console access"
 
     In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
