@@ -37,7 +37,7 @@ Follow the steps below:
 
      - To do so, copy the URL from the browser address bar, open a new browser window (or tab) and paste the URL there. It should open up one more OpenShift console in the new window (or tab). In the new window/tab, switch to the Developer profile (aka Persona) by going to the top left corner and clicking on **Administrator** and selecting **Developer** in the drop down menu. In short - ensure you have 2 browser windows, once each with Administrator and Developer profile (aka Persona).
      
-     ![type:video](https://github.com/user-attachments/assets/a622a195-00a6-4950-b2e5-686b04fa3401){: style='video_muted: True'}
+     ![type:video](https://github.com/user-attachments/assets/a622a195-00a6-4950-b2e5-686b04fa3401){: style='video_autoplay: True'}
 
 !!! note "RE-AUTHENTICATING in case you lose GUI/console access"
 
