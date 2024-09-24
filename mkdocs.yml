@@ -33,7 +33,9 @@ theme:
         name: "Switch to light mode"
 
 plugins:
-    - mkdocs-video
+    - mkdocs-video:
+        is_video: True
+        video_autoplay: False
     - macros
     - search
     - glightbox
