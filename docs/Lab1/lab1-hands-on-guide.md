@@ -18,4 +18,14 @@ Make sure you have the following items ready:
 2. Enter a project name: **lab1-demo** & click **Create**
    ![image](https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320)
 
+### Setup storage
+Let's setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
+In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PVC) and the actual storage (aka PersistentVolume or PV) gets alloted based on your request and the availability in the storage pool (NFS in this case).
 
+1. Go to OpenShift Administrator profile, click on **Storage** -> **PersistentVolumeClaims** and click **Create PersistentVolumeClaim**
+   ![image](https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2)
+2. In the resulting form, enter PVC name: **model-storage** and Size: **20** GB. Leave other fields as defaults.
+   ![image](https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c)
+
+
+   
