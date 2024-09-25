@@ -113,5 +113,6 @@ This completes the ConfigMap setup.
                 claimName: model-storage
    ```
 
-   ---
+   ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
+
 
