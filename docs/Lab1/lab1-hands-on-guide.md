@@ -125,6 +125,21 @@ This completes the ConfigMap setup.
 
     !!! info "Model download will take time - Have patience!!"
 
-        This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary as it depends on the TechZone networking and 
+        This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size.
+    
     ![image](https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc)
+
+    **Congratulations!**, you have successfully deployed a LLM on Power10.
+
+ 9. Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
+     ![image](https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca)
+ 10. In the pod details page, click on the **Logs** tab to see the pod logs
+     ![image](https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff)
+ 11. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**
+     ![image](https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a)
+
+     This verifies that we have indeed deployed tinyllama
+     
+
+
 
