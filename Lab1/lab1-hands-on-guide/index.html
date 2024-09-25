@@ -458,6 +458,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deploy-second-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy second model
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -748,6 +757,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deploy-second-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy second model
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -813,23 +831,22 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <ol>
 <li>Navigate to <strong>Workloads</strong> -&gt; <strong>ConfigMaps</strong> and click <strong>Create ConfigMap</strong>
    <a class="glightbox" href="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7"></a></li>
-<li>In the resulting form, enter a name: <strong>model-params</strong>, add Key: <strong>MODEL_NAME</strong> &amp; Value: <strong>tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong> and click <strong>Add key/value</strong> which will open up one more Key/Value box.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32"></a></li>
-<li>
-<p>In the newly created Key/Value box, enter: Key: <strong>MODEL_URL</strong> and Value: <strong>https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong> and click <strong>Create</strong>
-   <a class="glightbox" href="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a"></a></p>
-<p>This completes the ConfigMap setup.</p>
-</li>
+<li>In the resulting form, enter a name: <strong>model-params</strong>, and fill the Key and Value fields as below:
+   - Key: <strong>MODEL_NAME</strong>
+   - Value: <strong>tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong></li>
 </ol>
+<p>Click <strong>Add key/value</strong> which will open up one more Key/Value box.</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32"></a>
+4. In the newly created Key/Value box, enter: Key: <strong>MODEL_URL</strong> and Value: <strong>https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong> and click <strong>Create</strong>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a"></a></p>
+<div class="highlight"><pre><span></span><code>This completes the ConfigMap setup.
+</code></pre></div>
 <h3 id="deploy-first-model">Deploy first model<a class="headerlink" href="#deploy-first-model" title="Permanent link">¶</a></h3>
 <ol>
-<li>Navigate to the OpenShift Developer profile console window.</li>
-</ol>
-<p>!!! info "Note"</p>
-<div class="highlight"><pre><span></span><code>   If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile.
-   In case you didn't, go to top left corner of your console, click Administrator and select Developer.
-</code></pre></div>
-<ol start="3">
+<li>
+<p>Navigate to the OpenShift Developer profile console window.
+   - <strong>Note</strong>: If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click Administrator and select Developer.</p>
+</li>
 <li>
 <p><strong>IMP</strong>: Ensure you are in the <strong>lab1-demo</strong> project in the Developer profile window. If not, goto <strong>Project</strong> and select <strong>lab1-demo</strong>.</p>
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" controls alt="type:video"><source src="../_attachments/switch-to-lab1-demo-project.mp4" type="video/mp4"></source></video></div></p>
@@ -938,10 +955,18 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p>You should land in the Deployment details window. Click on <strong>Pods</strong> tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
    <a class="glightbox" href="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9"></a></p>
 </li>
-<li>Navigate to <strong>Environment</strong> tab, select <strong>fetch-model-data</strong> container and select <strong>model-params</strong> ConfigMap and click <strong>Save</strong>
-    <a class="glightbox" href="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa"></a></li>
-<li>Switch back to <strong>Pods</strong> tab and you should see that a new Pod has been launched by OpenShift as we updated the Pods's environment via ConfigMap.
-    <a class="glightbox" href="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf"></a></li>
+<li>
+<p>Navigate to <strong>Environment</strong> tab, select <strong>fetch-model-data</strong> container and select <strong>model-params</strong> ConfigMap and click <strong>Save</strong>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa"></a></p>
+<div class="admonition info">
+<p class="admonition-title">About LLama and tinyLLama models</p>
+<p>The ConfigMap currently points to the tinyLLaMa model. The LLaMA (Large Language Model Meta AI) model is a family of state-of-the-art large language models developed by Meta (formerly Facebook), specifically designed to perform various natural language processing tasks. TinyLLaMA is a compact variant of the LLaMA (Large Language Model Meta AI) model, designed for efficiency and accessibility, especially when deployed in smaller environments. Available via Hugging Face (HF), it focuses on reducing the size of large-scale language models while retaining strong performance across various natural language processing tasks.</p>
+</div>
+</li>
+<li>
+<p>Switch back to <strong>Pods</strong> tab and you should see that a new pod has been launched by OpenShift as we changed the pod's environment, when we added ConfigMap.
+    <a class="glightbox" href="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf"></a></p>
+</li>
 <li>
 <p>The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.</p>
 <div class="admonition info">
@@ -1068,6 +1093,15 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p><strong>Congratulations</strong>, you were able to deploy a LLM, create a public endpoint to access it and take it for a run!
 In the next step, let's learn how to deploy a different LLM.</p>
 </li>
+</ol>
+<h3 id="deploy-second-model">Deploy second model<a class="headerlink" href="#deploy-second-model" title="Permanent link">¶</a></h3>
+<p>In this section, let's deploy IBM's granite model.</p>
+<div class="admonition info">
+<p class="admonition-title">About IBM's granite LLM</p>
+<p>The IBM Granite model family is designed as enterprise-grade AI models tailored for business applications. Granite models are available both as open-source models on platforms like Hugging Face and through IBM's watsonx.ai for more enterprise-specific needs.</p>
+</div>
+<ol>
+<li>TEST</li>
 </ol></div>
 
 
