@@ -55,20 +55,20 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 ### Deploy first model
 
 1. Navigate to the OpenShift Developer profile console window.
+   
+   !!! info "Note"
 
-       !!! info "Note"
-
-           If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile.
-           In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**.
-
-2. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**.
+       If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile.
+       In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**.
+   
+3. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**.
    
     ![type:video](./_attachments/switch-to-lab1-demo-project.mp4)
 
-3. Click on **+Add** and select **Import YAML** option.
+4. Click on **+Add** and select **Import YAML** option.
    ![image](https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462)
 
-4. In the resulting window, copy and paste the below deployment yaml into it and click **Create**
+5. In the resulting window, copy and paste the below deployment yaml into it and click **Create**
    ``` yaml linenums="1"
     apiVersion: apps/v1
     kind: Deployment
@@ -119,13 +119,13 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    ```
     ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
 
- 5. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
+ 6. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
    ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
- 6. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**
+ 7. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**
     ![image](https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa)
- 7. Switch back to **Pods** tab and you should see that a new Pod has been launched by OpenShift as we updated the Pods's environment via ConfigMap.
+ 8. Switch back to **Pods** tab and you should see that a new Pod has been launched by OpenShift as we updated the Pods's environment via ConfigMap.
     ![image](https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf)
- 8. The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.
+ 9. The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.
 
     !!! info "Model download will take time - Have patience!!"
 
@@ -135,16 +135,16 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     **Congratulations!**, you have successfully deployed a LLM on Power10.
 
- 9. Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
+ 10. Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
     ![image](https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca)
-10. In the pod details page, click on the **Logs** tab to see the pod logs
+11. In the pod details page, click on the **Logs** tab to see the pod logs
     ![image](https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff)
-11. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**
+12. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**
     ![image](https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a)
 
     This verifies that we have indeed deployed tinyllama.
      
-12. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click **Networking** -> **Services** and click **Create Service**
+13. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click **Networking** -> **Services** and click **Create Service**
      
     !!! note ""
       
@@ -152,7 +152,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
   
     ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
 
-13. In the resulting Create Service yaml window, select all & delete everything. Then copy the below service yaml, paste it in the yaml window and click **Create**
+14. In the resulting Create Service yaml window, select all & delete everything. Then copy the below service yaml, paste it in the yaml window and click **Create**
     ``` yaml linenums="1"
     apiVersion: v1
     kind: Service
@@ -172,12 +172,12 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
 
-14. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
+15. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
     ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
 
-15. Navigate to **Networking** -> **Routes** and click **Create Route**
+16. Navigate to **Networking** -> **Routes** and click **Create Route**
       ![image](https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343)
-16. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
+17. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
     ``` yaml linenums="1"
     kind: Route
     apiVersion: route.openshift.io/v1
@@ -195,20 +195,20 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090)
 
-17. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
+18. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
     ![image](https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13)
-18. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
+19. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
       
     ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
       
-19. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
+20. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
     ![image](https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce)
 
     !!! note "Experimenting with model parameters"
 
         You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
 
-20. Here are some questions I asked and the responses I got.
+21. Here are some questions I asked and the responses I got.
     
     !!! warning "Accuracy of LLM responses"
 
