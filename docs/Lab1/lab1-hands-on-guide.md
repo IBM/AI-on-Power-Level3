@@ -12,9 +12,9 @@ Make sure you have the following items ready:
 
 ## Lab guide
 
-!!! note "Image zoom functionality"
+   !!! note "Image zoom functionality"
 
-    Feel free to click on the images in the lab guide below to a view larger image
+       Feel free to click on the images in the lab guide below to a view larger image
     
 ### Create project
 1. Go to OpenShift Administrator profile, click on **Home** -> **Projects** and click **Create Project**
@@ -35,7 +35,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 4. Navigate to **Storage** -> **PersistentVolumes** and view the actual storage (PV) bound to your storage request (PVC = **model-storage**)
    ![image](https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e)
 
-This completes the storage setup.
+    This completes the storage setup.
 
 ### Setup ConfigMap
 
@@ -50,13 +50,13 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 3. In the newly created Key/Value box, enter: Key: **MODEL_URL** and Value: **https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf** and click **Create**
    ![image](https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a)
 
-This completes the ConfigMap setup.
+   This completes the ConfigMap setup.
 
 ### Deploy first model
 
 1. Navigate to the OpenShift Developer profile console window.
 
-!!! note
+   !!! note
 
        If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**.
 
@@ -116,8 +116,7 @@ This completes the ConfigMap setup.
               persistentVolumeClaim:
                 claimName: model-storage
    ```
-
-   ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
+    ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
 
  5. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
    ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
@@ -202,13 +201,14 @@ This completes the ConfigMap setup.
     ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
       
 19. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
-      ![image](https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce)
+    ![image](https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce)
 
-      !!! note "Experimenting with model parameters"
+    !!! note "Experimenting with model parameters"
 
-          You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
 
 20. Here are some questions I asked and the responses I got.
+    
     !!! warning "Accuracy of LLM responses"
 
         Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a **specific cutoff date**. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.
