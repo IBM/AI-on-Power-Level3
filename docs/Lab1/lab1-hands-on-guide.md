@@ -12,6 +12,10 @@ Make sure you have the following items ready:
 
 ## Lab guide
 
+!!! note "Image zoom functionality"
+
+    Feel free to click on the images in the lab guide below to a view larger image
+    
 ### Create project
 1. Go to OpenShift Administrator profile, click on **Home** -> **Projects** and click **Create Project**
    ![image](https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f)
