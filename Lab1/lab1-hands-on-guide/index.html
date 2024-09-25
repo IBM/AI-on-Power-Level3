@@ -431,6 +431,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#setup-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-configmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup ConfigMap
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -694,6 +712,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#setup-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-configmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup ConfigMap
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -732,7 +768,33 @@
    <a class="glightbox" href="https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f"></a></li>
 <li>Enter a project name: <strong>lab1-demo</strong> &amp; click <strong>Create</strong>
    <a class="glightbox" href="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320"></a></li>
-</ol></div>
+</ol>
+<h3 id="setup-storage">Setup storage<a class="headerlink" href="#setup-storage" title="Permanent link">¶</a></h3>
+<p>Let's setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
+In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PVC) and the actual storage (aka PersistentVolume or PV) gets alloted based on your request and the storage availability in the storage pool (NFS in this case).</p>
+<ol>
+<li>Go to OpenShift Administrator profile, click on <strong>Storage</strong> -&gt; <strong>PersistentVolumeClaims</strong> and click <strong>Create PersistentVolumeClaim</strong>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2"></a></li>
+<li>In the resulting form, enter PVC name: <strong>model-storage</strong> and Size: <strong>20</strong> GB. Leave other fields as defaults and click <strong>Create</strong>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c"></a></li>
+<li>Note that it shows PVC status as bound, which means storage was allotted
+   <a class="glightbox" href="https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2"></a></li>
+<li>Navigate to <strong>Storage</strong> -&gt; <strong>PersistentVolumes</strong> and view the actual storage (PV) bound to your storage request (PVC = <strong>model-storage</strong>)
+   <a class="glightbox" href="https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e"></a></li>
+</ol>
+<p>This completes the storage setup.</p>
+<h3 id="setup-configmap">Setup ConfigMap<a class="headerlink" href="#setup-configmap" title="Permanent link">¶</a></h3>
+<p>In OpenShift, a ConfigMap is an object used to manage configuration data for applications. It allows you to decouple configuration details from application logic, which makes your applications more portable and easier to manage across different environments. Instead of hardcoding configuration values in your application, you store them in a ConfigMap and inject them into your application at runtime.</p>
+<p>We will use ConfigMap to store the model URL and model name, both of which will be used when we deploy the model. Using ConfigMap will help us switch to a different model very easily.</p>
+<ol>
+<li>Navigate to <strong>Workloads</strong> -&gt; <strong>ConfigMaps</strong> and click <strong>Create ConfigMap</strong>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7"></a></li>
+<li>In the resulting form, enter a name: <strong>model-params</strong>, add Key: <strong>MODEL_NAME</strong> &amp; Value: <strong>tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong> and click <strong>Add key/value</strong> which will open up one more Key/Value box.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/e4f465d2-4763-47f1-af15-4f26424d2963" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e4f465d2-4763-47f1-af15-4f26424d2963"></a></li>
+<li>In the newly created Key/Value box, enter: Key: <strong>MODEL_URL</strong> and Value: <strong>https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong> and click <strong>Create</strong>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a"></a></li>
+</ol>
+<p>This completes the ConfigMap setup.</p></div>
 
 
 
