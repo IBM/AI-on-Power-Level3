@@ -59,4 +59,9 @@ This completes the ConfigMap setup.
 2. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**.
    
     ![type:video](./_attachments/switch-to-lab1-demo-project.mp4)
-   
+
+3. Click on **+Add** and select **Import YAML** option.
+   ![image](https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462)
+
+4. 
+
