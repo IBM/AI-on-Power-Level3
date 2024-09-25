@@ -955,8 +955,8 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p>This verifies that we have indeed deployed tinyllama.</p>
 </li>
 <li>
-<p>Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click <strong>Networking</strong> -&gt; <strong>Services</strong> and click <strong>Create Service</strong>
-     !!! note ""</p>
+<p>Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click <strong>Networking</strong> -&gt; <strong>Services</strong> and click <strong>Create Service</strong></p>
+<p>!!! note ""</p>
 <div class="highlight"><pre><span></span><code> If you are switching browser window/tab, make sure you are in the **lab1-demo** project in the new window/tab.
 </code></pre></div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09"></a></p>
@@ -1044,19 +1044,21 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <li>
 <p>Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
       <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
-<p>!!! note "Experimenting with model parameters"</p>
-<div class="highlight"><pre><span></span><code>  You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
-</code></pre></div>
-</li>
-<li>
-<p>Here are some questions I asked and the responses I got.
-      !!! warning "Accuracy of LLM responses"</p>
-<div class="highlight"><pre><span></span><code>  Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a **specific cutoff date**. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.
-</code></pre></div>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843"></a></p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248"></a></p>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Experimenting with model parameters</p>
+<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab</p>
+</div>
+<ol start="21">
+<li>Here are some questions I asked and the responses I got.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Accuracy of LLM responses</p>
+<p>Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a <strong>specific cutoff date</strong>. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.</p>
+</div>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248"></a></p>
 <p><strong>Congratulations</strong>, you were able to deploy a LLM, create a public endpoint to access it and take it for a run!
   In the next step, let's learn how to deploy a different LLM.</p></div>
 
