@@ -63,5 +63,56 @@ This completes the ConfigMap setup.
 3. Click on **+Add** and select **Import YAML** option.
    ![image](https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462)
 
-4. 
+4. In the resulting window, copy and paste the below deployment yaml into it and click **Create**
+   ``` yaml linenums="1"
+   ---
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: lab1-demo
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: lab1-demo
+      template:
+        metadata:
+          labels:
+            app: lab1-demo
+        spec:
+          initContainers:
+            - name: fetch-model-data
+              image: ubi8
+              volumeMounts:
+                - name: llama-models
+                  mountPath: /models
+              command:
+                - sh
+                - '-c'
+                - |
+                  if [ ! -f /models/$MODEL_NAME ] ; then
+                    curl -L $MODEL_URL --output /models/$MODEL_NAME
+                  else
+                    echo "model /models/$MODEL_NAME already present"
+                  fi
+                  rm -f /models/mymodel
+                  ln -sf /models/$MODEL_NAME /models/mymodel
+              resources: {}
+          containers:
+            - name: llama-cpp
+              image: quay.io/daniel_casali/llama.cpp-mma:sep2024
+              args: ["-m", "/models/mymodel", "-c", "4096", "--host", "0.0.0.0"]
+              ports:
+                - containerPort: 8080
+                  name: http
+              volumeMounts:
+                - name: llama-models
+                  mountPath: /models
+          volumes:
+            - name: llama-models
+              persistentVolumeClaim:
+                claimName: model-storage
+   ```
+
+   ---
 
