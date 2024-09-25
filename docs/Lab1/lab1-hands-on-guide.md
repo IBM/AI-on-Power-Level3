@@ -48,4 +48,10 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
 This completes the ConfigMap setup.
 
+### Deploy first model
 
+1. Navigate to the OpenShift Developer profile and click **+Add**
+
+   !!! note ""
+      If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**
+   
