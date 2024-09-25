@@ -56,10 +56,10 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
 1. Navigate to the OpenShift Developer profile console window.
 
-     !!! info "Note"
+       !!! info "Note"
 
-         If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile.
-         In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**.
+           If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile.
+           In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**.
 
 2. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**.
    
