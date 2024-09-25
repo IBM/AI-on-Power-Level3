@@ -449,6 +449,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deploy-first-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy first model
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -730,6 +739,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deploy-first-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy first model
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -790,11 +808,17 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <li>Navigate to <strong>Workloads</strong> -&gt; <strong>ConfigMaps</strong> and click <strong>Create ConfigMap</strong>
    <a class="glightbox" href="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7"></a></li>
 <li>In the resulting form, enter a name: <strong>model-params</strong>, add Key: <strong>MODEL_NAME</strong> &amp; Value: <strong>tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong> and click <strong>Add key/value</strong> which will open up one more Key/Value box.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/e4f465d2-4763-47f1-af15-4f26424d2963" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e4f465d2-4763-47f1-af15-4f26424d2963"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32"></a></li>
 <li>In the newly created Key/Value box, enter: Key: <strong>MODEL_URL</strong> and Value: <strong>https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong> and click <strong>Create</strong>
    <a class="glightbox" href="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a"></a></li>
 </ol>
-<p>This completes the ConfigMap setup.</p></div>
+<p>This completes the ConfigMap setup.</p>
+<h3 id="deploy-first-model">Deploy first model<a class="headerlink" href="#deploy-first-model" title="Permanent link">¶</a></h3>
+<ol>
+<li>Navigate to the OpenShift Developer profile and click <strong>+Add</strong></li>
+</ol>
+<p>!!! note ""
+      If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click <strong>Administrator</strong> and select <strong>Developer</strong></p></div>
 
 
 
