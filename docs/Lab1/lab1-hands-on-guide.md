@@ -65,7 +65,6 @@ This completes the ConfigMap setup.
 
 4. In the resulting window, copy and paste the below deployment yaml into it and click **Create**
    ``` yaml linenums="1"
-   ---
     apiVersion: apps/v1
     kind: Deployment
     metadata:
