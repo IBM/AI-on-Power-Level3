@@ -12,9 +12,9 @@ Make sure you have the following items ready:
 
 ## Lab guide
 
-   !!! note "Image zoom functionality"
+  !!! note "Image zoom functionality"
 
-       Feel free to click on the images in the lab guide below to a view larger image
+    Feel free to click on the images in the lab guide below to a view larger image
     
 ### Create project
 1. Go to OpenShift Administrator profile, click on **Home** -> **Projects** and click **Create Project**
@@ -50,13 +50,13 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 3. In the newly created Key/Value box, enter: Key: **MODEL_URL** and Value: **https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf** and click **Create**
    ![image](https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a)
 
-   This completes the ConfigMap setup.
+    This completes the ConfigMap setup.
 
 ### Deploy first model
 
 1. Navigate to the OpenShift Developer profile console window.
 
-   !!! note
+   !!! note ""
 
        If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**.
 
