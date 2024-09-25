@@ -58,5 +58,5 @@ This completes the ConfigMap setup.
 
 2. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**
    <video style="width:100%" muted="true" autoplay="true" loop="true" controls="" alt="type:video">
-        <source src="https://github.com/user-attachments/assets/a622a195-00a6-4950-b2e5-686b04fa3401" type="video/mp4">
+        <source src="docs/Lab1/_attachments/switch-to-lab1-demo-project.mp4" type="video/mp4">
      </video>
