@@ -142,13 +142,13 @@ This completes the ConfigMap setup.
      
  12. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click **Networking** -> **Services** and click **Create Service**
      
-     !!! note ""
+  !!! note ""
+      
+      If you are switching browser window/tab, make sure you are in the **lab1-demo** project in the new window/tab.
+  
+  ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
 
-         If you are switching browser window/tab, make sure you are in the **lab1-demo** project in the new window/tab.
-
-     ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
-
-  14. In the resulting Create Service yaml window, select all & delete everything. Then copy the below service yaml, paste it in the yaml window and click **Create**
+  13. In the resulting Create Service yaml window, select all & delete everything. Then copy the below service yaml, paste it in the yaml window and click **Create**
       ``` yaml linenums="1"
       apiVersion: v1
       kind: Service
@@ -168,12 +168,12 @@ This completes the ConfigMap setup.
       ```
       ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
 
-  15. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
+  14. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
       ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
 
-  16. Navigate to **Networking** -> **Routes** and click **Create Route**
+  15. Navigate to **Networking** -> **Routes** and click **Create Route**
       ![image](https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343)
-  17. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
+  16. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
       ``` yaml linenums="1"
       kind: Route
       apiVersion: route.openshift.io/v1
@@ -191,20 +191,20 @@ This completes the ConfigMap setup.
       ```
       ![image](https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090)
 
-  18. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
+  17. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
       ![image](https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13)
-  19. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
+  18. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
       
       ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
       
-  20. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
+  19. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
       ![image](https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce)
 
 !!! note "Experimenting with model parameters"
 
     You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
 
-  21. Here are some questions I asked and the responses I got.
+  20. Here are some questions I asked and the responses I got.
 !!! warning "Accuracy of LLM responses"
 
     Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a **specific cutoff date**. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.
@@ -215,10 +215,3 @@ This completes the ConfigMap setup.
 
   **Congratulations**, you were able to deploy a LLM, create a public endpoint to access it and take it for a run!
   In the next step, let's learn how to deploy a different LLM.
-
-
-
-
-
-
-
