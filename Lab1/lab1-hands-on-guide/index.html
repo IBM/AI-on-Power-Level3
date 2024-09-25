@@ -938,9 +938,21 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p>The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.</p>
 <div class="admonition info">
 <p class="admonition-title">Model download will take time - Have patience!!</p>
-<p>This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary as it depends on the TechZone networking and </p>
+<p>This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size.</p>
 </div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc"></a></p>
+<p><strong>Congratulations!</strong>, you have successfully deployed a LLM on Power10.</p>
+</li>
+<li>
+<p>Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
+     <a class="glightbox" href="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca"></a></p>
+</li>
+<li>In the pod details page, click on the <strong>Logs</strong> tab to see the pod logs
+     <a class="glightbox" href="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff"></a></li>
+<li>
+<p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>
+     <a class="glightbox" href="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a"></a></p>
+<p>This verifies that we have indeed deployed tinyllama</p>
 </li>
 </ol></div>
 
