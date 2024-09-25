@@ -57,6 +57,7 @@ This completes the ConfigMap setup.
        If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**.
 
 2. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**
+   
    <video style="width:100%" muted="true" autoplay="true" loop="true" controls="" alt="type:video">
         <source src="./_attachments/switch-to-lab1-demo-project.mp4" type="video/mp4">
      </video>
