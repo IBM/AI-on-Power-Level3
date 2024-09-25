@@ -949,27 +949,25 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 <li>
 <p>Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
-     <a class="glightbox" href="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca"></a></p>
 </li>
 <li>In the pod details page, click on the <strong>Logs</strong> tab to see the pod logs
-     <a class="glightbox" href="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff"></a></li>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff"></a></li>
 <li>
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>
-     <a class="glightbox" href="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a"></a></p>
 <p>This verifies that we have indeed deployed tinyllama.</p>
 </li>
 <li>
 <p>Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click <strong>Networking</strong> -&gt; <strong>Services</strong> and click <strong>Create Service</strong></p>
-</li>
-</ol>
 <div class="admonition note">
 <p>If you are switching browser window/tab, make sure you are in the <strong>lab1-demo</strong> project in the new window/tab.</p>
 </div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09"></a></p>
-<ol start="13">
+</li>
 <li>
 <p>In the resulting Create Service yaml window, select all &amp; delete everything. Then copy the below service yaml, paste it in the yaml window and click <strong>Create</strong>
-      </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+    </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
@@ -999,11 +997,11 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="s">"lab1-demo"</span>
 </code></pre></div></td></tr></table></div>
-      <a class="glightbox" href="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf"></a>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf"></a>
 </li>
 <li>
 <p>You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
-      <a class="glightbox" href="https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb"></a></p>
 </li>
 <li>
 <p>Navigate to <strong>Networking</strong> -&gt; <strong>Routes</strong> and click <strong>Create Route</strong>
@@ -1011,7 +1009,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 <li>
 <p>In the resulting Create Route window, select <strong>YAML view</strong> and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click <strong>Create</strong>
-      </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+    </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -1037,11 +1035,11 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">  </span><span class="nt">port</span><span class="p">:</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lab1-port</span>
 </code></pre></div></td></tr></table></div>
-      <a class="glightbox" href="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090"></a>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090"></a>
 </li>
 <li>
 <p>You should land in the route details view. The URL mentioned under <strong>Location</strong> is the externally accessible URL of your application (which hosts the tinyllama LLM).
-      <a class="glightbox" href="https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13"></a></p>
 </li>
 <li>
 <p>Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      </p>
@@ -1055,17 +1053,16 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </code></pre></div>
 </li>
 <li>
-<p>Here are some questions I asked and the responses I got.</p>
-</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Accuracy of LLM responses</p>
-<p>Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a <strong>specific cutoff date</strong>. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.</p>
-</div>
+<p>Here are some questions I asked and the responses I got.
+    !!! warning "Accuracy of LLM responses"</p>
+<div class="highlight"><pre><span></span><code>Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a **specific cutoff date**. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.
+</code></pre></div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843"></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248"></a></p>
 <p><strong>Congratulations</strong>, you were able to deploy a LLM, create a public endpoint to access it and take it for a run!
-  In the next step, let's learn how to deploy a different LLM.</p></div>
+In the next step, let's learn how to deploy a different LLM.</p>
+</li>
+</ol></div>
 
 
 
