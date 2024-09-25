@@ -60,16 +60,17 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 ### Deploy first model
 
 2. Navigate to the OpenShift Developer profile console window.
+   
      - **Note**: If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click Administrator and select Developer.
 
-3. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**.
+4. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**.
    
     ![type:video](./_attachments/switch-to-lab1-demo-project.mp4)
 
-4. Click on **+Add** and select **Import YAML** option.
+5. Click on **+Add** and select **Import YAML** option.
    ![image](https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462)
 
-5. In the resulting window, copy and paste the below deployment yaml into it and click **Create**
+6. In the resulting window, copy and paste the below deployment yaml into it and click **Create**
    ``` yaml linenums="1"
     apiVersion: apps/v1
     kind: Deployment
@@ -120,9 +121,9 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    ```
     ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
 
- 6. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
+ 7. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
    ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
- 7. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**
+ 8. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**
     ![image](https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa)
 
     !!! info "About LLama and tinyLLama models"
