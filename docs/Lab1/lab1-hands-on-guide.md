@@ -58,6 +58,5 @@ This completes the ConfigMap setup.
 
 2. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**.
    
-     <video style="width:100%" muted="true" autoplay="true" loop="true" controls="" alt="type:video">
-          <source src="https://github.com/IBM/AI-on-Power-Level3/blob/main/docs/Lab1/_attachments/switch-to-lab1-demo-project.mp4" type="video/mp4">
-     </video>
+    ![type:video](./_attachments/switch-to-lab1-demo-project.mp4)
+   
