@@ -45,9 +45,14 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
 1. Navigate to **Workloads** -> **ConfigMaps** and click **Create ConfigMap**
    ![image](https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7)
-2. In the resulting form, enter a name: **model-params**, add Key: **MODEL_NAME** & Value: **tinyllama-1.1b-chat-v1.0.Q8_0.gguf** and click **Add key/value** which will open up one more Key/Value box.
+2. In the resulting form, enter a name: **model-params**, and fill the Key and Value fields as below:
+   - Key: **MODEL_NAME**
+   - Value: **tinyllama-1.1b-chat-v1.0.Q8_0.gguf**
+   
+   Click **Add key/value** which will open up one more Key/Value box.
+   
    ![image](https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32)
-3. In the newly created Key/Value box, enter: Key: **MODEL_URL** and Value: **https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf** and click **Create**
+4. In the newly created Key/Value box, enter: Key: **MODEL_URL** and Value: **https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf** and click **Create**
    ![image](https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a)
 
     This completes the ConfigMap setup.
@@ -119,9 +124,14 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
  7. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**
     ![image](https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa)
- 8. Switch back to **Pods** tab and you should see that a new Pod has been launched by OpenShift as we updated the Pods's environment via ConfigMap.
+
+    !!! info "About LLama and tinyLLama models"
+    
+        The ConfigMap currently points to the tinyLLaMa model. The LLaMA (Large Language Model Meta AI) model is a family of state-of-the-art large language models developed by Meta (formerly Facebook), specifically designed to perform various natural language processing tasks. TinyLLaMA is a compact variant of the LLaMA (Large Language Model Meta AI) model, designed for efficiency and accessibility, especially when deployed in smaller environments. Available via Hugging Face (HF), it focuses on reducing the size of large-scale language models while retaining strong performance across various natural language processing tasks.
+    
+ 9. Switch back to **Pods** tab and you should see that a new pod has been launched by OpenShift as we changed the pod's environment, when we added ConfigMap.
     ![image](https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf)
- 9. The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.
+ 10. The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.
 
     !!! info "Model download will take time - Have patience!!"
 
@@ -131,16 +141,16 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     **Congratulations!**, you have successfully deployed a LLM on Power10.
 
- 10. Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
+ 11. Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
     ![image](https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca)
-11. In the pod details page, click on the **Logs** tab to see the pod logs
+12. In the pod details page, click on the **Logs** tab to see the pod logs
     ![image](https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff)
-12. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**
+13. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**
     ![image](https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a)
 
     This verifies that we have indeed deployed tinyllama.
      
-13. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click **Networking** -> **Services** and click **Create Service**
+14. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click **Networking** -> **Services** and click **Create Service**
      
     !!! note ""
       
@@ -148,7 +158,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
   
     ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
 
-14. In the resulting Create Service yaml window, select all & delete everything. Then copy the below service yaml, paste it in the yaml window and click **Create**
+15. In the resulting Create Service yaml window, select all & delete everything. Then copy the below service yaml, paste it in the yaml window and click **Create**
     ``` yaml linenums="1"
     apiVersion: v1
     kind: Service
@@ -168,12 +178,12 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
 
-15. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
+16. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
     ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
 
-16. Navigate to **Networking** -> **Routes** and click **Create Route**
+17. Navigate to **Networking** -> **Routes** and click **Create Route**
       ![image](https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343)
-17. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
+18. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
     ``` yaml linenums="1"
     kind: Route
     apiVersion: route.openshift.io/v1
@@ -191,20 +201,20 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090)
 
-18. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
+19. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
     ![image](https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13)
-19. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
+20. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
       
     ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
       
-20. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
+19. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
     ![image](https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce)
 
     !!! note "Experimenting with model parameters"
 
         You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
 
-21. Here are some questions I asked and the responses I got.
+20. Here are some questions I asked and the responses I got.
     
     !!! warning "Accuracy of LLM responses"
 
@@ -216,3 +226,13 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     **Congratulations**, you were able to deploy a LLM, create a public endpoint to access it and take it for a run!
     In the next step, let's learn how to deploy a different LLM.
+
+### Deploy second model
+
+In this section, let's deploy IBM's granite model.
+
+!!! info "About IBM's granite LLM"
+
+    The IBM Granite model family is designed as enterprise-grade AI models tailored for business applications. Granite models are available both as open-source models on platforms like Hugging Face and through IBM's watsonx.ai for more enterprise-specific needs.
+
+1. TEST
