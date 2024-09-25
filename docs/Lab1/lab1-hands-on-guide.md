@@ -61,7 +61,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
 2. Navigate to the OpenShift Developer profile console window.
    
-     - **Note**: If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click Administrator and select Developer.
+     - **Note**: If you followed the TIP given in the "Lab setup instructions" page, you should already have a browser window/tab with the Developer profile. In case you didn't, go to top left corner of your console, click **Administrator** and select **Developer**.
 
 4. **IMP**: Ensure you are in the **lab1-demo** project in the Developer profile window. If not, goto **Project** and select **lab1-demo**.
    
@@ -236,4 +236,43 @@ In this section, let's deploy IBM's granite model.
 
     The IBM Granite model family is designed as enterprise-grade AI models tailored for business applications. Granite models are available both as open-source models on platforms like Hugging Face and through IBM's watsonx.ai for more enterprise-specific needs.
 
-1. TEST
+1. Navigate to your OpenShift developer profile window. Click **ConfigMaps**, then click **model-params**. This should open up the ConfigMap details page.
+   ![image](https://github.com/user-attachments/assets/a26e875b-02d0-438e-84f3-9ed86347e650)
+2. In the model-params ConfigMap details page, click **Action** and select **Edit ConfigMap**
+   ![image](https://github.com/user-attachments/assets/a0d66be8-8ca3-4f18-b360-ee35a7843862)
+3. In the resulting form, edit the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**
+   
+     - Key: MODEL_NAME
+     - Value: granite-7b-lab.Q4_K_M.gguf
+     - ---------
+     -  Key: MODEL_URL
+     -  Value: https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf
+
+    ![image](https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052)
+4. The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
+5. Let's go to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click **D lab1-demo** in that pane which will then open up the deployment details view for lab1-demo deployment.
+   ![image](https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958)
+6. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in redeployment of the pod.
+   ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
+7. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+   ![image](https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b)
+
+   !!! info "Model download will take time - Have patience!!"
+
+       This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same pod instance.
+8. If all goes well, you should see just 1 pod running.
+   ![image](https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050)
+9. Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.
+    ![image](https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f)
+10. In the pod details page, click on the Logs tab to see the pod logs.
+    ![image](https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75)
+11. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
+    ![image](https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c)
+
+    This verifies that we have indeed deployed granite.
+
+
+
+
+   
+
