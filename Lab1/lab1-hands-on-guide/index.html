@@ -932,6 +932,16 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
    <a class="glightbox" href="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9"></a></li>
 <li>Navigate to <strong>Environment</strong> tab, select <strong>fetch-model-data</strong> container and select <strong>model-params</strong> ConfigMap and click <strong>Save</strong>
     <a class="glightbox" href="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa"></a></li>
+<li>Switch back to <strong>Pods</strong> tab and you should see that a new Pod has been launched by OpenShift as we updated the Pods's environment via ConfigMap.
+    <a class="glightbox" href="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf"></a></li>
+<li>
+<p>The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.</p>
+<div class="admonition info">
+<p class="admonition-title">Model download will take time - Have patience!!</p>
+<p>This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary as it depends on the TechZone networking and </p>
+</div>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc"></a></p>
+</li>
 </ol></div>
 
 
