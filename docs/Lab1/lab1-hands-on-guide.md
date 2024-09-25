@@ -142,9 +142,9 @@ This completes the ConfigMap setup.
      
  12. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click **Networking** -> **Services** and click **Create Service**
      
-  !!! note ""
+!!! note ""
       
-      If you are switching browser window/tab, make sure you are in the **lab1-demo** project in the new window/tab.
+    If you are switching browser window/tab, make sure you are in the **lab1-demo** project in the new window/tab.
   
   ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
 
