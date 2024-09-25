@@ -119,4 +119,12 @@ This completes the ConfigMap setup.
    ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
  6. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**
     ![image](https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa)
+ 7. Switch back to **Pods** tab and you should see that a new Pod has been launched by OpenShift as we updated the Pods's environment via ConfigMap.
+    ![image](https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf)
+ 8. The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.
+
+    !!! info "Model download will take time - Have patience!!"
+
+        This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary as it depends on the TechZone networking and 
+    ![image](https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc)
 
