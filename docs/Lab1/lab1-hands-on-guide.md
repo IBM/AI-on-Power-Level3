@@ -125,7 +125,7 @@ This completes the ConfigMap setup.
 
     !!! info "Model download will take time - Have patience!!"
 
-        This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size.
+        This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same pod instance.
     
     ![image](https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc)
 
@@ -138,8 +138,41 @@ This completes the ConfigMap setup.
  11. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**
      ![image](https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a)
 
-     This verifies that we have indeed deployed tinyllama
+     This verifies that we have indeed deployed tinyllama.
      
+ 12. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click **Networking** -> **Services** and click **Create Service**
+     !!! note ""
+
+         If you are switching browser window/tab, make sure you are in the **lab1-demo** project in the new window/tab.
+
+     ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
+
+  13. In the resulting Create Service yaml window, select all & delete everything. Then copy the below service yaml, paste it in the yaml window and click **Create**
+      ``` yaml linenums="1"
+      apiVersion: v1
+      kind: Service
+      metadata:
+        name: "lab1-service"
+        labels:
+          app: "lab1-service"
+      spec:
+        type: "ClusterIP"
+        ports:
+          - name: lab1-port
+            port: 8080
+            protocol: TCP
+            targetPort: 8080
+        selector:
+          app: "lab1-demo"
+      ```
+      ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
+
+  14. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
+      ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
+
+  15. Navigate to **Networking** -> **Routes** and click **Create Route**
+      ![image](https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343)
+  16. 
 
 
 
