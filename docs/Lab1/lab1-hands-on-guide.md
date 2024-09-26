@@ -289,7 +289,7 @@ In this section, let's deploy IBM's granite model.
 
     !!! note "Multiple ways to access public URL of your application"
 
-        If you are in Administrator profile, you can navigate to **Networking** -> **Routes** to access your route resource and click on the URL to open your application, as we did in the previous section of this lab where we deployed our first model. Alternatively, if you are in Developer profile, you can go to **Topology* view and access the URL of your application as well. Let's use that method here...
+        If you are in Administrator profile, you can navigate to **Networking** -> **Routes** to access your route resource and click on the URL to open your application, as we did in the previous section of this lab where we deployed our first model. Alternatively, if you are in Developer profile, you can go to **Topology** view and access the URL of your application as well. Let's use that method here...
 
     - In Developer profile window, click **Topology** and you should see the icon representing your deployed application.
       ![image](https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb)
@@ -300,9 +300,11 @@ In this section, let's deploy IBM's granite model.
     - Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
       ![image](https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce)
 
+
       !!! note "Experimenting with model parameters"
 
           You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+
 
 17. Here are some questions I asked and the responses I got.
 
