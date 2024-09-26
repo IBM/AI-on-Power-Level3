@@ -285,3 +285,36 @@ In this section, let's deploy IBM's granite model.
 
     This verifies that we have indeed deployed granite.   
 
+16. Let's access the model now!. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the **Topology** view.
+
+    !!! note "Multiple ways to access public URL of your application"
+
+        If you are in Administrator profile, you can navigate to **Networking** -> **Routes** to access your route resource and click on the URL to open your application, as we did in the previous section of this lab where we deployed our first model. Alternatively, if you are in Developer profile, you can go to **Topology* view and access the URL of your application as well. Let's use that method here...
+
+    - In Developer profile window, click **Topology** and you should see the icon representing your deployed application.
+      ![image](https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb)
+    - Click on the arrow (in top right corner of the icon) that says "Open URL"
+      ![image](https://github.com/user-attachments/assets/7366146b-cf82-4dc3-9327-d51aa5944778)
+    - A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
+      ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
+    - Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
+      ![image](https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce)
+
+      !!! note "Experimenting with model parameters"
+
+          You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+
+17. Here are some questions I asked and the responses I got.
+
+    !!! warning "Accuracy of LLM responses"
+
+        Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a **specific cutoff date**. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.
+
+    ![image](https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e)
+
+    ![image](https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c)
+
+    **Congratulations**, in this section you learned how easy it is to switch to a different LLM, access it and take it for a run!
+    This completes the lab.
+
+
