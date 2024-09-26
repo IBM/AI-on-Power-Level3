@@ -1131,17 +1131,18 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </ol>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
 <ol start="10">
-<li>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.</li>
-</ol>
+<li>
+<p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b"></a></p>
-<p>!!! info "Model download will take time - Have patience!!"</p>
-<div class="highlight"><pre><span></span><code>   This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same pod instance.
-</code></pre></div>
-<ol start="11">
-<li>If all goes well, you should see just 1 pod running.</li>
-</ol>
+<div class="admonition info">
+<p class="admonition-title">Model download will take time - Have patience!!</p>
+<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same pod instance.</p>
+</div>
+</li>
+<li>
+<p>If all goes well, you should see just 1 pod running.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050"></a></p>
-<ol start="12">
+</li>
 <li>
 <p>Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f"></a></p>
