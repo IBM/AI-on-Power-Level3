@@ -252,17 +252,22 @@ In this section, let's deploy IBM's granite model.
 4. The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
    
 6. Let's go to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click **D lab1-demo** in that pane which will then open up the deployment details view for lab1-demo deployment.
+   
    ![image](https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958)
-7. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in redeployment of the pod.
+   
+8. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in redeployment of the pod.
+   
    ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
-8. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+   
+10. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+    
    ![image](https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b)
 
    !!! info "Model download will take time - Have patience!!"
 
        This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same pod instance.
    
-10. If all goes well, you should see just 1 pod running.
+11. If all goes well, you should see just 1 pod running.
     
    ![image](https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050)
    
@@ -278,10 +283,5 @@ In this section, let's deploy IBM's granite model.
     
     ![image](https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c)
 
-    This verifies that we have indeed deployed granite.
-
-
-
-
-   
+    This verifies that we have indeed deployed granite.   
 
