@@ -1156,6 +1156,37 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c"></a></p>
 <p>This verifies that we have indeed deployed granite.   </p>
 </li>
+<li>
+<p>Let's access the model now!. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the <strong>Topology</strong> view.</p>
+<div class="admonition note">
+<p class="admonition-title">Multiple ways to access public URL of your application</p>
+<p>If you are in Administrator profile, you can navigate to <strong>Networking</strong> -&gt; <strong>Routes</strong> to access your route resource and click on the URL to open your application, as we did in the previous section of this lab where we deployed our first model. Alternatively, if you are in Developer profile, you can go to *<em>Topology</em> view and access the URL of your application as well. Let's use that method here...</p>
+</div>
+<ul>
+<li>In Developer profile window, click <strong>Topology</strong> and you should see the icon representing your deployed application.
+  <a class="glightbox" href="https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb"></a></li>
+<li>Click on the arrow (in top right corner of the icon) that says "Open URL"
+  <a class="glightbox" href="https://github.com/user-attachments/assets/7366146b-cf82-4dc3-9327-d51aa5944778" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7366146b-cf82-4dc3-9327-d51aa5944778"></a></li>
+<li>A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
+  <a class="glightbox" href="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53"></a></li>
+<li>Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
+  <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></li>
+</ul>
+<p>!!! note "Experimenting with model parameters"</p>
+<div class="highlight"><pre><span></span><code>  You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+</code></pre></div>
+</li>
+<li>
+<p>Here are some questions I asked and the responses I got.</p>
+<div class="admonition warning">
+<p class="admonition-title">Accuracy of LLM responses</p>
+<p>Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a <strong>specific cutoff date</strong>. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.</p>
+</div>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c"></a></p>
+<p><strong>Congratulations</strong>, in this section you learned how easy it is to switch to a different LLM, access it and take it for a run!
+This completes the lab.</p>
+</li>
 </ol></div>
 
 
