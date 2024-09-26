@@ -1122,18 +1122,22 @@ In the next step, let's learn how to deploy a different LLM.</p>
 4. The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.</p>
 </li>
 <li>
-<p>Let's go to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click <strong>D lab1-demo</strong> in that pane which will then open up the deployment details view for lab1-demo deployment.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958"></a></p>
+<p>Let's go to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click <strong>D lab1-demo</strong> in that pane which will then open up the deployment details view for lab1-demo deployment.</p>
 </li>
-<li>Click <strong>Actions</strong> and select <strong>Restart rollout</strong>. This will restart the deployment which results in redeployment of the pod.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></li>
-<li>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b"></a></li>
 </ol>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958"></a></p>
+<ol start="8">
+<li>Click <strong>Actions</strong> and select <strong>Restart rollout</strong>. This will restart the deployment which results in redeployment of the pod.</li>
+</ol>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
+<ol start="10">
+<li>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.</li>
+</ol>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b"></a></p>
 <p>!!! info "Model download will take time - Have patience!!"</p>
 <div class="highlight"><pre><span></span><code>   This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same pod instance.
 </code></pre></div>
-<ol start="10">
+<ol start="11">
 <li>If all goes well, you should see just 1 pod running.</li>
 </ol>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050"></a></p>
@@ -1149,7 +1153,7 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <li>
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c"></a></p>
-<p>This verifies that we have indeed deployed granite.</p>
+<p>This verifies that we have indeed deployed granite.   </p>
 </li>
 </ol></div>
 
