@@ -261,14 +261,21 @@ In this section, let's deploy IBM's granite model.
    !!! info "Model download will take time - Have patience!!"
 
        This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same pod instance.
-9. If all goes well, you should see just 1 pod running.
+   
+10. If all goes well, you should see just 1 pod running.
+    
    ![image](https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050)
-10. Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.
+   
+12. Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.
     
     ![image](https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f)
-12. In the pod details page, click on the Logs tab to see the pod logs.
+    
+13. In the pod details page, click on the Logs tab to see the pod logs.
+    
     ![image](https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75)
-13. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
+    
+15. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
+    
     ![image](https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c)
 
     This verifies that we have indeed deployed granite.
