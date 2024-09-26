@@ -1133,16 +1133,22 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <p>!!! info "Model download will take time - Have patience!!"</p>
 <div class="highlight"><pre><span></span><code>   This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same pod instance.
 </code></pre></div>
-<ol start="9">
-<li>If all goes well, you should see just 1 pod running.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050"></a></li>
+<ol start="10">
+<li>If all goes well, you should see just 1 pod running.</li>
+</ol>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050"></a></p>
+<ol start="12">
 <li>
 <p>Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.</p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f"></a>
-12. In the pod details page, click on the Logs tab to see the pod logs.
-<a class="glightbox" href="https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75"></a>
-13. In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>.
-<a class="glightbox" href="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f"></a></p>
+</li>
+<li>
+<p>In the pod details page, click on the Logs tab to see the pod logs.</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75"></a></p>
+</li>
+<li>
+<p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>.</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c"></a></p>
 <p>This verifies that we have indeed deployed granite.</p>
 </li>
 </ol></div>
