@@ -1,4 +1,4 @@
-# Generate SQL query using code LLM on IBM Power10 - Lab guide
+# Generate code given a natural language query using code LLM on IBM Power10 - Lab guide
 
 ## Lab-ready check
 
@@ -74,3 +74,10 @@ Make sure you have the following items ready:
     ![image](https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2)
 
     This verifies that we have indeed deployed granite code LLM.
+
+15. Let's access our model. As we did in Lab1, head to **Topology** view, click on the **Open URL** icon of your application.
+    
+
+### Generate python code
+
+Now let's use the granite code model to generate python code using natural language queries.
