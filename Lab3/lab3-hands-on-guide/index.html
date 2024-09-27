@@ -13,23 +13,23 @@
       
       
       
+        <link rel="prev" href="../lab3-overview/">
       
-        <link rel="next" href="pre-req/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>AI on Power - Level 3</title>
+        <title>Hands-on guide - AI on Power - Level 3</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -64,7 +64,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#generate-sql-query-using-code-llm-on-ibm-power10-lab-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="AI on Power - Level 3" class="md-header__button md-logo" aria-label="AI on Power - Level 3" data-md-component="logo">
+    <a href="../.." title="AI on Power - Level 3" class="md-header__button md-logo" aria-label="AI on Power - Level 3" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Hands-on guide
             
           </span>
         </div>
@@ -220,7 +220,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="AI on Power - Level 3" class="md-nav__button md-logo" aria-label="AI on Power - Level 3" data-md-component="logo">
+    <a href="../.." title="AI on Power - Level 3" class="md-nav__button md-logo" aria-label="AI on Power - Level 3" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -235,30 +235,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -267,92 +247,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generative-ai-and-llms-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generative AI and LLMs overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-ibm-power-for-genai" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why IBM Power for GenAI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Why IBM Power for GenAI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Benefits:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ibm-power10-differentiation" class="md-nav__link">
-    <span class="md-ellipsis">
-      IBM Power10 differentiation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IBM Power10 differentiation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-advantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Advantages:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -364,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pre-req/" class="md-nav__link">
+      <a href="../../pre-req/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -384,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lab-setup/" class="md-nav__link">
+      <a href="../../lab-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Lab1/lab1-overview/" class="md-nav__link">
+      <a href="../../Lab1/lab1-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Lab1/lab1-hands-on-guide/" class="md-nav__link">
+      <a href="../../Lab1/lab1-hands-on-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -523,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Lab2/lab2-overview/" class="md-nav__link">
+      <a href="../../Lab2/lab2-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -544,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Lab2/lab2-hands-on-guide.md" class="md-nav__link">
+      <a href="../../Lab2/lab2-hands-on-guide.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,17 +463,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -593,7 +489,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Lab3 - Query DB using NL on Power10
@@ -607,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Lab3/lab3-overview/" class="md-nav__link">
+      <a href="../lab3-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,10 +521,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Lab3/lab3-hands-on-guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hands-on guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -637,6 +553,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lab-ready-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lab-ready check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lab guide
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -656,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Credits" class="md-nav__link">
+      <a href="../../Credits" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -696,66 +650,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#generative-ai-and-llms-overview" class="md-nav__link">
+  <a href="#lab-ready-check" class="md-nav__link">
     <span class="md-ellipsis">
-      Generative AI and LLMs overview
+      Lab-ready check
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-ibm-power-for-genai" class="md-nav__link">
+  <a href="#lab-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      Why IBM Power for GenAI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Why IBM Power for GenAI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Benefits:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ibm-power10-differentiation" class="md-nav__link">
-    <span class="md-ellipsis">
-      IBM Power10 differentiation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IBM Power10 differentiation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-advantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Advantages:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary:
+      Lab guide
     </span>
   </a>
   
@@ -776,113 +682,20 @@
                   
 
 
-<div><h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h1>
-<p>Welcome to the AI on Power - Level 3 course - seller enablement demonstration.
-This Level 3 course will provide hands-on enablement on how to use Generative AI (GenAI) models on Power10 and will cover few use-cases to help understand the art of the possible.</p>
-<p>There are 4 main parts to this demonstration as you can see on the left hand side navigation pane:</p>
-<ul>
-<li>
-<p>Lab Setup - How to provision and setup the lab env for the hands-on demos</p>
-</li>
-<li>
-<p>LAB 1 – Deploy a LLM on Power10 - Deploy a LLM on Power10 and switch to a diff LLM</p>
-</li>
-<li>
-<p>LAB 2 – Deploy RAG on Power10 - RAG chatbot for domain specific Q&amp;A</p>
-</li>
-<li>
-<p>LAB 3 – Query DB using NL on Power10 - Generate SQL queries for a given DB schema, using NL</p>
-</li>
-</ul>
-<h2 id="generative-ai-and-llms-overview">Generative AI and LLMs overview<a class="headerlink" href="#generative-ai-and-llms-overview" title="Permanent link">¶</a></h2>
-<p>Large Language Models (LLMs) and Generative AI (GenAI) have revolutionized industries by enabling machines to understand, generate, and interact with human language in ways never seen before. They have disrupted the market by:</p>
-<ul>
-<li>
-<p><strong>Automating Content Creation</strong>: From drafting articles, reports, and code to generating creative content like music and artwork, GenAI has drastically reduced time and costs in creative industries.</p>
-</li>
-<li>
-<p><strong>Enhancing Customer Experience</strong>: LLM-powered chatbots and virtual assistants are offering more personalized, human-like interactions, reshaping customer service and support.</p>
-</li>
-<li>
-<p><strong>Transforming Decision-Making</strong>: With advanced data processing and natural language understanding, businesses are leveraging AI for smarter, faster insights and predictive analytics.</p>
-</li>
-<li>
-<p><strong>Boosting Productivity</strong>: LLMs streamline workflows by handling complex tasks, like writing, summarizing, and translating, allowing professionals to focus on more strategic, creative efforts.</p>
-</li>
-</ul>
-<p>In short, LLMs and GenAI are reshaping industries by enhancing efficiency, creativity, and customer engagement, making them indispensable tools in the modern business landscape.</p>
-<h2 id="why-ibm-power-for-genai">Why IBM Power for GenAI<a class="headerlink" href="#why-ibm-power-for-genai" title="Permanent link">¶</a></h2>
-<p>IBM Power platform is a high-performance, enterprise-grade computing solution designed to handle demanding workloads such as AI, analytics, cloud, and mission-critical applications. With unmatched processing power, scalability, and reliability, IBM Power enables organizations to optimize performance, lower costs, and ensure security.</p>
-<h3 id="key-benefits">Key Benefits:<a class="headerlink" href="#key-benefits" title="Permanent link">¶</a></h3>
-<ul>
-<li>
-<p><strong>Unmatched Performance</strong>: Optimized for data-intensive applications, AI, and large-scale analytics, delivering faster insights and better decision-making.</p>
-</li>
-<li>
-<p><strong>Scalability</strong>: Seamlessly scale workloads across on-prem, cloud, and hybrid environments to meet evolving business needs.</p>
-</li>
-<li>
-<p><strong>Enterprise-Grade Security</strong>: Built-in security features provide robust protection for sensitive data and critical operations.</p>
-</li>
-<li>
-<p><strong>Efficiency and Flexibility</strong>: Designed for diverse environments, supporting Linux, AIX, IBM i, and containerized applications, making it versatile for a range of industries.</p>
-</li>
-</ul>
-<p>IBM Power is the platform of choice for businesses seeking to future-proof their IT infrastructure, handle complex workloads, and accelerate innovation</p>
-<h2 id="ibm-power10-differentiation">IBM Power10 differentiation<a class="headerlink" href="#ibm-power10-differentiation" title="Permanent link">¶</a></h2>
-<p>IBM Power10 offers several advantages for Generative AI (GenAI) use cases, providing the computational power, security, and efficiency required to support the demanding workloads of AI-driven applications. Here’s how Power10 is uniquely positioned to accelerate GenAI:</p>
-<h3 id="key-advantages">Key Advantages:<a class="headerlink" href="#key-advantages" title="Permanent link">¶</a></h3>
-<ol>
-<li>
-<p><strong>High Performance for AI Workloads:</strong></p>
-<ul>
-<li>
-<p><strong>AI Acceleration</strong>: IBM Power10 includes AI inference acceleration directly on the chip, allowing faster processing of GenAI tasks such as model training, inference, and real-time AI applications.</p>
-</li>
-<li>
-<p><strong>Massive Scalability</strong>: Power10 is designed to handle large-scale AI models, with enhanced memory bandwidth and processing power to efficiently manage vast datasets used in training LLMs and GenAI systems.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Memory and Bandwidth Optimization:</strong></p>
-<ul>
-<li>The DDR5 memory and faster I/O bandwidth provide a significant performance boost, enabling GenAI models to run more efficiently.</li>
-</ul>
-</li>
-<li>
-<p><strong>Energy Efficiency:</strong></p>
-<ul>
-<li>Power10 processors are highly energy-efficient, offering more performance per watt compared to previous generations. This reduces operational costs and is especially beneficial for the resource-intensive training and deployment of GenAI models.</li>
-</ul>
-</li>
-<li>
-<p><strong>Security:</strong></p>
-<ul>
-<li>
-<p>IBM Power10 comes with end-to-end encryption and advanced memory protection features, ensuring that sensitive AI workloads are secure from potential breaches. This is particularly important in industries like healthcare and finance, where GenAI applications need strong data protection.</p>
-</li>
-<li>
-<p>Quantum-safe encryption helps future-proof AI workloads against quantum computing threats.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Flexible Cloud and Hybrid Deployments:</strong></p>
-<ul>
-<li>Power10 integrates smoothly with hybrid cloud environments, allowing enterprises to run GenAI workloads both on-premises and in the cloud. This flexibility is key for scaling AI applications while maintaining control over data and infrastructure.</li>
-</ul>
-</li>
-<li>
-<p><strong>Support for AI Ecosystems:</strong></p>
-<ul>
-<li>IBM Power10 works seamlessly with AI frameworks like TensorFlow and PyTorch, making it easier for developers to build, train, and deploy GenAI models without needing major infrastructure changes.</li>
-<li>Support for OpenShift and Kubernetes enhances containerization, allowing efficient orchestration of AI workloads.</li>
-</ul>
-</li>
-</ol>
-<h2 id="summary"><strong>Summary:</strong><a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>IBM Power10 is designed to meet the specific needs of GenAI use cases by offering high-performance processing, memory scalability, security, and energy efficiency. It empowers enterprises to handle complex AI workloads efficiently while maintaining flexibility and security, making it ideal for industries that rely on AI-driven innovation.</p></div>
+<div><h1 id="generate-sql-query-using-code-llm-on-ibm-power10-lab-guide">Generate SQL query using code LLM on IBM Power10 - Lab guide<a class="headerlink" href="#generate-sql-query-using-code-llm-on-ibm-power10-lab-guide" title="Permanent link">¶</a></h1>
+<h2 id="lab-ready-check">Lab-ready check<a class="headerlink" href="#lab-ready-check" title="Permanent link">¶</a></h2>
+<p>Make sure you have the following items ready:
+  - In your browser, you have logged in as cecuser in the OpenShift GUI/console.
+  - In your terminal, you have logged into the bastion server and authenticated to the OpenShift cluster using the OpenShift CLI oc.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not proceed further unless the items mentioned above are ready. Please refer to "Lab setup instructions" section (see left hand side menu) to setup your browser and terminal windows.</p>
+</div>
+<h2 id="lab-guide">Lab guide<a class="headerlink" href="#lab-guide" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Image zoom functionality</p>
+<p>Feel free to click on the images in the lab guide below to a view larger image</p>
+</div></div>
 
 
 
@@ -928,10 +741,10 @@ This Level 3 course will provide hands-on enablement on how to use Generative AI
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy"], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
