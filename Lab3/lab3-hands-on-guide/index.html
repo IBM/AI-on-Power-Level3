@@ -817,12 +817,11 @@
 </li>
 <li>
 <p>Use the deployment resource to restart the pods.</p>
+<div class="admonition note">
+<p class="admonition-title">ConfigMap update does not restart pods automatically</p>
+</div>
+<p>The existing pod won't see the ConfigMap changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart automatically. It needs to be done manually.</p>
 </li>
-</ol>
-<p>!!! note "ConfigMap update does not restart pods automatically"</p>
-<div class="highlight"><pre><span></span><code>   The existing pod won't see the ConfigMap changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart automatically. It needs to be done manually.
-</code></pre></div>
-<ol start="7">
 <li>
 <p>Navigate to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "<strong>D lab1-demo</strong>" in that pane which will then open up the deployment details view for lab1-demo deployment.
    <a class="glightbox" href="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead"></a></p>
@@ -921,14 +920,14 @@
 <p>Generate C code for sorting a list of numbers.
    <a class="glightbox" href="https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b"></a></p>
 <ul>
-<li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line as <code>#include &lt;stdio.h&gt;</code> which was incomplete!</li>
+<li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code></li>
 </ul>
 </li>
 <li>
 <p>Generate C code for swapping 2 numbers without using a temporary variable
    <a class="glightbox" href="https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef"></a></p>
 <ul>
-<li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line as <code>#include &lt;stdio.h&gt;</code> which was incomplete!</li>
+<li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code></li>
 </ul>
 </li>
 </ol>
