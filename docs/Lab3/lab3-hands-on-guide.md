@@ -10,8 +10,12 @@ Make sure you have the following items ready:
 
 ## Lab guide
 
+!!! warning "Pre-requisite"
+    
+    This lab assumes you have finished Lab1. This lab uses the OpenShift resources deployed in Lab1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab1
+    
 !!! note "Image zoom functionality"
 
     Feel free to click on the images in the lab guide below to a view larger image
 
-
+Since we already To keep TechZone resource usage at 
