@@ -144,7 +144,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
 * USERS - This which has user specific info (user_id, name, age, dob etc)
 * ACCOUNTS - This holds the account balance of each user with user_id being the common field between the 2 tables
 
-1. Given the above DB example, the prompt (aka context) we need to provide is as below:
+1. Given the above DB example, the prompt (aka context) we need to provide to the code LLM is as below:
    ```
    You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
 
@@ -174,4 +174,25 @@ Let's take an super simple example of a bank which has information stored in 2 t
    ```
    With the above schema, please generate sql query to list all users whose balance is > 2000
    ```
+3. Let's send the "Prompt + Query" to the code LLM and see how it responds.
    
+   ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
+
+     - The SQL query generated seems correct. Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is > 2000
+     - For the sake of people who may want to analyse further, pasting the SQL query that was generated, below:
+       `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance > 2000; `
+       
+4. Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. The query I have formed is given below. Let's do that and see how it responds...
+    ```
+    What does the below SQL query do ?
+    SQL Query:
+    SELECT * FROM USERS u, ACCOUNTS a WHERE u.userid = a.userid AND a.balance > 2000;
+    ```
+
+    ![image](https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8)
+
+    That's a decent explanation of the SQL query!
+5. 
+
+   
+
