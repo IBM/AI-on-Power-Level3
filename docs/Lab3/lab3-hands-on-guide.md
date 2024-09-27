@@ -91,3 +91,16 @@ Make sure you have the following items ready:
 ### Generate python code
 
 Now let's use the granite code model to generate python code using natural language queries.
+
+1. Generating python code fibonacci series
+   ![image](https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3)
+   - I ran this code on my local python environment and it ran without errors!
+   - Note that I spelled fibonacci incorrectly, yet it understood my question correctly.
+   - Also note that the answer it gave uses recursion (function fib is being called recursively).
+     ![image](https://github.com/user-attachments/assets/a77331dd-190d-4cdf-94c3-c5feb7311f2d)
+
+2. Now let's try asking it to generate the same code without using recursion.
+   ![image](https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b)
+   - I ran this code on my local python environment and it ran 
+
+
