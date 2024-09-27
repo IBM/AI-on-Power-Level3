@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generate-sql-query-using-code-llm-on-ibm-power10-lab-guide" class="md-skip">
+        <a href="#generate-code-given-a-natural-language-query-using-code-llm-on-ibm-power10-lab-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -597,6 +597,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#generate-python-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate python code
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -692,6 +701,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#generate-python-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate python code
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -712,7 +730,7 @@
                   
 
 
-<div><h1 id="generate-sql-query-using-code-llm-on-ibm-power10-lab-guide">Generate SQL query using code LLM on IBM Power10 - Lab guide<a class="headerlink" href="#generate-sql-query-using-code-llm-on-ibm-power10-lab-guide" title="Permanent link">¶</a></h1>
+<div><h1 id="generate-code-given-a-natural-language-query-using-code-llm-on-ibm-power10-lab-guide">Generate code given a natural language query using code LLM on IBM Power10 - Lab guide<a class="headerlink" href="#generate-code-given-a-natural-language-query-using-code-llm-on-ibm-power10-lab-guide" title="Permanent link">¶</a></h1>
 <h2 id="lab-ready-check">Lab-ready check<a class="headerlink" href="#lab-ready-check" title="Permanent link">¶</a></h2>
 <p>Make sure you have the following items ready:</p>
 <ul>
@@ -801,6 +819,37 @@
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2"></a></p>
 <p>This verifies that we have indeed deployed granite code LLM.</p>
+</li>
+<li>
+<p>Let's access our model. As we did in Lab1, head to <strong>Topology</strong> view, click on the <strong>Open URL</strong> icon of your application.
+    <a class="glightbox" href="https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f"></a></p>
+</li>
+<li>A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
+    <a class="glightbox" href="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53"></a></li>
+<li>
+<p>Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
+    <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Experimenting with model parameters</p>
+<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab</p>
+</div>
+</li>
+</ol>
+<h3 id="generate-python-code">Generate python code<a class="headerlink" href="#generate-python-code" title="Permanent link">¶</a></h3>
+<p>Now let's use the granite code model to generate python code using natural language queries.</p>
+<ol>
+<li>
+<p>Generating python code fibonacci series
+   <a class="glightbox" href="https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3"></a>
+   - I ran this code on my local python environment and it ran without errors!
+   - Note that I spelled fibonacci incorrectly, yet it understood my question correctly.
+   - Also note that the answer it gave uses recursion (function fib is being called recursively).
+     <a class="glightbox" href="https://github.com/user-attachments/assets/a77331dd-190d-4cdf-94c3-c5feb7311f2d" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a77331dd-190d-4cdf-94c3-c5feb7311f2d"></a></p>
+</li>
+<li>
+<p>Now let's try asking it to generate the same code without using recursion.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b"></a>
+   - I ran this code on my local python environment and it ran </p>
 </li>
 </ol></div>
 
