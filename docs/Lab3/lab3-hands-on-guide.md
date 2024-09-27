@@ -31,7 +31,14 @@ Make sure you have the following items ready:
 4. In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**
    - Key: MODEL_NAME
    - Value: granite-8b-code-instruct.Q4_K_M.gguf
-     ---
+   ---
    - Key: MODEL_URL
    - Value: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/blob/main/granite-8b-code-instruct.Q4_K_M.gguf
+   ![image](https://github.com/user-attachments/assets/35558543-94b8-454c-bf9f-d03834764cba)
+   
+   !!! note "ConfigMap update does not restart pods"
+   
+       The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
 
+5. Let's go to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "**D lab1-demo**" in that pane which will then open up the deployment details view for lab1-demo deployment.
+   
