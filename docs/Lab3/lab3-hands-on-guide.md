@@ -42,7 +42,7 @@ Make sure you have the following items ready:
      ![image](https://github.com/user-attachments/assets/395d95b2-bd4f-4163-980a-536acf9c4877)
      ---
    
-   !!! note "ConfigMap update does not restart pods"
+     !!! note "ConfigMap update does not restart pods"
    
        The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
    
