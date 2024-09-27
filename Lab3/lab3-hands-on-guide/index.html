@@ -942,7 +942,7 @@
 <li>ACCOUNTS - This holds the account balance of each user with user_id being the common field between the 2 tables</li>
 </ul>
 <ol>
-<li>Given the above DB example, the prompt (aka context) we need to provide is as below:
+<li>Given the above DB example, the prompt (aka context) we need to provide to the code LLM is as below:
    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> Here are the 2 tables :
@@ -969,7 +969,45 @@
 <li>Natural language query can be something like:
    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>With the above schema, please generate sql query to list all users whose balance is &gt; 2000
 </code></pre></div></li>
-</ol></div>
+<li>Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.</li>
+</ol>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11"></a></p>
+<div class="highlight"><pre><span></span><code> - The SQL query generated seems correct. Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is &gt; 2000
+ - For the sake of people who may want to analyse further, pasting the SQL query that was generated, below:
+   `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000; `
+</code></pre></div>
+<ol start="4">
+<li>
+<p>Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Let's do that and see how it responds...
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>What does the below SQL query do ?
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>SQL Query:
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.userid = a.userid AND a.balance &gt; 2000;
+</code></pre></div>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8"></a></p>
+<p>That's a decent explanation of the SQL query!</p>
+</li>
+<li>
+<p>Let's try one more example. Here I give it 2 conditions to match in the query.
+   NOTE: You don't have to repeat the whole schema in the prompt. LLMs can remember context.</p>
+</li>
+</ol>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Using the schema given above, generate SQL query to list all users whose account balance &gt; 2000 and user is of type employee
+</code></pre></div>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a"></a>
+<p>Response received as below:
+   </p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Here's the SQL query to list all users whose account balance is greater than 2000 and they are of type employee from the USERS and ACCOUNTS tables:
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000 AND usertypeid='employee';
+</code></pre></div>
+     - The response is not 100% correct.
+     - The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.
+     - The correct SQL query would have <code>u.usertypeid='employee'</code> so that the DB knows that its part of the USERS (aliased as <code>u</code> in the query) table.
+<p>Re-iterating the point we made above, code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed &amp; tweaked to perfection by the developer. There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case.</p>
+<p>IBM offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.</p>
+<ol start="8">
+<li>IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (e.g.: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.</li>
+</ol>
+<p><strong>Summary</strong></p>
+<p>Code LLMs democratize coding by making it more accessible to non-coders, accelerating the development process for smaller teams, and assisting both beginners and experienced developers in learning and improving productivity. By lowering technical barriers, they are transforming who can engage in software development and how innovation happens across industries.</p></div>
 
 
 
