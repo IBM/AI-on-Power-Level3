@@ -55,4 +55,18 @@ Make sure you have the following items ready:
 
         This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
 
-11. 
+11. If all goes well, you should see just 1 pod running.
+    ![image](https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489)
+
+12. Let's verify that the model running is granite code LLM!. Click on the pod to enter the pod details view/page.
+    ![image](https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934)
+
+13. In the pod details page, click on the Logs tab to see the pod logs.
+    ![image](https://github.com/user-attachments/assets/ac49a5bb-bbf0-4ac1-9050-a88327185c18)
+14. In the log window, scroll upwards to see the name of the model against the attribute llm_load_print_meta: general.name
+    ![image](https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2)
+
+    This verifies that we have indeed deployed granite code LLM.
+
+
+
