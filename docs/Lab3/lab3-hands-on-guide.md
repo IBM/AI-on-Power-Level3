@@ -23,7 +23,7 @@ Make sure you have the following items ready:
 1. In this lab, we will deploy IBM's granite code LLM which is also available on HF. Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    ![image](https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c)
 
-3. Select ConfigMaps and click **model-params**
+3. Select **ConfigMaps** and click **model-params**
    ![image](https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5)
 
 
