@@ -727,27 +727,26 @@
 <li>Value: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/resolve/main/granite-8b-code-instruct.Q4_K_M.gguf     </li>
 </ul>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/395d95b2-bd4f-4163-980a-536acf9c4877" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/395d95b2-bd4f-4163-980a-536acf9c4877"></a></p>
-</li>
-</ol>
 <p>!!! note "ConfigMap update does not restart pods"</p>
-<div class="highlight"><pre><span></span><code>   The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
+<div class="highlight"><pre><span></span><code> The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
 </code></pre></div>
-<ol start="7">
-<li>Let's go to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "<strong>D lab1-demo</strong>" in that pane which will then open up the deployment details view for lab1-demo deployment.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead"></a></li>
+</li>
+<li>
+<p>Let's go to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "<strong>D lab1-demo</strong>" in that pane which will then open up the deployment details view for lab1-demo deployment.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead"></a></p>
+</li>
 <li>
 <p>Click <strong>Actions</strong> and select <strong>Restart rollout</strong>. This will restart the deployment which results in re-deployment of the pod. This ensure the pod will now see the new ConfigMap changes.
    <a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
 </li>
 <li>
 <p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Model download will take time - Have patience!!</p>
+<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
+</div>
 </li>
-</ol>
-<p>!!! info "Model download will take time - Have patience!!"</p>
-<div class="highlight"><pre><span></span><code>    This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
-</code></pre></div>
-<ol start="11">
 <li>
 </ol></div>
 
