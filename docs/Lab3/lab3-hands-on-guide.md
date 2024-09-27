@@ -46,13 +46,15 @@ Make sure you have the following items ready:
 7. Let's go to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "**D lab1-demo**" in that pane which will then open up the deployment details view for lab1-demo deployment.
    ![image](https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead)
 8. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in re-deployment of the pod. This ensure the pod will now see the new ConfigMap changes.
-9. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+   ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
+   
+10. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
    ![image](https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926)
    
    !!! info "Model download will take time - Have patience!!"
 
         This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
 
-10. 
+11. 
 
    
