@@ -43,12 +43,12 @@ Make sure you have the following items ready:
      ---
 
 6. Use the deployment resource to restart the pods.
-      
-   !!! note "ConfigMap update does not restart pods automatically"
+         
+    !!! note "ConfigMap update does not restart pods automatically"
    
        The existing pod won't see the ConfigMap changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart automatically. It needs to be done manually.
-   
-7. Navigate to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "**D lab1-demo**" in that pane which will then open up the deployment details view for lab1-demo deployment.
+      
+8. Navigate to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "**D lab1-demo**" in that pane which will then open up the deployment details view for lab1-demo deployment.
    ![image](https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead)
    
 9. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in re-deployment of the pod. This ensure the pod will now see the new ConfigMap changes.
@@ -124,11 +124,11 @@ Now let's use the granite code model to generate C code using natural language q
 1. Generate C code for sorting a list of numbers.
    ![image](https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b)
 
-     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line as `#include <stdio.h>` which was incomplete!
+     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`
 
 2. Generate C code for swapping 2 numbers without using a temporary variable
    ![image](https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef)
 
-     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line as `#include <stdio.h>` which was incomplete!
+     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`
 
 ### Generate SQL query
