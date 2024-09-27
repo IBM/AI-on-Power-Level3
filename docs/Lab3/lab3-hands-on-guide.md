@@ -20,10 +20,18 @@ Make sure you have the following items ready:
 
     Feel free to click on the images in the lab guide below to a view larger image
 
-1. In this lab, we will deploy IBM's granite code LLM which is also available on HF. Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+1. In this lab, we will deploy IBM's granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    ![image](https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c)
 
-3. Select **ConfigMaps** and click **model-params**
+2. Select **ConfigMaps** and click **model-params**
    ![image](https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5)
 
+3. Click on **Actions** -> **Edit ConfigMap**
+   ![image](https://github.com/user-attachments/assets/e900c672-ee49-4f9d-94f2-f28bbe1aef20)
+4. In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**
+   - Key: MODEL_NAME
+   - Value: granite-8b-code-instruct.Q4_K_M.gguf
+     ---
+   - Key: MODEL_URL
+   - Value: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/blob/main/granite-8b-code-instruct.Q4_K_M.gguf
 
