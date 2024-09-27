@@ -101,6 +101,15 @@ Now let's use the granite code model to generate python code using natural langu
 
 2. Now let's try asking it to generate the same code without using recursion.
    ![image](https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b)
-   - I ran this code on my local python environment and it ran 
+   - As expected, it did give the code snippet that doesn't use recursion, so it did well there.
+   - Generated code is not 100% correct. I ran this code on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.
+   - The above shows that code LLMs can generate almost perfect code and in some cases it might need developer intervention to make it perfect!
+
+   !!! info "Accuracy of code LLMs"
+
+       LLMs excel at generating simple or boilerplate code, often producing highly accurate results for common tasks such as sorting algorithms, basic input/output operations, or template-based functions. For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems. When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors. For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.
+
+### Generate C++ code
+
 
 
