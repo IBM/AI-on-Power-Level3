@@ -86,8 +86,6 @@ Make sure you have the following items ready:
 
         You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
 
-    
-
 ### Generate python code
 
 Now let's use the granite code model to generate python code using natural language queries.
@@ -117,6 +115,8 @@ Now let's use the granite code model to generate python code using natural langu
          - When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors.
          - For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.
 
+   Feel free to explore and try out more scenarios!
+
 ### Generate C code
 
 Now let's use the granite code model to generate C code using natural language queries.
@@ -131,4 +131,47 @@ Now let's use the granite code model to generate C code using natural language q
 
      - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`
 
+   Feel free to explore and try out more scenarios!
+
 ### Generate SQL query
+
+Generating SQL query using natural langguage is a little different than C or python code since SQL is a language to query Databases (DBs). One needs to give enough context to the code LLM for it to understand the DB table schemas for which you want it to generate the SQL query.
+
+The context is given as a prompt to the code LLM which preceeds the natural language query and the code LLM answers the query using the context given in the prompt. The best way to understand is looking at some examples as depicted below.
+
+Let's take an super simple example of a bank which has information stored in 2 tables in a DB:
+
+* USERS - This which has user specific info (user_id, name, age, dob etc)
+* ACCOUNTS - This holds the account balance of each user with user_id being the common field between the 2 tables
+
+1. Given the above DB example, the prompt (aka context) we need to provide is as below:
+   ```
+   You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
+
+    Here are the 2 tables :
+  
+    (1) Database Table Name: USERS
+    Table Schema:
+    Column Name # Meaning
+    user_id # unique identifier of the user
+    user_name # name of the user
+    usertypeid # user is '\''employee'\'', '\''customer'\''
+    gender_id # user'\''s gender is 1 for female, 2 for male and 3 for other
+    dob # date of birth of the user
+    address # adress of the user
+    state # state of the user
+    country # country of residence of the user
+    
+    (2) Database Table Name: ACCOUNTS
+    Table Schema:
+    Column Name # Meaning
+    acc_id # account number or account id of the user
+    user_id # user id of the user
+    balance # available balance in the account
+   
+   ```
+2. Natural language query can be something like:
+   ```
+   With the above schema, please generate sql query to list all users whose balance is > 2000
+   ```
+   
