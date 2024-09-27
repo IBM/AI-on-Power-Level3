@@ -44,7 +44,7 @@ Make sure you have the following items ready:
 
 6. Use the deployment resource to restart the pods.
       
-    !!! note "ConfigMap update does not restart pods automatically"
+   !!! note "ConfigMap update does not restart pods automatically"
    
        The existing pod won't see the ConfigMap changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart automatically. It needs to be done manually.
    
@@ -112,7 +112,10 @@ Now let's use the granite code model to generate python code using natural langu
 
     !!! info "Accuracy of code LLMs"
 
-         LLMs excel at generating simple or boilerplate code, often producing highly accurate results for common tasks such as sorting algorithms, basic input/output operations, or template-based functions. For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems. When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors. For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.
+         - LLMs excel at generating simple or boilerplate code, often producing highly accurate results for common tasks such as sorting algorithms, basic input/output operations, or template-based functions.
+         - For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems.
+         - When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors.
+         - For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.
 
 ### Generate C code
 
