@@ -684,9 +684,11 @@
 
 <div><h1 id="generate-sql-query-using-code-llm-on-ibm-power10-lab-guide">Generate SQL query using code LLM on IBM Power10 - Lab guide<a class="headerlink" href="#generate-sql-query-using-code-llm-on-ibm-power10-lab-guide" title="Permanent link">¶</a></h1>
 <h2 id="lab-ready-check">Lab-ready check<a class="headerlink" href="#lab-ready-check" title="Permanent link">¶</a></h2>
-<p>Make sure you have the following items ready:
-  - In your browser, you have logged in as cecuser in the OpenShift GUI/console.
-  - In your terminal, you have logged into the bastion server and authenticated to the OpenShift cluster using the OpenShift CLI oc.</p>
+<p>Make sure you have the following items ready:</p>
+<ul>
+<li>In your browser, you have logged in as cecuser in the OpenShift GUI/console.</li>
+<li>In your terminal, you have logged into the bastion server and authenticated to the OpenShift cluster using the OpenShift CLI oc.</li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not proceed further unless the items mentioned above are ready. Please refer to "Lab setup instructions" section (see left hand side menu) to setup your browser and terminal windows.</p>
@@ -694,13 +696,22 @@
 <h2 id="lab-guide">Lab guide<a class="headerlink" href="#lab-guide" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Pre-requisite</p>
-<p>This lab assumes you have finished Lab1. This lab uses the OpenShift resources deployed in Lab1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab1</p>
+<p>This lab assumes you have finished Lab1. This lab uses the OpenShift resources deployed in Lab1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab1!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Image zoom functionality</p>
 <p>Feel free to click on the images in the lab guide below to a view larger image</p>
 </div>
-<p>Since we already To keep TechZone resource usage at </p></div>
+<ol>
+<li>
+<p>In this lab, we will deploy IBM's granite code LLM which is also available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c"></a></p>
+</li>
+<li>
+<p>Select ConfigMaps and click <strong>model-params</strong>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5"></a></p>
+</li>
+</ol></div>
 
 
 
