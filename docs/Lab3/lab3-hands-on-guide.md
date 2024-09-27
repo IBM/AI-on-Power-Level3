@@ -44,7 +44,7 @@ Make sure you have the following items ready:
 
 6. Use the deployment resource to restart the pods.
       
-   !!! note "ConfigMap update does not restart pods automatically"
+    !!! note "ConfigMap update does not restart pods automatically"
    
        The existing pod won't see the ConfigMap changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart automatically. It needs to be done manually.
    
@@ -95,22 +95,22 @@ Now let's use the granite code model to generate python code using natural langu
 1. Generating python code for printing the fibonacci series
    ![image](https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3)
    
-   - I ran this code on my local python environment and it ran without errors!
+     - I ran this code on my local python environment and it ran without errors!
      
-   - Note that I spelled fibonacci incorrectly, yet it understood my question correctly.
+     - Note that I spelled fibonacci incorrectly, yet it understood my question correctly.
      
-   - Also note that the answer it gave uses recursion (function fib is being called recursively).
+     - Also note that the answer it gave uses recursion (function fib is being called recursively).
 
 3. Now let's try asking it to generate the same code without using recursion.
    ![image](https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b)
    
-   - As expected, it did give the code snippet that doesn't use recursion, so it did well there.
+     - As expected, it did give the code snippet that doesn't use recursion, so it did well there.
      
-   - Generated code is not 100% correct. I ran this code on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.
+     - Generated code is not 100% correct. I ran this code on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.
      
-   - The above shows that code LLMs can generate almost perfect code and in some cases it might need developer intervention to make it perfect!
+     - The above shows that code LLMs can generate almost perfect code and in some cases it might need developer intervention to make it perfect!
 
-   !!! info "Accuracy of code LLMs"
+    !!! info "Accuracy of code LLMs"
 
          LLMs excel at generating simple or boilerplate code, often producing highly accurate results for common tasks such as sorting algorithms, basic input/output operations, or template-based functions. For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems. When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors. For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.
 
@@ -121,10 +121,11 @@ Now let's use the granite code model to generate C code using natural language q
 1. Generate C code for sorting a list of numbers.
    ![image](https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b)
 
-   - I ran this code on my local python environment and it ran without errors! Ofcourse I had to fix the first line as `#include <stdio.h>` which was incomplete!
+     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line as `#include <stdio.h>` which was incomplete!
 
 2. Generate C code for swapping 2 numbers without using a temporary variable
    ![image](https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef)
 
-   - I ran this code on my local python environment and it ran without errors! Ofcourse I had to fix the first line as `#include <stdio.h>` which was incomplete!
+     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line as `#include <stdio.h>` which was incomplete!
 
+### Generate SQL query
