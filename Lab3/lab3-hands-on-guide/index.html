@@ -817,11 +817,12 @@
 </li>
 <li>
 <p>Use the deployment resource to restart the pods.</p>
-<div class="admonition note">
-<p class="admonition-title">ConfigMap update does not restart pods automatically</p>
-</div>
-<p>The existing pod won't see the ConfigMap changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart automatically. It needs to be done manually.</p>
 </li>
+</ol>
+<p>!!! note "ConfigMap update does not restart pods automatically"</p>
+<div class="highlight"><pre><span></span><code>   The existing pod won't see the ConfigMap changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart automatically. It needs to be done manually.
+</code></pre></div>
+<ol start="7">
 <li>
 <p>Navigate to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "<strong>D lab1-demo</strong>" in that pane which will then open up the deployment details view for lab1-demo deployment.
    <a class="glightbox" href="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead"></a></p>
@@ -904,7 +905,12 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Accuracy of code LLMs</p>
-<p>LLMs excel at generating simple or boilerplate code, often producing highly accurate results for common tasks such as sorting algorithms, basic input/output operations, or template-based functions. For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems. When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors. For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.</p>
+<ul>
+<li>LLMs excel at generating simple or boilerplate code, often producing highly accurate results for common tasks such as sorting algorithms, basic input/output operations, or template-based functions.</li>
+<li>For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems.</li>
+<li>When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors.</li>
+<li>For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.</li>
+</ul>
 </div>
 </li>
 </ol>
