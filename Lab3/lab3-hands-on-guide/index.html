@@ -704,13 +704,32 @@
 </div>
 <ol>
 <li>
-<p>In this lab, we will deploy IBM's granite code LLM which is also available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+<p>In this lab, we will deploy IBM's granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    <a class="glightbox" href="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c"></a></p>
 </li>
 <li>
 <p>Select <strong>ConfigMaps</strong> and click <strong>model-params</strong>
    <a class="glightbox" href="https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5"></a></p>
 </li>
+<li>
+<p>Click on <strong>Actions</strong> -&gt; <strong>Edit ConfigMap</strong>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/e900c672-ee49-4f9d-94f2-f28bbe1aef20" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e900c672-ee49-4f9d-94f2-f28bbe1aef20"></a></p>
+</li>
+<li>In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click <strong>Save</strong>
+   - Key: MODEL_NAME
+   - Value: granite-8b-code-instruct.Q4_K_M.gguf</li>
+</ol>
+<hr>
+<ul>
+<li>Key: MODEL_URL</li>
+<li>Value: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/blob/main/granite-8b-code-instruct.Q4_K_M.gguf
+   <a class="glightbox" href="https://github.com/user-attachments/assets/35558543-94b8-454c-bf9f-d03834764cba" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/35558543-94b8-454c-bf9f-d03834764cba"></a></li>
+</ul>
+<p>!!! note "ConfigMap update does not restart pods"</p>
+<div class="highlight"><pre><span></span><code>   The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
+</code></pre></div>
+<ol start="5">
+<li>Let's go to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "<strong>D lab1-demo</strong>" in that pane which will then open up the deployment details view for lab1-demo deployment.</li>
 </ol></div>
 
 
