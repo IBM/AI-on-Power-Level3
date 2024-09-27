@@ -212,6 +212,10 @@ Let's take an super simple example of a bank which has information stored in 2 t
 
    Re-iterating the point we made above, code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed & tweaked to perfection by the developer. There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case.
 
-7. 
-   
-   
+   IBM offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.
+
+8. IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (e.g.: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.
+
+**Summary**
+
+Code LLMs democratize coding by making it more accessible to non-coders, accelerating the development process for smaller teams, and assisting both beginners and experienced developers in learning and improving productivity. By lowering technical barriers, they are transforming who can engage in software development and how innovation happens across industries.
