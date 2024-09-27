@@ -94,12 +94,14 @@ Now let's use the granite code model to generate python code using natural langu
 
 1. Generating python code for printing the fibonacci series
    ![image](https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3)
+   
    - I ran this code on my local python environment and it ran without errors!
+     
    - Note that I spelled fibonacci incorrectly, yet it understood my question correctly.
+     
    - Also note that the answer it gave uses recursion (function fib is being called recursively).
-     ![image](https://github.com/user-attachments/assets/a77331dd-190d-4cdf-94c3-c5feb7311f2d)
 
-2. Now let's try asking it to generate the same code without using recursion.
+3. Now let's try asking it to generate the same code without using recursion.
    ![image](https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b)
    
    - As expected, it did give the code snippet that doesn't use recursion, so it did well there.
@@ -108,13 +110,21 @@ Now let's use the granite code model to generate python code using natural langu
      
    - The above shows that code LLMs can generate almost perfect code and in some cases it might need developer intervention to make it perfect!
 
-     !!! info "Accuracy of code LLMs"
+   !!! info "Accuracy of code LLMs"
 
          LLMs excel at generating simple or boilerplate code, often producing highly accurate results for common tasks such as sorting algorithms, basic input/output operations, or template-based functions. For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems. When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors. For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.
 
 ### Generate C code
 
+Now let's use the granite code model to generate C code using natural language queries.
+
 1. Generate C code for sorting a list of numbers.
    ![image](https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b)
 
-   
+   - I ran this code on my local python environment and it ran without errors! Ofcourse I had to fix the first line as `#include <stdio.h>` which was incomplete!
+
+2. Generate C code for swapping 2 numbers without using a temporary variable
+   ![image](https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef)
+
+   - I ran this code on my local python environment and it ran without errors! Ofcourse I had to fix the first line as `#include <stdio.h>` which was incomplete!
+
