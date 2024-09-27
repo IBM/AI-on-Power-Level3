@@ -727,9 +727,14 @@
 <li>Value: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/blob/main/granite-8b-code-instruct.Q4_K_M.gguf</li>
 </ul>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/35558543-94b8-454c-bf9f-d03834764cba" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/35558543-94b8-454c-bf9f-d03834764cba"></a></p>
-<p>!!! note "ConfigMap update does not restart pods"</p>
-<div class="highlight"><pre><span></span><code>   The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
-</code></pre></div>
+<ul>
+<li>
+<div class="admonition note">
+<p class="admonition-title">ConfigMap update does not restart pods</p>
+</div>
+<p>The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>Let's go to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "<strong>D lab1-demo</strong>" in that pane which will then open up the deployment details view for lab1-demo deployment.</p>
