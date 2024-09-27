@@ -76,6 +76,16 @@ Make sure you have the following items ready:
     This verifies that we have indeed deployed granite code LLM.
 
 15. Let's access our model. As we did in Lab1, head to **Topology** view, click on the **Open URL** icon of your application.
+    ![image](https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f)
+16. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
+    ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
+17. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
+    ![image](https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce)
+
+    !!! note "Experimenting with model parameters"
+
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+
     
 
 ### Generate python code
