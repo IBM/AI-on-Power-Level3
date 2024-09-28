@@ -966,17 +966,17 @@
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a> user_id # user id of the user
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a> balance # available balance in the account
 </code></pre></div></li>
-<li>Natural language query can be something like:</li>
-</ol>
+<li>
+<p>Natural language query can be something like:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>With the above schema, please generate sql query to list all users whose balance is &gt; 2000
 </code></pre></div>
-<ol start="4">
+</li>
 <li>
 <p>Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11"></a></p>
 <ul>
 <li>The SQL query generated seems correct. Its joining both the tables using <code>user_id</code> as the key and selecting all records where the user's account balance is &gt; 2000</li>
-<li>For the sake of people who may want to analyse further, pasting the SQL query that was generated <code>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000;</code></li>
+<li>For the sake of people who may want to analyse further, pasting the SQL query that was generated:  <code>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000;</code></li>
 </ul>
 </li>
 <li>
@@ -1003,12 +1003,12 @@
 <li>The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.</li>
 <li>The correct SQL query would have <code>u.usertypeid='employee'</code> so that the DB knows that its part of the USERS (aliased as <code>u</code> in the query) table.</li>
 </ul>
-</li>
-</ol>
 <p>Re-iterating the point we made above, code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed &amp; tweaked to perfection by the developer. There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case.</p>
 <p>IBM offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.</p>
-<ol start="8">
-<li>IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (e.g.: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.</li>
+</li>
+<li>
+<p>IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (e.g.: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.</p>
+</li>
 </ol>
 <p><strong>Summary</strong></p>
 <p>Code LLMs democratize coding by making it more accessible to non-coders, accelerating the development process for smaller teams, and assisting both beginners and experienced developers in learning and improving productivity. By lowering technical barriers, they are transforming who can engage in software development and how innovation happens across industries.</p></div>
