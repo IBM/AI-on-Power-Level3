@@ -171,18 +171,20 @@ Let's take an super simple example of a bank which has information stored in 2 t
    
    ```
 2. Natural language query can be something like:
+   
    ```
    With the above schema, please generate sql query to list all users whose balance is > 2000
    ```
-3. Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.
+   
+4. Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.
    
    ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
 
-     - The SQL query generated seems correct. Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is > 2000
-     - For the sake of people who may want to analyse further, pasting the SQL query that was generated, below:
-       `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance > 2000; `
+   - The SQL query generated seems correct. Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is > 2000
+   - For the sake of people who may want to analyse further, pasting the SQL query that was generated, below:
+      `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance > 2000; `
        
-4. Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Let's do that and see how it responds...
+5. Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Let's do that and see how it responds...
     ```
     What does the below SQL query do ?
     SQL Query:
