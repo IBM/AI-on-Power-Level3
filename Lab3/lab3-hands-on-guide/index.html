@@ -971,15 +971,14 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>With the above schema, please generate sql query to list all users whose balance is &gt; 2000
 </code></pre></div>
 <ol start="4">
-<li>Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.</li>
-</ol>
+<li>
+<p>Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11"></a></p>
 <ul>
 <li>The SQL query generated seems correct. Its joining both the tables using <code>user_id</code> as the key and selecting all records where the user's account balance is &gt; 2000</li>
-<li>For the sake of people who may want to analyse further, pasting the SQL query that was generated, below:
-      <code>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000;</code></li>
+<li>For the sake of people who may want to analyse further, pasting the SQL query that was generated <code>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000;</code></li>
 </ul>
-<ol start="5">
+</li>
 <li>
 <p>Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Let's do that and see how it responds...
     </p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>What does the below SQL query do ?
@@ -992,18 +991,20 @@
 <li>
 <p>Let's try one more example. Here I give it 2 conditions to match in the query.
    NOTE: You don't have to repeat the whole schema in the prompt. LLMs can remember context.</p>
-</li>
-</ol>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Using the schema given above, generate SQL query to list all users whose account balance &gt; 2000 and user is of type employee
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Using the schema given above, generate SQL query to list all users whose account balance &gt; 2000 and user is of type employee
 </code></pre></div>
-   <a class="glightbox" href="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a"></a>
-<p>Response received as below:
-   </p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Here's the SQL query to list all users whose account balance is greater than 2000 and they are of type employee from the USERS and ACCOUNTS tables:
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a"></a></p>
+<p>Response received as below:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Here's the SQL query to list all users whose account balance is greater than 2000 and they are of type employee from the USERS and ACCOUNTS tables:
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000 AND usertypeid='employee';
 </code></pre></div>
-     - The response is not 100% correct.
-     - The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.
-     - The correct SQL query would have <code>u.usertypeid='employee'</code> so that the DB knows that its part of the USERS (aliased as <code>u</code> in the query) table.
+<ul>
+<li>The response is not 100% correct.</li>
+<li>The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.</li>
+<li>The correct SQL query would have <code>u.usertypeid='employee'</code> so that the DB knows that its part of the USERS (aliased as <code>u</code> in the query) table.</li>
+</ul>
+</li>
+</ol>
 <p>Re-iterating the point we made above, code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed &amp; tweaked to perfection by the developer. There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case.</p>
 <p>IBM offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.</p>
 <ol start="8">
