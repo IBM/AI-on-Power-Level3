@@ -172,16 +172,16 @@ Let's take an super simple example of a bank which has information stored in 2 t
    ```
 2. Natural language query can be something like:
    
-   ```
-   With the above schema, please generate sql query to list all users whose balance is > 2000
-   ```
+     ```
+     With the above schema, please generate sql query to list all users whose balance is > 2000
+     ```
    
 4. Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.
    
      ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
 
      - The SQL query generated seems correct. Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is > 2000
-     - For the sake of people who may want to analyse further, pasting the SQL query that was generated `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance > 2000; `
+     - For the sake of people who may want to analyse further, pasting the SQL query that was generated:  `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance > 2000; `
        
 5. Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Let's do that and see how it responds...
     ```
@@ -214,9 +214,9 @@ Let's take an super simple example of a bank which has information stored in 2 t
      - The last part of the SQL query `usertypeid='employee'` is ambiguous as the DB won't know which `usertypeid` column to reference.
      - The correct SQL query would have `u.usertypeid='employee'` so that the DB knows that its part of the USERS (aliased as `u` in the query) table.
 
-   Re-iterating the point we made above, code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed & tweaked to perfection by the developer. There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case.
+     Re-iterating the point we made above, code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed & tweaked to perfection by the developer. There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case.
 
-   IBM offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.
+     IBM offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.
 
 8. IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (e.g.: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.
 
