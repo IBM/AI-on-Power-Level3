@@ -966,17 +966,20 @@
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a> user_id # user id of the user
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a> balance # available balance in the account
 </code></pre></div></li>
-<li>Natural language query can be something like:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>With the above schema, please generate sql query to list all users whose balance is &gt; 2000
-</code></pre></div></li>
+<li>Natural language query can be something like:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>With the above schema, please generate sql query to list all users whose balance is &gt; 2000
+</code></pre></div>
+<ol start="4">
 <li>Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.</li>
 </ol>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11"></a></p>
-<div class="highlight"><pre><span></span><code> - The SQL query generated seems correct. Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is &gt; 2000
- - For the sake of people who may want to analyse further, pasting the SQL query that was generated, below:
-   `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000; `
-</code></pre></div>
-<ol start="4">
+<ul>
+<li>The SQL query generated seems correct. Its joining both the tables using <code>user_id</code> as the key and selecting all records where the user's account balance is &gt; 2000</li>
+<li>For the sake of people who may want to analyse further, pasting the SQL query that was generated, below:
+      <code>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000;</code></li>
+</ul>
+<ol start="5">
 <li>
 <p>Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Let's do that and see how it responds...
     </p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>What does the below SQL query do ?
