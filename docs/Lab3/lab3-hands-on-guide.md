@@ -1,4 +1,4 @@
-# Generate code with natural language using code LLM on IBM Power10 - Lab guide
+# Use natural language to generate code using code LLM on IBM Power10 - Lab guide
 
 ## Lab-ready check
 
