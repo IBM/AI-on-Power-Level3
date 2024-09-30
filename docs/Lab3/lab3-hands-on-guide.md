@@ -214,7 +214,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
      - The last part of the SQL query `usertypeid='employee'` is ambiguous as the DB won't know which `usertypeid` column to reference.
      - The correct SQL query would have `u.usertypeid='employee'` so that the DB knows that its part of the USERS (aliased as `u` in the query) table.
 
-     Re-iterating some of the points we learned in this lab:
+7. Re-iterating some of the points we learned in this lab:
    
        - Code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed & tweaked to perfection by the developer.
 
