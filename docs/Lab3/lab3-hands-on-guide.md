@@ -176,7 +176,8 @@ Let's take an super simple example of a bank which has information stored in 2 t
      With the above schema, please generate sql query to list all users whose balance is > 2000
      ```
    
-4. Let's send the "Prompt + Query" to the code LLM and see how it responds.
+4. Let's send the "Prompt + Query" to the code LLM and see how it responds. Feel free to copy and paste it in your LLM application window.
+   
      ```
         You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
 
@@ -203,6 +204,8 @@ Let's take an super simple example of a bank which has information stored in 2 t
 
     With the above schema, please generate sql query to list all users whose balance is > 2000
      ```
+
+     <br/>
      
      ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
 
@@ -210,23 +213,27 @@ Let's take an super simple example of a bank which has information stored in 2 t
      - Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is > 2000
      - For the sake of people who may want to analyse further, pasting the SQL query that was generated:  `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance > 2000; `
        
-6. Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Let's do that and see how it responds...
+6. Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Feel free to copy the query and post it in your LLM application window.
+   
     ```
     What does the below SQL query do ?
     SQL Query:
     SELECT * FROM USERS u, ACCOUNTS a WHERE u.userid = a.userid AND a.balance > 2000;
     ```
-
+    <br/>
+    
     ![image](https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8)
 
     That's a decent explanation of the SQL query!
    
-7. Let's try one more example. Here I give it 2 conditions to match in the query.
+8. Let's try one more example. Here I give it 2 conditions to match in the query.
    NOTE: You don't have to repeat the whole schema in the prompt. LLMs can remember context.
    
      ```
      Using the schema given above, generate SQL query to list all users whose account balance > 2000 and user is of type employee
      ```
+
+     <br/>
      
      ![image](https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a)
   
@@ -236,12 +243,13 @@ Let's take an super simple example of a bank which has information stored in 2 t
      Here's the SQL query to list all users whose account balance is greater than 2000 and they are of type employee from the USERS and ACCOUNTS tables:
      SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance > 2000 AND usertypeid='employee';
      ```
+     <br/>
      
      - The response is not 100% correct.
      - The last part of the SQL query `usertypeid='employee'` is ambiguous as the DB won't know which `usertypeid` column to reference.
      - The correct SQL query would have `u.usertypeid='employee'` so that the DB knows that its part of the USERS (aliased as `u` in the query) table.
 
-8. Re-iterating some of the points we learned in this lab:
+9. Re-iterating some of the points we learned in this lab:
    
        - Code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed & tweaked to perfection by the developer.
 
@@ -249,7 +257,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
 
        - IBM also offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.
 
-9. IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (e.g.: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.
+10. IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (e.g.: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.
     - Check this ~2min short [video demo](https://mediacenter.ibm.com/media/Infusing+AI+into+mission+critical+workloads+with+PowerVS+and+watsonx.ai/1_fzqutamr) on "Infusing AI into mission critical workloads with PowerVS and watsonx.ai" which uses natural language to query fraudulent transactions and list high value customers. Although this demo is based on PowerVS use case the same is applicable to on-premise as well.
 
 **Summary**
