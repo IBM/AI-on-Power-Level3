@@ -1003,11 +1003,13 @@
 <li>The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.</li>
 <li>The correct SQL query would have <code>u.usertypeid='employee'</code> so that the DB knows that its part of the USERS (aliased as <code>u</code> in the query) table.</li>
 </ul>
-<p>Re-iterating the point we made above, code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed &amp; tweaked to perfection by the developer. There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case.</p>
-<p>IBM offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.</p>
+<p>Re-iterating the point we made above, code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed &amp; tweaked to perfection by the developer. There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case. IBM also offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.</p>
 </li>
 <li>
 <p>IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (e.g.: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.</p>
+<ul>
+<li>Check this ~2min short <a href="https://mediacenter.ibm.com/media/Infusing+AI+into+mission+critical+workloads+with+PowerVS+and+watsonx.ai/1_fzqutamr">video demo</a> on "Infusing AI into mission critical workloads with PowerVS and watsonx.ai" which uses natural language to query fraudulent transactions and list high value customer. Although this demo is based on PowerVS use case the same is applicable to on-premise as well.</li>
+</ul>
 </li>
 </ol>
 <p><strong>Summary</strong></p>
