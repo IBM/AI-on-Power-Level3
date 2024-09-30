@@ -776,17 +776,27 @@
 <h3 id="deploy-milvus">Deploy milvus<a class="headerlink" href="#deploy-milvus" title="Permanent link">¶</a></h3>
 <p>Since our focus is to provide hands-on using jupyter notebook we will use <code>oc</code> CLI to quickly deploy milvus DB using the pre-created yamls available in our github repository</p>
 <ol>
-<li>Navigate to the terminal window where we had setup <code>oc</code> CLI on the bastion node.</li>
-</ol>
+<li>
+<p>Navigate to the terminal window where we had setup <code>oc</code> CLI on the bastion node.</p>
 <p>!!! warning "Ensure <code>oc</code> CLI is authenticated with the cluster"</p>
-<div class="highlight"><pre><span></span><code>   Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli) to ensure `oc` is authenticated with the cluster.
+<div class="highlight"><pre><span></span><code> Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli) to ensure `oc` is authenticated with the cluster.
 </code></pre></div>
-<ol start="3">
-<li>Clone the github repository.</li>
+</li>
+<li>
+<p>Make sure you are in the home directory and then run the command below to clone the github repository. Switch to the newly cloned repository directory.</p>
+<ul>
+<li><code>cd</code></li>
+<li><code>git clone https://github.com/mgiessing/bcn-lab-2084</code></li>
+<li><code>cd bcn-lab-2084/</code></li>
+</ul>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/87e39369-ebbc-4fbd-a130-214f04ee4212" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/87e39369-ebbc-4fbd-a130-214f04ee4212"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/b5ac2239-552f-4839-900f-917f11109ab9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b5ac2239-552f-4839-900f-917f11109ab9"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5"></a></p>
+</li>
 </ol>
-<p>4.
-5.
-6. Switch to <strong>lab2-demo</strong> project</p></div>
+<p>5.
+6.
+7. Switch to <strong>lab2-demo</strong> project</p></div>
 
 
 
