@@ -107,7 +107,7 @@ In this lab, we will focus on the below:
 
 5. Copy and paste the URL in the browser. You should see the jupyter screen as below:
 
-   ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
+     ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
 
 
 
