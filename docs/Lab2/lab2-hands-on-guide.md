@@ -39,7 +39,7 @@ In this lab, we will focus on the below:
 
     !!! warning "Ensure `oc` CLI is authenticated with the cluster"
 
-       Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli) to ensure `oc` is authenticated with the cluster.
+        Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli) to ensure `oc` is authenticated with the cluster.
 
 3. Make sure you are in the home directory and then run the command below to clone the github repository. Then switch to the newly cloned repository directory.
      - `cd`
@@ -70,5 +70,10 @@ In this lab, we will focus on the below:
      
      ![image](https://github.com/user-attachments/assets/0b632d95-3af0-4b48-a883-31085455370f)
 
-8. Switch to **lab2-demo** project
+8. Monitor deployment using the below command until all pods are in **Running** state. <br>
+   Hit Ctrl-C on the keyboard to exit and come back to the shell prompt.
+
+   ` oc get pods -w`
+
+    ![image](https://github.com/user-attachments/assets/5289e0ef-3322-4206-9da3-ef833db0608e)
 
