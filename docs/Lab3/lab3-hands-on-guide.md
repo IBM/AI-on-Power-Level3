@@ -205,7 +205,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
       With the above schema, please generate sql query to list all users whose balance is > 2000
      ```
 
-<br/>
+     <br/>
      
      ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
 
