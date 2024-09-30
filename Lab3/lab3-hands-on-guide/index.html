@@ -973,56 +973,61 @@
 </li>
 <li>
 <p>Let's send the "Prompt + Query" to the code LLM and see how it responds. Feel free to copy and paste it in your LLM application window.</p>
-<p>```
-    You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive</p>
-<p>Here are the 2 tables :</p>
-<p>(1) Database Table Name: USERS
-Table Schema:
-Column Name # Meaning
-user_id # unique identifier of the user
-user_name # name of the user
-usertypeid # user is '\''employee'\'', '\''customer'\''
-gender_id # user'\''s gender is 1 for female, 2 for male and 3 for other
-dob # date of birth of the user
-address # adress of the user
-state # state of the user
-country # country of residence of the user</p>
-<p>(2) Database Table Name: ACCOUNTS
-Table Schema:
-Column Name # Meaning
-acc_id # account number or account id of the user
-user_id # user id of the user
-balance # available balance in the account</p>
-<p>With the above schema, please generate sql query to list all users whose balance is &gt; 2000
- ```</p>
-<p><br></p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11"></a></p>
-<ul>
-<li>The SQL query generated seems correct.</li>
-<li>Its joining both the tables using <code>user_id</code> as the key and selecting all records where the user's account balance is &gt; 2000</li>
-<li>For the sake of people who may want to analyse further, pasting the SQL query that was generated:  <code>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000;</code></li>
-</ul>
 </li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> Here are the 2 tables :
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> (1) Database Table Name: USERS
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a> Table Schema:
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a> Column Name # Meaning
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a> user_id # unique identifier of the user
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a> user_name # name of the user
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a> usertypeid # user is '\''employee'\'', '\''customer'\''
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a> gender_id # user'\''s gender is 1 for female, 2 for male and 3 for other
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a> dob # date of birth of the user
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a> address # adress of the user
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a> state # state of the user
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a> country # country of residence of the user
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a> (2) Database Table Name: ACCOUNTS
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a> Table Schema:
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a> Column Name # Meaning
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a> acc_id # account number or account id of the user
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a> user_id # user id of the user
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a> balance # available balance in the account
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a> With the above schema, please generate sql query to list all users whose balance is &gt; 2000
+</code></pre></div>
+<p><br></p>
+<div class="highlight"><pre><span></span><code> ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
+
+ - The SQL query generated seems correct.
+ - Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is &gt; 2000
+ - For the sake of people who may want to analyse further, pasting the SQL query that was generated:  `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000; `
+</code></pre></div>
+<ol start="6">
 <li>
 <p>Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Feel free to copy the query and post it in your LLM application window.</p>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>What does the below SQL query do ?
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>SQL Query:
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.userid = a.userid AND a.balance &gt; 2000;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>What does the below SQL query do ?
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>SQL Query:
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.userid = a.userid AND a.balance &gt; 2000;
 </code></pre></div>
-<br>
+<p><br></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8"></a></p>
 <p>That's a decent explanation of the SQL query!</p>
 </li>
 <li>
 <p>Let's try one more example. Here I give it 2 conditions to match in the query.
    NOTE: You don't have to repeat the whole schema in the prompt. LLMs can remember context.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Using the schema given above, generate SQL query to list all users whose account balance &gt; 2000 and user is of type employee
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Using the schema given above, generate SQL query to list all users whose account balance &gt; 2000 and user is of type employee
 </code></pre></div>
 <p><br></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a"></a></p>
 <p>Response received as below:</p>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Here's the SQL query to list all users whose account balance is greater than 2000 and they are of type employee from the USERS and ACCOUNTS tables:
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000 AND usertypeid='employee';
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Here's the SQL query to list all users whose account balance is greater than 2000 and they are of type employee from the USERS and ACCOUNTS tables:
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000 AND usertypeid='employee';
 </code></pre></div>
  <br>
 <ul>
