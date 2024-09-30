@@ -524,6 +524,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deploy-jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy jupyter notebook
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -712,6 +721,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deploy-jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy jupyter notebook
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -794,11 +812,10 @@
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5"></a></p>
 </li>
 <li>
-<p>Make sure <code>oc CLI is pointing to the **lab2-demo** project</code>oc project lab2-demo `</p>
-</li>
-</ol>
+<p>Make sure `oc CLI is pointing to the <strong>lab2-demo</strong> project</p>
+<p><code>oc project lab2-demo</code></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/a68c209f-45dd-4317-acdc-38b34d7f1394" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a68c209f-45dd-4317-acdc-38b34d7f1394"></a></p>
-<ol start="7">
+</li>
 <li>
 <p>Run the below commands to deploy milvus DB
      </p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd Part2-RAG/milvus-deployment
@@ -814,11 +831,38 @@
 <li>
 <p>Monitor deployment using the below command until all pods are in <strong>Running</strong> state. <br>
    Hit Ctrl-C on the keyboard to exit and come back to the shell prompt.</p>
+<p><code>oc get pods -w</code></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/5289e0ef-3322-4206-9da3-ef833db0608e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5289e0ef-3322-4206-9da3-ef833db0608e"></a></p>
 </li>
 </ol>
-<p><code>oc get pods -w</code></p>
-<div class="highlight"><pre><span></span><code>![image](https://github.com/user-attachments/assets/5289e0ef-3322-4206-9da3-ef833db0608e)
-</code></pre></div></div>
+<h3 id="deploy-jupyter-notebook">Deploy jupyter notebook<a class="headerlink" href="#deploy-jupyter-notebook" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Run the below commands to deploy jupyter notebook (NB). Ignore any warnings if seen.</p>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd nb-deployment
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>oc apply -f .
+</code></pre></div>
+ <a class="glightbox" href="https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9"></a>
+</li>
+<li>
+<p>Verify the notebook pod is running using the command below. Hit Ctrl-C on keyboard to exit and return back to shell prompt.</p>
+<p><code>oc get pods --selector=app=cpu-notebook -w</code></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/3b7b1764-2135-4192-854e-0144068673b0" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/3b7b1764-2135-4192-854e-0144068673b0"></a></p>
+</li>
+<li>
+<p>Once the notebook pod is deployed you should be able to access it using the link retrieved from the below command:</p>
+<p><code>oc get route cpu-notebook -o jsonpath='{.spec.host}'</code></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/be511e8a-15e9-44af-8e40-6079cc266af6" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/be511e8a-15e9-44af-8e40-6079cc266af6"></a></p>
+<p>In my case, the URL was:
+   <code>cpu-notebook-lab2-demo.apps.p1279.cecc.ihost.com</code> <br>
+  but yours can be different!</p>
+</li>
+<li>
+<p>Copy and paste the URL in the browser. You should see the jupyter screen as below:</p>
+</li>
+</ol>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab"></a></p></div>
 
 
 
