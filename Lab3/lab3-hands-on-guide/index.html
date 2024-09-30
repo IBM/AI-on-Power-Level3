@@ -972,10 +972,33 @@
 </code></pre></div>
 </li>
 <li>
-<p>Let's send the "Prompt + Query" (feel free to join them by copying it from the above) to the code LLM and see how it responds.</p>
+<p>Let's send the "Prompt + Query" to the code LLM and see how it responds.
+     ```
+        You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive</p>
+<p>Here are the 2 tables :</p>
+<p>(1) Database Table Name: USERS
+Table Schema:
+Column Name # Meaning
+user_id # unique identifier of the user
+user_name # name of the user
+usertypeid # user is '\''employee'\'', '\''customer'\''
+gender_id # user'\''s gender is 1 for female, 2 for male and 3 for other
+dob # date of birth of the user
+address # adress of the user
+state # state of the user
+country # country of residence of the user</p>
+<p>(2) Database Table Name: ACCOUNTS
+Table Schema:
+Column Name # Meaning
+acc_id # account number or account id of the user
+user_id # user id of the user
+balance # available balance in the account</p>
+<p>With the above schema, please generate sql query to list all users whose balance is &gt; 2000
+ ```</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11"></a></p>
 <ul>
-<li>The SQL query generated seems correct. Its joining both the tables using <code>user_id</code> as the key and selecting all records where the user's account balance is &gt; 2000</li>
+<li>The SQL query generated seems correct.</li>
+<li>Its joining both the tables using <code>user_id</code> as the key and selecting all records where the user's account balance is &gt; 2000</li>
 <li>For the sake of people who may want to analyse further, pasting the SQL query that was generated:  <code>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000;</code></li>
 </ul>
 </li>
