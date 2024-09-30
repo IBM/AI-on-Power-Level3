@@ -39,13 +39,22 @@ Since our focus is to provide hands-on using jupyter notebook we will use `oc` C
 
 1. Navigate to the terminal window where we had setup `oc` CLI on the bastion node.
 
-   !!! warning "Ensure `oc` CLI is authenticated with the cluster"
+     !!! warning "Ensure `oc` CLI is authenticated with the cluster"
 
-       Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli) to ensure `oc` is authenticated with the cluster.
+         Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli) to ensure `oc` is authenticated with the cluster.
 
-3. Clone the github repository.
+3. Make sure you are in the home directory and then run the command below to clone the github repository. Switch to the newly cloned repository directory.
+     - `cd`
+     - `git clone https://github.com/mgiessing/bcn-lab-2084`
+     - `cd bcn-lab-2084/`
+
+     ![image](https://github.com/user-attachments/assets/87e39369-ebbc-4fbd-a130-214f04ee4212)
    
-4.
+     ![image](https://github.com/user-attachments/assets/b5ac2239-552f-4839-900f-917f11109ab9)
+   
+     ![image](https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5)
+
 5.
-6. Switch to **lab2-demo** project
+6.
+7. Switch to **lab2-demo** project
 
