@@ -178,34 +178,34 @@ Let's take an super simple example of a bank which has information stored in 2 t
    
 4. Let's send the "Prompt + Query" to the code LLM and see how it responds. Feel free to copy and paste it in your LLM application window.
    
-   ```
-   You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
-
-    Here are the 2 tables :
+     ```
+     You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
   
-    (1) Database Table Name: USERS
-    Table Schema:
-    Column Name # Meaning
-    user_id # unique identifier of the user
-    user_name # name of the user
-    usertypeid # user is '\''employee'\'', '\''customer'\''
-    gender_id # user'\''s gender is 1 for female, 2 for male and 3 for other
-    dob # date of birth of the user
-    address # adress of the user
-    state # state of the user
-    country # country of residence of the user
+      Here are the 2 tables :
     
-    (2) Database Table Name: ACCOUNTS
-    Table Schema:
-    Column Name # Meaning
-    acc_id # account number or account id of the user
-    user_id # user id of the user
-    balance # available balance in the account
-  
-    With the above schema, please generate sql query to list all users whose balance is > 2000
-   ```
+      (1) Database Table Name: USERS
+      Table Schema:
+      Column Name # Meaning
+      user_id # unique identifier of the user
+      user_name # name of the user
+      usertypeid # user is '\''employee'\'', '\''customer'\''
+      gender_id # user'\''s gender is 1 for female, 2 for male and 3 for other
+      dob # date of birth of the user
+      address # adress of the user
+      state # state of the user
+      country # country of residence of the user
+      
+      (2) Database Table Name: ACCOUNTS
+      Table Schema:
+      Column Name # Meaning
+      acc_id # account number or account id of the user
+      user_id # user id of the user
+      balance # available balance in the account
+    
+      With the above schema, please generate sql query to list all users whose balance is > 2000
+     ```
 
-   <br/>
+<br/>
      
      ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
 
