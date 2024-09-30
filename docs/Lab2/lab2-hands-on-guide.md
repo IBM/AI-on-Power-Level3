@@ -53,9 +53,10 @@ In this lab, we will focus on the below:
      ![image](https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5)
 
 5. Make sure `oc CLI is pointing to the **lab2-demo** project
-   `oc project lab2-demo `
+
+     `oc project lab2-demo `
    
-   ![image](https://github.com/user-attachments/assets/a68c209f-45dd-4317-acdc-38b34d7f1394)
+     ![image](https://github.com/user-attachments/assets/a68c209f-45dd-4317-acdc-38b34d7f1394)
 
 7. Run the below commands to deploy milvus DB
      ```
@@ -73,7 +74,41 @@ In this lab, we will focus on the below:
 8. Monitor deployment using the below command until all pods are in **Running** state. <br>
    Hit Ctrl-C on the keyboard to exit and come back to the shell prompt.
 
-   ` oc get pods -w`
+     `oc get pods -w`
 
-    ![image](https://github.com/user-attachments/assets/5289e0ef-3322-4206-9da3-ef833db0608e)
+      ![image](https://github.com/user-attachments/assets/5289e0ef-3322-4206-9da3-ef833db0608e)
+
+### Deploy jupyter notebook
+
+1. Run the below commands to deploy jupyter notebook (NB). Ignore any warnings if seen.
+
+     ```
+     cd nb-deployment
+
+     oc apply -f .
+     ```
+     ![image](https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9)
+
+2. Verify the notebook pod is running using the command below. Hit Ctrl-C on keyboard to exit and return back to shell prompt.
+   
+     `oc get pods --selector=app=cpu-notebook -w`
+
+     ![image](https://github.com/user-attachments/assets/3b7b1764-2135-4192-854e-0144068673b0)
+
+4. Once the notebook pod is deployed you should be able to access it using the link retrieved from the below command:
+   
+     `oc get route cpu-notebook -o jsonpath='{.spec.host}' `
+
+     ![image](https://github.com/user-attachments/assets/be511e8a-15e9-44af-8e40-6079cc266af6)
+
+     In my case, the URL was:
+       `cpu-notebook-lab2-demo.apps.p1279.cecc.ihost.com` <br>
+      but yours can be different!
+
+5. Copy and paste the URL in the browser. You should see the jupyter screen as below:
+
+   ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
+
+
+
 
