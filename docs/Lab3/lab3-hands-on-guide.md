@@ -227,7 +227,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
 
     That's a decent explanation of the SQL query!
    
-8. Let's try one more example. Here I give it 2 conditions to match in the query.
+8. Let's try one more example. Here I give it 2 conditions to match in the query.<br>
    NOTE: You don't have to repeat the whole schema in the prompt. LLMs can remember context.
    
      ```
