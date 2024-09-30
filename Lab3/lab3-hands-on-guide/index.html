@@ -998,16 +998,14 @@
 <a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
 <a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a> With the above schema, please generate sql query to list all users whose balance is &gt; 2000
 </code></pre></div>
-</li>
-</ol>
 <p><br></p>
-<div class="highlight"><pre><span></span><code> ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
-
- - The SQL query generated seems correct.
- - Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is &gt; 2000
- - For the sake of people who may want to analyse further, pasting the SQL query that was generated:  `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000; `
-</code></pre></div>
-<ol start="6">
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11"></a></p>
+<ul>
+<li>The SQL query generated seems correct.</li>
+<li>Its joining both the tables using <code>user_id</code> as the key and selecting all records where the user's account balance is &gt; 2000</li>
+<li>For the sake of people who may want to analyse further, pasting the SQL query that was generated:  <code>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000;</code></li>
+</ul>
+</li>
 <li>
 <p>Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Feel free to copy the query and post it in your LLM application window.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>What does the below SQL query do ?
