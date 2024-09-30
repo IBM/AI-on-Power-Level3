@@ -66,7 +66,7 @@ nav:
   - Lab2 - Deploy RAG on Power10:
     - 'Lab Overview': 'Lab2/lab2-overview.md'
     - 'Hands-on guide': 'Lab2/lab2-hands-on-guide.md'
-  - Lab3 - Query DB using NL on Power10:
+  - Lab3 - Deploy code LLM on Power10:
     - 'Lab Overview': 'Lab3/lab3-overview.md'
     - 'Hands-on guide': 'Lab3/lab3-hands-on-guide.md'
   - Credits
