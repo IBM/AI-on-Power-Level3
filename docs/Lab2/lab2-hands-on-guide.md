@@ -17,7 +17,9 @@ Make sure you have the following items ready:
     Feel free to click on the images in the lab guide below to a view larger image
 
 In this lab, we will focus on the below:
+
   - Deploy a vector DB - milvus
+    
   - Deploy a jupyter notebook where we will learn about:
       - Index the milvus DB with a sample PDF
       - Query the DB to get relevant documents for the question asked.
@@ -25,4 +27,4 @@ In this lab, we will focus on the below:
 
 
   
-###
+### TEST
