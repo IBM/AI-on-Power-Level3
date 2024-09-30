@@ -972,9 +972,9 @@
 </code></pre></div>
 </li>
 <li>
-<p>Let's send the "Prompt + Query" to the code LLM and see how it responds.
-     ```
-        You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive</p>
+<p>Let's send the "Prompt + Query" to the code LLM and see how it responds. Feel free to copy and paste it in your LLM application window.</p>
+<p>```
+    You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive</p>
 <p>Here are the 2 tables :</p>
 <p>(1) Database Table Name: USERS
 Table Schema:
@@ -995,6 +995,7 @@ user_id # user id of the user
 balance # available balance in the account</p>
 <p>With the above schema, please generate sql query to list all users whose balance is &gt; 2000
  ```</p>
+<p><br></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11"></a></p>
 <ul>
 <li>The SQL query generated seems correct.</li>
@@ -1003,11 +1004,12 @@ balance # available balance in the account</p>
 </ul>
 </li>
 <li>
-<p>Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Let's do that and see how it responds...
-    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>What does the below SQL query do ?
+<p>Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Feel free to copy the query and post it in your LLM application window.</p>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>What does the below SQL query do ?
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>SQL Query:
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.userid = a.userid AND a.balance &gt; 2000;
 </code></pre></div>
+<br>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8"></a></p>
 <p>That's a decent explanation of the SQL query!</p>
 </li>
@@ -1016,11 +1018,13 @@ balance # available balance in the account</p>
    NOTE: You don't have to repeat the whole schema in the prompt. LLMs can remember context.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Using the schema given above, generate SQL query to list all users whose account balance &gt; 2000 and user is of type employee
 </code></pre></div>
+<p><br></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2be00e6a-8d79-4f1b-8844-b6768b63d86a"></a></p>
 <p>Response received as below:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Here's the SQL query to list all users whose account balance is greater than 2000 and they are of type employee from the USERS and ACCOUNTS tables:
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Here's the SQL query to list all users whose account balance is greater than 2000 and they are of type employee from the USERS and ACCOUNTS tables:
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance &gt; 2000 AND usertypeid='employee';
 </code></pre></div>
+ <br>
 <ul>
 <li>The response is not 100% correct.</li>
 <li>The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.</li>
