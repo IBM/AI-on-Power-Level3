@@ -178,8 +178,8 @@ Let's take an super simple example of a bank which has information stored in 2 t
    
 4. Let's send the "Prompt + Query" to the code LLM and see how it responds. Feel free to copy and paste it in your LLM application window.
    
-     ```
-        You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
+   ```
+   You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
 
     Here are the 2 tables :
   
@@ -201,11 +201,11 @@ Let's take an super simple example of a bank which has information stored in 2 t
     acc_id # account number or account id of the user
     user_id # user id of the user
     balance # available balance in the account
-
+  
     With the above schema, please generate sql query to list all users whose balance is > 2000
-     ```
+   ```
 
-     <br/>
+   <br/>
      
      ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
 
@@ -220,6 +220,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
     SQL Query:
     SELECT * FROM USERS u, ACCOUNTS a WHERE u.userid = a.userid AND a.balance > 2000;
     ```
+
     <br/>
     
     ![image](https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8)
