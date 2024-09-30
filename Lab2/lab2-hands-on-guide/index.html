@@ -774,17 +774,16 @@
 </li>
 </ol>
 <h3 id="deploy-milvus">Deploy milvus<a class="headerlink" href="#deploy-milvus" title="Permanent link">¶</a></h3>
-<p>Since our focus is to provide hands-on using jupyter notebook we will use <code>oc</code> CLI to quickly deploy milvus DB using the pre-created yamls available in our github repository</p>
 <ol>
 <li>
 <p>Navigate to the terminal window where we had setup <code>oc</code> CLI on the bastion node.</p>
 <div class="admonition warning">
 <p class="admonition-title">Ensure <code>oc</code> CLI is authenticated with the cluster</p>
-</div>
 <p>Run a simple command: <code>oc project</code> and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in <a href="https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli">lab instructions</a> to ensure <code>oc</code> is authenticated with the cluster.</p>
+</div>
 </li>
 <li>
-<p>Make sure you are in the home directory and then run the command below to clone the github repository. Switch to the newly cloned repository directory.</p>
+<p>Make sure you are in the home directory and then run the command below to clone the github repository. Then switch to the newly cloned repository directory.</p>
 <ul>
 <li><code>cd</code></li>
 <li><code>git clone https://github.com/mgiessing/bcn-lab-2084</code></li>
@@ -794,10 +793,32 @@
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/b5ac2239-552f-4839-900f-917f11109ab9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b5ac2239-552f-4839-900f-917f11109ab9"></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5"></a></p>
 </li>
+<li>
+<p>Make sure <code>oc CLI is pointing to the **lab2-demo** project</code>oc project lab2-demo `</p>
+</li>
 </ol>
-<p>5.
-6.
-7. Switch to <strong>lab2-demo</strong> project</p></div>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/a68c209f-45dd-4317-acdc-38b34d7f1394" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a68c209f-45dd-4317-acdc-38b34d7f1394"></a></p>
+<ol start="7">
+<li>
+<p>Run the below commands to deploy milvus DB
+     </p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd Part2-RAG/milvus-deployment
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>oc create configmap milvus-config --from-file=./config/milvus.yaml
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>oc apply -f .
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>cd ..
+</code></pre></div>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/0b632d95-3af0-4b48-a883-31085455370f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0b632d95-3af0-4b48-a883-31085455370f"></a></p>
+</li>
+<li>
+<p>Monitor deployment using the below command until all pods are in <strong>Running</strong> state. <br>
+   Hit Ctrl-C on the keyboard to exit and come back to the shell prompt.</p>
+</li>
+</ol>
+<p><code>oc get pods -w</code></p>
+<div class="highlight"><pre><span></span><code>![image](https://github.com/user-attachments/assets/5289e0ef-3322-4206-9da3-ef833db0608e)
+</code></pre></div></div>
 
 
 
