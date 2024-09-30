@@ -35,15 +35,13 @@ In this lab, we will focus on the below:
 
 ### Deploy milvus
 
-Since our focus is to provide hands-on using jupyter notebook we will use `oc` CLI to quickly deploy milvus DB using the pre-created yamls available in our github repository
-
 1. Navigate to the terminal window where we had setup `oc` CLI on the bastion node.
 
     !!! warning "Ensure `oc` CLI is authenticated with the cluster"
 
        Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli) to ensure `oc` is authenticated with the cluster.
 
-3. Make sure you are in the home directory and then run the command below to clone the github repository. Switch to the newly cloned repository directory.
+3. Make sure you are in the home directory and then run the command below to clone the github repository. Then switch to the newly cloned repository directory.
      - `cd`
      - `git clone https://github.com/mgiessing/bcn-lab-2084`
      - `cd bcn-lab-2084/`
@@ -54,7 +52,23 @@ Since our focus is to provide hands-on using jupyter notebook we will use `oc` C
    
      ![image](https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5)
 
-5.
-6.
-7. Switch to **lab2-demo** project
+5. Make sure `oc CLI is pointing to the **lab2-demo** project
+   `oc project lab2-demo `
+   
+   ![image](https://github.com/user-attachments/assets/a68c209f-45dd-4317-acdc-38b34d7f1394)
+
+7. Run the below commands to deploy milvus DB
+     ```
+     cd Part2-RAG/milvus-deployment
+
+     oc create configmap milvus-config --from-file=./config/milvus.yaml
+
+     oc apply -f .
+
+     cd ..
+     ```
+     
+     ![image](https://github.com/user-attachments/assets/0b632d95-3af0-4b48-a883-31085455370f)
+
+8. Switch to **lab2-demo** project
 
