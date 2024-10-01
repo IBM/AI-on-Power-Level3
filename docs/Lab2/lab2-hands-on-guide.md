@@ -105,9 +105,9 @@ In this lab, we will focus on the below:
        `cpu-notebook-lab2-demo.apps.p1279.cecc.ihost.com` <br>
      but yours can be different!
 
-     !!! note "Alternate way to get the jupyter NB URL"
+       !!! note "Alternate way to get the jupyter NB URL"
 
-         You can also goto OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -> **Routes**, select **cpu-notebook** route and click on the URL mentioned under **Location** field
+           You can also goto OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -> **Routes**, select **cpu-notebook** route and click on the URL mentioned under **Location** field
 
 6. Copy and paste the URL in the browser. You should see the jupyter screen as below:
     ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
@@ -127,9 +127,9 @@ In this lab, we will focus on the below:
 
 9. Use **oc cp ...** command to copy the NB file from bastion server to **/tmp/notebooks/** directory of the NB pod.
 
-   `oc cp ./RAG.ipynb cpu-notebook:/tmp/notebooks/`
+     `oc cp ./RAG.ipynb cpu-notebook:/tmp/notebooks/`
     
-    ![image](https://github.com/user-attachments/assets/fb351616-347f-489f-890a-258fc4bea196)
+     ![image](https://github.com/user-attachments/assets/fb351616-347f-489f-890a-258fc4bea196)
 
 10. Go back to the jupyter NB application in your browser and hit refresh (F5 shortcut in keyboard). You should be able to see the **RAG.ipynb** file listed.
 
