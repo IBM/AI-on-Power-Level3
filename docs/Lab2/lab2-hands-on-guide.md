@@ -101,14 +101,15 @@ In this lab, we will focus on the below:
 
      ![image](https://github.com/user-attachments/assets/be511e8a-15e9-44af-8e40-6079cc266af6)
 
-     In my case, the URL was:
+     In my case, the URL was: <br>
        `cpu-notebook-lab2-demo.apps.p1279.cecc.ihost.com` <br>
-      but yours can be different!
+     but yours can be different!
 
-5. Copy and paste the URL in the browser. You should see the jupyter screen as below:
+     !!! note "Alternate way to get the jupyter NB URL"
+
+         You can also goto OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -> **Routes**, select **cpu-notebook** route and click on the URL mentioned under **Location** field
+
+6. Copy and paste the URL in the browser. You should see the jupyter screen as below:
     ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
 
-6. 
-
-
-
+7. 
