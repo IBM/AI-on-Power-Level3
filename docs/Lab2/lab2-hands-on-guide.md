@@ -112,4 +112,25 @@ In this lab, we will focus on the below:
 6. Copy and paste the URL in the browser. You should see the jupyter screen as below:
     ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
 
-7. 
+7. Now let's copy the jupyter NB (.ipynb file) present in the git repository to the NB pod. <br>
+   In your `oc` CLI terminal window, navigate to the root of your git repository which has the **RAG.ipynb** file.
+
+     `cd /home/cecuser/bcn-lab-2084`
+
+     ![image](https://github.com/user-attachments/assets/3e7774f6-18c3-49bd-b2ff-dc36740fc121)
+
+8. List pods and copy the name of the cpu-notebook pod.
+
+     `oc get pods`
+
+     ![image](https://github.com/user-attachments/assets/d6ac1e0d-408a-45e5-9262-c5217d08dd35)
+
+9. Use **oc cp ...** command to copy the NB file from bastion server to **/tmp/notebooks/** directory of the NB pod.
+
+   `oc cp ./RAG.ipynb cpu-notebook:/tmp/notebooks/`
+    
+    ![image](https://github.com/user-attachments/assets/fb351616-347f-489f-890a-258fc4bea196)
+
+10. Go back to the jupyter NB application in your browser and hit refresh (F5 shortcut in keyboard). You should be able to see the **RAG.ipynb** file listed.
+
+      ![image](https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad)
