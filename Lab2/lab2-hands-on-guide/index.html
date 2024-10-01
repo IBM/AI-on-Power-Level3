@@ -858,7 +858,7 @@
    <code>cpu-notebook-lab2-demo.apps.p1279.cecc.ihost.com</code> <br>
  but yours can be different!</p>
 <p>!!! note "Alternate way to get the jupyter NB URL"</p>
-<div class="highlight"><pre><span></span><code> You can also goto OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -&gt; **Routes**, select **cpu-notebook** route and click on the URL mentioned under **Location** field
+<div class="highlight"><pre><span></span><code>   You can also goto OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -&gt; **Routes**, select **cpu-notebook** route and click on the URL mentioned under **Location** field
 </code></pre></div>
 </li>
 <li>
@@ -878,12 +878,9 @@
 </li>
 <li>
 <p>Use <strong>oc cp ...</strong> command to copy the NB file from bastion server to <strong>/tmp/notebooks/</strong> directory of the NB pod.</p>
-</li>
-</ol>
 <p><code>oc cp ./RAG.ipynb cpu-notebook:/tmp/notebooks/</code></p>
-<div class="highlight"><pre><span></span><code>![image](https://github.com/user-attachments/assets/fb351616-347f-489f-890a-258fc4bea196)
-</code></pre></div>
-<ol start="10">
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/fb351616-347f-489f-890a-258fc4bea196" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/fb351616-347f-489f-890a-258fc4bea196"></a></p>
+</li>
 <li>
 <p>Go back to the jupyter NB application in your browser and hit refresh (F5 shortcut in keyboard). You should be able to see the <strong>RAG.ipynb</strong> file listed.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad"></a></p>
