@@ -43,14 +43,14 @@ In this lab, we will focus on the below:
 
 3. Make sure you are in the home directory and then run the command below to clone the github repository. Then switch to the newly cloned repository directory.
      - `cd`
-     - `git clone https://github.com/mgiessing/bcn-lab-2084`
+     - `git clone https://github.com/dpkshetty/bcn-lab-2084`
      - `cd bcn-lab-2084/`
 
-     ![image](https://github.com/user-attachments/assets/87e39369-ebbc-4fbd-a130-214f04ee4212)
-   
-     ![image](https://github.com/user-attachments/assets/b5ac2239-552f-4839-900f-917f11109ab9)
-   
-     ![image](https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5)
+       ![image](https://github.com/user-attachments/assets/87e39369-ebbc-4fbd-a130-214f04ee4212)
+     
+       ![image](https://github.com/user-attachments/assets/ba5c7a65-25f2-4073-878d-1fcd5d72030a)
+     
+       ![image](https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5)
 
 5. Make sure `oc CLI is pointing to the **lab2-demo** project
 
@@ -97,7 +97,7 @@ In this lab, we will focus on the below:
 
 4. Once the notebook pod is deployed you should be able to access it using the link retrieved from the below command:
    
-     `oc get route cpu-notebook -o jsonpath='{.spec.host}' `
+     `oc get route cpu-notebook -o jsonpath='{.spec.host}'`
 
      ![image](https://github.com/user-attachments/assets/be511e8a-15e9-44af-8e40-6079cc266af6)
 
@@ -106,9 +106,9 @@ In this lab, we will focus on the below:
       but yours can be different!
 
 5. Copy and paste the URL in the browser. You should see the jupyter screen as below:
+    ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
 
-     ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
-
+6. 
 
 
 
