@@ -125,9 +125,13 @@ We will use ConfigMap to store the model URL and model name, both of which will 
      
      - **Line 2** says its a deployment yaml
 
-     - **Line 4** shows the name of this deployment resource
+     - **Line 4** shows the name of this deployment resource (`lab-demo`)
+       
+     - **Lines 7-9**: Defines the label selector to match Pods with the "app: lab1-demo" label
+       
+     - **Lines 11-13**: Specifies the labels that the Pods will have.
 
-     - This deployment has 1 pod which contains 2 containers:
+     - `spec` section starting on **Line 14** contains the pod specification. This deployment has 1 pod which contains 2 containers:
        
          - **initContainer** named `fetch-model-data` (**Lines 15-32**) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the `command` section ensures that the model is downloaded only if its not already present. `volumeMounts` section (**Lines 18-20**) has the name of the volume `llama-models` this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.
          
@@ -207,12 +211,24 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
 
-16. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
+16. Here is a quick explanation of the Service yaml
+    
+    - **Line 2** shows its a service yaml
+      
+    - **Line 4** shows the name of the service (`lab1-service`)
+      
+    - **Line 8** shows the type of this service is `ClusterIP`. ClusterIP is the default service type used to expose a set of Pods internally within the cluster. It creates a virtual IP (ClusterIP) for the service, which other services or Pods within the same Kubernetes cluster can use to access it.
+      
+    - **Lines 9-13** has the port details. `port: 8080` refers to the port for the incoming traffic of the service. `targetPort: 8080` refers to the port on the pod. This means that incoming traffic for the service on port 8080 will be forwarded to the pod on port 8080.
+      
+    - **Lines 14-15** specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label `app: lab1-demo`.
+      
+18. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
     ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
 
-17. Navigate to **Networking** -> **Routes** and click **Create Route**
+19. Navigate to **Networking** -> **Routes** and click **Create Route**
       ![image](https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343)
-18. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
+20. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
     ``` yaml linenums="1"
     kind: Route
     apiVersion: route.openshift.io/v1
@@ -230,9 +246,9 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090)
 
-19. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
+21. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
     ![image](https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13)
-20. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
+22. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
       
     ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
       
