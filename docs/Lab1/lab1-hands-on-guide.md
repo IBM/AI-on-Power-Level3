@@ -246,17 +246,19 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090)
 
-21. Here is a quick explanation of the Route yaml. In OpenShift, a Route exposes a service to external clients by mapping an external URL to an internal Kubernetes service.
+21. Here is a quick explanation of the Route yaml. In OpenShift, a Route exposes a service to external clients by mapping an external URL to an internal OpenShift service.
+
+    ??? info "Route yaml explanation"
     
-    - Line 1: This defines that you're creating an OpenShift Route resource.
-      
-    - Lines 3-6: The `name` field defines the name of the route (`lab1-route`), and the `labels` field associates labels with the route, which can be used for tracking or organizing the route in OpenShift.
-      
-    - LInes 7-10: The `to` field under `spec` defines the target resource for the route. In this case, it targets a Service named `lab1-service`, which has already been defined and exposes Pods internally via ClusterIP.
-      
-    - Line 11: TLS is set to `null`, meaning there is no SSL/TLS encryption configured for this route. For secure routes (HTTPS), you'd configure this section to specify certificates and encryption protocols.
-      
-    - Lines 12-13: The `targetPort` field under `port` specifies which port on the service (or Pods) the route should forward requests to. In this case, it refers to `lab1-port`, which was defined as port 8080 in our service configuration.
+        - **Line 1**: This defines that you're creating an OpenShift Route resource.
+          
+        - **Lines 3-6**: The `name` field defines the name of the route (`lab1-route`), and the `labels` field associates labels with the route, which can be used for tracking or organizing the route in OpenShift.
+          
+        - **Lines 7-10**: The `to` field under `spec` defines the target resource for the route. In this case, it targets a Service named `lab1-service`, which has already been defined and exposes Pods internally via ClusterIP.
+          
+        - **Line 11**: TLS is set to `null`, meaning there is no SSL/TLS encryption configured for this route. For secure routes (HTTPS), you'd configure this section to specify certificates and encryption protocols.
+          
+        - **Lines 12-13**: The `targetPort` field under `port` specifies which port on the service (or Pods) the route should forward requests to. In this case, it refers to `lab1-port`, which was defined as port 8080 in our service configuration.
       
 23. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
     ![image](https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13)
