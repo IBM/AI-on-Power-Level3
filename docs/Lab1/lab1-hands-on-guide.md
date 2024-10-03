@@ -133,7 +133,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
          
          - **Container** named `llama-cpp` (Lines 33-42) which is the main workload container that will serve the LLM. This container uses the docker image `quay.io/daniel_casali/llama.cpp-mma:sep2024` which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source [llama.cpp](https://github.com/ggerganov/llama.cpp) project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware. 
 
-             !!! info "Need for model runtime"
+              !!! info "Need for model runtime"
      
                 A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production. It helps manage system resources such as CPU, GPU, memory, and network resources that are critical for deploying models. Advanced runtimes may include optimizations for specific hardware, including accelerators like TPUs or MMAs (Matrix Math Accelerators), for faster computation. They allow models to be scaled for real-world applications, particularly in cloud or distributed computing environments. They enable handling multiple requests simultaneously while keeping latency low, which is vital in production systems. By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.
 
