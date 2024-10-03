@@ -964,10 +964,13 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 
  - **Lines 11-13**: Specifies the labels that the Pods will have.
 
- - `spec` section starting on **Line 14** contains the pod specification. This deployment has 1 pod which contains 2 containers.          
-        - **initContainer** named `fetch-model-data` (**Lines 15-32**) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the `command` section ensures that the model is downloaded only if its not already present. `volumeMounts` section (**Lines 18-20**) has the name of the volume `llama-models` this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.               
-        - **Container** named `llama-cpp` (**Lines 33-42**) which is the main workload container that will serve the LLM. This container uses the docker image `quay.io/daniel_casali/llama.cpp-mma:sep2024` which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source [llama.cpp](https://github.com/ggerganov/llama.cpp) project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.  
-        - Container `llama-cpp` uses the same volume `llama-models` as initContainer for underlying storage and hence can access the model(s) downloaded by initContainer. Lines 43-46 specifies the PVC (Persistent Volume Claim) `model-storage` used as the source of storage for the volume. Recall that we created this PVC at the beginning of this lab!
+ - `spec` section starting on **Line 14** contains the pod specification. This deployment has 1 pod which contains 2 containers.
+
+ - **initContainer** named `fetch-model-data` (**Lines 15-32**) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the `command` section ensures that the model is downloaded only if its not already present. `volumeMounts` section (**Lines 18-20**) has the name of the volume `llama-models` this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.
+
+ - **Container** named `llama-cpp` (**Lines 33-42**) which is the main workload container that will serve the LLM. This container uses the docker image `quay.io/daniel_casali/llama.cpp-mma:sep2024` which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source [llama.cpp](https://github.com/ggerganov/llama.cpp) project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.
+
+ - Container `llama-cpp` uses the same volume `llama-models` as initContainer for underlying storage and hence can access the model(s) downloaded by initContainer. Lines 43-46 specifies the PVC (Persistent Volume Claim) `model-storage` used as the source of storage for the volume. Recall that we created this PVC at the beginning of this lab!
 </code></pre></div>
 </li>
 <li>
