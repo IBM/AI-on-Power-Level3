@@ -41,9 +41,9 @@ Follow the steps below:
            <source src="https://github.com/user-attachments/assets/a622a195-00a6-4950-b2e5-686b04fa3401" type="video/mp4">
         </video>
      
-         !!! note "RE-AUTHENTICATING in case you lose GUI/console access"
+     !!! note "RE-AUTHENTICATING in case you lose GUI/console access"
    
-            In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
+         In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
 
 ### Accessing OpenShift `oc` CLI
 
