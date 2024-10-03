@@ -30,7 +30,7 @@ In short, LLMs and GenAI are reshaping industries by enhancing efficiency, creat
 ## Why IBM Power for GenAI
 IBM Power platform is a high-performance, enterprise-grade computing solution designed to handle demanding workloads such as AI, analytics, cloud, and mission-critical applications. With unmatched processing power, scalability, and reliability, IBM Power enables organizations to optimize performance, lower costs, and ensure security.
 
-### Key Benefits:
+### Key Benefits
 
 * **Unmatched Performance**: Optimized for data-intensive applications, AI, and large-scale analytics, delivering faster insights and better decision-making.
 
@@ -46,11 +46,11 @@ IBM Power is the platform of choice for businesses seeking to future-proof their
 
 IBM Power10 offers several advantages for Generative AI (GenAI) use cases, providing the computational power, security, and efficiency required to support the demanding workloads of AI-driven applications. Here’s how Power10 is uniquely positioned to accelerate GenAI:
 
-### Key Advantages:
+### Key Advantages
 
 1. **High Performance for AI Workloads:**
 
-    * **AI Acceleration**: IBM Power10 includes AI inference acceleration directly on the chip, allowing faster processing of GenAI tasks such as model training, inference, and real-time AI applications.
+    * **AI Acceleration**: IBM Power10 includes AI inference acceleration directly on the chip (aka Matrix Math Accelerator (MMA), allowing faster processing of GenAI tasks such as model training, inference, and real-time AI applications.
 
     * **Massive Scalability**: Power10 is designed to handle large-scale AI models, with enhanced memory bandwidth and processing power to efficiently manage vast datasets used in training LLMs and GenAI systems.
 
