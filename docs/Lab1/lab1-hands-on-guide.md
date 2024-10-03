@@ -122,36 +122,38 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
 
   7. Here is a quick explanation of the deployment yaml
+
+     ??? info "Deployment yaml explanation"
      
-     - **Line 2** says its a deployment yaml
-
-     - **Line 4** shows the name of this deployment resource (`lab-demo`)
-       
-     - **Lines 7-9**: Defines the label selector to match Pods with the "app: lab1-demo" label
-       
-     - **Lines 11-13**: Specifies the labels that the Pods will have.
-
-     - `spec` section starting on **Line 14** contains the pod specification. This deployment has 1 pod which contains 2 containers:
-       
-         - **initContainer** named `fetch-model-data` (**Lines 15-32**) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the `command` section ensures that the model is downloaded only if its not already present. `volumeMounts` section (**Lines 18-20**) has the name of the volume `llama-models` this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.
-         
-         - **Container** named `llama-cpp` (**Lines 33-42**) which is the main workload container that will serve the LLM. This container uses the docker image `quay.io/daniel_casali/llama.cpp-mma:sep2024` which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source [llama.cpp](https://github.com/ggerganov/llama.cpp) project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.
+         - **Line 2** says its a deployment yaml
+    
+         - **Line 4** shows the name of this deployment resource (`lab-demo`)
            
-             - You may ask... What's the need for a model runtime?
+         - **Lines 7-9**: Defines the label selector to match Pods with the "app: lab1-demo" label
+           
+         - **Lines 11-13**: Specifies the labels that the Pods will have.
+    
+         - `spec` section starting on **Line 14** contains the pod specification. This deployment has 1 pod which contains 2 containers:
+           
+             - **initContainer** named `fetch-model-data` (**Lines 15-32**) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the `command` section ensures that the model is downloaded only if its not already present. `volumeMounts` section (**Lines 18-20**) has the name of the volume `llama-models` this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.
+             
+             - **Container** named `llama-cpp` (**Lines 33-42**) which is the main workload container that will serve the LLM. This container uses the docker image `quay.io/daniel_casali/llama.cpp-mma:sep2024` which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source [llama.cpp](https://github.com/ggerganov/llama.cpp) project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.
                
-                - A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production.
-                  
-                - It helps manage system resources such as CPU, GPU, memory, and network resources that are critical for deploying models.
-                  
-                - Advanced runtimes may include optimizations for specific hardware, including accelerators like TPUs or MMAs (Matrix Math Accelerators), for faster computation.
-                  
-                - It allows models to be scaled for real-world applications, particularly in cloud or distributed computing environments.
-                  
-                - It enables handling multiple requests simultaneously while keeping latency low, which is vital in production systems.
-                  
-             - By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.
-
-         - Container `llama-cpp` uses the same volume `llama-models` as initContainer for underlying storage and hence can access the model(s) downloaded by initContainer. Lines 43-46 specifies the PVC (Persistent Volume Claim) `model-storage` used as the source of storage for the volume. Recall that we created this PVC at the beginning of this lab!
+                 - You may ask... What's the need for a model runtime?
+                   
+                    - A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production.
+                      
+                    - It helps manage system resources such as CPU, GPU, memory, and network resources that are critical for deploying models.
+                      
+                    - Advanced runtimes may include optimizations for specific hardware, including accelerators like TPUs or MMAs (Matrix Math Accelerators), for faster computation.
+                      
+                    - It allows models to be scaled for real-world applications, particularly in cloud or distributed computing environments.
+                      
+                    - It enables handling multiple requests simultaneously while keeping latency low, which is vital in production systems.
+                      
+                 - By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.
+    
+             - Container `llama-cpp` uses the same volume `llama-models` as initContainer for underlying storage and hence can access the model(s) downloaded by initContainer. Lines 43-46 specifies the PVC (Persistent Volume Claim) `model-storage` used as the source of storage for the volume. Recall that we created this PVC at the beginning of this lab!
 
   7. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
    ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
@@ -212,16 +214,18 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
 
 16. Here is a quick explanation of the Service yaml
+
+    ??? info "Service yaml explanation"
     
-    - **Line 2** shows its a service yaml
-      
-    - **Line 4** shows the name of the service (`lab1-service`)
-      
-    - **Line 8** shows the type of this service is `ClusterIP`. ClusterIP is the default service type used to expose a set of Pods internally within the cluster. It creates a virtual IP (ClusterIP) for the service, which other services or Pods within the same Kubernetes cluster can use to access it.
-      
-    - **Lines 9-13** has the port details. `port: 8080` refers to the port for the incoming traffic of the service. `targetPort: 8080` refers to the port on the pod. This means that incoming traffic for the service on port 8080 will be forwarded to the pod on port 8080.
-      
-    - **Lines 14-15** specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label `app: lab1-demo`, which is the label we assigned in the deployment yaml.
+        - **Line 2** shows its a service yaml
+          
+        - **Line 4** shows the name of the service (`lab1-service`)
+          
+        - **Line 8** shows the type of this service is `ClusterIP`. ClusterIP is the default service type used to expose a set of Pods internally within the cluster. It creates a virtual IP (ClusterIP) for the service, which other services or Pods within the same Kubernetes cluster can use to access it.
+          
+        - **Lines 9-13** has the port details. `port: 8080` refers to the port for the incoming traffic of the service. `targetPort: 8080` refers to the port on the pod. This means that incoming traffic for the service on port 8080 will be forwarded to the pod on port 8080.
+          
+        - **Lines 14-15** specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label `app: lab1-demo`, which is the label we assigned in the deployment yaml.
       
 18. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
     ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
