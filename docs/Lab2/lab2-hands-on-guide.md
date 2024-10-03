@@ -135,3 +135,5 @@ In this lab, we will focus on the below:
 10. Go back to the jupyter NB application in your browser and hit refresh (F5 shortcut in keyboard). You should be able to see the **RAG.ipynb** file listed.
 
       ![image](https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad)
+
+11. You're all set! Navigate to the browser window/tab hosting the jupyter NB and follow the instructions given in the NB to finish this lab.
