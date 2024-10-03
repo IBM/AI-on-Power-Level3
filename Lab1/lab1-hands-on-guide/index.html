@@ -954,6 +954,32 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
     <a class="glightbox" href="https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61"></a>
 </li>
 <li>
+<p>Here is a quick explanation of the deployment yaml</p>
+<ul>
+<li>
+<p>Line 2 says its a deployment yaml</p>
+</li>
+<li>
+<p>Line 4 shows the name of this deployment resource</p>
+</li>
+<li>
+<p>This deployment has 1 pod which contains 2 containers:</p>
+</li>
+<li>
+<p><strong>initContainer</strong> named <code>fetch-model-data</code> (Lines 15-32) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the <code>command</code> section ensures that the model is downloaded only if its not already present. <code>volumeMounts</code> section (Lines 18-20) has the name of the volume <code>llama-models</code> this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.</p>
+</li>
+<li>
+<p>Container named <code>llama-cpp</code> (Lines 33-42) which is the main workload container that will serve the LLM. This container uses the docker image <code>quay.io/daniel_casali/llama.cpp-mma:sep2024</code> which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware. </p>
+</li>
+</ul>
+<p>!!! info "Need for model runtime"</p>
+<div class="highlight"><pre><span></span><code> A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production. It helps manage system resources such as CPU, GPU, memory, and network resources that are critical for deploying models. Advanced runtimes may include optimizations for specific hardware, including accelerators like TPUs or MMAs (Matrix Math Accelerators), for faster computation. They allow models to be scaled for real-world applications, particularly in cloud or distributed computing environments. They enable handling multiple requests simultaneously while keeping latency low, which is vital in production systems. By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.
+</code></pre></div>
+<ul>
+<li>This container uses the same volume as initContainer <code>llama-models</code> for underlying storage and hence can access the model downloaded by initContiner. Lines 43-46 specifies the PVC (Persistent Volume Claim) used as the source of storage for the volume named <code>llama-models</code>. Recall that we created this PVC at the beginning of this lab!</li>
+</ul>
+</li>
+<li>
 <p>You should land in the Deployment details window. Click on <strong>Pods</strong> tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
    <a class="glightbox" href="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9"></a></p>
 </li>
