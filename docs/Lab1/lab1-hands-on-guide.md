@@ -138,21 +138,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
              - **initContainer** named `fetch-model-data` (**Lines 15-32**) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the `command` section ensures that the model is downloaded only if its not already present. `volumeMounts` section (**Lines 18-20**) has the name of the volume `llama-models` this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.
              
              - **Container** named `llama-cpp` (**Lines 33-42**) which is the main workload container that will serve the LLM. This container uses the docker image `quay.io/daniel_casali/llama.cpp-mma:sep2024` which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source [llama.cpp](https://github.com/ggerganov/llama.cpp) project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.
-               
-                 - You may ask... What's the need for a model runtime?
-                   
-                    - A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production.
-                      
-                    - It helps manage system resources such as CPU, GPU, memory, and network resources that are critical for deploying models.
-                      
-                    - Advanced runtimes may include optimizations for specific hardware, including accelerators like TPUs or MMAs (Matrix Math Accelerators), for faster computation.
-                      
-                    - It allows models to be scaled for real-world applications, particularly in cloud or distributed computing environments.
-                      
-                    - It enables handling multiple requests simultaneously while keeping latency low, which is vital in production systems.
-                      
-                 - By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.
-    
+                        
              - Container `llama-cpp` uses the same volume `llama-models` as initContainer for underlying storage and hence can access the model(s) downloaded by initContainer. Lines 43-46 specifies the PVC (Persistent Volume Claim) `model-storage` used as the source of storage for the volume. Recall that we created this PVC at the beginning of this lab!
 
   7. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
