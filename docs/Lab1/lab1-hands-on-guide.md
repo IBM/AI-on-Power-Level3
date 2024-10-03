@@ -47,22 +47,25 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    ![image](https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7)
 2. In the resulting form, enter a name: **model-params**, and fill the Key and Value fields as below:
    
-   - Key: **MODEL_NAME**
+     - Key: **MODEL_NAME**
 
-   - Value: **tinyllama-1.1b-chat-v1.0.Q8_0.gguf**
+     - Value: **tinyllama-1.1b-chat-v1.0.Q8_0.gguf**
    
-   Click **Add key/value** which will open up one more Key/Value box.
+     Click **Add key/value** which will open up one more Key/Value box.
    
-   ![image](https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32)
+     ![image](https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32)
+   
 4. In the newly created Key/Value box, enter the values as below:
 
-   - Key: **MODEL_URL**
+     - Key: **MODEL_URL**
      
-   - Value: **https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf** and click **Create**
+     - Value: **https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf**
      
-   ![image](https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a)
+     Click **Create**
+     
+     ![image](https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a)
 
-    This completes the ConfigMap setup.
+     This completes the ConfigMap setup.
 
 ### Deploy first model
 
