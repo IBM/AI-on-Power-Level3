@@ -123,17 +123,17 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
   7. Here is a quick explanation of the deployment yaml
      
-     - Line 2 says its a deployment yaml
+     - **Line 2** says its a deployment yaml
 
-     - Line 4 shows the name of this deployment resource
+     - **Line 4** shows the name of this deployment resource
 
      - This deployment has 1 pod which contains 2 containers:
        
-         - **initContainer** named `fetch-model-data` (Lines 15-32) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the `command` section ensures that the model is downloaded only if its not already present. `volumeMounts` section (Lines 18-20) has the name of the volume `llama-models` this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.
+         - **initContainer** named `fetch-model-data` (**Lines 15-32**) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the `command` section ensures that the model is downloaded only if its not already present. `volumeMounts` section (**Lines 18-20**) has the name of the volume `llama-models` this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.
          
-         - **Container** named `llama-cpp` (Lines 33-42) which is the main workload container that will serve the LLM. This container uses the docker image `quay.io/daniel_casali/llama.cpp-mma:sep2024` which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source [llama.cpp](https://github.com/ggerganov/llama.cpp) project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.
+         - **Container** named `llama-cpp` (**Lines 33-42**) which is the main workload container that will serve the LLM. This container uses the docker image `quay.io/daniel_casali/llama.cpp-mma:sep2024` which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source [llama.cpp](https://github.com/ggerganov/llama.cpp) project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.
            
-             - You may ask.. What's the need for a model runtime?:
+             - You may ask... What's the need for a model runtime?
                
                 - A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production.
                   
