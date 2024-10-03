@@ -831,10 +831,16 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <ol>
 <li>Navigate to <strong>Workloads</strong> -&gt; <strong>ConfigMaps</strong> and click <strong>Create ConfigMap</strong>
    <a class="glightbox" href="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7"></a></li>
-<li>In the resulting form, enter a name: <strong>model-params</strong>, and fill the Key and Value fields as below:
-   - Key: <strong>MODEL_NAME</strong>
-   - Value: <strong>tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong></li>
+<li>In the resulting form, enter a name: <strong>model-params</strong>, and fill the Key and Value fields as below:</li>
 </ol>
+<ul>
+<li>
+<p>Key: <strong>MODEL_NAME</strong></p>
+</li>
+<li>
+<p>Value: <strong>tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong></p>
+</li>
+</ul>
 <p>Click <strong>Add key/value</strong> which will open up one more Key/Value box.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32"></a>
 4. In the newly created Key/Value box, enter: Key: <strong>MODEL_URL</strong> and Value: <strong>https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf</strong> and click <strong>Create</strong>
