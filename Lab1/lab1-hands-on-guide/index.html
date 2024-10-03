@@ -1102,7 +1102,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p><strong>Lines 9-13</strong> has the port details. <code>port: 8080</code> refers to the port for the incoming traffic of the service. <code>targetPort: 8080</code> refers to the port on the pod. This means that incoming traffic for the service on port 8080 will be forwarded to the pod on port 8080.</p>
 </li>
 <li>
-<p><strong>Lines 14-15</strong> specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label <code>app: lab1-demo</code>.</p>
+<p><strong>Lines 14-15</strong> specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label <code>app: lab1-demo</code>, which is the label we assigned in the deployment yaml.</p>
 </li>
 </ul>
 </li>
@@ -1143,6 +1143,26 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lab1-port</span>
 </code></pre></div></td></tr></table></div>
     <a class="glightbox" href="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090"></a>
+</li>
+<li>
+<p>Here is a quick explanation of the Route yaml. In OpenShift, a Route exposes a service to external clients by mapping an external URL to an internal Kubernetes service.</p>
+<ul>
+<li>
+<p>Line 1: This defines that you're creating an OpenShift Route resource.</p>
+</li>
+<li>
+<p>Lines 3-6: The <code>name</code> field defines the name of the route (<code>lab1-route</code>), and the <code>labels</code> field associates labels with the route, which can be used for tracking or organizing the route in OpenShift.</p>
+</li>
+<li>
+<p>LInes 7-10: The <code>to</code> field under <code>spec</code> defines the target resource for the route. In this case, it targets a Service named <code>lab1-service</code>, which has already been defined and exposes Pods internally via ClusterIP.</p>
+</li>
+<li>
+<p>Line 11: TLS is set to <code>null</code>, meaning there is no SSL/TLS encryption configured for this route. For secure routes (HTTPS), you'd configure this section to specify certificates and encryption protocols.</p>
+</li>
+<li>
+<p>Lines 12-13: The <code>targetPort</code> field under <code>port</code> specifies which port on the service (or Pods) the route should forward requests to. In this case, it refers to <code>lab1-port</code>, which was defined as port 8080 in our service configuration.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>You should land in the route details view. The URL mentioned under <strong>Location</strong> is the externally accessible URL of your application (which hosts the tinyllama LLM).
