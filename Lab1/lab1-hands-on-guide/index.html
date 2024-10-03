@@ -957,22 +957,28 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p>Here is a quick explanation of the deployment yaml</p>
 <ul>
 <li>
-<p>Line 2 says its a deployment yaml</p>
+<p><strong>Line 2</strong> says its a deployment yaml</p>
 </li>
 <li>
-<p>Line 4 shows the name of this deployment resource</p>
+<p><strong>Line 4</strong> shows the name of this deployment resource (<code>lab-demo</code>)</p>
 </li>
 <li>
-<p>This deployment has 1 pod which contains 2 containers:</p>
+<p><strong>Lines 7-9</strong>: Defines the label selector to match Pods with the "app: lab1-demo" label</p>
+</li>
+<li>
+<p><strong>Lines 11-13</strong>: Specifies the labels that the Pods will have.</p>
+</li>
+<li>
+<p><code>spec</code> section starting on <strong>Line 14</strong> contains the pod specification. This deployment has 1 pod which contains 2 containers:</p>
 <ul>
 <li>
-<p><strong>initContainer</strong> named <code>fetch-model-data</code> (Lines 15-32) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the <code>command</code> section ensures that the model is downloaded only if its not already present. <code>volumeMounts</code> section (Lines 18-20) has the name of the volume <code>llama-models</code> this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.</p>
+<p><strong>initContainer</strong> named <code>fetch-model-data</code> (<strong>Lines 15-32</strong>) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the <code>command</code> section ensures that the model is downloaded only if its not already present. <code>volumeMounts</code> section (<strong>Lines 18-20</strong>) has the name of the volume <code>llama-models</code> this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.</p>
 </li>
 <li>
-<p><strong>Container</strong> named <code>llama-cpp</code> (Lines 33-42) which is the main workload container that will serve the LLM. This container uses the docker image <code>quay.io/daniel_casali/llama.cpp-mma:sep2024</code> which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.</p>
+<p><strong>Container</strong> named <code>llama-cpp</code> (<strong>Lines 33-42</strong>) which is the main workload container that will serve the LLM. This container uses the docker image <code>quay.io/daniel_casali/llama.cpp-mma:sep2024</code> which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.</p>
 <ul>
 <li>
-<p>You may ask.. What's the need for a model runtime?:</p>
+<p>You may ask... What's the need for a model runtime?</p>
 <ul>
 <li>
 <p>A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production.</p>
@@ -1079,6 +1085,26 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="s">"lab1-demo"</span>
 </code></pre></div></td></tr></table></div>
     <a class="glightbox" href="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf"></a>
+</li>
+<li>
+<p>Here is a quick explanation of the Service yaml</p>
+<ul>
+<li>
+<p><strong>Line 2</strong> shows its a service yaml</p>
+</li>
+<li>
+<p><strong>Line 4</strong> shows the name of the service (<code>lab1-service</code>)</p>
+</li>
+<li>
+<p><strong>Line 8</strong> shows the type of this service is <code>ClusterIP</code>. ClusterIP is the default service type used to expose a set of Pods internally within the cluster. It creates a virtual IP (ClusterIP) for the service, which other services or Pods within the same Kubernetes cluster can use to access it.</p>
+</li>
+<li>
+<p><strong>Lines 9-13</strong> has the port details. <code>port: 8080</code> refers to the port for the incoming traffic of the service. <code>targetPort: 8080</code> refers to the port on the pod. This means that incoming traffic for the service on port 8080 will be forwarded to the pod on port 8080.</p>
+</li>
+<li>
+<p><strong>Lines 14-15</strong> specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label <code>app: lab1-demo</code>.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
