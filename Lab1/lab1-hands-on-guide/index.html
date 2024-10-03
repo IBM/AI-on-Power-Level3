@@ -964,19 +964,21 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 <li>
 <p>This deployment has 1 pod which contains 2 containers:</p>
-</li>
+<ul>
 <li>
 <p><strong>initContainer</strong> named <code>fetch-model-data</code> (Lines 15-32) which fetches the model from HF and saves it in the underlying storage. The shell script embedded under the <code>command</code> section ensures that the model is downloaded only if its not already present. <code>volumeMounts</code> section (Lines 18-20) has the name of the volume <code>llama-models</code> this container will use for disk storage and the path where the storage should be mounted. This initContainer uses the standard RHEL8 UBI (Universal Base Image) image and exits after downloading the model.</p>
 </li>
 <li>
-<p>Container named <code>llama-cpp</code> (Lines 33-42) which is the main workload container that will serve the LLM. This container uses the docker image <code>quay.io/daniel_casali/llama.cpp-mma:sep2024</code> which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware. </p>
+<p><strong>Container</strong> named <code>llama-cpp</code> (Lines 33-42) which is the main workload container that will serve the LLM. This container uses the docker image <code>quay.io/daniel_casali/llama.cpp-mma:sep2024</code> which is a custom built image for ppc64le architecture with MMA optimized libraries. This image provides a runtime environment based on the open-source <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> project which enables LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware. </p>
 </li>
 </ul>
 <p>!!! info "Need for model runtime"</p>
-<div class="highlight"><pre><span></span><code> A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production. It helps manage system resources such as CPU, GPU, memory, and network resources that are critical for deploying models. Advanced runtimes may include optimizations for specific hardware, including accelerators like TPUs or MMAs (Matrix Math Accelerators), for faster computation. They allow models to be scaled for real-world applications, particularly in cloud or distributed computing environments. They enable handling multiple requests simultaneously while keeping latency low, which is vital in production systems. By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.
+<div class="highlight"><pre><span></span><code>   A model runtime serves as the infrastructure needed to deploy, manage, and execute these models in production. It helps manage system resources such as CPU, GPU, memory, and network resources that are critical for deploying models. Advanced runtimes may include optimizations for specific hardware, including accelerators like TPUs or MMAs (Matrix Math Accelerators), for faster computation. They allow models to be scaled for real-world applications, particularly in cloud or distributed computing environments. They enable handling multiple requests simultaneously while keeping latency low, which is vital in production systems. By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.
 </code></pre></div>
 <ul>
 <li>This container uses the same volume as initContainer <code>llama-models</code> for underlying storage and hence can access the model downloaded by initContiner. Lines 43-46 specifies the PVC (Persistent Volume Claim) used as the source of storage for the volume named <code>llama-models</code>. Recall that we created this PVC at the beginning of this lab!</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
