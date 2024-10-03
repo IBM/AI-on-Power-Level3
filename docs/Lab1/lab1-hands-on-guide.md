@@ -221,7 +221,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
       
     - **Lines 9-13** has the port details. `port: 8080` refers to the port for the incoming traffic of the service. `targetPort: 8080` refers to the port on the pod. This means that incoming traffic for the service on port 8080 will be forwarded to the pod on port 8080.
       
-    - **Lines 14-15** specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label `app: lab1-demo`.
+    - **Lines 14-15** specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label `app: lab1-demo`, which is the label we assigned in the deployment yaml.
       
 18. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
     ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
@@ -246,9 +246,21 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090)
 
-21. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
+21. Here is a quick explanation of the Route yaml. In OpenShift, a Route exposes a service to external clients by mapping an external URL to an internal Kubernetes service.
+    
+    - Line 1: This defines that you're creating an OpenShift Route resource.
+      
+    - Lines 3-6: The `name` field defines the name of the route (`lab1-route`), and the `labels` field associates labels with the route, which can be used for tracking or organizing the route in OpenShift.
+      
+    - LInes 7-10: The `to` field under `spec` defines the target resource for the route. In this case, it targets a Service named `lab1-service`, which has already been defined and exposes Pods internally via ClusterIP.
+      
+    - Line 11: TLS is set to `null`, meaning there is no SSL/TLS encryption configured for this route. For secure routes (HTTPS), you'd configure this section to specify certificates and encryption protocols.
+      
+    - Lines 12-13: The `targetPort` field under `port` specifies which port on the service (or Pods) the route should forward requests to. In this case, it refers to `lab1-port`, which was defined as port 8080 in our service configuration.
+      
+23. You should land in the route details view. The URL mentioned under **Location** is the externally accessible URL of your application (which hosts the tinyllama LLM).
     ![image](https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13)
-22. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
+24. Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      
       
     ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
       
