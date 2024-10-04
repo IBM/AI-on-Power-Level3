@@ -69,6 +69,7 @@ nav:
   - Lab3 - Deploy code LLM on Power10:
     - 'Lab Education': 'Lab3/lab3-overview.md'
     - 'Hands-on guide': 'Lab3/lab3-hands-on-guide.md'
+  - Additional resources: resources.md
   - Credits: credits.md
 
 extra:
