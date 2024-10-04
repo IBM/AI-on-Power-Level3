@@ -136,4 +136,8 @@ In this lab, we will focus on the below:
 
       ![image](https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad)
 
-11. You're all set! Navigate to the browser window/tab hosting the jupyter NB and follow the instructions given in the NB to finish this lab.
+11. Double-click on the **RAG.ipynb** file and it should open up in the right pane of the browser
+    
+      ![image](https://github.com/user-attachments/assets/e5e26a7c-33d7-4c9f-acaf-fce3290d6b3d)
+
+11. You're all set! Follow the instructions given in the NB to finish this lab.
