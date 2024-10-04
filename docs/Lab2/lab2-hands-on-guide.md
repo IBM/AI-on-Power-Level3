@@ -54,9 +54,9 @@ In this lab, we will focus on the below:
 
 5. Make sure `oc CLI is pointing to the **lab2-demo** project
 
-     `oc project lab2-demo `
-   
-     ![image](https://github.com/user-attachments/assets/a68c209f-45dd-4317-acdc-38b34d7f1394)
+     `oc project lab2-demo `   
+     
+     ![image](https://github.com/user-attachments/assets/721a4e9d-81db-48e8-b85c-c6491e96a8a1)
 
 7. Run the below commands to deploy milvus DB
      ```
