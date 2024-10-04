@@ -12,8 +12,8 @@
 ## Watch and learn
 
 - TechZone demos
-  - [AI Inferencing on IBM Power10 with MMA](https://techzone.ibm.com/collection/ai-inferencing-on-ibm-power10-mma)
-  - [Generative AI demos on IBM Power](https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power)
+    - [AI Inferencing on IBM Power10 with MMA](https://techzone.ibm.com/collection/ai-inferencing-on-ibm-power10-mma)
+    - [Generative AI demos on IBM Power](https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power)
 - RedHat Developer webinar hosted on YouTube - [Implementing enterprise-ready generative AI](https://www.youtube.com/watch?v=qx6MHt24TrY)
 - [Panel discussion on AI performance on Power - Sept 2024](https://ec.yourlearning.ibm.com/w3/playback/10467290) - IBMers only
 
