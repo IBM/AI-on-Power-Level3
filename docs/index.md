@@ -7,11 +7,11 @@ There are 4 main parts to this demonstration as you can see on the left hand sid
 
 * Lab Setup - How to provision and setup the lab env for the hands-on demos
 
-* LAB 1 – Deploy a LLM on Power10 - Deploy a LLM on Power10 and switch to a diff LLM
+* LAB 1 – Deploy a Large Language Model (LLM) on Power10 - Deploy a LLM on Power10 and switch to a diff LLM
 
 * LAB 2 – Deploy RAG on Power10 - RAG chatbot for domain specific Q&A
 
-* LAB 3 – Query DB using NL on Power10 - Generate SQL queries for a given DB schema, using NL
+* LAB 3 – Deploy code LLM Power10 - Generate python, C code and SQL query using natural language
 
 ## Generative AI and LLMs overview
 
