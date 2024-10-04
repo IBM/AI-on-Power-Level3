@@ -47,9 +47,9 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    ![image](https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7)
 2. In the resulting form, enter a name: **model-params**, and fill the Key and Value fields as below:
    
-     - Key: **MODEL_NAME**
+     - **Key**: `MODEL_NAME`
 
-     - Value: **tinyllama-1.1b-chat-v1.0.Q8_0.gguf**
+     - **Value**: `tinyllama-1.1b-chat-v1.0.Q8_0.gguf`
    
      Click **Add key/value** which will open up one more Key/Value box.
    
@@ -57,9 +57,9 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    
 4. In the newly created Key/Value box, enter the values as below:
 
-     - Key: **MODEL_URL**
+     - **Key**: `MODEL_URL`
      
-     - Value: **https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf**
+     - **Value**: `https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf`
      
      Click **Create**
      
