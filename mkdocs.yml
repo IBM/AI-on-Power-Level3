@@ -39,6 +39,9 @@ plugins:
     - macros
     - search
     - glightbox
+    - privacy:
+        links_attr_map:
+          target: _blank
 
 markdown_extensions:
   - toc:
