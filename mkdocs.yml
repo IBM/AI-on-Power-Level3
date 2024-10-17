@@ -39,6 +39,7 @@ plugins:
     - macros
     - search
     - glightbox
+    - open-in-new-tab
 
 markdown_extensions:
   - toc:
