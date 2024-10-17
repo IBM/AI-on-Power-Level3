@@ -44,8 +44,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
       
     
@@ -829,20 +829,20 @@
 <ol>
 <li>
 <p>Head to <a href="https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power/environments">this</a> TechZone collection and provision the environment named "OpenShift 4.14 ready for AI on IBM Power10 (Container PaaS)" by clicking on <strong>Reserve</strong> and submitting the resulting form (select <strong>Education</strong> as purpose)
-   <a class="glightbox" href="../_attachments/tz-env-reserve.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/tz-env-reserve.png"></a></p>
+   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/tz-env-reserve.png"></a></p>
 </li>
 <li>
 <p>Watch your email for updates from TechZone and wait for your environment to be provisioned.</p>
 </li>
 <li>Once provisioned, head to <a href="https://techzone.ibm.com/my/reservations">my reservations</a> page to ensure its ready.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52"></a></li>
+   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52"></a></li>
 </ol>
 <h2 id="accessing-the-environment">Accessing the environment<a class="headerlink" href="#accessing-the-environment" title="Permanent link">¶</a></h2>
 <ol>
 <li>Since this is an on-prem environment, make sure you are connected to the IBM network to access the environment.(TODO: add details on VPN)</li>
 <li>In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.</li>
 <li>Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
-   <a class="glightbox" href="https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb"></a></li>
+   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb"></a></li>
 </ol>
 <h3 id="accessing-openshift-guiconsole">Accessing OpenShift GUI/console<a class="headerlink" href="#accessing-openshift-guiconsole" title="Permanent link">¶</a></h3>
 <ol>
@@ -857,8 +857,8 @@
 <ul>
 <li>TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window</li>
 </ul>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f"></a>
- <a class="glightbox" href="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f"></a>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473"></a></p>
 </li>
 <li>
 <p>You have successfully logged into the OpenShift cluster using the GUI/console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console. You should land in <strong>Administrator</strong> profile (or <strong>Developer</strong> profile if that was the last profile you were in when you logged off).</p>
@@ -898,9 +898,9 @@
 <ul>
 <li>Ignore the error part of the <code>oc version</code> for now. Its as expected since you have not yet logged into the cluster from the CLI.</li>
 </ul>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb"></a>
-  <a class="glightbox" href="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604"></a>
-  <a class="glightbox" href="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/576d86f0-8873-492c-8b13-9433c9f25604"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6"></a></p>
 </li>
 </ol>
 <h3 id="logging-in-to-openshift-cluster-using-oc-cli">Logging in to OpenShift Cluster using <code>oc</code> CLI<a class="headerlink" href="#logging-in-to-openshift-cluster-using-oc-cli" title="Permanent link">¶</a></h3>
@@ -908,7 +908,7 @@
 <ol>
 <li>
 <p>In the OpenShift console, top right section click on <code>cecuser</code> and select <code>Copy login command</code> option.</p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/64cf7f76-5bb1-477b-9f2c-45451fc80fa3" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/64cf7f76-5bb1-477b-9f2c-45451fc80fa3"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/64cf7f76-5bb1-477b-9f2c-45451fc80fa3"></a></p>
 </li>
 <li>
 <p>A new browser window (or tab, depending on your browser setting) opens up.</p>
@@ -917,25 +917,25 @@
 </ul>
 </li>
 <li>You will be presented with another login screen. Click <strong>htpasswd</strong> option
-   <a class="glightbox" href="https://github.com/user-attachments/assets/c3151615-24ba-44ea-8d71-783d39e4ccfb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c3151615-24ba-44ea-8d71-783d39e4ccfb"></a></li>
+   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c3151615-24ba-44ea-8d71-783d39e4ccfb"></a></li>
 <li>Use Username: <code>cecuser</code> and Password: <code>&lt;as provided in the TechZone Reservation Details page&gt;</code><ul>
 <li>TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.</li>
 </ul>
 </li>
 <li>
 <p>Click <strong>Display token</strong></p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/4af10efe-22fc-4d01-86a7-44e2fbbdd10d" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4af10efe-22fc-4d01-86a7-44e2fbbdd10d"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4af10efe-22fc-4d01-86a7-44e2fbbdd10d"></a></p>
 </li>
 <li>
 <p>Copy the <code>oc login --token=...</code> CLI and paste it in the bastion node terminal window.
-     <a class="glightbox" href="https://github.com/user-attachments/assets/75ad62a0-d0a0-45f6-8797-fedad6e5877a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/75ad62a0-d0a0-45f6-8797-fedad6e5877a"></a>
-     <a class="glightbox" href="https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5"></a></p>
+     <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/75ad62a0-d0a0-45f6-8797-fedad6e5877a"></a>
+     <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5"></a></p>
 </li>
 <li>You have successfully logged into the OpenShift cluster using the <code>oc</code> CLI.</li>
 <li>
 <p>In case you lose access to the <code>oc</code> CLI, you will get an error as below, in which case you need to re-authenticate.<br>
    Refer to the call-out on how to re-authenticate.</p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/a1e8d00c-64d0-41ab-997c-540378df0544" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a1e8d00c-64d0-41ab-997c-540378df0544"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a1e8d00c-64d0-41ab-997c-540378df0544"></a></p>
 </li>
 </ol>
 <h3 id="re-authenticating-for-cli-access">Re-authenticating for CLI access<a class="headerlink" href="#re-authenticating-for-cli-access" title="Permanent link">¶</a></h3>
@@ -996,10 +996,20 @@ We strive to use OpenShift GUI/console as much possible, but in some scenarios O
     
       <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="/js/open_in_new_tab.js"></script>
-      
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+  <script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
 </html>

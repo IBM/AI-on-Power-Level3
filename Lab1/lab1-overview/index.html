@@ -44,8 +44,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
       
     
@@ -823,7 +823,7 @@ Watsonx is designed for the enterprise and is targeted for business domains, emp
 Read <a href="https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-working-together-in-open-source/">this blog</a> to understand more about how IBM and Hugging Face are working to bring open source communities together for enterprise AI.</p>
 <h2 id="ai-and-watsonx-with-ibm-power">AI and watsonx with IBM Power<a class="headerlink" href="#ai-and-watsonx-with-ibm-power" title="Permanent link">¶</a></h2>
 <p>Here is a quick 1-slider on what you can do with AI and watsonx on IBM Power, today.
-<a class="glightbox" href="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149"></a></p>
 <p>Clients can get started with AI and watsonx with IBM Power today. 
 IBM has made it simple by aligning the common use cases around 4 key areas that we see within our pilots and client activations.</p>
 <ul>
@@ -897,10 +897,20 @@ Determine which factors are most important for you and your organization.</p>
     
       <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="/js/open_in_new_tab.js"></script>
-      
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+  <script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
 </html>
