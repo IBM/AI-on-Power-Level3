@@ -44,8 +44,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
       
     
@@ -825,23 +825,23 @@
 <h3 id="create-project">Create project<a class="headerlink" href="#create-project" title="Permanent link">¶</a></h3>
 <ol>
 <li>Go to OpenShift Administrator profile, click on <strong>Home</strong> -&gt; <strong>Projects</strong> and click <strong>Create Project</strong>
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f"></a></li>
 <li>Enter a project name: <strong>lab1-demo</strong> &amp; click <strong>Create</strong>
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320"></a></li>
 </ol>
 <h3 id="setup-storage">Setup storage<a class="headerlink" href="#setup-storage" title="Permanent link">¶</a></h3>
 <p>Let's setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
 In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PVC) and the actual storage (aka PersistentVolume or PV) gets alloted based on your request and the storage availability in the storage pool (NFS in this case).</p>
 <ol>
 <li>Go to OpenShift Administrator profile, click on <strong>Storage</strong> -&gt; <strong>PersistentVolumeClaims</strong> and click <strong>Create PersistentVolumeClaim</strong>
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2"></a></li>
 <li>In the resulting form, enter PVC name: <strong>model-storage</strong> and Size: <strong>20</strong> GB. Leave other fields as defaults and click <strong>Create</strong>
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c"></a></li>
 <li>Note that it shows PVC status as bound, which means storage was allotted
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2"></a></li>
 <li>
 <p>Navigate to <strong>Storage</strong> -&gt; <strong>PersistentVolumes</strong> and view the actual storage (PV) bound to your storage request (PVC = <strong>model-storage</strong>)
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e"></a></p>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e"></a></p>
 <p>This completes the storage setup.</p>
 </li>
 </ol>
@@ -850,7 +850,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p>We will use ConfigMap to store the model URL and model name, both of which will be used when we deploy the model. Using ConfigMap will help us switch to a different model very easily.</p>
 <ol>
 <li>Navigate to <strong>Workloads</strong> -&gt; <strong>ConfigMaps</strong> and click <strong>Create ConfigMap</strong>
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7"></a></li>
 <li>
 <p>In the resulting form, enter a name: <strong>model-params</strong>, and fill the Key and Value fields as below:</p>
 <ul>
@@ -862,7 +862,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 </ul>
 <p>Click <strong>Add key/value</strong> which will open up one more Key/Value box.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32"></a></p>
 </li>
 <li>
 <p>In the newly created Key/Value box, enter the values as below:</p>
@@ -875,7 +875,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 </ul>
 <p>Click <strong>Create</strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a"></a></p>
 <p>This completes the ConfigMap setup.</p>
 </li>
 </ol>
@@ -893,7 +893,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 <li>
 <p>Click on <strong>+Add</strong> and select <strong>Import YAML</strong> option.
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462"></a></p>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462"></a></p>
 </li>
 <li>
 <p>In the resulting window, copy and paste the below deployment yaml into it and click <strong>Create</strong>
@@ -989,7 +989,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">           </span><span class="nt">persistentVolumeClaim</span><span class="p">:</span>
 <a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">             </span><span class="nt">claimName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">model-storage</span>
 </code></pre></div></td></tr></table></div>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61"></a>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61"></a>
 </li>
 <li>
 <p>Here is a quick explanation of the deployment yaml</p>
@@ -1022,11 +1022,11 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 <li>
 <p>You should land in the Deployment details window. Click on <strong>Pods</strong> tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9"></a></p>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9"></a></p>
 </li>
 <li>
 <p>Navigate to <strong>Environment</strong> tab, select <strong>fetch-model-data</strong> container and select <strong>model-params</strong> ConfigMap and click <strong>Save</strong>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa"></a></p>
 <div class="admonition info">
 <p class="admonition-title">About LLama and tinyLLama models</p>
 <p>The ConfigMap currently points to the tinyLLaMa model. The LLaMA (Large Language Model Meta AI) model is a family of state-of-the-art large language models developed by Meta (formerly Facebook), specifically designed to perform various natural language processing tasks. TinyLLaMA is a compact variant of the LLaMA (Large Language Model Meta AI) model, designed for efficiency and accessibility, especially when deployed in smaller environments. Available via Hugging Face (HF), it focuses on reducing the size of large-scale language models while retaining strong performance across various natural language processing tasks.</p>
@@ -1034,7 +1034,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 <li>
 <p>Switch back to <strong>Pods</strong> tab and you should see that a new pod has been launched by OpenShift as we changed the pod's environment, when we added ConfigMap.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf"></a></p>
 </li>
 <li>
 <p>The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.</p>
@@ -1042,18 +1042,18 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p class="admonition-title">Model download will take time - Have patience!!</p>
 <p>This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV)</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc"></a></p>
 <p><strong>Congratulations!</strong>, you have successfully deployed a LLM on Power10.</p>
 </li>
 <li>
 <p>Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca"></a></p>
 </li>
 <li>In the pod details page, click on the <strong>Logs</strong> tab to see the pod logs
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff"></a></li>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff"></a></li>
 <li>
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a"></a></p>
 <p>This verifies that we have indeed deployed tinyllama.</p>
 </li>
 <li>
@@ -1061,7 +1061,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <div class="admonition note">
 <p>If you are switching browser window/tab, make sure you are in the <strong>lab1-demo</strong> project in the new window/tab.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09"></a></p>
 </li>
 <li>
 <p>In the resulting Create Service yaml window, select all &amp; delete everything. Then copy the below service yaml, paste it in the yaml window and click <strong>Create</strong>
@@ -1095,7 +1095,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="s">"lab1-demo"</span>
 </code></pre></div></td></tr></table></div>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf"></a>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf"></a>
 </li>
 <li>
 <p>Here is a quick explanation of the Service yaml</p>
@@ -1122,11 +1122,11 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 <li>
 <p>You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb"></a></p>
 </li>
 <li>
 <p>Navigate to <strong>Networking</strong> -&gt; <strong>Routes</strong> and click <strong>Create Route</strong>
-      <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343"></a></p>
+      <a class="glightbox" href="https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343"></a></p>
 </li>
 <li>
 <p>In the resulting Create Route window, select <strong>YAML view</strong> and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click <strong>Create</strong>
@@ -1156,7 +1156,7 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">  </span><span class="nt">port</span><span class="p">:</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lab1-port</span>
 </code></pre></div></td></tr></table></div>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090"></a>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090"></a>
 </li>
 <li>
 <p>Here is a quick explanation of the Route yaml. In OpenShift, a Route exposes a service to external clients by mapping an external URL to an internal OpenShift service.</p>
@@ -1183,15 +1183,15 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 </li>
 <li>
 <p>You should land in the route details view. The URL mentioned under <strong>Location</strong> is the externally accessible URL of your application (which hosts the tinyllama LLM).
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/abfcc310-985e-4208-9e56-d2f39e4f2c13"></a></p>
 </li>
 <li>
 <p>Click on the external URL in the route details view to access your model. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:      </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53"></a></p>
 </li>
 <li>
 <p>Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like, but keep in mind you're using a small model and there are more powerful models out there for general conversation.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
+    <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Experimenting with model parameters</p>
 <p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab</p>
@@ -1203,8 +1203,8 @@ In OpenShift, you first request for the storage (aka PersistentVolumeClaim or PV
 <p class="admonition-title">Accuracy of LLM responses</p>
 <p>Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a <strong>specific cutoff date</strong>. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248"></a></p>
 <p><strong>Congratulations</strong>, you were able to deploy a LLM, create a public endpoint to access it and take it for a run!
 In the next step, let's learn how to deploy a different LLM.</p>
 </li>
@@ -1217,9 +1217,9 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </div>
 <ol>
 <li>Navigate to your OpenShift developer profile window. Click <strong>ConfigMaps</strong>, then click <strong>model-params</strong>. This should open up the ConfigMap details page.
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a26e875b-02d0-438e-84f3-9ed86347e650"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/a26e875b-02d0-438e-84f3-9ed86347e650" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a26e875b-02d0-438e-84f3-9ed86347e650"></a></li>
 <li>In the model-params ConfigMap details page, click <strong>Action</strong> and select <strong>Edit ConfigMap</strong>
-   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a0d66be8-8ca3-4f18-b360-ee35a7843862"></a></li>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/a0d66be8-8ca3-4f18-b360-ee35a7843862" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a0d66be8-8ca3-4f18-b360-ee35a7843862"></a></li>
 <li>
 <p>In the resulting form, edit the key/value fields for MODEL_NAME and MODEL_URL as below and click <strong>Save</strong></p>
 <ul>
@@ -1231,22 +1231,22 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <li>Key: MODEL_URL</li>
 <li>Value: https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052"></a>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052"></a>
 4. The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.</p>
 </li>
 <li>
 <p>Let's go to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click <strong>D lab1-demo</strong> in that pane which will then open up the deployment details view for lab1-demo deployment.</p>
 </li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958"></a></p>
 <ol start="8">
 <li>Click <strong>Actions</strong> and select <strong>Restart rollout</strong>. This will restart the deployment which results in redeployment of the pod.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
 <ol start="10">
 <li>
 <p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Model download will take time - Have patience!!</p>
 <p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
@@ -1254,19 +1254,19 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </li>
 <li>
 <p>If all goes well, you should see just 1 pod running.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050"></a></p>
 </li>
 <li>
 <p>Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f"></a></p>
 </li>
 <li>
 <p>In the pod details page, click on the Logs tab to see the pod logs.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75"></a></p>
 </li>
 <li>
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c"></a></p>
 <p>This verifies that we have indeed deployed granite.   </p>
 </li>
 <li>
@@ -1277,13 +1277,13 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </div>
 <ul>
 <li>In Developer profile window, click <strong>Topology</strong> and you should see the icon representing your deployed application.
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb"></a></li>
+  <a class="glightbox" href="https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb"></a></li>
 <li>Click on the arrow (in top right corner of the icon) that says "Open URL"
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7366146b-cf82-4dc3-9327-d51aa5944778"></a></li>
+  <a class="glightbox" href="https://github.com/user-attachments/assets/7366146b-cf82-4dc3-9327-d51aa5944778" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7366146b-cf82-4dc3-9327-d51aa5944778"></a></li>
 <li>A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53"></a></li>
+  <a class="glightbox" href="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53"></a></li>
 <li>Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></li>
+  <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Experimenting with model parameters</p>
@@ -1296,8 +1296,8 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <p class="admonition-title">Accuracy of LLM responses</p>
 <p>Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a <strong>specific cutoff date</strong>. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c"></a></p>
 <p><strong>Congratulations</strong>, in this section you learned how easy it is to switch to a different LLM, access it and take it for a run!
 This completes the lab.</p>
 </li>
@@ -1353,19 +1353,7 @@ This completes the lab.</p>
       <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
-  <script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
-    try {
-        var img = element.querySelector('img');
-        if (img && img.src) {
-            element.setAttribute('href', img.src);
-        } else {
-            console.log('No img element with src attribute found');
-        }
-    } catch (error) {
-        console.log('Error:', error);
-    }
-});
-const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
 </html>
