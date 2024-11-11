@@ -39,7 +39,7 @@ In this lab, we will focus on the below:
 
     !!! warning "Ensure `oc` CLI is authenticated with the cluster"
 
-        Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli) to ensure `oc` is authenticated with the cluster.
+        Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli){target="_blank"} to ensure `oc` is authenticated with the cluster.
 
 3. Make sure you are in the home directory and then run the command below to clone the github repository. Then switch to the newly cloned repository directory.
      - `cd`
