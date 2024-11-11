@@ -3,7 +3,7 @@
 Goal of this lab is to showcase the basics (and the ease) of deploying a LLM (aka foundation models) on Power and how easy it is to switch to a different LLM.
 But before we do that, let's understand the ecosystem around LLMs (aka foundation models or Generative AI) in the context of IBM Power.
 
-In this lab, we will deploy 2 LLMs from [Hugging Face (HF)](https://huggingface.co/) on IBM Power10 using the on-prem lab environment that has been provisioned.
+In this lab, we will deploy 2 LLMs from [Hugging Face (HF)](https://huggingface.co/){target="_blank"} on IBM Power10 using the on-prem lab environment that has been provisioned.
 
 ## What is Hugging Face?
 
@@ -19,7 +19,7 @@ We use HF to access LLMs in this lab as it has a vast collection of pre-trained 
 
 ## What is IBM watsonx?
 
-Enterprise clients of IBM will use the [IBM watsonx platform](https://www.ibm.com/watsonx), an enterprise-ready AI and data platform.
+Enterprise clients of IBM will use the [IBM watsonx platform](https://www.ibm.com/watsonx){target="_blank"}, an enterprise-ready AI and data platform.
 Watsonx is designed for the enterprise and is targeted for business domains, empowering value creators to transform business applications into AI-first applications.
 
 !!! note "What is IBM watsonx?"
@@ -51,7 +51,7 @@ IBM watsonx and Hugging Face can work together by combining IBM's enterprise AI 
 - **Deployment**: Hugging Face models can be integrated into IBM watsonx to deploy at scale on hybrid cloud or on-premise environments, ensuring enterprise-level security and performance.
 
 Together, Hugging Face provides the models, and watsonx offers the enterprise-ready infrastructure for secure, large-scale, compliant deployment.
-Read [this blog](https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-working-together-in-open-source/) to understand more about how IBM and Hugging Face are working to bring open source communities together for enterprise AI.
+Read [this blog](https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-working-together-in-open-source/){target="_blank"} to understand more about how IBM and Hugging Face are working to bring open source communities together for enterprise AI.
 
 ## AI and watsonx with IBM Power
 
@@ -82,5 +82,5 @@ Determine which factors are most important for you and your organization.
 
 After you have a short list of models that best fit your needs, you can test the models to see which ones consistently return the results you want.
 
-For more details on choosing a foundation model that support your use case / language / other factors, refer to [this document](https://www.ibm.com/docs/en/watsonx/saas?topic=models-choosing-model). Although this document is part of the watsonx.ai product documentation, the information provided includes both IBM-trained models and open-source models as watsonx.ai support both types of models.
+For more details on choosing a foundation model that support your use case / language / other factors, refer to [this document](https://www.ibm.com/docs/en/watsonx/saas?topic=models-choosing-model){target="_blank"}. Although this document is part of the watsonx.ai product documentation, the information provided includes both IBM-trained models and open-source models as watsonx.ai support both types of models.
 
