@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-rendering-error" class="md-skip">
+        <a href="#using-the-demonstration-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -616,8 +616,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Helpful Tips
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -628,6 +637,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-demonstration-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the demonstration guide
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -650,8 +685,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-demonstration-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the demonstration guide
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -666,23 +716,44 @@
                   
 
 
-<div><h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link">¶</a></h1>
-<p><em>File</em>: <code>helpful-tips.md</code></p>
-<p><em>UndefinedError</em>: 'guide' is undefined</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Traceback (most recent call last):
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  File "/home/dpkshetty/.local/lib/python3.11/site-packages/mkdocs_macros/plugin.py", line 527, in render
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    return md_template.render(**page_variables)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  File "/home/dpkshetty/.local/lib/python3.11/site-packages/jinja2/environment.py", line 1304, in render
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    self.environment.handle_exception()
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  File "/home/dpkshetty/.local/lib/python3.11/site-packages/jinja2/environment.py", line 939, in handle_exception
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    raise rewrite_traceback_stack(source=source)
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  File "&lt;template&gt;", line 10, in top-level template code
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  File "/home/dpkshetty/.local/lib/python3.11/site-packages/jinja2/environment.py", line 487, in getattr
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    return getattr(obj, attribute)
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>           ^^^^^^^^^^^^^^^^^^^^^^^
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>jinja2.exceptions.UndefinedError: 'guide' is undefined
-</code></pre></div></div>
+  <h1>Helpful Tips</h1>
+
+<div><h2 id="using-the-demonstration-guide">Using the demonstration guide<a class="headerlink" href="#using-the-demonstration-guide" title="Permanent link">¶</a></h2>
+<p>Use these helpful tips to take full advantage of the AI on IBM Power - Level 3 guide.</p>
+<details class="tip">
+<summary>Printing the demonstration guide</summary>
+<div class="admonition warning">
+<p class="admonition-title">Printed or saved copies can be out of date</p>
+<p>The AI on IBM Power - Level 3 guide changes regularly to match the AI on IBM Power offering and associated ITZ environment. Printed or saved copies of the demonstration guide can become out-of-date quickly and result in failed steps. </p>
+</div>
+<p>A ready-to-print PDF version of the AI on IBM Power - Level 3 guide is <a href="_pdf/IBM%20watsonx%20Assistant%20for%20Z%20Demonstration%20Guide.pdf" target="_blank">here</a>. </p>
+</details>
+<details class="tip">
+<summary>Viewing images</summary>
+<p>Images in the demonstration guide can be enlarged by clicking on the image. Press the <span class="keys"><kbd class="key-escape">Esc</kbd></span> key or click the <strong>X</strong> to dismiss the enlarged image.</p>
+</details>
+<details class="tip">
+<summary>Image highlighting</summary>
+<p>In some images, the following styles of highlighting are used:</p>
+<ul>
+<li>
+<p><strong>Solid highlight box</strong>: This style of box highlights where to click, enter, or select an item.
+<a class="glightbox" href="_attachments/welcome-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="_attachments/welcome-1.png"></a></p>
+</li>
+<li>
+<p><strong>Dash highlight box</strong>: This style of box highlights one of two things: the path to follow to get to a specific location in the user interface, or areas to explore on your own.
+<a class="glightbox" href="_attachments/welcome-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="_attachments/welcome-2.png"></a></p>
+</li>
+</ul>
+</details>
+<details class="tip">
+<summary>Copying commands and prompts</summary>
+<!-- - **Copy to the clipboard**: The text is copied to the clipboard. Click the copy icon (highlighted) and then use the operating system paste function. For example, entering <code>Ctrl+v</code>, <code>Cmd+v</code>, or right-click and select <code>Paste</code>.
+<a class="glightbox" href="_attachments/welcome-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="_attachments/welcome-3.png" /></a> -->
+<p>Copying and pasting commands and prompts from this demonstration guide is easy and can eliminate typographical errors.</p>
+<p>Click the highlighted copy icon and then use your operating system's paste function. For example, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>, or right-click and select <code>Paste</code>.
+<a class="glightbox" href="_attachments/welcome-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="_attachments/welcome-3.png"></a></p>
+</details></div>
 
 
 
