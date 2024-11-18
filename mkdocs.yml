@@ -71,6 +71,7 @@ nav:
     - 'Hands-on guide': 'Lab3/lab3-hands-on-guide.md'
   - Additional resources: resources.md
   - Credits: credits.md
+  - Support: support.md
 
 extra:
   generator: false
