@@ -3,8 +3,8 @@ Use these helpful tips to take full advantage of the AI on IBM Power - Level 3 g
 
 ??? tip "Printing the demonstration guide"
 
-    Need a physical copy? Looking for a printable version? 
-    Use the ['Print Course'](https://ibm.github.io/AI-on-Power-Level3/print_page/){target="_blank"} option in the navigation bar to access a print-ready version of the course for offline study.
+    Need a physical copy? Looking for a printable version? Want a PDF version?
+    Use the ['Print Course'](https://ibm.github.io/AI-on-Power-Level3/print_page/){target="_blank"} option in the navigation bar to access a print-ready version of the course for offline study. You could then use your browser's **File > Print > Save to PDF** option to save the whole course into a single PDF.
  
 
 ??? tip "Viewing images"
@@ -16,10 +16,7 @@ Use these helpful tips to take full advantage of the AI on IBM Power - Level 3 g
     In some images, the following styles of highlighting are used:
 
     - **Solid highlight box**: This style of box highlights where to click, enter, or select an item.
-    ![](_attachments/welcome-1.png)
-
-    - **Dash highlight box**: This style of box highlights one of two things: the path to follow to get to a specific location in the user interface, or areas to explore on your own.
-    ![](_attachments/welcome-2.png)
+    ![image](https://github.com/user-attachments/assets/ded103d9-5224-4d5f-bf8d-e6b93b1f0d6b)
 
 ??? tip "Copying commands and prompts"
 
