@@ -39,6 +39,7 @@ plugins:
     - macros
     - search
     - glightbox
+    - print-site
 
 markdown_extensions:
   - toc:
