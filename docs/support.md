@@ -1,4 +1,4 @@
-## Support
+# Support
 
 Think something is down? Check the applicable status pages for any known issues like a site or service not available:
 
