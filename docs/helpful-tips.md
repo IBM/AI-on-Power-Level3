@@ -20,10 +20,8 @@ Use these helpful tips to take full advantage of the AI on IBM Power - Level 3 g
 
 ??? tip "Copying commands and prompts"
 
-    <!-- - **Copy to the clipboard**: The text is copied to the clipboard. Click the copy icon (highlighted) and then use the operating system paste function. For example, entering ```Ctrl+v```, ```Cmd+v```, or right-click and select ```Paste```.
-    ![](_attachments/welcome-3.png) -->
-
     Copying and pasting commands and prompts from this demonstration guide is easy and can eliminate typographical errors.
 
     Click the highlighted copy icon and then use your operating system's paste function. For example, ++ctrl+v++, or right-click and select ```Paste```.
-    ![](_attachments/welcome-3.png)
+    ![image](https://github.com/user-attachments/assets/dcac9336-bbc0-4438-ac7b-1fc52bc87d06)
+
