@@ -40,16 +40,16 @@ plugins:
     - search
     - glightbox
     - print-site:
-        add_to_navigation: false
+        add_to_navigation: true
         print_page_title: 'Print Site'
-        add_print_site_banner: false
+        add_print_site_banner: true
         # Table of contents
         add_table_of_contents: true
         toc_title: 'Table of Contents'
         toc_depth: 6
         # Content-related
         add_full_urls: false
-        enumerate_headings: true
+        enumerate_headings: false
         enumerate_figures: true
         add_cover_page: true
         cover_page_template: ""
@@ -57,6 +57,7 @@ plugins:
         include_css: true
         enabled: true
         exclude:
+          - docs/helpful-tips.md
 
 markdown_extensions:
   - toc:
