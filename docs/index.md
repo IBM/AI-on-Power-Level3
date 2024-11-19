@@ -89,6 +89,6 @@ IBM Power10 includes the Matrix Math Accelerator (MMA), which offers several ben
 <br>   
 These benefits make IBM Power10's MMA highly attractive for enterprises aiming to accelerate their AI/ML initiatives while maintaining high levels of performance and energy efficiency.
 
-## **Summary:**
+## **Summary**
 
 IBM Power10 is designed to meet the specific needs of GenAI use cases by offering high-performance processing, memory scalability, security, and energy efficiency. It empowers enterprises to handle complex AI workloads efficiently while maintaining flexibility and security, making it ideal for industries that rely on AI-driven innovation.
