@@ -43,7 +43,7 @@ plugins:
         add_to_navigation: true
         print_page_title: 'Print Course'
         add_print_site_banner: true
-	print_site_banner_template: docs/assets/templates/print_site_banner.tpl
+        print_site_banner_template: docs/assets/templates/print_site_banner.tpl
         # Table of contents
         add_table_of_contents: true
         toc_title: 'Table of Contents'
