@@ -58,6 +58,7 @@ markdown_extensions:
   - md_in_html
 
 nav:
+  - Helpful Tips: helpful-tips.md
   - Introduction: 'index.md'
   - Pre-requisites: 'pre-req.md'
   - Lab setup instructions: 'lab-setup.md'
@@ -73,7 +74,6 @@ nav:
   - Additional resources: resources.md
   - Credits: credits.md
   - Support: support.md
-  - Helpful Tips: helpful-tips.md
 
 extra:
   generator: false
