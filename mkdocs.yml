@@ -39,8 +39,8 @@ plugins:
     - macros
     - search
     - glightbox
-    - print-site
-      add_to_navigation: false
+    - print-site:
+        add_to_navigation: false
         print_page_title: 'Print Site'
         add_print_site_banner: false
         # Table of contents
