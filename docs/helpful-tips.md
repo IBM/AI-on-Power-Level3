@@ -3,11 +3,9 @@ Use these helpful tips to take full advantage of the AI on IBM Power - Level 3 g
 
 ??? tip "Printing the demonstration guide"
 
-    !!! Warning "Printed or saved copies can be out of date"
-
-        The AI on IBM Power - Level 3 guide changes regularly to match the AI on IBM Power offering and associated ITZ environment. Printed or saved copies of the demonstration guide can become out-of-date quickly and result in failed steps. 
-
-    A ready-to-print PDF version of the AI on IBM Power - Level 3 guide is <a href="_pdf/IBM%20watsonx%20Assistant%20for%20Z%20Demonstration%20Guide.pdf" target="_blank">here</a>. 
+    Need a physical copy? Looking for a printable version? 
+    Use the ['Print Course'](https://ibm.github.io/AI-on-Power-Level3/print_page/){target="_blank"} option in the navigation bar to access a print-ready version of the course for offline study.
+ 
 
 ??? tip "Viewing images"
 
