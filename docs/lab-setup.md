@@ -45,9 +45,9 @@ Follow the steps below:
      
 ### Reauthenticating for console
 
-!!! note "RE-AUTHENTICATING in case you lose console access"
+!!! note "REAUTHENTICATING in case you lose console access"
    
-    In case you lose access to the OpenShift cluster and need to re-login to the console, which is possible in case your reservation expires and/or your console authentication timed-out, please follow the above steps again to re-login to your OpenShift console
+    In case you lose access to the OpenShift cluster and need to reauthenticate to the console, which is possible in case your reservation expires and/or your console authentication timed-out, please follow the above steps again to reauthenticate to your OpenShift console
 
 ### Accessing OpenShift `oc` CLI
 
@@ -93,7 +93,7 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
    
 ### Reauthenticating for CLI access
 
-!!! note "RE-AUTHENTICATING in case you lose CLI access"
+!!! note "REAUTHENTICATING in case you lose CLI access"
       
     In case you lose access to the OpenShift cluster and need to reauthenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your `oc` CLI authenticated to the OpenShift cluster
 
