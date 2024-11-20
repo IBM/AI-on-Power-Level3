@@ -43,7 +43,7 @@ Follow the steps below:
            <source src="https://github.com/user-attachments/assets/a622a195-00a6-4950-b2e5-686b04fa3401" type="video/mp4">
         </video>
      
-### Re-authenticating for console
+### Reauthenticating for console
 
 !!! note "RE-AUTHENTICATING in case you lose console access"
    
@@ -86,16 +86,16 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
      ![image](https://github.com/user-attachments/assets/75ad62a0-d0a0-45f6-8797-fedad6e5877a)
      ![image](https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5)
 8. You have successfully logged into the OpenShift cluster using the `oc` CLI.
-9. In case you lose access to the `oc` CLI, you will get an error as below, in which case you need to re-authenticate.<br>
-   Refer to the call-out on how to re-authenticate.
+9. In case you lose access to the `oc` CLI, you will get an error as below, in which case you need to reauthenticate.<br>
+   Refer to the call-out on how to reauthenticate.
 
      ![image](https://github.com/user-attachments/assets/a1e8d00c-64d0-41ab-997c-540378df0544)
    
-### Re-authenticating for CLI access
+### Reauthenticating for CLI access
 
 !!! note "RE-AUTHENTICATING in case you lose CLI access"
       
-    In case you lose access to the OpenShift cluster and need to re-authenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your `oc` CLI authenticated to the OpenShift cluster
+    In case you lose access to the OpenShift cluster and need to reauthenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your `oc` CLI authenticated to the OpenShift cluster
 
 ### Summary
 Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.
