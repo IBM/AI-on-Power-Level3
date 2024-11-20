@@ -16,7 +16,7 @@ These models, built on architectures like GPT or similar transformers, are train
   - **Code Generation**: Code LLMs can generate new code based on prompts, such as writing functions, classes, or even entire programs.
   - **Code Completion**: Similar to how text-based LLMs suggest completions for sentences, code LLMs can suggest code completions in real-time, aiding developers in writing code faster.
   - **Bug Detection and Fixes**: These models can detect bugs or potential issues in code and suggest corrections.
-  - **Multi-Language Support**: Code LLMs are typically trained on multiple programming languages, allowing them to work across various tech stacks (e.g., Python, Java, JavaScript, C++, etc.).
+  - **Multi-Language Support**: Code LLMs are typically trained on multiple programming languages, allowing them to work across various tech stacks (for example, Python, Java, JavaScript, C++, etc.).
   - **Code Explanation**: Some models can explain how a piece of code works, making them useful for learning, documentation, and debugging.
 
 ## Use Cases
