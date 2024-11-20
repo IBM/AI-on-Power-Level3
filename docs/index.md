@@ -56,7 +56,7 @@ IBM Power10 offers several advantages for generative AI (genAI) use cases, provi
 
 2. **Memory and bandwidth optimization:**
 
-    * The DDR5 memory and faster I/O bandwidth provide a significant performance boost, enabling genAI models to run more efficiently.
+    * The Double Data Rate 5 (DDR5) memory and faster Input/Output (I/O) bandwidth provide a significant performance boost, enabling genAI models to run more efficiently.
 
 3. **Energy efficiency:**
 
