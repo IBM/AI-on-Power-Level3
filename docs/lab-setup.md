@@ -16,12 +16,13 @@ Follow the steps below:
 
 ## Accessing the environment
 
-1. Since this is an on-prem environment, make sure you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to [this](https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md){target="_blank"} link for more details.
-2. In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.
-3. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
+1. As this is an on-prem environment, verify you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to [this](https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md){target="_blank"} link for more details.
+2. In TechZone, open the [My Reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page.
+3. Click on your reservation, which will open up the details page.
+4. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
    ![image](https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb)
 
-### Accessing OpenShift GUI/console
+### Accessing OpenShift console
 
 1. In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link
 2. This will open up a new browser tab/window and opens up the OpenShift console login page   
@@ -33,7 +34,7 @@ Follow the steps below:
      ![image](https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f)
      ![image](https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473)
 
-7. You have successfully logged into the OpenShift cluster using the GUI/console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console. You should land in **Administrator** profile (or **Developer** profile if that was the last profile you were in when you logged off).
+7. You have successfully logged into the OpenShift cluster using the console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console. You should land in **Administrator** profile (or **Developer** profile if that was the last profile you were in when you logged off).
 8. **TIP**: Its a good idea to have 2 browser windows (or tabs per your preference) for OpenShift console access - one with Administrator profile and another with Developer profile because in the hands-on labs we will be needing to switch between these profiles and its easier and efficient to do so with 2 browser windows.
 
      - To do so, copy the URL from the browser address bar, open a new browser window (or tab) and paste the URL there. It should open up one more OpenShift console in the new window (or tab). In the new window/tab, switch to the Developer profile (also known as Persona) by going to the top left corner and clicking on **Administrator** and selecting **Developer** (or vice-versa) in the drop down menu. In short, ensure you have 2 browser windows, one each with Administrator and Developer profile (also known as Persona) and we will call this OpenShift Administrator console and Developer console respectively.
@@ -42,11 +43,11 @@ Follow the steps below:
            <source src="https://github.com/user-attachments/assets/a622a195-00a6-4950-b2e5-686b04fa3401" type="video/mp4">
         </video>
      
-### Re-authenticating for GUI/console
+### Re-authenticating for console
 
-!!! note "RE-AUTHENTICATING in case you lose GUI/console access"
+!!! note "RE-AUTHENTICATING in case you lose console access"
    
-    In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console
+    In case you lose access to the OpenShift cluster and need to re-login to the console, which is possible in case your reservation expires and/or your console authentication timed-out, please follow the above steps again to re-login to your OpenShift console
 
 ### Accessing OpenShift `oc` CLI
 
@@ -98,5 +99,5 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
 
 ### Summary
 Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.
-We strive to use OpenShift GUI/console as much possible, but in some scenarios OpenShift console doesn't yet support some functionality in which case we switch to the `oc` CLI. Hence this lab will use OpenShift GUI/console and `oc` CLI both as necessary.
+We strive to use OpenShift console as much possible, but in some scenarios OpenShift console doesn't yet support some functionality in which case we switch to the `oc` CLI. Hence this lab will use OpenShift console and `oc` CLI both as necessary.
 

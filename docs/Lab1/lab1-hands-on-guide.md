@@ -4,7 +4,7 @@
 
 Make sure you have the following items ready:
 
-- In your browser, you have logged in as `cecuser` in the OpenShift GUI/console.
+- In your browser, you have logged in as `cecuser` in the OpenShift console.
 - In your terminal, you have logged into the bastion server and authenticated to the OpenShift cluster using the OpenShift CLI `oc`.
   
 !!! warning "Warning"
