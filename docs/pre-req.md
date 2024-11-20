@@ -1,16 +1,16 @@
 # Prerequisites for the course
 
-The following are the prerequisites for this course:
+The following are the prerequisite(s) for this course:
 
 * AI on Power - Level 2 course - [IBM](https://yourlearning.ibm.com/activity/PLAN-95E47B97CBB5){target="_blank"} | [BP](https://learn.ibm.com/course/view.php?id=16329){target="_blank"}
 
 * Basic understanding of Generative AI (genAI) and Large Language Models (LLM)
-   	- If not, feel free to learn more by doing Google search :) 
+   	- If not, feel free to learn more by doing Google search 
 
-* Basic understanding of OpenShift and working with yaml files. 
-	- In any case, appropriate instructions are provided through-out the course
+* Basic understanding of OpenShift and working with Yet Another Markup Language (YAML) files. 
+	- While sufficient instructions are provided through-out the course, it is highly recommended to have a basic understanding of OpenShift and working with YAML files
 
-* Laptop with ssh pre-installed to connect to lab environment.
- 	- Windows: PowerShell should have ssh pre-installed.
+* Laptop with Secure Shell (ssh) pre-installed to connect to lab environment
+ 	- Windows: PowerShell should have ssh pre-installed
     	- Mac/Linux: ssh should be already available
-       	- If not, Google is your friend :) 
+       	- If not, Google is your friend 
