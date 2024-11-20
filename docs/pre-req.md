@@ -1,6 +1,6 @@
-# Pre-requisites for the course
+# Prerequisites for the course
 
-The following are the pre-requisites for this course:
+The following are the prerequisites for this course:
 
 * AI on Power - Level 2 course - [IBM](https://yourlearning.ibm.com/activity/PLAN-95E47B97CBB5){target="_blank"} | [BP](https://learn.ibm.com/course/view.php?id=16329){target="_blank"}
 
