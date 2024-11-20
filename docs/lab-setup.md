@@ -16,7 +16,7 @@ Follow the steps below:
 
 ## Accessing the environment
 
-1. Since this is an on-prem environment, make sure you are connected to the IBM network to access the environment.(TODO: add details on VPN)
+1. Since this is an on-prem environment, make sure you are connected to the Virtual Private Network (VPN) to access the environment. Refer to [this](https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md){target="_blank"} link for more details.
 2. In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.
 3. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
    ![image](https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb)
