@@ -49,16 +49,18 @@ Follow the steps below:
    
     In case you lose access to the OpenShift cluster and need to reauthenticate to the console, which is possible in case your reservation expires and/or your console authentication timed-out, please follow the above steps again to reauthenticate to your OpenShift console
 
-### Accessing OpenShift `oc` CLI
+### Accessing OpenShift Command Line Interface (CLI)
+
+OpenShift CLIs are accessed using the `oc` command
 
 1. Go back to the "Reservation Details" section of the TechZone environment details page.
-2. Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.
+2. Open a terminal window and use the SSH client to connect to the Bastion node of OpenShift cluster.
       - `ssh -l cecuser <your bastion hostname/IP as provided in Reservation Details section>`
       - If `ssh` gives any warning, type `yes` and continue
       - When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window
 3. You have logged in successfully to the bastion node of your OpenShift cluster.
-      - Keep this terminal window always open as you will be using it frequently to run CLI commands.
-5. `oc` CLI is pre-installed on the bastion node and must be working already. You can check by running `oc version` command.
+      - Keep this terminal window open as you will be using it frequently to run CLI commands.
+4. `oc` CLI is pre-installed on the bastion node. Verify by running `oc version` command.
       - Ignore the error part of the `oc version` for now. Its as expected since you have not yet logged into the cluster from the CLI.
      
       ![image](https://github.com/user-attachments/assets/0e41ba9f-9f36-41d1-89a2-2116babbacdb)
