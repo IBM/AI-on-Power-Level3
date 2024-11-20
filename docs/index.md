@@ -50,7 +50,7 @@ IBM Power10 offers several advantages for generative AI (genAI) use cases, provi
 
 1. **High performance for AI workloads:**
 
-    * **AI acceleration**: IBM Power10 includes AI inference acceleration directly on the chip (aka Matrix Math Accelerator (MMA)), allowing faster processing of genAI tasks such as model training, inference, and real-time AI applications.
+    * **AI acceleration**: IBM Power10 includes AI inference acceleration directly on the chip (also known as Matrix Math Accelerator (MMA)), allowing faster processing of genAI tasks such as model training, inference, and real-time AI applications.
 
     * **Massive scalability**: Power10 is designed to handle large-scale AI models, with enhanced memory bandwidth and processing power to efficiently manage vast datasets used in training LLMs and genAI systems.
 

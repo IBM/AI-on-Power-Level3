@@ -144,7 +144,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
 * USERS - This which has user specific info (user_id, name, age, dob etc)
 * ACCOUNTS - This holds the account balance of each user with user_id being the common field between the 2 tables
 
-1. Given the above DB example, the prompt (aka context) we need to provide to the code LLM is as below:
+1. Given the above DB example, the prompt (also known as context) we need to provide to the code LLM is as below:
    ```
    You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
 

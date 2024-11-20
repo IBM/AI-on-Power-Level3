@@ -1,7 +1,7 @@
 # Deploy a Large Language Model (LLM) on IBM Power10 - Lab Education
 
-Goal of this lab is to showcase the basics (and the ease) of deploying a LLM (aka foundation models) on Power and how easy it is to switch to a different LLM.
-But before we do that, let's understand the ecosystem around LLMs (aka foundation models or Generative AI) in the context of IBM Power.
+Goal of this lab is to showcase the basics (and the ease) of deploying a LLM (also known as foundation models) on Power and how easy it is to switch to a different LLM.
+But before we do that, let's understand the ecosystem around LLMs (also known as foundation models or Generative AI) in the context of IBM Power.
 
 In this lab, we will deploy 2 LLMs from [Hugging Face (HF)](https://huggingface.co/){target="_blank"} on IBM Power10 using the on-prem lab environment that has been provisioned.
 
