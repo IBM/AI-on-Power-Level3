@@ -379,27 +379,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#accessing-openshift-guiconsole" class="md-nav__link">
+  <a href="#accessing-openshift-console" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing OpenShift GUI/console
+      Accessing OpenShift console
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#re-authenticating-for-guiconsole" class="md-nav__link">
+  <a href="#reauthenticating-for-console" class="md-nav__link">
     <span class="md-ellipsis">
-      Re-authenticating for GUI/console
+      Reauthenticating for console
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#accessing-openshift-oc-cli" class="md-nav__link">
+  <a href="#accessing-openshift-command-line-interface-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing OpenShift oc CLI
+      Accessing OpenShift Command Line Interface (CLI)
     </span>
   </a>
   
@@ -415,9 +415,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#re-authenticating-for-cli-access" class="md-nav__link">
+  <a href="#reauthenticating-for-cli-access" class="md-nav__link">
     <span class="md-ellipsis">
-      Re-authenticating for CLI access
+      Reauthenticating for CLI access
     </span>
   </a>
   
@@ -823,27 +823,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#accessing-openshift-guiconsole" class="md-nav__link">
+  <a href="#accessing-openshift-console" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing OpenShift GUI/console
+      Accessing OpenShift console
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#re-authenticating-for-guiconsole" class="md-nav__link">
+  <a href="#reauthenticating-for-console" class="md-nav__link">
     <span class="md-ellipsis">
-      Re-authenticating for GUI/console
+      Reauthenticating for console
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#accessing-openshift-oc-cli" class="md-nav__link">
+  <a href="#accessing-openshift-command-line-interface-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing OpenShift oc CLI
+      Accessing OpenShift Command Line Interface (CLI)
     </span>
   </a>
   
@@ -859,9 +859,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#re-authenticating-for-cli-access" class="md-nav__link">
+  <a href="#reauthenticating-for-cli-access" class="md-nav__link">
     <span class="md-ellipsis">
-      Re-authenticating for CLI access
+      Reauthenticating for CLI access
     </span>
   </a>
   
@@ -898,29 +898,30 @@
 
 <div><h1 id="lab-setup">Lab Setup<a class="headerlink" href="#lab-setup" title="Permanent link">¶</a></h1>
 <h2 id="provisioning-the-environment">Provisioning the environment<a class="headerlink" href="#provisioning-the-environment" title="Permanent link">¶</a></h2>
-<p>For the hands-on labs, we will be using the OpenShift on Power10 on-prem environment, optimized for AI workloads and hosted on IBM TechZone.</p>
+<p>For the hands-on labs, we will be using the OpenShift on Power10 on-prem environment which is optimized for AI workloads and hosted on IBM TechZone.</p>
 <p>Follow the steps below:</p>
 <ol>
 <li>
-<p>Head to <a href="https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power/environments" target="_blank">this</a> TechZone collection and provision the environment named "OpenShift 4.14 ready for AI on IBM Power10 (Container PaaS)" by clicking on <strong>Reserve</strong> and submitting the resulting form (select <strong>Education</strong> as purpose)
+<p>Open <a href="https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power/environments" target="_blank">this</a> TechZone collection and provision the environment named "OpenShift 4.14 ready for AI on IBM Power10 (Container PaaS)" by clicking on <strong>Reserve</strong> and submitting the resulting form (select <strong>Education</strong> as purpose)
    <a class="glightbox" href="../_attachments/tz-env-reserve.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/tz-env-reserve.png"></a></p>
 </li>
 <li>
 <p>Watch your email for updates from TechZone and wait for your environment to be provisioned.   </p>
 </li>
 <li>
-<p>Once provisioned, head to <a href="https://techzone.ibm.com/my/reservations" target="_blank">my reservations</a> page to ensure its ready.</p>
+<p>Once provisioned, go to <a href="https://techzone.ibm.com/my/reservations" target="_blank">my reservations</a> page to ensure its in "Ready" state.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/e4ef1ccc-70e3-42b8-8e06-caab6ed87d52"></a></p>
 </li>
 </ol>
 <h2 id="accessing-the-environment">Accessing the environment<a class="headerlink" href="#accessing-the-environment" title="Permanent link">¶</a></h2>
 <ol>
-<li>Since this is an on-prem environment, make sure you are connected to the IBM network to access the environment.(TODO: add details on VPN)</li>
-<li>In TechZone, click on your provisioned environment under "My Reservations" which will open up the details page.</li>
+<li>As this is an on-prem environment, verify you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to <a href="https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md" target="_blank">this</a> link for more details.</li>
+<li>In TechZone, open the <a href="https://techzone.ibm.com/my/reservations" target="_blank">My Reservations</a> page.</li>
+<li>Click on your reservation, which will open up the details page.</li>
 <li>Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
    <a class="glightbox" href="https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb"></a></li>
 </ol>
-<h3 id="accessing-openshift-guiconsole">Accessing OpenShift GUI/console<a class="headerlink" href="#accessing-openshift-guiconsole" title="Permanent link">¶</a></h3>
+<h3 id="accessing-openshift-console">Accessing OpenShift console<a class="headerlink" href="#accessing-openshift-console" title="Permanent link">¶</a></h3>
 <ol>
 <li>In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link</li>
 <li>This will open up a new browser tab/window and opens up the OpenShift console login page   <ul>
@@ -937,7 +938,7 @@
  <a class="glightbox" href="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473"></a></p>
 </li>
 <li>
-<p>You have successfully logged into the OpenShift cluster using the GUI/console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console. You should land in <strong>Administrator</strong> profile (or <strong>Developer</strong> profile if that was the last profile you were in when you logged off).</p>
+<p>You have successfully logged into the OpenShift cluster using the console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console. You should land in <strong>Administrator</strong> profile (or <strong>Developer</strong> profile if that was the last profile you were in when you logged off).</p>
 </li>
 <li>
 <p><strong>TIP</strong>: Its a good idea to have 2 browser windows (or tabs per your preference) for OpenShift console access - one with Administrator profile and another with Developer profile because in the hands-on labs we will be needing to switch between these profiles and its easier and efficient to do so with 2 browser windows.</p>
@@ -951,26 +952,27 @@
 </ul>
 </li>
 </ol>
-<h3 id="re-authenticating-for-guiconsole">Re-authenticating for GUI/console<a class="headerlink" href="#re-authenticating-for-guiconsole" title="Permanent link">¶</a></h3>
+<h3 id="reauthenticating-for-console">Reauthenticating for console<a class="headerlink" href="#reauthenticating-for-console" title="Permanent link">¶</a></h3>
 <div class="admonition note">
-<p class="admonition-title">RE-AUTHENTICATING in case you lose GUI/console access</p>
-<p>In case you lose access to the OpenShift cluster and need to re-login to the GUI/console, which is possible in case your reservation expires and/or your GUI/console authentication timed-out, please follow the above steps again to re-login to your OpenShift GUI/console</p>
+<p class="admonition-title">REAUTHENTICATING in case you lose console access</p>
+<p>In case you lose access to the OpenShift cluster and need to reauthenticate to the console, which is possible in case your reservation expires and/or your console authentication timed-out, please follow the above steps again to reauthenticate to your OpenShift console</p>
 </div>
-<h3 id="accessing-openshift-oc-cli">Accessing OpenShift <code>oc</code> CLI<a class="headerlink" href="#accessing-openshift-oc-cli" title="Permanent link">¶</a></h3>
+<h3 id="accessing-openshift-command-line-interface-cli">Accessing OpenShift Command Line Interface (CLI)<a class="headerlink" href="#accessing-openshift-command-line-interface-cli" title="Permanent link">¶</a></h3>
+<p>OpenShift CLIs are accessed using the <code>oc</code> command</p>
 <ol>
 <li>Go back to the "Reservation Details" section of the TechZone environment details page.</li>
-<li>Open your terminal window and use SSH utility to connect to the Bastion node of OpenShift cluster.<ul>
+<li>Open a terminal window and use the SSH client to connect to the Bastion node of OpenShift cluster.<ul>
 <li><code>ssh -l cecuser &lt;your bastion hostname/IP as provided in Reservation Details section&gt;</code></li>
 <li>If <code>ssh</code> gives any warning, type <code>yes</code> and continue</li>
 <li>When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window</li>
 </ul>
 </li>
 <li>You have logged in successfully to the bastion node of your OpenShift cluster.<ul>
-<li>Keep this terminal window always open as you will be using it frequently to run CLI commands.</li>
+<li>Keep this terminal window open as you will be using it frequently to run CLI commands.</li>
 </ul>
 </li>
 <li>
-<p><code>oc</code> CLI is pre-installed on the bastion node and must be working already. You can check by running <code>oc version</code> command.</p>
+<p><code>oc</code> CLI is pre-installed on the bastion node. Verify by running <code>oc version</code> command.</p>
 <ul>
 <li>Ignore the error part of the <code>oc version</code> for now. Its as expected since you have not yet logged into the cluster from the CLI.</li>
 </ul>
@@ -1009,19 +1011,19 @@
 </li>
 <li>You have successfully logged into the OpenShift cluster using the <code>oc</code> CLI.</li>
 <li>
-<p>In case you lose access to the <code>oc</code> CLI, you will get an error as below, in which case you need to re-authenticate.<br>
-   Refer to the call-out on how to re-authenticate.</p>
+<p>In case you lose access to the <code>oc</code> CLI, you will get an error as below, in which case you need to reauthenticate.<br>
+   Refer to the call-out on how to reauthenticate.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/a1e8d00c-64d0-41ab-997c-540378df0544" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a1e8d00c-64d0-41ab-997c-540378df0544"></a></p>
 </li>
 </ol>
-<h3 id="re-authenticating-for-cli-access">Re-authenticating for CLI access<a class="headerlink" href="#re-authenticating-for-cli-access" title="Permanent link">¶</a></h3>
+<h3 id="reauthenticating-for-cli-access">Reauthenticating for CLI access<a class="headerlink" href="#reauthenticating-for-cli-access" title="Permanent link">¶</a></h3>
 <div class="admonition note">
-<p class="admonition-title">RE-AUTHENTICATING in case you lose CLI access</p>
-<p>In case you lose access to the OpenShift cluster and need to re-authenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your <code>oc</code> CLI authenticated to the OpenShift cluster</p>
+<p class="admonition-title">REAUTHENTICATING in case you lose CLI access</p>
+<p>In case you lose access to the OpenShift cluster and need to reauthenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your <code>oc</code> CLI authenticated to the OpenShift cluster</p>
 </div>
 <h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h3>
 <p>Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.
-We strive to use OpenShift GUI/console as much possible, but in some scenarios OpenShift console doesn't yet support some functionality in which case we switch to the <code>oc</code> CLI. Hence this lab will use OpenShift GUI/console and <code>oc</code> CLI both as necessary.</p></div>
+We strive to use OpenShift console as much possible, but in some scenarios OpenShift console doesn't yet support some functionality in which case we switch to the <code>oc</code> CLI. Hence this lab will use OpenShift console and <code>oc</code> CLI both as necessary.</p></div>
 
 
 
