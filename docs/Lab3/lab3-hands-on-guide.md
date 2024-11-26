@@ -90,7 +90,7 @@ Make sure you have the following items ready:
 
 Now let's use the granite code model to generate python code using natural language queries.
 
-1. Generating python code for printing the fibonacci series
+1. Generating python code for printing the fibonacci series.<br> Here is what I entered: `generate python for finonacci sequence`
    ![image](https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3)
    
      - I ran this code on my local python environment and it ran without errors!
@@ -99,7 +99,7 @@ Now let's use the granite code model to generate python code using natural langu
      
      - Also note that the answer it gave uses recursion (function fib is being called recursively).
 
-3. Now let's try asking it to generate the same code without using recursion.
+3. Now let's try asking it to generate the same code without using recursion.<br> Here is what I entered: `give me python code for generating fibonacci sequence without using recursion`
    ![image](https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b)
    
      - As expected, it did give the code snippet that doesn't use recursion, so it did well there.
@@ -114,6 +114,7 @@ Now let's use the granite code model to generate python code using natural langu
          - For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems.
          - When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors.
          - For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.
+         - AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.
 
    Feel free to explore and try out more scenarios!
 
