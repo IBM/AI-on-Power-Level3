@@ -46,8 +46,6 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 1. Navigate to **Workloads** -> **ConfigMaps** and select **lab1-demo** as the active Project
    ![image](https://github.com/user-attachments/assets/72e44e26-9f7e-4d85-a67b-47752ba6c983)
 
-3. 
-   
 5. Click **Create ConfigMap**
    ![image](https://github.com/user-attachments/assets/14b9433f-35ab-4042-8c37-5302756b8b6e)
 
