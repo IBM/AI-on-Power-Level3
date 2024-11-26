@@ -373,7 +373,8 @@ In this section, let's deploy IBM's granite model.
 
     !!! warning "Accuracy of LLM responses"
 
-        Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a **specific cutoff date**. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.
+        - Large Language Models (LLMs), are trained on vast amounts of text data, but that training is limited to a **specific cutoff date**. This means that the model can only answer questions based on the information available up to that point in time. It cannot access real-time data or understand events, trends, or new information that occurred after the cutoff date. Consequently, their ability to provide accurate answers is constrained by the knowledge they were trained on.
+        - AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.
 
     ![image](https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e)
 
