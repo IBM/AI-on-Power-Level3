@@ -132,6 +132,7 @@ Now let's use the granite code model to generate C code using natural language q
 
      - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`
 
+   **NOTE**: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br>
    Feel free to explore and try out more scenarios!
 
 ### Generate SQL query
@@ -251,6 +252,8 @@ Let's take an super simple example of a bank which has information stored in 2 t
      - The last part of the SQL query `usertypeid='employee'` is ambiguous as the DB won't know which `usertypeid` column to reference.
      - The correct SQL query would have `u.usertypeid='employee'` so that the DB knows that its part of the USERS (aliased as `u` in the query) table.
 
+   **NOTE**: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br>
+   
 9. Re-iterating some of the points we learned in this lab:
    
        - Code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed & tweaked to perfection by the developer.
