@@ -84,7 +84,7 @@ Make sure you have the following items ready:
 
     !!! note "Experimenting with model parameters"
 
-        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
 
 ### Generate python code
 
