@@ -43,9 +43,12 @@ In OpenShift, a ConfigMap is an object used to manage configuration data for app
 
 We will use ConfigMap to store the model URL and model name, both of which will be used when we deploy the model. Using ConfigMap will help us switch to a different model very easily.
 
-1. Navigate to **Workloads** -> **ConfigMaps** and click **Create ConfigMap**
+1. Navigate to **Workloads** -> **ConfigMaps** and select **lab1-demo** as the active Project
+   ![image](https://github.com/user-attachments/assets/72e44e26-9f7e-4d85-a67b-47752ba6c983)
+
+3. Click **Create ConfigMap**   
    ![image](https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7)
-2. In the resulting form, enter a name: **model-params**, and fill the Key and Value fields as below:
+4. In the resulting form, enter a name: **model-params**, and fill the Key and Value fields as below:
    
      - **Key**: `MODEL_NAME`
 
@@ -55,7 +58,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    
      ![image](https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32)
    
-4. In the newly created Key/Value box, enter the values as below:
+5. In the newly created Key/Value box, enter the values as below:
 
      - **Key**: `MODEL_URL`
      
