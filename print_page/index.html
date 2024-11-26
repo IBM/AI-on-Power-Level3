@@ -1900,14 +1900,12 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </li>
 <li>
 <p>Let's go to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click <strong>D lab1-demo</strong> in that pane which will then open up the deployment details view for lab1-demo deployment.</p>
-</li>
-</ol>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958"></a></p>
-<ol start="6">
-<li>Click <strong>Actions</strong> and select <strong>Restart rollout</strong>. This will restart the deployment which results in redeployment of the pod.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Actions</strong> and select <strong>Restart rollout</strong>. This will restart the deployment which results in redeployment of the pod.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
-<ol start="7">
+</li>
 <li>
 <p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b"></a></p>
