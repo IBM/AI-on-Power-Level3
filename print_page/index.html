@@ -1699,7 +1699,7 @@ In OpenShift, you first request for the storage (also known as PersistentVolumeC
 <p>The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.</p>
 <div class="admonition info">
 <p class="admonition-title">Model download will take time - Have patience!!</p>
-<p>This process will take a few minutes (in my case it took around 1-1.5 mims) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV)</p>
+<p>This process will take a few minutes (in my case it took around 1-1.5 mins) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV)</p>
 </div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc"></a></p>
 <p><strong>Congratulations!</strong>, you have successfully deployed a LLM on Power10.</p>
