@@ -188,7 +188,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     This verifies that we have indeed deployed tinyllama.
      
-14. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile, click **Networking** -> **Services** and click **Create Service**
+14. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile and click **Networking** -> **Services** and click **Create Service**
      
     !!! note ""
       
