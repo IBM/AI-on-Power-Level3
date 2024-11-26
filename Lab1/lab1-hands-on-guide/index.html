@@ -923,8 +923,14 @@ In OpenShift, you first request for the storage (also known as PersistentVolumeC
 <p>In OpenShift, a ConfigMap is an object used to manage configuration data for applications. It allows you to decouple configuration details from application logic, which makes your applications more portable and easier to manage across different environments. Instead of hardcoding configuration values in your application, you store them in a ConfigMap and inject them into your application at runtime.</p>
 <p>We will use ConfigMap to store the model URL and model name, both of which will be used when we deploy the model. Using ConfigMap will help us switch to a different model very easily.</p>
 <ol>
-<li>Navigate to <strong>Workloads</strong> -&gt; <strong>ConfigMaps</strong> and click <strong>Create ConfigMap</strong>
-   <a class="glightbox" href="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7"></a></li>
+<li>
+<p>Navigate to <strong>Workloads</strong> -&gt; <strong>ConfigMaps</strong> and select <strong>lab1-demo</strong> as the active Project
+   <a class="glightbox" href="https://github.com/user-attachments/assets/72e44e26-9f7e-4d85-a67b-47752ba6c983" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/72e44e26-9f7e-4d85-a67b-47752ba6c983"></a></p>
+</li>
+<li>
+<p>Click <strong>Create ConfigMap</strong> <br>
+<a class="glightbox" href="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/11dea9ae-a2cb-4b6a-ae33-0d4a80c168f7"></a></p>
+</li>
 <li>
 <p>In the resulting form, enter a name: <strong>model-params</strong>, and fill the Key and Value fields as below:</p>
 <ul>
