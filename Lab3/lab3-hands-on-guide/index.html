@@ -1027,10 +1027,10 @@
 <ul>
 <li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code></li>
 </ul>
-</li>
-</ol>
 <p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br>
    Feel free to explore and try out more scenarios!</p>
+</li>
+</ol>
 <h3 id="generate-sql-query">Generate SQL query<a class="headerlink" href="#generate-sql-query" title="Permanent link">¶</a></h3>
 <p>Generating SQL query using natural langguage is a little different than C or python code since SQL is a language to query Databases (DBs). One needs to give enough context to the code LLM for it to understand the DB table schemas for which you want it to generate the SQL query.</p>
 <p>The context is given as a prompt to the code LLM which preceeds the natural language query and the code LLM answers the query using the context given in the prompt. The best way to understand is looking at some examples as depicted below.</p>
@@ -1131,10 +1131,8 @@
 <li>The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.</li>
 <li>The correct SQL query would have <code>u.usertypeid='employee'</code> so that the DB knows that its part of the USERS (aliased as <code>u</code> in the query) table.</li>
 </ul>
-</li>
-</ol>
 <p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br></p>
-<ol start="9">
+</li>
 <li>
 <p>Re-iterating some of the points we learned in this lab:</p>
 <ul>
