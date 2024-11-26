@@ -315,17 +315,18 @@ In this section, let's deploy IBM's granite model.
      -  Value: https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf
 
     ![image](https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052)
+
 4. The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
    
-6. Let's go to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click **D lab1-demo** in that pane which will then open up the deployment details view for lab1-demo deployment.
+5. Let's go to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click **D lab1-demo** in that pane which will then open up the deployment details view for lab1-demo deployment.
    
    ![image](https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958)
    
-8. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in redeployment of the pod.
+6. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in redeployment of the pod.
    
    ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
    
-10. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+7. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
     
     ![image](https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b)
 
@@ -333,25 +334,25 @@ In this section, let's deploy IBM's granite model.
 
         This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
    
-11. If all goes well, you should see just 1 pod running.
+8. If all goes well, you should see just 1 pod running.
     
     ![image](https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050)
    
-12. Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.
+9. Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.
     
     ![image](https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f)
     
-13. In the pod details page, click on the Logs tab to see the pod logs.
+10. In the pod details page, click on the Logs tab to see the pod logs.
     
     ![image](https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75)
     
-15. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
+11. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
     
     ![image](https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c)
 
     This verifies that we have indeed deployed granite.   
 
-16. Let's access the model now!. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the **Topology** view.
+12. Let's access the model now!. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the **Topology** view.
 
     !!! note "Multiple ways to access public URL of your application"
 
@@ -370,7 +371,7 @@ In this section, let's deploy IBM's granite model.
 
         You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
 
-17. Here are some questions I asked and the responses I got.
+13. Here are some questions I asked and the responses I got.
 
     !!! warning "Accuracy of LLM responses"
 
