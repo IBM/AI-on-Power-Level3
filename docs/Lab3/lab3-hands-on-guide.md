@@ -122,12 +122,12 @@ Now let's use the granite code model to generate python code using natural langu
 
 Now let's use the granite code model to generate C code using natural language queries.
 
-1. Generate C code for sorting a list of numbers.
+1. Generate C code for sorting a list of numbers.<br> Here is what I entered: `C code to sort a list of numbers`
    ![image](https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b)
 
      - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`
 
-2. Generate C code for swapping 2 numbers without using a temporary variable
+2. Generate C code for swapping 2 numbers without using a temporary variable.<br> Here is what I entered: `C code for swapping 2 numbers`
    ![image](https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef)
 
      - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`
