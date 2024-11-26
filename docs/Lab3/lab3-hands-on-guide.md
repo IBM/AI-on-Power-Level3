@@ -90,7 +90,7 @@ Make sure you have the following items ready:
 
 Now let's use the granite code model to generate python code using natural language queries.
 
-1. Generating python code for printing the fibonacci series.<br> Here is what I entered: `generate python for finonacci sequence`
+1. Generating python code for printing the fibonacci series.<br> Here is what I entered: `python for finonacci sequence`
    ![image](https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3)
    
      - I ran this code on my local python environment and it ran without errors!
