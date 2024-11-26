@@ -320,11 +320,11 @@ In this section, let's deploy IBM's granite model.
    
 5. Let's go to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click **D lab1-demo** in that pane which will then open up the deployment details view for lab1-demo deployment.
    
-   ![image](https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958)
+    ![image](https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958)
    
 6. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in redeployment of the pod.
    
-   ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
+    ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
    
 7. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
     
