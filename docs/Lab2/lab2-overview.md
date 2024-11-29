@@ -17,10 +17,11 @@ Key Components of RAG:
 RAG is a technique that uses vector databases to retrieve relevant information and improve the accuracy of Large Language Models (LLMs):
 
 1. **Vector database storage**: Text data is converted into vector embeddings using pre-trained models like BERT or GPT. These embeddings are then stored in a vector database.
-2. **Query conversion**: When a query is posed to the AI system, it is also converted into a vector
-3. **Vector search**: The vector database performs a vector search to find relevant embeddings from the stored dataset
-4. **Information retrieval**: The retrieved information is then integrated into the LLM's query input
-5. **Response generation**: The augmented query is sent to the LLM to generate an accurate answer.
+     - In this lab, we use **all-MiniLM-L6-v2** model from HF to convert text data into embeddings which are then stored in a **Milvus** vector DB.
+3. **Query conversion**: When a query is posed to the AI system, it is also converted into a vector
+4. **Vector search**: The vector database performs a vector search to find relevant embeddings from the stored dataset
+5. **Information retrieval**: The retrieved information is then integrated into the LLM's query input
+6. **Response generation**: The augmented query is sent to the LLM to generate an accurate answer.
 
 !!! info "Why use vector database in RAG?"
 
