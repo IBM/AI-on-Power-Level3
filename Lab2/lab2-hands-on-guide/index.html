@@ -928,12 +928,10 @@
 <h3 id="deploy-jupyter-notebook">Deploy jupyter notebook<a class="headerlink" href="#deploy-jupyter-notebook" title="Permanent link">¶</a></h3>
 <ol>
 <li>
-<p>Run the below commands to deploy jupyter notebook (NB). Ignore any warnings if seen.</p>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd nb-deployment
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>oc apply -f .
-</code></pre></div>
- <a class="glightbox" href="https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9"></a>
+<p>Run the below set of commands to deploy jupyter notebook (NB).<br>Ignore any warnings if seen.</p>
+<p><code>cd nb-deployment</code></p>
+<p><code>oc apply -f .</code></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9"></a></p>
 </li>
 <li>
 <p>Verify the notebook pod is running using the command below. Hit Ctrl-C on keyboard to exit and return back to shell prompt.</p>
