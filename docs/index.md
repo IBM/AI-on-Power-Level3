@@ -17,13 +17,13 @@ There are 4 main parts to this demonstration as you can see on the left panel:
 
 Large language models (LLMs) and generative AI (genAI) have revolutionized industries by enabling machines to understand, generate, and interact with human language in ways never seen before. They have disrupted the market by:
 
+* **Boosting productivity**: LLMs streamline workflows by handling complex tasks, like writing, summarizing, and translating, allowing professionals to focus on more strategic, creative efforts.
+  
 * **Automating content creation**: From drafting articles, reports, and code to generating creative content like music and artwork, genAI has drastically reduced time and costs in creative industries.
 
 * **Enhancing customer experience**: LLM-powered chatbots and virtual assistants are offering more personalized, human-like interactions, reshaping customer service and support.
 
-* **Transforming decision-making**: With advanced data processing and natural language understanding, businesses are leveraging AI for smarter, faster insights and predictive analytics.
-
-* **Boosting productivity**: LLMs streamline workflows by handling complex tasks, like writing, summarizing, and translating, allowing professionals to focus on more strategic, creative efforts.
+* **Transforming decision-making**: With advanced data processing and natural language understanding, businesses are leveraging AI for smarter, faster insights and predictive analytics. 
 
 In short, LLMs and genAI are reshaping industries by enhancing efficiency, creativity, and customer engagement, making them indispensable tools in the modern business landscape.
 
@@ -44,50 +44,28 @@ IBM Power is the platform of choice for businesses seeking to future-proof their
 
 ## IBM Power10 differentiation
 
-IBM Power10 offers several advantages for generative AI (genAI) use cases, providing the computational power, security, and efficiency required to support the demanding workloads of AI-driven applications. Here’s how Power10 is uniquely positioned to accelerate genAI:
+IBM Power10 offers several advantages for generative AI (genAI) use cases, providing the computational power, security, and efficiency required to support the demanding workloads of AI-driven applications.
 
 ### Key advantages
 
-1. **High performance for AI workloads:**
+1. **AI acceleration:** At the core-level, IBM Power10 comes with several features that accelerate genAI workloads:
+   
+   * **High bandwidth data-path:** As data fuels AI, a fast access to big data for training and inferencing is required. Most AI workloads are memory bandwith bound and IBM Power10’s memory bandwidth is optimal for such scenarios. The Double Data Rate 5 (DDR5) memory and faster Input/Output (I/O) bandwidth provide a significant performance boost, enabling large-scale genAI models to run more efficiently.
+      
+    * **4 Matrix Math Accelerator (MMA) engines per core:** MMA does matrix math and helps accelerate matrix multiplications, which are required for training, fine-tuning, and inferencing of AI models such as Neural Networks and foundation models.
 
-    * **AI acceleration**: IBM Power10 includes AI inference acceleration directly on the chip (also known as Matrix Math Accelerator (MMA)), allowing faster processing of genAI tasks such as model training, inference, and real-time AI applications.
+    * **8 Single Instruction Multiple Data (SIMD) engines per core:** Vector processing can be highly parallelized using SIMD engines. Vectors are used in most AI algorithms. SIMD does vector math. A single inference request is often “just” a vector that is “send through” the LLM using SIMD acceleration. By batching multiple inference requests together, the workload can become MMA-bound where a whole matrix is "send through" the LLM, leading to improved throughputs.
 
-    * **Massive scalability**: Power10 is designed to handle large-scale AI models, with enhanced memory bandwidth and processing power to efficiently manage vast datasets used in training LLMs and genAI systems.
+2. **Energy efficiency:** Power10 processors are highly energy-efficient, offering more performance per watt compared to previous generations. This reduces operational costs and is especially beneficial for the resource-intensive training and deployment of genAI models.
 
-2. **Memory and bandwidth optimization:**
-
-    * The Double Data Rate 5 (DDR5) memory and faster Input/Output (I/O) bandwidth provide a significant performance boost, enabling genAI models to run more efficiently.
-
-3. **Energy efficiency:**
-
-    * Power10 processors are highly energy-efficient, offering more performance per watt compared to previous generations. This reduces operational costs and is especially beneficial for the resource-intensive training and deployment of genAI models.
-
-4. **Security:**
-
-    * IBM Power10 comes with end-to-end encryption and advanced memory protection features, ensuring that sensitive AI workloads are secure from potential breaches. This is particularly important in industries like healthcare and finance, where genAI applications need strong data protection.
+3. **Security:** IBM Power10 comes with end-to-end encryption and advanced memory protection features, ensuring that sensitive AI workloads are secure from potential breaches. This is particularly important in industries like healthcare and finance, where genAI applications need strong data protection.
       
     * Quantum-safe encryption helps future-proof AI workloads against quantum computing threats.
 
-5. **Flexible cloud and hybrid deployments:**
+5. **Flexible cloud and hybrid deployments:** Power10 integrates smoothly with hybrid cloud environments, allowing enterprises to run genAI workloads both on-premises and in the cloud. This flexibility is key for scaling AI applications while maintaining control over data and infrastructure.
 
-    * Power10 integrates smoothly with hybrid cloud environments, allowing enterprises to run genAI workloads both on-premises and in the cloud. This flexibility is key for scaling AI applications while maintaining control over data and infrastructure.
-
-6. **Support for AI ecosystems:**
-
-    * IBM Power10 works seamlessly with AI frameworks like TensorFlow and PyTorch, making it easier for developers to build, train, and deploy genAI models without needing major infrastructure changes.
+6. **Support for AI ecosystems:** IBM Power10 works seamlessly with AI frameworks like TensorFlow and PyTorch, making it easier for developers to build, train, and deploy genAI models without needing major infrastructure changes.
     * Support for OpenShift and Kubernetes enhances containerization, allowing efficient orchestration of AI workloads.
-
-### MMA advantages
-IBM Power10 includes the Matrix Math Accelerator (MMA), which offers several benefits, particularly in areas that require high computational efficiency, such as artificial intelligence (AI), machine learning (ML), and high-performance computing (HPC). Here are some key benefits of MMA in Power10:
-
-1. **AI and ML performance boost**: The MMA on Power10 provides accelerated support for matrix multiplication operations, which are foundational in deep learning workloads (for example, neural networks). It enables higher throughput for AI models by speeding up training and inference processes. MMA is optimized for mixed-precision computing, particularly FP32, BFLOAT16, and INT8 numerical precision formats, improving performance without sacrificing accuracy.
-2. **Improved efficiency**: With MMA, Power10 delivers superior compute performance per watt compared to previous generations. Power10's design allows for multiple matrix multiplications to be handled simultaneously, improving overall processing efficiency for large-scale workloads.
-3. **Scalability and flexibility**: The MMA units can scale across multiple cores and processors, making Power10 systems more suitable for multi-node deployments. This scalability allows users to efficiently run larger AI models and handle more complex workloads with reduced latency.
-4. **Workload optimization**: MMA is tailored to accelerate matrix-heavy operations like those in data analytics, financial modeling, and scientific computing, leading to better performance in these domains. It is also highly beneficial in natural language processing (NLP) and computer vision tasks that involve large datasets.
-5. **Integration with open software ecosystem**: IBM Power10 with MMA is compatible with common AI and machine learning frameworks like TensorFlow, PyTorch, and ONNX, making it easier to deploy on-premise AI models. This open framework integration allows developers to leverage MMA benefits without needing to heavily modify their existing codebases.
-6. **Enhanced security and reliability**: IBM Power10 architecture, including MMA, is built with end-to-end security, ensuring data privacy even during large-scale computations. The architecture also maintains reliability, particularly for critical enterprise workloads.
-<br>   
-These benefits make IBM Power10's MMA highly attractive for enterprises aiming to accelerate their AI/ML initiatives while maintaining high levels of performance and energy efficiency.
 
 ## **Summary**
 
