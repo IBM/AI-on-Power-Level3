@@ -58,17 +58,16 @@ In this lab, we will focus on the below:
      
      ![image](https://github.com/user-attachments/assets/721a4e9d-81db-48e8-b85c-c6491e96a8a1)
 
-7. Run the below commands to deploy milvus DB
-     ```
-     cd Part2-RAG/milvus-deployment
-
-     oc create configmap milvus-config --from-file=./config/milvus.yaml
-
-     oc apply -f .
-
-     cd ..
-     ```
+7. Run the below set of commands to deploy milvus DB
      
+     `cd Part2-RAG/milvus-deployment`
+
+     `oc create configmap milvus-config --from-file=./config/milvus.yaml`
+
+     `oc apply -f .`
+
+     `cd ..`
+          
      ![image](https://github.com/user-attachments/assets/0b632d95-3af0-4b48-a883-31085455370f)
 
 8. Monitor deployment using the below command until all pods are in **Running** state. <br>
