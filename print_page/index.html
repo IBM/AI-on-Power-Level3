@@ -1983,7 +1983,10 @@ Before we do that, lets understand what RAG is, its advantages, key usecases and
 <h2 id="lab2-lab2-overview-how-rag-works">How RAG works?<a class="headerlink" href="#lab2-lab2-overview-how-rag-works" title="Permanent link">¶</a></h2>
 <p>RAG is a technique that uses vector databases to retrieve relevant information and improve the accuracy of Large Language Models (LLMs):</p>
 <ol>
-<li><strong>Vector database storage</strong>: Text data is converted into vector embeddings using pre-trained models like BERT or GPT. These embeddings are then stored in a vector database.</li>
+<li><strong>Vector database storage</strong>: Text data is converted into vector embeddings using pre-trained models like BERT or GPT. These embeddings are then stored in a vector database.<ul>
+<li>In this lab, we use <strong>all-MiniLM-L6-v2</strong> model from HF to convert text data into embeddings which are then stored in a <strong>Milvus</strong> vector DB.</li>
+</ul>
+</li>
 <li><strong>Query conversion</strong>: When a query is posed to the AI system, it is also converted into a vector</li>
 <li><strong>Vector search</strong>: The vector database performs a vector search to find relevant embeddings from the stored dataset</li>
 <li><strong>Information retrieval</strong>: The retrieved information is then integrated into the LLM's query input</li>
