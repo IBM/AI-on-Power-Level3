@@ -48,7 +48,7 @@ IBM Power10 offers several advantages for generative AI (genAI) use cases, provi
 
 ### Key advantages
 
-1. **AI acceleration:** At the core-level, IBM Power10 comes with several features that accelerate genAI workloads using on-chip acceleration:
+1. **AI acceleration:** IBM Power10 comes with several features that accelerate genAI workloads using high memory bandwith and on-chip acceleration:
    
     * **High bandwidth data-path:** As data fuels AI, a fast access to big data for training and inferencing is required. Most AI workloads are memory bandwith bound. IBM Power10's large memory capacity that, in general exceeds limited GPU memory and IBM Power10’s high memory bandwidth are optimal for such scenarios. In addition, the Double Data Rate 5 (DDR5) memory and faster Input/Output (I/O) bandwidth provide a significant performance boost, enabling large-scale genAI models to run more efficiently.
       
