@@ -79,13 +79,12 @@ In this lab, we will focus on the below:
 
 ### Deploy jupyter notebook
 
-1. Run the below commands to deploy jupyter notebook (NB). Ignore any warnings if seen.
+1. Run the below set of commands to deploy jupyter notebook (NB).<br>Ignore any warnings if seen.
+     
+     `cd nb-deployment`
 
-     ```
-     cd nb-deployment
-
-     oc apply -f .
-     ```
+     `oc apply -f .`
+     
      ![image](https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9)
 
 2. Verify the notebook pod is running using the command below. Hit Ctrl-C on keyboard to exit and return back to shell prompt.
