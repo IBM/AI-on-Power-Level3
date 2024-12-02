@@ -6,7 +6,7 @@ For the hands-on labs, we will be using the OpenShift on Power10 on-prem environ
 
 Follow the steps below:
 
-1. Open [this](https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power/environments){target="_blank"} TechZone collection and provision the environment named "OpenShift 4.14 ready for AI on IBM Power10 (Container PaaS)" by clicking on **Reserve** and submitting the resulting form (select **Education** as purpose)
+1. Open [this](https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power/environments){target="_blank"} TechZone collection and provision the environment named "OpenShift ready for AI on IBM Power10 (Container PaaS)" by clicking on **Reserve** and submitting the resulting form (select **Education** as purpose)
    ![](_attachments/tz-env-reserve.png)
    
 2. Watch your email for updates from TechZone and wait for your environment to be provisioned.   

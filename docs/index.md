@@ -7,7 +7,7 @@ There are 4 main parts to this demonstration as you can see on the left panel:
 
 * Lab setup - How to provision and setup the lab env for the hands-on demos
 
-* Lab 1 – Deploy a Large Language Model (LLM) on Power10 - Deploy a LLM on Power10 and switch to a diff LLM
+* Lab 1 – Deploy a Large Language Model (LLM) on Power10 - Deploy a LLM on Power10 and switch to a different LLM
 
 * Lab 2 – Deploy Retrieval-Augmented Generation (RAG) on Power10 - RAG chatbot for domain specific question and answers
 
@@ -50,7 +50,7 @@ IBM Power10 offers several advantages for generative AI (genAI) use cases, provi
 
 1. **AI acceleration:** IBM Power10 comes with several features that accelerate genAI workloads using high memory bandwith and on-chip acceleration:
    
-    * **High bandwidth data-path:** As data fuels AI, a fast access to big data for training and inferencing is required. Most AI workloads are memory bandwith bound. IBM Power10's large memory capacity that, in general exceeds limited GPU memory and IBM Power10’s high memory bandwidth are optimal for such scenarios. In addition, the Double Data Rate 5 (DDR5) memory and faster Input/Output (I/O) bandwidth provide a significant performance boost, enabling large-scale genAI models to run more efficiently.
+    * **High bandwidth data-path:** As data fuels AI, a fast access to big data for training and inferencing is required. Most AI workloads are memory bandwith bound. IBM Power10's large memory capacity that, in general exceeds limited Graphics Processing Unit (GPU) memory and IBM Power10’s high memory bandwidth are optimal for such scenarios. In addition, the Double Data Rate 5 (DDR5) memory and faster Input/Output (I/O) bandwidth provide a significant performance boost, enabling large-scale genAI models to run more efficiently.
       
     * **4 Matrix Math Accelerator (MMA) engines per core:** MMA does matrix math and helps accelerate matrix multiplications, which are required for training, fine-tuning, and inferencing of AI models such as Neural Networks and foundation models. IBM is seeing strong evidence that it supersedes GPUs and improves consolidation when deploying AI at point of use. 
 

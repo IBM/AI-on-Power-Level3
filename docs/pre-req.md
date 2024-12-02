@@ -11,6 +11,6 @@ The following are the prerequisite(s) for this course:
 	- While sufficient instructions are provided through-out the course, it is highly recommended to have a basic understanding of OpenShift and working with YAML files
 
 * Laptop with Secure Shell (ssh) pre-installed to connect to lab environment
- 	- Windows: PowerShell should have ssh pre-installed
-    	- Mac/Linux: ssh should be already available
-       	- If not, Google is your friend 
+ 	- Windows: PowerShell should have ssh pre-installed. PuTTY tool can also be used.
+    - Mac/Linux: ssh should be already available
+    - If not, install ssh - Google is your friend 

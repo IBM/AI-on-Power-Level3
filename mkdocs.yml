@@ -77,18 +77,18 @@ markdown_extensions:
   - md_in_html
 
 nav:
-  - Getting Started: helpful-tips.md
+  - Getting started: helpful-tips.md
   - Introduction: 'index.md'
-  - Pre-requisites: 'pre-req.md'
+  - Prerequisites: 'pre-req.md'
   - Lab setup instructions: 'lab-setup.md'
   - Lab1 - Deploy a LLM on Power10:
-    - 'Lab Education': 'Lab1/lab1-overview.md'
+    - 'Lab education': 'Lab1/lab1-overview.md'
     - 'Hands-on guide': 'Lab1/lab1-hands-on-guide.md'
   - Lab2 - Deploy RAG on Power10:
-    - 'Lab Education': 'Lab2/lab2-overview.md'
+    - 'Lab education': 'Lab2/lab2-overview.md'
     - 'Hands-on guide': 'Lab2/lab2-hands-on-guide.md'
   - Lab3 - Deploy code LLM on Power10:
-    - 'Lab Education': 'Lab3/lab3-overview.md'
+    - 'Lab education': 'Lab3/lab3-overview.md'
     - 'Hands-on guide': 'Lab3/lab3-hands-on-guide.md'
   - Additional resources: resources.md
   - Credits: credits.md
