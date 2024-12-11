@@ -93,7 +93,7 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
      ![image](https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5)
 8. You have successfully logged into the OpenShift cluster using the `oc` CLI.
 9. In case you lose access to the `oc` CLI, you will get an error as below, in which case you need to reauthenticate.<br>
-   Refer to the call-out on how to reauthenticate.
+   Refer to the call-out in the section below, on how to reauthenticate.
 
      ![image](https://github.com/user-attachments/assets/a1e8d00c-64d0-41ab-997c-540378df0544)
    
