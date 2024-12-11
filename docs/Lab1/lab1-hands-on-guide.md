@@ -280,7 +280,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
         You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
 
-20. Here are some questions I asked and the responses I got.
+20. Presented below are questions and their corresponding responses.
     
     !!! warning "Accuracy of LLM responses"
 
@@ -371,7 +371,7 @@ In this section, let's deploy IBM's granite model.
 
         You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
 
-13. Here are some questions I asked and the responses I got.
+13. Presented below are questions and their corresponding responses.
 
     !!! warning "Accuracy of LLM responses"
 
