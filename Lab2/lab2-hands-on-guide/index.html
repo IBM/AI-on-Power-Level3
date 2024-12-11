@@ -858,17 +858,17 @@
 <h2 id="lab-guide">Lab guide<a class="headerlink" href="#lab-guide" title="Permanent link">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Image zoom functionality</p>
-<p>Feel free to click on the images in the lab guide below to a view larger image</p>
+<p>Feel free to click on the images in the lab guide below to a view larger image.</p>
 </div>
 <p>In this lab, we will focus on the below:</p>
 <ul>
 <li>
-<p>Deploy a vector DB - milvus</p>
+<p>Deploy a vector DB - milvus.</p>
 </li>
 <li>
 <p>Deploy a jupyter notebook where we will implement RAG pattern and learn about:</p>
 <ul>
-<li>Index the milvus DB with a sample PDF</li>
+<li>Index the milvus DB with a sample PDF.</li>
 <li>Query the DB to get relevant documents for the question asked.</li>
 <li>Create a prompt based on the relevant documents gotten from the previous step and send it to the LLM (granite model we deployed in Lab1) to get a domain specific answer.</li>
 </ul>
@@ -877,11 +877,11 @@
 <h3 id="create-project">Create project<a class="headerlink" href="#create-project" title="Permanent link">¶</a></h3>
 <ol>
 <li>
-<p>Let's create a new OpenShift project that will hold all resources of this lan. Navigate to your browser window/tab which has the <strong>Administrator</strong> profile. Select <strong>Home</strong> -&gt; <strong>Projects</strong> and click <strong>Create Project</strong>
+<p>Let's create a new OpenShift project that will hold all resources of this lan. Navigate to your browser window/tab which has the <strong>Administrator</strong> profile. Select <strong>Home</strong> -&gt; <strong>Projects</strong> and click <strong>Create Project</strong>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/ec396478-05eb-4fa9-8862-c49c9321f21e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ec396478-05eb-4fa9-8862-c49c9321f21e"></a></p>
 </li>
 <li>
-<p>In the resulting form, enter <strong>lab2-demo</strong> as the project name and click <strong>Create</strong>
+<p>In the resulting form, enter <strong>lab2-demo</strong> as the project name and click <strong>Create</strong>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/6ece11da-db12-4ddb-ae79-9334004ccdd1" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6ece11da-db12-4ddb-ae79-9334004ccdd1"></a></p>
 </li>
 </ol>
@@ -906,12 +906,12 @@
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5"></a></p>
 </li>
 <li>
-<p>Make sure `oc CLI is pointing to the <strong>lab2-demo</strong> project</p>
+<p>Make sure `oc CLI is pointing to the <strong>lab2-demo</strong> project.</p>
 <p><code>oc project lab2-demo</code>   </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/721a4e9d-81db-48e8-b85c-c6491e96a8a1" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/721a4e9d-81db-48e8-b85c-c6491e96a8a1"></a></p>
 </li>
 <li>
-<p>Run the below set of commands to deploy milvus DB</p>
+<p>Run the below set of commands to deploy milvus DB.</p>
 <p><code>cd Part2-RAG/milvus-deployment</code></p>
 <p><code>oc create configmap milvus-config --from-file=./config/milvus.yaml</code></p>
 <p><code>oc apply -f .</code></p>
@@ -947,7 +947,7 @@
  but yours can be different! <br></p>
 <div class="admonition note">
 <p class="admonition-title">Alternate way to get the jupyter NB URL</p>
-<p>You can also goto OpenShift <strong>Administrator</strong> profile console window in your browser, navigate to <strong>Networking</strong> -&gt; <strong>Routes</strong>, select <strong>cpu-notebook</strong> route and click on the URL mentioned under <strong>Location</strong> field</p>
+<p>You can also goto OpenShift <strong>Administrator</strong> profile console window in your browser, navigate to <strong>Networking</strong> -&gt; <strong>Routes</strong>, select <strong>cpu-notebook</strong> route and click on the URL mentioned under <strong>Location</strong> field.</p>
 </div>
 </li>
 <li>
@@ -975,7 +975,7 @@
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad"></a></p>
 </li>
 <li>
-<p>Double-click on the <strong>RAG.ipynb</strong> file and it should open up in the right pane of the browser</p>
+<p>Double-click on the <strong>RAG.ipynb</strong> file and it should open up in the right pane of the browser.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/e5e26a7c-33d7-4c9f-acaf-fce3290d6b3d" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e5e26a7c-33d7-4c9f-acaf-fce3290d6b3d"></a></p>
 </li>
 <li>
