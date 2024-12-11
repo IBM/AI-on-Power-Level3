@@ -24,11 +24,11 @@ IBM watsonx is designed for the enterprise and is targeted for business domains,
 
 !!! note "What is IBM watsonx?"
 
-    IBM watsonx is IBM’s next-generation AI and data platform, designed to help enterprises build, train, fine-tune, and deploy large-scale AI models efficiently. watsonx enables businesses to harness the power of artificial intelligence and machine learning (AI/ML) for various tasks like generative AI, predictive analytics, and decision-making. It integrates advanced capabilities for handling large language models (LLMs), machine learning workflows, and AI governance.
+    IBM watsonx is IBM’s next-generation AI and data platform, designed to help enterprises build, train, fine-tune, and deploy large-scale AI models efficiently. IBM watsonx enables businesses to harness the power of artificial intelligence and machine learning (AI/ML) for various tasks like generative AI, predictive analytics, and decision-making. It integrates advanced capabilities for handling large language models (LLMs), machine learning workflows, and AI governance.
 
 !!! danger "IBM watsonx support on IBM Power"
 
-    **NOTE**: At the time of writing this lab, IBM watsonx is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by watsonx on IBM Cloud or running stand-alone on-premises on IBM Power) to infuse and harness the power of (Gen)AI into their on-premises applications running on IBM Power.
+    **NOTE**: At the time of writing this lab, IBM watsonx is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by watsonx on IBM Cloud or running stand-alone on-premises on IBM Power) to infuse and harness the power of (gen)AI into their on-premises applications running on IBM Power.
 
 ## IBM watsonx Vs Hugging Face
 
