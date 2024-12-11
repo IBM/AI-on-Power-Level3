@@ -48,7 +48,7 @@ In essence, Code LLMs bring AI-driven enhancements to the software development p
 
 IBM watsonx™ Code Assistant (WCA) is a family of offerings from IBM that leverages generative AI to accelerate development while maintaining the principles of trust, security and compliance at its core. Developers and IT Operators can speed up application modernization efforts and generate automation to rapidly scale IT environments. 
 
-WCA is powered by the IBM Granite foundation models that include state-of-the-art large language models designed for code, geared to help IT teams create high-quality code using AI-generated recommendations based on natural language requests or existing source code. Built on the Watsonx AI platform, this tool leverages IBM’s expertise in AI and machine learning to enhance productivity across various industries.
+WCA is powered by the IBM Granite foundation models that include state-of-the-art large language models designed for code, geared to help IT teams create high-quality code using AI-generated recommendations based on natural language requests or existing source code. Built on the watsonx AI platform, this tool leverages IBM’s expertise in AI and machine learning to enhance productivity across various industries.
 
 !!! danger "IBM watsonx Code Assistant (WCA) support on IBM Power"
 

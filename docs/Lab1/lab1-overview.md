@@ -20,11 +20,11 @@ We use HF to access LLMs in this lab as it has a vast collection of pre-trained 
 ## What is IBM watsonx?
 
 Enterprise clients of IBM will use the [IBM watsonx platform](https://www.ibm.com/watsonx){target="_blank"}, an enterprise-ready AI and data platform.
-Watsonx is designed for the enterprise and is targeted for business domains, empowering value creators to transform business applications into AI-first applications.
+IBM watsonx is designed for the enterprise and is targeted for business domains, empowering value creators to transform business applications into AI-first applications.
 
 !!! note "What is IBM watsonx?"
 
-    IBM Watsonx is IBM’s next-generation AI and data platform, designed to help enterprises build, train, fine-tune, and deploy large-scale AI models efficiently. Watsonx enables businesses to harness the power of artificial intelligence and machine learning (AI/ML) for various tasks like generative AI, predictive analytics, and decision-making. It integrates advanced capabilities for handling large language models (LLMs), machine learning workflows, and AI governance.
+    IBM watsonx is IBM’s next-generation AI and data platform, designed to help enterprises build, train, fine-tune, and deploy large-scale AI models efficiently. watsonx enables businesses to harness the power of artificial intelligence and machine learning (AI/ML) for various tasks like generative AI, predictive analytics, and decision-making. It integrates advanced capabilities for handling large language models (LLMs), machine learning workflows, and AI governance.
 
 !!! danger "IBM watsonx support on IBM Power"
 
@@ -32,7 +32,7 @@ Watsonx is designed for the enterprise and is targeted for business domains, emp
 
 ## IBM watsonx Vs Hugging Face
 
-IBM Watsonx and Hugging Face both offer AI tools, but they serve different purposes:
+IBM watsonx and Hugging Face both offer AI tools, but they serve different purposes:
 
 - **IBM watsonx**: An enterprise-grade AI platform designed for large-scale AI model training, fine-tuning, and deployment. It focuses on governance, compliance, and custom AI models for business use, offering robust tools for data management and AI governance. Ideal for enterprises needing secure, scalable AI with industry-specific solutions.
 
@@ -46,8 +46,8 @@ With IBM watsonx, clients can run not just IBM-trained foundation models, but al
 
 IBM watsonx and Hugging Face can work together by combining IBM's enterprise AI capabilities with Hugging Face's vast collection of pre-trained models and tools for rapid AI development:
 
-- **Model Access**: IBM watsonx users can leverage Hugging Face's pre-trained models (like GPT, BERT, etc.) from its model hub to fine-tune or deploy in enterprise environments using Watsonx’s scalable infrastructure.
-- **Fine-Tuning and Customization**: Businesses can use Hugging Face models in Watsonx to fine-tune them with proprietary data while benefiting from watsonx’s AI governance and compliance tools.
+- **Model Access**: IBM watsonx users can leverage Hugging Face's pre-trained models (like GPT, BERT, etc.) from its model hub to fine-tune or deploy in enterprise environments using watsonx’s scalable infrastructure.
+- **Fine-Tuning and Customization**: Businesses can use Hugging Face models in watsonx to fine-tune them with proprietary data while benefiting from watsonx’s AI governance and compliance tools.
 - **Deployment**: Hugging Face models can be integrated into IBM watsonx to deploy at scale on hybrid cloud or on-premises environments, ensuring enterprise-level security and performance.
 
 Together, Hugging Face provides the models, and watsonx offers the enterprise-ready infrastructure for secure, large-scale, compliant deployment.
