@@ -20,17 +20,17 @@ Follow the steps below:
 1. As this is an on-premises environment, verify you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to [this](https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md){target="_blank"} link for more details.
 2. In TechZone, open the [My Reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page.
 3. Click on your reservation, which will open up the details page.
-4. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
+4. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console.
    ![image](https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb)
 
 ### Accessing OpenShift console
 
-1. In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link
-2. This will open up a new browser tab/window and opens up the OpenShift console login page   
+1. In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link.
+2. This will open up a new browser tab/window and opens up the OpenShift console login page.
       - If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue. This is ok as we are in a lab/demo environment and using self-signed certificates.
 4. On the OpenShift console page, select the **htpasswd** login option.
 5. Use Username: `cecuser` and Password: `<as provided in the TechZone Reservation Details page>`
-      - TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window
+      - TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.
 
      ![image](https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f)
      ![image](https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473)
@@ -48,7 +48,7 @@ Follow the steps below:
 
 !!! note "REAUTHENTICATING in case you lose console access"
    
-    In case you lose access to the OpenShift cluster and need to reauthenticate to the console, which is possible in case your reservation expires and/or your console authentication timed-out, please follow the above steps again to reauthenticate to your OpenShift console
+    In case you lose access to the OpenShift cluster and need to reauthenticate to the console, which is possible in case your reservation expires and/or your console authentication timed-out, please follow the above steps again to reauthenticate to your OpenShift console.
 
 ### Accessing OpenShift Command Line Interface (CLI)
 
@@ -56,8 +56,8 @@ OpenShift CLIs are accessed using the `oc` command
 
 1. Go back to the "Reservation Details" section of the TechZone environment details page.
 2. Open a terminal window and use the SSH client to connect to the Bastion node of OpenShift cluster.
-      - `ssh -l cecuser <your bastion hostname/IP as provided in Reservation Details section>`
-      - If `ssh` gives any warning, type `yes` and continue
+      - `ssh -l cecuser <your bastion hostname/IP as provided in Reservation Details section>`.
+      - If `ssh` gives any warning, type `yes` and continue.
       - When prompted for password, copy the password from Reservation Details page by clicking on the copy icon and pasting it in the ssh terminal window
 3. You have logged in successfully to the bastion node of your OpenShift cluster.
       - Keep this terminal window open as you will be using it frequently to run CLI commands.
@@ -79,9 +79,9 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
       - If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue. This is ok as we are in a lab/demo environment and using self-signed certificates.
 4. You will be presented with another login screen. Click **htpasswd** option
    ![image](https://github.com/user-attachments/assets/c3151615-24ba-44ea-8d71-783d39e4ccfb)
-5. Use Username: `cecuser` and Password: `<as provided in the TechZone Reservation Details page>`
+5. Use Username: `cecuser` and Password: `<as provided in the TechZone Reservation Details page>`.
       - TIP: Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.
-6. Click **Display token**
+6. Click **Display token**.
    
      ![image](https://github.com/user-attachments/assets/4af10efe-22fc-4d01-86a7-44e2fbbdd10d)
    
@@ -98,7 +98,7 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
 
 !!! note "REAUTHENTICATING in case you lose CLI access"
       
-    In case you lose access to the OpenShift cluster and need to reauthenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your `oc` CLI authenticated to the OpenShift cluster
+    In case you lose access to the OpenShift cluster and need to reauthenticate using the CLI, which is possible in case your reservation expires and/or your CLI window terminated for some reason, please follow the above steps again to get back your `oc` CLI authenticated to the OpenShift cluster.
 
 ### Summary
 Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.

@@ -14,25 +14,25 @@ Make sure you have the following items ready:
 
 !!! note "Image zoom functionality"
 
-    Feel free to click on the images in the lab guide below to a view larger image
+    Feel free to click on the images in the lab guide below to a view larger image.
     
 ### Create project
-1. Go to OpenShift Administrator profile, click on **Home** -> **Projects** and click **Create Project**
+1. Go to OpenShift Administrator profile, click on **Home** -> **Projects** and click **Create Project**.
    ![image](https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f)
-2. Enter a project name: **lab1-demo** & click **Create**
+2. Enter a project name: **lab1-demo** & click **Create**.
    ![image](https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320)
 
 ### Setup storage
 Let's setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
 In OpenShift, you first request for the storage (also known as PersistentVolumeClaim or PVC) and the actual storage (also known as PersistentVolume or PV) gets alloted based on your request and the storage availability in the storage pool (NFS in this case).
 
-1. Go to OpenShift Administrator profile, click on **Storage** -> **PersistentVolumeClaims** and click **Create PersistentVolumeClaim**
+1. Go to OpenShift Administrator profile, click on **Storage** -> **PersistentVolumeClaims** and click **Create PersistentVolumeClaim**.
    ![image](https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2)
-2. In the resulting form, enter PVC name: **model-storage** and Size: **20** GB. Leave other fields as defaults and click **Create**
+2. In the resulting form, enter PVC name: **model-storage** and Size: **20** GB. Leave other fields as defaults and click **Create**.
    ![image](https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c)
-3. Note that it shows PVC status as bound, which means storage was allotted
+3. Note that it shows PVC status as bound, which means storage was allotted.
    ![image](https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2)
-4. Navigate to **Storage** -> **PersistentVolumes** and view the actual storage (PV) bound to your storage request (PVC = **model-storage**)
+4. Navigate to **Storage** -> **PersistentVolumes** and view the actual storage (PV) bound to your storage request (PVC = **model-storage**).
    ![image](https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e)
 
     This completes the storage setup.
@@ -43,13 +43,13 @@ In OpenShift, a ConfigMap is an object used to manage configuration data for app
 
 We will use ConfigMap to store the model URL and model name, both of which will be used when we deploy the model. Using ConfigMap will help us switch to a different model very easily.
 
-1. Navigate to **Workloads** -> **ConfigMaps** and select **lab1-demo** as the active Project
+1. Navigate to **Workloads** -> **ConfigMaps** and select **lab1-demo** as the active Project.
    ![image](https://github.com/user-attachments/assets/72e44e26-9f7e-4d85-a67b-47752ba6c983)
 
-5. Click **Create ConfigMap**
+5. Click **Create ConfigMap**.
    ![image](https://github.com/user-attachments/assets/14b9433f-35ab-4042-8c37-5302756b8b6e)
 
-6. In the resulting form, Ensure **Form view** option is selected
+6. In the resulting form, Ensure **Form view** option is selected.
    ![image](https://github.com/user-attachments/assets/5c156ef4-a314-47f5-9084-328a170f1d74)
 
 8. Enter a name: **model-params**, and fill the Key and Value fields as below:
@@ -68,7 +68,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
      
      - **Value**: `https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf`
      
-     Click **Create**
+     Click **Create**.
      
      ![image](https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a)
 
@@ -87,7 +87,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 5. Click on **+Add** and select **Import YAML** option.
    ![image](https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462)
 
-6. In the resulting window, copy and paste the below deployment YAML into it and click **Create**
+6. In the resulting window, copy and paste the below deployment YAML into it and click **Create**.
    ``` yaml linenums="1"
     apiVersion: apps/v1
     kind: Deployment
@@ -138,7 +138,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    ```
     ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
 
-7. Here is a quick explanation of the deployment YAML
+7. Here is a quick explanation of the deployment YAML.
 
     ??? info "Deployment YAML explanation"
      
@@ -160,7 +160,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
 7. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the YAML references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
    ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
-8. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**
+8. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**.
     ![image](https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa)
 
     !!! info "About LLama and tinyLLama models"
@@ -173,7 +173,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     !!! info "Model download will take time - Have patience!!"
 
-        This process will take a few minutes (in my case it took around 1-1.5 mins) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV)
+        This process will take a few minutes (in my case it took around 1-1.5 mins) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
     
     ![image](https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc)
 
@@ -181,14 +181,14 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
 11. Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
     ![image](https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca)
-12. In the pod details page, click on the **Logs** tab to see the pod logs
+12. In the pod details page, click on the **Logs** tab to see the pod logs.
     ![image](https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff)
-13. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**
+13. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
     ![image](https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a)
 
     This verifies that we have indeed deployed tinyllama.
      
-14. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile and click **Networking** -> **Services** and click **Create Service**
+14. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile and click **Networking** -> **Services** and click **Create Service**.
      
     !!! note ""
       
@@ -196,7 +196,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
   
     ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
 
-15. In the resulting Create Service YAML window, select all & delete everything. Then copy the below service YAML, paste it in the YAML window and click **Create**
+15. In the resulting Create Service YAML window, select all & delete everything. Then copy the below service YAML, paste it in the YAML window and click **Create**.
     ``` yaml linenums="1"
     apiVersion: v1
     kind: Service
@@ -216,7 +216,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
 
-16. Here is a quick explanation of the Service YAML
+16. Here is a quick explanation of the Service YAML.
 
     ??? info "Service YAML explanation"
     
@@ -233,9 +233,9 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 18. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
     ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
 
-19. Navigate to **Networking** -> **Routes** and click **Create Route**
+19. Navigate to **Networking** -> **Routes** and click **Create Route**.
       ![image](https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343)
-20. In the resulting Create Route window, select **YAML view** and clear everything from the YAML window. Copy the below YAML and paste it in the YAML window and click **Create**
+20. In the resulting Create Route window, select **YAML view** and clear everything from the YAML window. Copy the below YAML and paste it in the YAML window and click **Create**.
     ``` yaml linenums="1"
     kind: Route
     apiVersion: route.openshift.io/v1
@@ -278,7 +278,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     !!! note "Experimenting with model parameters"
 
-        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
 
 20. Here are some questions I asked and the responses I got.
     
@@ -304,9 +304,9 @@ In this section, let's deploy IBM's granite model.
 
 1. Navigate to your OpenShift developer profile window. Click **ConfigMaps**, then click **model-params**. This should open up the ConfigMap details page.
    ![image](https://github.com/user-attachments/assets/a26e875b-02d0-438e-84f3-9ed86347e650)
-2. In the model-params ConfigMap details page, click **Action** and select **Edit ConfigMap**
+2. In the model-params ConfigMap details page, click **Action** and select **Edit ConfigMap**.
    ![image](https://github.com/user-attachments/assets/a0d66be8-8ca3-4f18-b360-ee35a7843862)
-3. In the resulting form, edit the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**
+3. In the resulting form, edit the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**.
    
      - Key: MODEL_NAME
      - Value: granite-7b-lab.Q4_K_M.gguf
@@ -356,11 +356,11 @@ In this section, let's deploy IBM's granite model.
 
     !!! note "Multiple ways to access public URL of your application"
 
-        If you are in Administrator profile, you can navigate to **Networking** -> **Routes** to access your route resource and click on the URL to open your application, as we did in the previous section of this lab where we deployed our first model. Alternatively, if you are in Developer profile, you can go to **Topology** view and access the URL of your application as well. Let's use that method here...
+        If you are in Administrator profile, you can navigate to **Networking** -> **Routes** to access your route resource and click on the URL to open your application, as we did in the previous section of this lab where we deployed our first model. Alternatively, if you are in Developer profile, you can go to **Topology** view and access the URL of your application as well. Let's use that method here:
 
     - In Developer profile window, click **Topology** and you should see the icon representing your deployed application.
       ![image](https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb)
-    - Click on the arrow (in top right corner of the icon) that says "Open URL"
+    - Click on the arrow (in top right corner of the icon) that says "Open URL".
       ![image](https://github.com/user-attachments/assets/7366146b-cf82-4dc3-9327-d51aa5944778)
     - A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
       ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
@@ -369,7 +369,7 @@ In this section, let's deploy IBM's granite model.
 
     !!! note "Experimenting with model parameters"
 
-        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
 
 13. Here are some questions I asked and the responses I got.
 

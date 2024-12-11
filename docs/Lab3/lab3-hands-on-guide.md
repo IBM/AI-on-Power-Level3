@@ -14,7 +14,7 @@ Make sure you have the following items ready:
 
 !!! note "Image zoom functionality"
 
-    Feel free to click on the images in the lab guide below to a view larger image
+    Feel free to click on the images in the lab guide below to a view larger image.
 
 ### Deploy granite code LLM
 
@@ -25,13 +25,13 @@ Make sure you have the following items ready:
 1. In this lab, we will deploy IBM's granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    ![image](https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c)
 
-2. Select **ConfigMaps** and click **model-params**
+2. Select **ConfigMaps** and click **model-params**.
    ![image](https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5)
 
-3. Click on **Actions** -> **Edit ConfigMap**
+3. Click on **Actions** -> **Edit ConfigMap**.
    ![image](https://github.com/user-attachments/assets/e900c672-ee49-4f9d-94f2-f28bbe1aef20)
    
-5. In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**
+5. In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**.
    
      - Key: MODEL_NAME
      - Value: granite-8b-code-instruct.Q4_K_M.gguf
@@ -69,7 +69,7 @@ Make sure you have the following items ready:
 
 13. In the pod details page, click on the Logs tab to see the pod logs.
     ![image](https://github.com/user-attachments/assets/ac49a5bb-bbf0-4ac1-9050-a88327185c18)
-14. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**
+14. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
     
     ![image](https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2)
 
@@ -84,13 +84,13 @@ Make sure you have the following items ready:
 
     !!! note "Experimenting with model parameters"
 
-        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
 
 ### Generate python code
 
 Now let's use the granite code model to generate python code using natural language queries.
 
-1. Generating python code for printing the fibonacci series.<br> Here is what I entered: `python for finonacci sequence`
+1. Generating python code for printing the fibonacci series.<br> Here is what I entered: `python for finonacci sequence`.
    ![image](https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3)
    
      - I ran this code on my local python environment and it ran without errors!
@@ -99,7 +99,7 @@ Now let's use the granite code model to generate python code using natural langu
      
      - Also note that the answer it gave uses recursion (function fib is being called recursively).
 
-3. Now let's try asking it to generate the same code without using recursion.<br> Here is what I entered: `give me python code for generating fibonacci sequence without using recursion`
+3. Now let's try asking it to generate the same code without using recursion.<br> Here is what I entered: `give me python code for generating fibonacci sequence without using recursion`.
    ![image](https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b)
    
      - As expected, it did give the code snippet that doesn't use recursion, so it did well there.
@@ -122,15 +122,15 @@ Now let's use the granite code model to generate python code using natural langu
 
 Now let's use the granite code model to generate C code using natural language queries.
 
-1. Generate C code for sorting a list of numbers.<br> Here is what I entered: `C code to sort a list of numbers`
+1. Generate C code for sorting a list of numbers.<br> Here is what I entered: `C code to sort a list of numbers`.
    ![image](https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b)
 
-     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`
+     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`.
 
-2. Generate C code for swapping 2 numbers without using a temporary variable.<br> Here is what I entered: `C code for swapping 2 numbers`
+2. Generate C code for swapping 2 numbers without using a temporary variable.<br> Here is what I entered: `C code for swapping 2 numbers`.
    ![image](https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef)
 
-     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`
+     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`.
 
      **NOTE**: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br>
    Feel free to explore and try out more scenarios!
@@ -143,12 +143,12 @@ The context is given as a prompt to the code LLM which preceeds the natural lang
 
 Let's take an super simple example of a bank which has information stored in 2 tables in a DB:
 
-* USERS - This which has user specific info (user_id, name, age, dob etc)
-* ACCOUNTS - This holds the account balance of each user with user_id being the common field between the 2 tables
+* USERS - This which has user specific info (user_id, name, age, dob etc).
+* ACCOUNTS - This holds the account balance of each user with user_id being the common field between the 2 tables.
 
 1. Given the above DB example, the prompt (also known as context) we need to provide to the code LLM is as below:
    ```
-   You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
+   You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive.
 
     Here are the 2 tables :
   
@@ -175,13 +175,13 @@ Let's take an super simple example of a bank which has information stored in 2 t
 2. Natural language query can be something like:
    
      ```
-     With the above schema, please generate sql query to list all users whose balance is > 2000
+     With the above schema, please generate sql query to list all users whose balance is > 2000.
      ```
    
 3. Let's send the "Prompt + Query" to the code LLM and see how it responds. Feel free to copy and paste it in your LLM application window.
    
      ```
-     You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive
+     You are a developer writing SQL queries given natural language questions. The database contains a set of 2 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive.
   
       Here are the 2 tables :
     
@@ -212,7 +212,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
      ![image](https://github.com/user-attachments/assets/445f9928-074f-4a58-a5b4-a1f757910c11)
 
      - The SQL query generated seems correct.
-     - Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is > 2000
+     - Its joining both the tables using `user_id` as the key and selecting all records where the user's account balance is > 2000.
      - For the sake of people who may want to analyse further, pasting the SQL query that was generated:  `SELECT * FROM USERS u, ACCOUNTS a WHERE u.user_id = a.user_id AND a.balance > 2000; `
        
 4. Interestingly, code LLM works both ways! Given a SQL query, you can ask code LLM to explain what it does. To do that I have formed the query as below. Feel free to copy the query and post it in your LLM application window.
@@ -233,7 +233,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
    NOTE: You don't have to repeat the whole schema in the prompt. LLMs can remember context.
    
      ```
-     Using the schema given above, generate SQL query to list all users whose account balance > 2000 and user is of type employee
+     Using the schema given above, generate SQL query to list all users whose account balance > 2000 and user is of type employee.
      ```
 
      <br/>

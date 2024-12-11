@@ -14,23 +14,23 @@ Make sure you have the following items ready:
 
 !!! note "Image zoom functionality"
 
-    Feel free to click on the images in the lab guide below to a view larger image
+    Feel free to click on the images in the lab guide below to a view larger image.
 
 In this lab, we will focus on the below:
 
-  - Deploy a vector DB - milvus
+  - Deploy a vector DB - milvus.
     
   - Deploy a jupyter notebook where we will implement RAG pattern and learn about:
-      - Index the milvus DB with a sample PDF
+      - Index the milvus DB with a sample PDF.
       - Query the DB to get relevant documents for the question asked.
       - Create a prompt based on the relevant documents gotten from the previous step and send it to the LLM (granite model we deployed in Lab1) to get a domain specific answer.
 
 ### Create project
 
-1. Let's create a new OpenShift project that will hold all resources of this lan. Navigate to your browser window/tab which has the **Administrator** profile. Select **Home** -> **Projects** and click **Create Project**
+1. Let's create a new OpenShift project that will hold all resources of this lan. Navigate to your browser window/tab which has the **Administrator** profile. Select **Home** -> **Projects** and click **Create Project**.
    ![image](https://github.com/user-attachments/assets/ec396478-05eb-4fa9-8862-c49c9321f21e)
 
-2. In the resulting form, enter **lab2-demo** as the project name and click **Create**
+2. In the resulting form, enter **lab2-demo** as the project name and click **Create**.
    ![image](https://github.com/user-attachments/assets/6ece11da-db12-4ddb-ae79-9334004ccdd1)
 
 ### Deploy milvus
@@ -52,13 +52,13 @@ In this lab, we will focus on the below:
      
        ![image](https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5)
 
-5. Make sure `oc CLI is pointing to the **lab2-demo** project
+5. Make sure `oc CLI is pointing to the **lab2-demo** project.
 
      `oc project lab2-demo `   
      
      ![image](https://github.com/user-attachments/assets/721a4e9d-81db-48e8-b85c-c6491e96a8a1)
 
-7. Run the below set of commands to deploy milvus DB
+7. Run the below set of commands to deploy milvus DB.
      
      `cd Part2-RAG/milvus-deployment`
 
@@ -106,7 +106,7 @@ In this lab, we will focus on the below:
 
     !!! note "Alternate way to get the jupyter NB URL"
 
-        You can also goto OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -> **Routes**, select **cpu-notebook** route and click on the URL mentioned under **Location** field
+        You can also goto OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -> **Routes**, select **cpu-notebook** route and click on the URL mentioned under **Location** field.
 
 6. Copy and paste the URL in the browser. You should see the jupyter screen as below:
     ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
@@ -134,7 +134,7 @@ In this lab, we will focus on the below:
 
       ![image](https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad)
 
-11. Double-click on the **RAG.ipynb** file and it should open up in the right pane of the browser
+11. Double-click on the **RAG.ipynb** file and it should open up in the right pane of the browser.
     
       ![image](https://github.com/user-attachments/assets/e5e26a7c-33d7-4c9f-acaf-fce3290d6b3d)
 

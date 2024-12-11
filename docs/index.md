@@ -5,13 +5,13 @@ This Level 3 course will provide hands-on enablement on how to use generative AI
 
 There are 4 main parts to this demonstration as you can see on the left panel:
 
-* Lab setup - How to provision and setup the lab env for the hands-on demos
+* Lab setup - How to provision and setup the lab env for the hands-on demos.
 
-* Lab 1 – Deploy a Large Language Model (LLM) on Power10 - Deploy a LLM on Power10 and switch to a different LLM
+* Lab 1 – Deploy a Large Language Model (LLM) on Power10 - Deploy a LLM on Power10 and switch to a different LLM.
 
-* Lab 2 – Deploy Retrieval-Augmented Generation (RAG) on Power10 - RAG chatbot for domain specific question and answers
+* Lab 2 – Deploy Retrieval-Augmented Generation (RAG) on Power10 - RAG chatbot for domain specific question and answers.
 
-* Lab 3 – Deploy code LLM Power10 - Generate python, C code and Sequential Query Language (SQL) query using natural language
+* Lab 3 – Deploy code LLM Power10 - Generate python, C code and Sequential Query Language (SQL) query using natural language.
 
 ## Generative AI and LLMs overview
 
@@ -40,7 +40,7 @@ IBM Power platform is a high-performance, enterprise-grade computing solution de
 
 * **Efficiency and flexibility**: Designed for diverse environments, supporting Linux, AIX, IBM i, and containerized applications, making it versatile for a range of industries.
 
-IBM Power is the platform of choice for businesses seeking to future-proof their IT infrastructure, handle complex workloads, and accelerate innovation
+IBM Power is the platform of choice for businesses seeking to future-proof their IT infrastructure, handle complex workloads, and accelerate innovation.
 
 ## IBM Power10 differentiation
 
