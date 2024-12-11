@@ -16,13 +16,13 @@ Make sure you have the following items ready:
 
     Feel free to click on the images in the lab guide below to a view larger image.
 
-### Deploy granite code LLM
+### Deploy IBM Granite code LLM
 
 !!! warning "Pre-requisite"
     
     This lab assumes you have finished Lab1. This lab uses the OpenShift resources deployed in Lab1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab1!
     
-1. In this lab, we will deploy IBM's granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+1. In this lab, we will deploy IBM's IBM Granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    ![image](https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c)
 
 2. Select **ConfigMaps** and click **model-params**.
@@ -54,17 +54,17 @@ Make sure you have the following items ready:
 9. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in re-deployment of the pod. This ensure the pod will now see the new ConfigMap changes.
    ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
    
-10. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+10. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to IBM Granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
     ![image](https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926)
    
     !!! info "Model download will take time"
 
-        This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
+        This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
 
 11. If all goes well, you should see just 1 pod running.
     ![image](https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489)
 
-12. Let's verify that the model running is granite code LLM!. Click on the pod to enter the pod details view/page.
+12. Let's verify that the model running is IBM Granite code LLM!. Click on the pod to enter the pod details view/page.
     ![image](https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934)
 
 13. In the pod details page, click on the Logs tab to see the pod logs.
@@ -73,7 +73,7 @@ Make sure you have the following items ready:
     
     ![image](https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2)
 
-    This verifies that we have indeed deployed granite code LLM.
+    This verifies that we have indeed deployed IBM Granite code LLM.
 
 15. Let's access our model. As we did in Lab1, head to **Topology** view, click on the **Open URL** icon of your application.
     ![image](https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f)
@@ -84,11 +84,11 @@ Make sure you have the following items ready:
 
     !!! note "Experimenting with model parameters"
 
-        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
 
 ### Generate python code
 
-Now let's use the granite code model to generate python code using natural language queries.
+Now let's use the IBM Granite code model to generate python code using natural language queries.
 
 1. Generating python code for printing the fibonacci series.<br> Here is what I entered: `python for finonacci sequence`.
    ![image](https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3)
@@ -120,7 +120,7 @@ Now let's use the granite code model to generate python code using natural langu
 
 ### Generate C code
 
-Now let's use the granite code model to generate C code using natural language queries.
+Now let's use the IBM Granite code model to generate C code using natural language queries.
 
 1. Generate C code for sorting a list of numbers.<br> Here is what I entered: `C code to sort a list of numbers`.
    ![image](https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b)

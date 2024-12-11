@@ -173,7 +173,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     !!! info "Model download will take time"
 
-        This process will take a few minutes (in my case it took around 1-1.5 mins) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
+        This process will take a few minutes (in my case it took around 1-1.5 mins) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
     
     ![image](https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc)
 
@@ -278,7 +278,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     !!! note "Experimenting with model parameters"
 
-        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
 
 20. Here are some questions I asked and the responses I got.
     
@@ -332,7 +332,7 @@ In this section, let's deploy IBM's granite model.
 
     !!! info "Model download will take time"
 
-        This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
+        This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
    
 8. If all goes well, you should see just 1 pod running.
     
@@ -369,7 +369,7 @@ In this section, let's deploy IBM's granite model.
 
     !!! note "Experimenting with model parameters"
 
-        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
+        You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.
 
 13. Here are some questions I asked and the responses I got.
 

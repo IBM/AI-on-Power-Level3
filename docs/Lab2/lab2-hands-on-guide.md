@@ -23,7 +23,7 @@ In this lab, we will focus on the below:
   - Deploy a jupyter notebook where we will implement RAG pattern and learn about:
       - Index the milvus DB with a sample PDF.
       - Query the DB to get relevant documents for the question asked.
-      - Create a prompt based on the relevant documents gotten from the previous step and send it to the LLM (granite model we deployed in Lab1) to get a domain specific answer.
+      - Create a prompt based on the relevant documents gotten from the previous step and send it to the LLM (IBM Granite model we deployed in Lab1) to get a domain specific answer.
 
 ### Create project
 
