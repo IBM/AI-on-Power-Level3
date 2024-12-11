@@ -904,7 +904,7 @@
    <a class="glightbox" href="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320"></a></li>
 </ol>
 <h3 id="setup-storage">Setup storage<a class="headerlink" href="#setup-storage" title="Permanent link">¶</a></h3>
-<p>Let's setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
+<p>Let us setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
 In OpenShift, you first request for the storage (also known as PersistentVolumeClaim or PVC) and the actual storage (also known as PersistentVolume or PV) gets alloted based on your request and the storage availability in the storage pool (NFS in this case).</p>
 <ol>
 <li>Go to OpenShift Administrator profile, click on <strong>Storage</strong> -&gt; <strong>PersistentVolumeClaims</strong> and click <strong>Create PersistentVolumeClaim</strong>.
@@ -1123,8 +1123,8 @@ In OpenShift, you first request for the storage (also known as PersistentVolumeC
 <li>
 <p>The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.</p>
 <div class="admonition info">
-<p class="admonition-title">Model download will take time - Have patience!!</p>
-<p>This process will take a few minutes (in my case it took around 1-1.5 mins) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
+<p class="admonition-title">Model download will take time</p>
+<p>This process will take a few minutes (in my case it took around 1-1.5 mins) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
 </div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc"></a></p>
 <p><strong>Congratulations!</strong>, you have successfully deployed a LLM on Power10.</p>
@@ -1278,7 +1278,7 @@ In OpenShift, you first request for the storage (also known as PersistentVolumeC
     <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Experimenting with model parameters</p>
-<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
+<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
 </div>
 </li>
 <li>
@@ -1335,8 +1335,8 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b"></a></p>
 <div class="admonition info">
-<p class="admonition-title">Model download will take time - Have patience!!</p>
-<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
+<p class="admonition-title">Model download will take time</p>
+<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
 </div>
 </li>
 <li>
@@ -1374,7 +1374,7 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Experimenting with model parameters</p>
-<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
+<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
 </div>
 </li>
 <li>

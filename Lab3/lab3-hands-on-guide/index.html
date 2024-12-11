@@ -625,9 +625,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deploy-granite-code-llm" class="md-nav__link">
+  <a href="#deploy-ibm-granite-code-llm" class="md-nav__link">
     <span class="md-ellipsis">
-      Deploy granite code LLM
+      Deploy IBM Granite code LLM
     </span>
   </a>
   
@@ -807,9 +807,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deploy-granite-code-llm" class="md-nav__link">
+  <a href="#deploy-ibm-granite-code-llm" class="md-nav__link">
     <span class="md-ellipsis">
-      Deploy granite code LLM
+      Deploy IBM Granite code LLM
     </span>
   </a>
   
@@ -878,14 +878,14 @@
 <p class="admonition-title">Image zoom functionality</p>
 <p>Feel free to click on the images in the lab guide below to a view larger image.</p>
 </div>
-<h3 id="deploy-granite-code-llm">Deploy granite code LLM<a class="headerlink" href="#deploy-granite-code-llm" title="Permanent link">¶</a></h3>
+<h3 id="deploy-ibm-granite-code-llm">Deploy IBM Granite code LLM<a class="headerlink" href="#deploy-ibm-granite-code-llm" title="Permanent link">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Pre-requisite</p>
-<p>This lab assumes you have finished Lab1. This lab uses the OpenShift resources deployed in Lab1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab1!</p>
+<p>This lab assumes you have finished Lab 1. This lab uses the OpenShift resources deployed in Lab 1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab 1!</p>
 </div>
 <ol>
 <li>
-<p>In this lab, we will deploy IBM's granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+<p>In this lab, we will deploy IBM's IBM Granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    <a class="glightbox" href="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c"></a></p>
 </li>
 <li>
@@ -927,11 +927,11 @@
    <a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
 </li>
 <li>
-<p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+<p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to IBM Granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
     <a class="glightbox" href="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926"></a></p>
 <div class="admonition info">
-<p class="admonition-title">Model download will take time - Have patience!!</p>
-<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
+<p class="admonition-title">Model download will take time</p>
+<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
 </div>
 </li>
 <li>
@@ -939,7 +939,7 @@
     <a class="glightbox" href="https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489"></a></p>
 </li>
 <li>
-<p>Let's verify that the model running is granite code LLM!. Click on the pod to enter the pod details view/page.
+<p>Let's verify that the model running is IBM Granite code LLM!. Click on the pod to enter the pod details view/page.
     <a class="glightbox" href="https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934"></a></p>
 </li>
 <li>
@@ -949,10 +949,10 @@
 <li>
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2"></a></p>
-<p>This verifies that we have indeed deployed granite code LLM.</p>
+<p>This verifies that we have indeed deployed IBM Granite code LLM.</p>
 </li>
 <li>
-<p>Let's access our model. As we did in Lab1, head to <strong>Topology</strong> view, click on the <strong>Open URL</strong> icon of your application.
+<p>Let's access our model. As we did in Lab 1, head to <strong>Topology</strong> view, click on the <strong>Open URL</strong> icon of your application.
     <a class="glightbox" href="https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f"></a></p>
 </li>
 <li>A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
@@ -962,12 +962,12 @@
     <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Experimenting with model parameters</p>
-<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
+<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
 </div>
 </li>
 </ol>
 <h3 id="generate-python-code">Generate python code<a class="headerlink" href="#generate-python-code" title="Permanent link">¶</a></h3>
-<p>Now let's use the granite code model to generate python code using natural language queries.</p>
+<p>Now let's use the IBM Granite code model to generate python code using natural language queries.</p>
 <ol>
 <li>
 <p>Generating python code for printing the fibonacci series.<br> Here is what I entered: <code>python for finonacci sequence</code>.
@@ -1012,7 +1012,7 @@
 </ol>
 <p>Feel free to explore and try out more scenarios!</p>
 <h3 id="generate-c-code">Generate C code<a class="headerlink" href="#generate-c-code" title="Permanent link">¶</a></h3>
-<p>Now let's use the granite code model to generate C code using natural language queries.</p>
+<p>Now let's use the IBM Granite code model to generate C code using natural language queries.</p>
 <ol>
 <li>
 <p>Generate C code for sorting a list of numbers.<br> Here is what I entered: <code>C code to sort a list of numbers</code>.

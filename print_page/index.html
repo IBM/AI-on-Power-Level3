@@ -1397,10 +1397,10 @@ IBM watsonx is designed for the enterprise and is targeted for business domains,
 </ul>
 <p>In essence, IBM watsonx focuses on enterprise-grade AI with strong governance and scalability, while Hugging Face is designed for flexible, community-driven AI development with a focus on rapid prototyping and open access to pre-trained models.</p>
 <h2 id="lab1-lab1-overview-ibm-watsonx-hugging-face">IBM watsonx &amp; Hugging Face<a class="headerlink" href="#lab1-lab1-overview-ibm-watsonx-hugging-face" title="Permanent link">¶</a></h2>
-<p>With IBM watsonx, clients can run not just IBM-trained foundation models, but also open source models and models from Hugging Face as well!</p>
+<p>With IBM watsonx, clients can run not just IBM-trained foundation models, but also open source models and models from Hugging Face as well.</p>
 <p>IBM watsonx and Hugging Face can work together by combining IBM's enterprise AI capabilities with Hugging Face's vast collection of pre-trained models and tools for rapid AI development:</p>
 <ul>
-<li><strong>Model Access</strong>: IBM watsonx users can leverage Hugging Face's pre-trained models (like GPT, BERT, etc.) from its model hub to fine-tune or deploy in enterprise environments using watsonx’s scalable infrastructure.</li>
+<li><strong>Model Access</strong>: IBM watsonx users can leverage Hugging Face's pre-trained models from its model hub to fine-tune or deploy in enterprise environments using watsonx’s scalable infrastructure.</li>
 <li><strong>Fine-Tuning and Customization</strong>: Businesses can use Hugging Face models in watsonx to fine-tune them with proprietary data while benefiting from watsonx’s AI governance and compliance tools.</li>
 <li><strong>Deployment</strong>: Hugging Face models can be integrated into IBM watsonx to deploy at scale on hybrid cloud or on-premises environments, ensuring enterprise-level security and performance.</li>
 </ul>
@@ -1414,9 +1414,9 @@ IBM has made it simple by aligning the common use cases around 4 key areas that 
 <ul>
 <li><strong>Pattern 1</strong>: Securely tune, deploy and manage foundation models. When it comes to task-specific use cases, it is a good idea to work with large open-source models in your own workspace that are under your control. Hugging Face is a large repository with over 950K pre-trained ML models and a platform where the AI ecosystem collaborates on models, datasets and applications. Download any model from Hugging Face and securely deploy at scale on IBM Power. Then, use best-of-breed software to help you tune, deploy and manage as many models as you need. Some examples of what enterprises can use this capability for: Customer service, knowledge workers to augment staff and fraud reporting.
  </li>
-<li><strong>Pattern 2</strong>: There are many new and existing business apps that are using foundation models integrated into the workflows. Deploy your foundation models anywhere, on Power, x86, cloud, and use the watsonx.ai software development kit (SDK) available in Python and embed directly into applications. On Power, enterprises can do this quickly so that services can be released to customers faster on a resilient 24/7 environment. Some examples of clients can embed AI into apps are generating the first draft of reports, citizen services for government end-clients and knowledge management.
+<li><strong>Pattern 2</strong>: There are many new and existing business apps that are using foundation models integrated into the workflows. Deploy your foundation models anywhere, on Power, x86, cloud, and use the watsonx.ai software development kit (SDK) available in Python and embed directly into applications. On Power, enterprises can do this quickly so that services can be released to clients faster on a resilient 24/7 environment. Some examples of clients can embed AI into apps are generating the first draft of reports, citizen services for government end-clients and knowledge management.
  </li>
-<li><strong>Pattern 3</strong>: The ecosystem is important to enterprises that have long-standing investments in software that drives their core business workflows. Consume watsonx services from customers customized ecosystem apps. Enterprises can generate code for Ansible playbooks for IBM i or AIX to enhance the Ansible IT management experience. Additionally, SAP applications can be embedded with watsonx services within the SAP ABAP environments. These custom apps help clients deliver services much faster while taking advantage of existing and familiar investments, making this an attractive proposition for many. Some example use cases include asset management, code generation, accounting automation. 
+<li><strong>Pattern 3</strong>: The ecosystem is important to enterprises that have long-standing investments in software that drives their core business workflows. Consume watsonx services from clients customized ecosystem apps. Enterprises can generate code for Ansible playbooks for IBM i or AIX to enhance the Ansible IT management experience. Additionally, SAP applications can be embedded with watsonx services within the SAP ABAP (Advanced Business Application Programming) environments. These custom apps help clients deliver services much faster while taking advantage of existing and familiar investments, making this an attractive proposition for many. Some example use cases include asset management, code generation, accounting automation. 
  </li>
 <li><strong>Pattern 4</strong>: Lastly, we are bringing a full suite of AI capabilities to the Power platform to help clients train, tune and deploy models without purchasing GPUs. The lead time for GPUs is somewhere around a year and clients will miss out on opportunity if they can’t get started today. Some of the popular use cases that enterprises will use are fraud detection, risk underwriting, and demand forecasting.</li>
 </ul>
@@ -1455,7 +1455,7 @@ Determine which factors are most important for you and your organization.</p>
    <a class="glightbox" href="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320"></a></li>
 </ol>
 <h3 id="lab1-lab1-hands-on-guide-setup-storage">Setup storage<a class="headerlink" href="#lab1-lab1-hands-on-guide-setup-storage" title="Permanent link">¶</a></h3>
-<p>Let's setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
+<p>Let us setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
 In OpenShift, you first request for the storage (also known as PersistentVolumeClaim or PVC) and the actual storage (also known as PersistentVolume or PV) gets alloted based on your request and the storage availability in the storage pool (NFS in this case).</p>
 <ol>
 <li>Go to OpenShift Administrator profile, click on <strong>Storage</strong> -&gt; <strong>PersistentVolumeClaims</strong> and click <strong>Create PersistentVolumeClaim</strong>.
@@ -1674,8 +1674,8 @@ In OpenShift, you first request for the storage (also known as PersistentVolumeC
 <li>
 <p>The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.</p>
 <div class="admonition info">
-<p class="admonition-title">Model download will take time - Have patience!!</p>
-<p>This process will take a few minutes (in my case it took around 1-1.5 mins) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
+<p class="admonition-title">Model download will take time</p>
+<p>This process will take a few minutes (in my case it took around 1-1.5 mins) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
 </div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc"></a></p>
 <p><strong>Congratulations!</strong>, you have successfully deployed a LLM on Power10.</p>
@@ -1829,7 +1829,7 @@ In OpenShift, you first request for the storage (also known as PersistentVolumeC
     <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Experimenting with model parameters</p>
-<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
+<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
 </div>
 </li>
 <li>
@@ -1886,8 +1886,8 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b"></a></p>
 <div class="admonition info">
-<p class="admonition-title">Model download will take time - Have patience!!</p>
-<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
+<p class="admonition-title">Model download will take time</p>
+<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
 </div>
 </li>
 <li>
@@ -1925,7 +1925,7 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Experimenting with model parameters</p>
-<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
+<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
 </div>
 </li>
 <li>
@@ -2091,7 +2091,7 @@ Before we do that, lets understand what RAG is, its advantages, key use cases an
 <ul>
 <li>Index the milvus DB with a sample PDF.</li>
 <li>Query the DB to get relevant documents for the question asked.</li>
-<li>Create a prompt based on the relevant documents gotten from the previous step and send it to the LLM (granite model we deployed in Lab1) to get a domain specific answer.</li>
+<li>Create a prompt based on the relevant documents gotten from the previous step and send it to the LLM (IBM Granite model we deployed in Lab1) to get a domain specific answer.</li>
 </ul>
 </li>
 </ul>
@@ -2295,14 +2295,14 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <p class="admonition-title">Image zoom functionality</p>
 <p>Feel free to click on the images in the lab guide below to a view larger image.</p>
 </div>
-<h3 id="lab3-lab3-hands-on-guide-deploy-granite-code-llm">Deploy granite code LLM<a class="headerlink" href="#lab3-lab3-hands-on-guide-deploy-granite-code-llm" title="Permanent link">¶</a></h3>
+<h3 id="lab3-lab3-hands-on-guide-deploy-ibm-granite-code-llm">Deploy IBM Granite code LLM<a class="headerlink" href="#lab3-lab3-hands-on-guide-deploy-ibm-granite-code-llm" title="Permanent link">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Pre-requisite</p>
-<p>This lab assumes you have finished Lab1. This lab uses the OpenShift resources deployed in Lab1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab1!</p>
+<p>This lab assumes you have finished Lab 1. This lab uses the OpenShift resources deployed in Lab 1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab 1!</p>
 </div>
 <ol>
 <li>
-<p>In this lab, we will deploy IBM's granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+<p>In this lab, we will deploy IBM's IBM Granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    <a class="glightbox" href="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c"></a></p>
 </li>
 <li>
@@ -2344,11 +2344,11 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
    <a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
 </li>
 <li>
-<p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+<p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to IBM Granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
     <a class="glightbox" href="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926"></a></p>
 <div class="admonition info">
-<p class="admonition-title">Model download will take time - Have patience!!</p>
-<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
+<p class="admonition-title">Model download will take time</p>
+<p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
 </div>
 </li>
 <li>
@@ -2356,7 +2356,7 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
     <a class="glightbox" href="https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489"></a></p>
 </li>
 <li>
-<p>Let's verify that the model running is granite code LLM!. Click on the pod to enter the pod details view/page.
+<p>Let's verify that the model running is IBM Granite code LLM!. Click on the pod to enter the pod details view/page.
     <a class="glightbox" href="https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934"></a></p>
 </li>
 <li>
@@ -2366,10 +2366,10 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <li>
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2"></a></p>
-<p>This verifies that we have indeed deployed granite code LLM.</p>
+<p>This verifies that we have indeed deployed IBM Granite code LLM.</p>
 </li>
 <li>
-<p>Let's access our model. As we did in Lab1, head to <strong>Topology</strong> view, click on the <strong>Open URL</strong> icon of your application.
+<p>Let's access our model. As we did in Lab 1, head to <strong>Topology</strong> view, click on the <strong>Open URL</strong> icon of your application.
     <a class="glightbox" href="https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f"></a></p>
 </li>
 <li>A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
@@ -2379,12 +2379,12 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
     <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Experimenting with model parameters</p>
-<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Feel free to google and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
+<p>You can see a lot of model parameters or tunables (eg: Predictions, Temperature, etc.). Visit the model specific documentation and learn about them and experiment with it. You may want to change some parameters, ask the same question and check how the response changes. We will not cover these parameters in this lab as its outside the scope of the lab.</p>
 </div>
 </li>
 </ol>
 <h3 id="lab3-lab3-hands-on-guide-generate-python-code">Generate python code<a class="headerlink" href="#lab3-lab3-hands-on-guide-generate-python-code" title="Permanent link">¶</a></h3>
-<p>Now let's use the granite code model to generate python code using natural language queries.</p>
+<p>Now let's use the IBM Granite code model to generate python code using natural language queries.</p>
 <ol>
 <li>
 <p>Generating python code for printing the fibonacci series.<br> Here is what I entered: <code>python for finonacci sequence</code>.
@@ -2429,7 +2429,7 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 </ol>
 <p>Feel free to explore and try out more scenarios!</p>
 <h3 id="lab3-lab3-hands-on-guide-generate-c-code">Generate C code<a class="headerlink" href="#lab3-lab3-hands-on-guide-generate-c-code" title="Permanent link">¶</a></h3>
-<p>Now let's use the granite code model to generate C code using natural language queries.</p>
+<p>Now let's use the IBM Granite code model to generate C code using natural language queries.</p>
 <ol>
 <li>
 <p>Generate C code for sorting a list of numbers.<br> Here is what I entered: <code>C code to sort a list of numbers</code>.
@@ -2595,7 +2595,7 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <p>Sincere and heartfelt thanks to the below people who helped in various stages of creating this course:</p>
 <ul>
 <li>
-<p><strong>Marvin Gießing</strong>: Lab1 and Lab2 are inspired by Marvin's existing work <a href="https://github.com/mgiessing/bcn-lab-2084/" target="_blank">here</a>.</p>
+<p><strong>Marvin Gießing</strong>: Lab 1 and Lab 2 are inspired by Marvin's existing work <a href="https://github.com/mgiessing/bcn-lab-2084/" target="_blank">here</a>.</p>
 </li>
 <li>
 <p><strong>Jean Midot</strong>: For the support he provided on the TechZone front.</p>
