@@ -2206,13 +2206,13 @@ Before we do that, lets understand what RAG is, its advantages, key use cases, a
                         <h1 class='nav-section-title' id='section-lab-3-deploy-code-llm-on-power10'>
                             Lab 3 - Deploy code LLM on Power10 <a class='headerlink' href='#section-lab-3-deploy-code-llm-on-power10' title='Permanent link'>↵</a>
                         </h1>
-                        <section class="print-page" id="lab3-lab3-overview"><div><h1 id="generate-sql-query-using-code-llm-on-ibm-power10-lab-education">Generate SQL query using code LLM on IBM Power10 - Lab education<a class="headerlink" href="#lab3-lab3-overview-generate-sql-query-using-code-llm-on-ibm-power10-lab-education" title="Permanent link">¶</a></h1>
+                        <section class="print-page" id="lab3-lab3-overview"><div><h1 id="generate-sql-query-using-code-large-language-model-llm-on-ibm-power10-lab-education">Generate SQL query using code Large Language Model (LLM) on IBM Power10 - Lab education<a class="headerlink" href="#lab3-lab3-overview-generate-sql-query-using-code-large-language-model-llm-on-ibm-power10-lab-education" title="Permanent link">¶</a></h1>
 <p>Goal of this lab is to acquire some hands-on experience with code LLMs and understand their use cases.
 In this lab, we will use a code LLM to convert a natural language query into a SQL statement which can be used to query DBs.
 We will also to generate some python and C++ code and understand how better prompting can generate code closer to your expectations.</p>
 <p>But before we do that, lets understand what code LLM is, its benefits, key use cases, and IBM products around code LLMs.</p>
 <h2 id="lab3-lab3-overview-what-is-code-llm">What is code LLM?<a class="headerlink" href="#lab3-lab3-overview-what-is-code-llm" title="Permanent link">¶</a></h2>
-<p>A Code LLM (Large Language Model) is a type of AI model specifically trained to understand, generate, and manipulate programming code.
+<p>A code LLM is a type of AI model specifically trained to understand, generate, and manipulate programming code.
 These models, built on architectures like GPT or similar transformers, are trained on vast datasets of code from various programming languages, enabling them to assist with coding tasks such as generating code snippets, debugging, refactoring, and even writing documentation.</p>
 <h2 id="lab3-lab3-overview-key-features-of-code-llm">Key Features of Code LLM<a class="headerlink" href="#lab3-lab3-overview-key-features-of-code-llm" title="Permanent link">¶</a></h2>
 <ul>
@@ -2224,7 +2224,7 @@ These models, built on architectures like GPT or similar transformers, are train
 </ul>
 <h2 id="lab3-lab3-overview-use-cases">Use Cases<a class="headerlink" href="#lab3-lab3-overview-use-cases" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Autocompletion in IDEs</strong>: Code LLMs like GitHub Copilot, powered by OpenAI's Codex, assist developers by offering code suggestions and completions.</li>
+<li><strong>Autocompletion in integrated developement environment (IDE)</strong>: Code LLMs like GitHub Copilot, powered by OpenAI's Codex, assist developers by offering code suggestions and completions.</li>
 <li><strong>Code Refactoring</strong>: LLMs can suggest improvements or optimizations to existing code, helping improve performance or readability.</li>
 <li><strong>Debugging and Error Resolution</strong>: Code LLMs can help identify issues in code and suggest potential fixes, streamlining the debugging process.</li>
 <li><strong>Automated Documentation</strong>: They can generate comments or documentation for code, reducing the manual effort required for explaining code logic.</li>
@@ -2246,7 +2246,7 @@ These models, built on architectures like GPT or similar transformers, are train
 </ul>
 <p>In essence, Code LLMs bring AI-driven enhancements to the software development process, making it faster, more accurate, and more accessible.</p>
 <h2 id="lab3-lab3-overview-ibm-watsonx-code-assistant">IBM watsonx Code Assistant<a class="headerlink" href="#lab3-lab3-overview-ibm-watsonx-code-assistant" title="Permanent link">¶</a></h2>
-<p>IBM watsonx™ Code Assistant (WCA) is a family of offerings from IBM that leverages generative AI to accelerate development while maintaining the principles of trust, security and compliance at its core. Developers and IT Operators can speed up application modernization efforts and generate automation to rapidly scale IT environments. </p>
+<p>IBM watsonx Code Assistant (WCA) is a family of offerings from IBM that leverages generative AI to accelerate development while maintaining the principles of trust, security and compliance at its core. Developers and IT Operators can speed up application modernization efforts and generate automation to rapidly scale IT environments. </p>
 <p>WCA is powered by the IBM Granite foundation models that include state-of-the-art large language models designed for code, geared to help IT teams create high-quality code using AI-generated recommendations based on natural language requests or existing source code. Built on the watsonx AI platform, this tool leverages IBM’s expertise in AI and machine learning to enhance productivity across various industries.</p>
 <div class="admonition danger">
 <p class="admonition-title">IBM watsonx Code Assistant (WCA) support on IBM Power</p>
@@ -2302,7 +2302,7 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 </div>
 <ol>
 <li>
-<p>In this lab, we will deploy IBM's IBM Granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+<p>In this lab, we will deploy IBM Granite code LLM which is available on Hugging Face (HF). Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    <a class="glightbox" href="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c"></a></p>
 </li>
 <li>
@@ -2387,11 +2387,11 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <p>Now let's use the IBM Granite code model to generate python code using natural language queries.</p>
 <ol>
 <li>
-<p>Generating python code for printing the fibonacci series.<br> Here is what I entered: <code>python for finonacci sequence</code>.
+<p>Generating python code for printing the fibonacci series.<br> The input provided was: <code>python for finonacci sequence</code>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3"></a></p>
 <ul>
 <li>
-<p>I ran this code on my local python environment and it ran without errors!</p>
+<p>The code snippet above was run on my local python environment and it ran without errors!</p>
 </li>
 <li>
 <p>Note that I spelled fibonacci incorrectly, yet it understood my question correctly.</p>
@@ -2402,14 +2402,14 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 </ul>
 </li>
 <li>
-<p>Now let's try asking it to generate the same code without using recursion.<br> Here is what I entered: <code>give me python code for generating fibonacci sequence without using recursion</code>.
+<p>Now let's try asking it to generate the same code without using recursion.<br> The input provided was: <code>give me python code for generating fibonacci sequence without using recursion</code>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b"></a></p>
 <ul>
 <li>
 <p>As expected, it did give the code snippet that doesn't use recursion, so it did well there.</p>
 </li>
 <li>
-<p>Generated code is not 100% correct. I ran this code on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.</p>
+<p>Generated code is not 100% correct. The code snippet above was run on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.</p>
 </li>
 <li>
 <p>The above shows that code LLMs can generate almost perfect code and in some cases it might need developer intervention to make it perfect!</p>
@@ -2422,7 +2422,7 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <li>For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems.</li>
 <li>When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors.</li>
 <li>For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.</li>
-<li>AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.</li>
+<li>AI-generated content may vary and may not always provide consistent answers. Your results may vary.</li>
 </ul>
 </div>
 </li>
@@ -2432,19 +2432,19 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <p>Now let's use the IBM Granite code model to generate C code using natural language queries.</p>
 <ol>
 <li>
-<p>Generate C code for sorting a list of numbers.<br> Here is what I entered: <code>C code to sort a list of numbers</code>.
+<p>Generate C code for sorting a list of numbers.<br> The input provided was: <code>C code to sort a list of numbers</code>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b"></a></p>
 <ul>
-<li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code>.</li>
+<li>The code snippet above was run on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code>.</li>
 </ul>
 </li>
 <li>
-<p>Generate C code for swapping 2 numbers without using a temporary variable.<br> Here is what I entered: <code>C code for swapping 2 numbers</code>.
+<p>Generate C code for swapping 2 numbers without using a temporary variable.<br> The input provided was: <code>C code for swapping 2 numbers</code>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef"></a></p>
 <ul>
-<li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code>.</li>
+<li>The code snippet above was run on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code>.</li>
 </ul>
-<p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br>
+<p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your results may vary.
    Feel free to explore and try out more scenarios!</p>
 </li>
 </ol>
@@ -2529,7 +2529,7 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 </code></pre></div>
 <p><br></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8"></a></p>
-<p>That's a decent explanation of the SQL query!</p>
+<p>That's a decent explanation of the SQL query.</p>
 </li>
 <li>
 <p>Let's try one more example. Here I give it 2 conditions to match in the query.<br>
@@ -2548,7 +2548,7 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <li>The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.</li>
 <li>The correct SQL query would have <code>u.usertypeid='employee'</code> so that the DB knows that its part of the USERS (aliased as <code>u</code> in the query) table.</li>
 </ul>
-<p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br></p>
+<p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your results may vary.<br></p>
 </li>
 <li>
 <p>Re-iterating some of the points we learned in this lab:</p>
@@ -2601,7 +2601,7 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <p><strong>Jean Midot</strong>: For the support he provided on the TechZone front.</p>
 </li>
 <li>
-<p><strong>Sebastian Lehrig</strong>, <strong>David Spurway</strong> &amp; <strong>DANIEL DE SOUZA CASALI</strong>: For all the technical guidance and support provided during the course.</p>
+<p><strong>Sebastian Lehrig</strong>, <strong>David Spurway</strong> &amp; <strong>Daniel Casali</strong>: For all the technical guidance and support provided during the course.</p>
 </li>
 </ul></div></section><section class="print-page" id="support"><div><h1 id="support">Support<a class="headerlink" href="#support-support" title="Permanent link">¶</a></h1>
 <p>Think something is down? Check the applicable status pages for any known issues like a site or service not available:</p>

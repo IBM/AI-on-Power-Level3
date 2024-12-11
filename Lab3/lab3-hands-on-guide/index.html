@@ -885,7 +885,7 @@
 </div>
 <ol>
 <li>
-<p>In this lab, we will deploy IBM's IBM Granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+<p>In this lab, we will deploy IBM Granite code LLM which is available on Hugging Face (HF). Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    <a class="glightbox" href="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c"></a></p>
 </li>
 <li>
@@ -970,11 +970,11 @@
 <p>Now let's use the IBM Granite code model to generate python code using natural language queries.</p>
 <ol>
 <li>
-<p>Generating python code for printing the fibonacci series.<br> Here is what I entered: <code>python for finonacci sequence</code>.
+<p>Generating python code for printing the fibonacci series.<br> The input provided was: <code>python for finonacci sequence</code>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3"></a></p>
 <ul>
 <li>
-<p>I ran this code on my local python environment and it ran without errors!</p>
+<p>The code snippet above was run on my local python environment and it ran without errors!</p>
 </li>
 <li>
 <p>Note that I spelled fibonacci incorrectly, yet it understood my question correctly.</p>
@@ -985,14 +985,14 @@
 </ul>
 </li>
 <li>
-<p>Now let's try asking it to generate the same code without using recursion.<br> Here is what I entered: <code>give me python code for generating fibonacci sequence without using recursion</code>.
+<p>Now let's try asking it to generate the same code without using recursion.<br> The input provided was: <code>give me python code for generating fibonacci sequence without using recursion</code>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b"></a></p>
 <ul>
 <li>
 <p>As expected, it did give the code snippet that doesn't use recursion, so it did well there.</p>
 </li>
 <li>
-<p>Generated code is not 100% correct. I ran this code on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.</p>
+<p>Generated code is not 100% correct. The code snippet above was run on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.</p>
 </li>
 <li>
 <p>The above shows that code LLMs can generate almost perfect code and in some cases it might need developer intervention to make it perfect!</p>
@@ -1005,7 +1005,7 @@
 <li>For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems.</li>
 <li>When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors.</li>
 <li>For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.</li>
-<li>AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.</li>
+<li>AI-generated content may vary and may not always provide consistent answers. Your results may vary.</li>
 </ul>
 </div>
 </li>
@@ -1015,19 +1015,19 @@
 <p>Now let's use the IBM Granite code model to generate C code using natural language queries.</p>
 <ol>
 <li>
-<p>Generate C code for sorting a list of numbers.<br> Here is what I entered: <code>C code to sort a list of numbers</code>.
+<p>Generate C code for sorting a list of numbers.<br> The input provided was: <code>C code to sort a list of numbers</code>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b"></a></p>
 <ul>
-<li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code>.</li>
+<li>The code snippet above was run on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code>.</li>
 </ul>
 </li>
 <li>
-<p>Generate C code for swapping 2 numbers without using a temporary variable.<br> Here is what I entered: <code>C code for swapping 2 numbers</code>.
+<p>Generate C code for swapping 2 numbers without using a temporary variable.<br> The input provided was: <code>C code for swapping 2 numbers</code>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef"></a></p>
 <ul>
-<li>I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code>.</li>
+<li>The code snippet above was run on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as <code>#include &lt;stdio.h&gt;</code>.</li>
 </ul>
-<p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br>
+<p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your results may vary.
    Feel free to explore and try out more scenarios!</p>
 </li>
 </ol>
@@ -1112,7 +1112,7 @@
 </code></pre></div>
 <p><br></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8"></a></p>
-<p>That's a decent explanation of the SQL query!</p>
+<p>That's a decent explanation of the SQL query.</p>
 </li>
 <li>
 <p>Let's try one more example. Here I give it 2 conditions to match in the query.<br>
@@ -1131,7 +1131,7 @@
 <li>The last part of the SQL query <code>usertypeid='employee'</code> is ambiguous as the DB won't know which <code>usertypeid</code> column to reference.</li>
 <li>The correct SQL query would have <code>u.usertypeid='employee'</code> so that the DB knows that its part of the USERS (aliased as <code>u</code> in the query) table.</li>
 </ul>
-<p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br></p>
+<p><strong>NOTE</strong>: AI-generated content may vary and may not always provide consistent answers. Your results may vary.<br></p>
 </li>
 <li>
 <p>Re-iterating some of the points we learned in this lab:</p>
