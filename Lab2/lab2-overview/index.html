@@ -521,7 +521,7 @@
         <li class="md-nav__item">
   <a href="#need-advantages-of-rag" class="md-nav__link">
     <span class="md-ellipsis">
-      Need &amp; Advantages of RAG
+      Need &amp; advantages of RAG
     </span>
   </a>
   
@@ -565,9 +565,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rag-ibm-power10-solution-architecture" class="md-nav__link">
+  <a href="#rag-and-ibm-power10-solution-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      RAG + IBM Power10 - solution architecture
+      RAG and IBM Power10 solution architecture
     </span>
   </a>
   
@@ -826,7 +826,7 @@
         <li class="md-nav__item">
   <a href="#need-advantages-of-rag" class="md-nav__link">
     <span class="md-ellipsis">
-      Need &amp; Advantages of RAG
+      Need &amp; advantages of RAG
     </span>
   </a>
   
@@ -870,9 +870,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rag-ibm-power10-solution-architecture" class="md-nav__link">
+  <a href="#rag-and-ibm-power10-solution-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      RAG + IBM Power10 - solution architecture
+      RAG and IBM Power10 solution architecture
     </span>
   </a>
   
@@ -900,7 +900,7 @@
 
 <div><h1 id="deploy-retrieval-augmented-generation-rag-on-ibm-power10-lab-education">Deploy Retrieval-Augmented Generation (RAG) on IBM Power10 - Lab education<a class="headerlink" href="#deploy-retrieval-augmented-generation-rag-on-ibm-power10-lab-education" title="Permanent link">¶</a></h1>
 <p>Goal of this lab is to get hands-on experience in deploying a RAG pattern on IBM Power10.
-Before we do that, lets understand what RAG is, its advantages, key use cases and how it fits in the IBM Power landscape.</p>
+Before we do that, lets understand what RAG is, its advantages, key use cases, and how it fits in the IBM Power landscape.</p>
 <h2 id="what-is-rag">What is RAG?<a class="headerlink" href="#what-is-rag" title="Permanent link">¶</a></h2>
 <p>RAG (Retrieval-Augmented Generation) is an advanced technique that combines retrieval-based and generation-based approaches to improve the performance of large language models, especially in question-answering and knowledge-intensive tasks. In layman terms, clients can use RAG pattern to generate factually accurate output from LLMs, that is grounded in information in a knowledge base.</p>
 <p>Key Components of RAG:</p>
@@ -924,7 +924,7 @@ Before we do that, lets understand what RAG is, its advantages, key use cases an
 <p class="admonition-title">Why use vector database in RAG?</p>
 <p>Vector databases are used in RAG because they store data in a way that makes it easy to search and retrieve. Vector search techniques go beyond keyword matching and focus on semantic relationships, which improves the quality of the retrieved information.</p>
 </div>
-<h2 id="need-advantages-of-rag">Need &amp; Advantages of RAG<a class="headerlink" href="#need-advantages-of-rag" title="Permanent link">¶</a></h2>
+<h2 id="need-advantages-of-rag">Need &amp; advantages of RAG<a class="headerlink" href="#need-advantages-of-rag" title="Permanent link">¶</a></h2>
 <p>The need for Retrieval-Augmented Generation (RAG) arises from the limitations of current large language models (LLMs) and the growing demands for factual accuracy and knowledge scalability in AI applications. </p>
 <p>Here are the key reasons why RAG is necessary and its associated advantages:</p>
 <ol>
@@ -976,40 +976,40 @@ Before we do that, lets understand what RAG is, its advantages, key use cases an
 <p>IBM Power Systems play exceptionally well with RAG due to the following reasons:</p>
 <ol>
 <li><strong>High-Performance Data Handling</strong><ul>
-<li>Power Systems are designed for high-volume data transactions and processing. This makes them perfect for storing and managing systems of record, which RAG relies on to retrieve real-time, relevant information.</li>
-<li>When RAG retrieves data from a system of record stored on IBM Power, it benefits from the fast data access and throughput that Power Systems offer, ensuring quick and efficient retrieval of documents for AI processing.</li>
+<li>Power Systems are designed for high-volume data transactions and processing. This makes them perfect for storing and managing SOR, which RAG relies on to retrieve real-time, relevant information.</li>
+<li>When RAG retrieves data from a SOR stored on IBM Power, it benefits from the fast data access and throughput that Power Systems offer, ensuring quick and efficient retrieval of documents for AI processing.</li>
 </ul>
 </li>
 <li><strong>Data Security and Compliance</strong><ul>
 <li>Power Systems are known for their robust security features, including end-to-end encryption and advanced data protection, making them ideal for storing sensitive data such as customer information, financial records, or healthcare data.</li>
-<li>In a RAG scenario, where retrieved data is used to generate answers, the ability of IBM Power Systems to ensure data privacy and regulatory compliance (for example, HIPAA, GDPR) is crucial, especially for enterprises dealing with sensitive or regulated data.</li>
+<li>In a RAG scenario, where retrieved data is used to generate answers, the ability of IBM Power Systems to ensure data privacy and regulatory compliance (for example, Health Insurance Portability and Accountability Act (HIPAA), General Data Protection Regulation (GDPR)) is crucial, especially for enterprises dealing with sensitive or regulated data.</li>
 </ul>
 </li>
 <li><strong>Scalability and Reliability</strong><ul>
 <li>RAG applications require scalable infrastructure to handle varying levels of computational demand, especially when dealing with large-scale document retrieval and real-time AI processing. IBM Power Systems are built to scale seamlessly, allowing RAG to handle larger datasets and more complex queries without performance degradation.</li>
-<li>Reliability is critical for systems of record, and Power Systems have a proven track record of uptime and resilience, ensuring that the data RAG retrieves is always available when needed, without risk of downtime affecting the retrieval process.</li>
+<li>Reliability is critical for SOR, and Power Systems have a proven track record of uptime and resilience, ensuring that the data RAG retrieves is always available when needed, without risk of downtime affecting the retrieval process.</li>
 </ul>
 </li>
 <li><strong>Integration with AI Workloads</strong><ul>
-<li>IBM Power Systems are optimized for AI workloads, with features like accelerated AI processing (for example, Power10's Matrix Math Accelerator (MMA)) that boost the performance of both retrieval and generation tasks in RAG.</li>
+<li>IBM Power Systems are optimized for AI workloads, with features like accelerated AI processing (for example, Power10's MMA (Matrix Math Accelerator))) that boost the performance of both retrieval and generation tasks in RAG.</li>
 <li>By running RAG-based applications on Power10, enterprises can take advantage of faster AI inference and improved data handling, resulting in more responsive and accurate AI systems.</li>
 </ul>
 </li>
 <li><strong>Efficient Handling of Structured and Unstructured Data</strong><ul>
-<li>Power Systems can efficiently handle both structured data (like databases) and unstructured data (such as documents and records), making them ideal for RAG, where both types of data may be retrieved from systems of record.</li>
+<li>Power Systems can efficiently handle both structured data (like databases) and unstructured data (such as documents and records), making them ideal for RAG, where both types of data may be retrieved from SOR.</li>
 <li>RAG can retrieve structured data for quick reference (for example, customer records or transactions) and unstructured data (for example, reports, emails) for more complex, context-driven AI responses. Power Systems' capability to manage both types ensures efficient, accurate information retrieval.</li>
 </ul>
 </li>
 <li><strong>Real-Time Analytics</strong><ul>
 <li>Real-time data analytics capabilities in IBM Power Systems enable quick access to up-to-date information, which is essential for RAG when generating responses based on current data.</li>
-<li>This feature allows the RAG model to provide contextualized answers based on the latest transactions or data updates from the system of record, improving the relevance of AI-driven outputs.</li>
+<li>This feature allows the RAG model to provide contextualized answers based on the latest transactions or data updates from the SOR, improving the relevance of AI-driven outputs.</li>
 </ul>
 </li>
 </ol>
 <p><strong>Summary</strong></p>
-<p>IBM Power Systems provide the speed, security, and reliability needed to store and manage systems of record that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.</p>
-<h3 id="rag-ibm-power10-solution-architecture">RAG + IBM Power10 - solution architecture<a class="headerlink" href="#rag-ibm-power10-solution-architecture" title="Permanent link">¶</a></h3>
-<p>Here is the high level solution architecture of a typical RAG use case on IBM Power10. This example is deployed on IBM Power10 end-to-end. The foundation model is simply downloaded from watsonx.ai or open-source repositories such as the Hugging Face model hub. The model does not require fine-tuning thanks to a domain adaptation technique called Retrieval Augmented Generation (RAG). </p>
+<p>IBM Power Systems provide the speed, security, and reliability needed to store and manage SOR that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.</p>
+<h3 id="rag-and-ibm-power10-solution-architecture">RAG and IBM Power10 solution architecture<a class="headerlink" href="#rag-and-ibm-power10-solution-architecture" title="Permanent link">¶</a></h3>
+<p>Here is the high level solution architecture of a typical RAG use case on IBM Power10. This example is deployed on IBM Power10 end-to-end. The foundation model is simply downloaded from watsonx.ai or open-source repositories such as the Hugging Face model hub. The model does not require fine-tuning thanks to a domain adaptation technique called RAG. </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/3476cad1-a743-474f-8535-b70806d8c09f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/3476cad1-a743-474f-8535-b70806d8c09f"></a></p>
 <ol>
 <li>User asks a domain specific question in natural language.</li>

@@ -1292,7 +1292,7 @@ In OpenShift, you first request for the storage (also known as PersistentVolumeC
 </div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c0c4b3ca-dbc6-4f9f-8d29-115c11486843"></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248"></a></p>
-<p><strong>Congratulations</strong>, you were able to deploy a LLM, create a public endpoint to access it and take it for a run!
+<p><strong>Congratulations</strong>, you successfully deployed an LLM model and provisioned a public-facing API endpoint to access it.
 In the next step, let's learn how to deploy a different LLM.</p>
 </li>
 </ol>
@@ -1310,13 +1310,13 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <li>
 <p>In the resulting form, edit the key/value fields for MODEL_NAME and MODEL_URL as below and click <strong>Save</strong>.</p>
 <ul>
-<li>Key: MODEL_NAME</li>
-<li>Value: granite-7b-lab.Q4_K_M.gguf</li>
+<li><strong>Key</strong>: MODEL_NAME</li>
+<li><strong>Value</strong>: granite-7b-lab.Q4_K_M.gguf</li>
 </ul>
 <hr>
 <ul>
-<li>Key: MODEL_URL</li>
-<li>Value: https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf</li>
+<li><strong>Key</strong>: MODEL_URL</li>
+<li><strong>Value</strong>: https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf</li>
 </ul>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052"></a></p>
 </li>
@@ -1340,11 +1340,11 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </div>
 </li>
 <li>
-<p>If all goes well, you should see just 1 pod running.</p>
+<p>Provided the previous step completed without errors, you should see just 1 pod running.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050"></a></p>
 </li>
 <li>
-<p>Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.</p>
+<p>Let us verify that the model running is IBM Granite. Click on the pod to enter the pod details view/page.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f"></a></p>
 </li>
 <li>
@@ -1354,10 +1354,10 @@ In the next step, let's learn how to deploy a different LLM.</p>
 <li>
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c"></a></p>
-<p>This verifies that we have indeed deployed granite.   </p>
+<p>This verifies that we have indeed deployed IBM Granite (granite-7b-lab) model.   </p>
 </li>
 <li>
-<p>Let's access the model now!. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the <strong>Topology</strong> view.</p>
+<p>Let's access the model now. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the <strong>Topology</strong> view.</p>
 <div class="admonition note">
 <p class="admonition-title">Multiple ways to access public URL of your application</p>
 <p>If you are in Administrator profile, you can navigate to <strong>Networking</strong> -&gt; <strong>Routes</strong> to access your route resource and click on the URL to open your application, as we did in the previous section of this lab where we deployed our first model. Alternatively, if you are in Developer profile, you can go to <strong>Topology</strong> view and access the URL of your application as well. Let's use that method here:</p>
@@ -1388,7 +1388,7 @@ In the next step, let's learn how to deploy a different LLM.</p>
 </div>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4201cafb-9f11-4f82-945b-1f843713426e"></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c"></a></p>
-<p><strong>Congratulations</strong>, in this section you learned how easy it is to switch to a different LLM, access it and take it for a run!
+<p><strong>Congratulations</strong>, in this section, you learned how straightforward it is to transition to a different LLM, access it, and utilize its capabilities.
 This completes the lab.</p>
 </li>
 </ol></div>
