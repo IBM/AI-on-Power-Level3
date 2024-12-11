@@ -23,7 +23,7 @@ Make sure you have the following items ready:
    ![image](https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320)
 
 ### Setup storage
-Let's setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
+Let us setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
 In OpenShift, you first request for the storage (also known as PersistentVolumeClaim or PVC) and the actual storage (also known as PersistentVolume or PV) gets alloted based on your request and the storage availability in the storage pool (NFS in this case).
 
 1. Go to OpenShift Administrator profile, click on **Storage** -> **PersistentVolumeClaims** and click **Create PersistentVolumeClaim**.
@@ -171,7 +171,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ![image](https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf)
 10. The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.
 
-    !!! info "Model download will take time - Have patience!!"
+    !!! info "Model download will take time"
 
         This process will take a few minutes (in my case it took around 1-1.5 mins) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
     
@@ -330,7 +330,7 @@ In this section, let's deploy IBM's granite model.
     
     ![image](https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b)
 
-    !!! info "Model download will take time - Have patience!!"
+    !!! info "Model download will take time"
 
         This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your mileage may vary! Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
    
