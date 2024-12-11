@@ -1,4 +1,4 @@
-# Generate SQL query using code LLM on IBM Power10 - Lab education
+# Generate SQL query using code Large Language Model (LLM) on IBM Power10 - Lab education
 
 Goal of this lab is to acquire some hands-on experience with code LLMs and understand their use cases.
 In this lab, we will use a code LLM to convert a natural language query into a SQL statement which can be used to query DBs.
@@ -8,7 +8,7 @@ But before we do that, lets understand what code LLM is, its benefits, key use c
 
 ## What is code LLM?
 
-A Code LLM (Large Language Model) is a type of AI model specifically trained to understand, generate, and manipulate programming code.
+A code LLM is a type of AI model specifically trained to understand, generate, and manipulate programming code.
 These models, built on architectures like GPT or similar transformers, are trained on vast datasets of code from various programming languages, enabling them to assist with coding tasks such as generating code snippets, debugging, refactoring, and even writing documentation.
 
 ## Key Features of Code LLM
@@ -21,7 +21,7 @@ These models, built on architectures like GPT or similar transformers, are train
 
 ## Use Cases
 
-  - **Autocompletion in IDEs**: Code LLMs like GitHub Copilot, powered by OpenAI's Codex, assist developers by offering code suggestions and completions.
+  - **Autocompletion in integrated developement environment (IDE)**: Code LLMs like GitHub Copilot, powered by OpenAI's Codex, assist developers by offering code suggestions and completions.
   - **Code Refactoring**: LLMs can suggest improvements or optimizations to existing code, helping improve performance or readability.
   - **Debugging and Error Resolution**: Code LLMs can help identify issues in code and suggest potential fixes, streamlining the debugging process.
   - **Automated Documentation**: They can generate comments or documentation for code, reducing the manual effort required for explaining code logic.
@@ -46,7 +46,7 @@ In essence, Code LLMs bring AI-driven enhancements to the software development p
 
 ## IBM watsonx Code Assistant
 
-IBM watsonx™ Code Assistant (WCA) is a family of offerings from IBM that leverages generative AI to accelerate development while maintaining the principles of trust, security and compliance at its core. Developers and IT Operators can speed up application modernization efforts and generate automation to rapidly scale IT environments. 
+IBM watsonx Code Assistant (WCA) is a family of offerings from IBM that leverages generative AI to accelerate development while maintaining the principles of trust, security and compliance at its core. Developers and IT Operators can speed up application modernization efforts and generate automation to rapidly scale IT environments. 
 
 WCA is powered by the IBM Granite foundation models that include state-of-the-art large language models designed for code, geared to help IT teams create high-quality code using AI-generated recommendations based on natural language requests or existing source code. Built on the watsonx AI platform, this tool leverages IBM’s expertise in AI and machine learning to enhance productivity across various industries.
 

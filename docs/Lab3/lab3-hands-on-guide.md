@@ -22,7 +22,7 @@ Make sure you have the following items ready:
     
     This lab assumes you have finished Lab 1. This lab uses the OpenShift resources deployed in Lab 1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab 1!
     
-1. In this lab, we will deploy IBM's IBM Granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+1. In this lab, we will deploy IBM Granite code LLM which is available on Hugging Face (HF). Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    ![image](https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c)
 
 2. Select **ConfigMaps** and click **model-params**.
@@ -90,21 +90,21 @@ Make sure you have the following items ready:
 
 Now let's use the IBM Granite code model to generate python code using natural language queries.
 
-1. Generating python code for printing the fibonacci series.<br> Here is what I entered: `python for finonacci sequence`.
+1. Generating python code for printing the fibonacci series.<br> The input provided was: `python for finonacci sequence`.
    ![image](https://github.com/user-attachments/assets/031c1d4a-d700-4f2a-89ec-87e49b1cc8f3)
    
-     - I ran this code on my local python environment and it ran without errors!
+     - The code snippet above was run on my local python environment and it ran without errors!
      
      - Note that I spelled fibonacci incorrectly, yet it understood my question correctly.
      
      - Also note that the answer it gave uses recursion (function fib is being called recursively).
 
-3. Now let's try asking it to generate the same code without using recursion.<br> Here is what I entered: `give me python code for generating fibonacci sequence without using recursion`.
+3. Now let's try asking it to generate the same code without using recursion.<br> The input provided was: `give me python code for generating fibonacci sequence without using recursion`.
    ![image](https://github.com/user-attachments/assets/74f1ce36-7aee-40ac-8444-8e212402745b)
    
      - As expected, it did give the code snippet that doesn't use recursion, so it did well there.
      
-     - Generated code is not 100% correct. I ran this code on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.
+     - Generated code is not 100% correct. The code snippet above was run on my local python environment and it ran into some issues and had to fix some code to make it generate the right fibonacci sequence.
      
      - The above shows that code LLMs can generate almost perfect code and in some cases it might need developer intervention to make it perfect!
 
@@ -114,7 +114,7 @@ Now let's use the IBM Granite code model to generate python code using natural l
          - For routine tasks and widely-used languages like Python or JavaScript, accuracy rates can be high, sometimes upwards of 80-90% for straightforward problems.
          - When dealing with more complex algorithms, nuanced edge cases, or multi-step logic, LLMs may struggle. The model can produce syntactically correct code that might not solve the problem as intended or might have logic errors.
          - For complex use cases, accuracy can drop significantly, often requiring human intervention to correct the output.
-         - AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.
+         - AI-generated content may vary and may not always provide consistent answers. Your results may vary.
 
    Feel free to explore and try out more scenarios!
 
@@ -122,17 +122,17 @@ Now let's use the IBM Granite code model to generate python code using natural l
 
 Now let's use the IBM Granite code model to generate C code using natural language queries.
 
-1. Generate C code for sorting a list of numbers.<br> Here is what I entered: `C code to sort a list of numbers`.
+1. Generate C code for sorting a list of numbers.<br> The input provided was: `C code to sort a list of numbers`.
    ![image](https://github.com/user-attachments/assets/57ae7cf6-2d8f-4b20-8618-5c19fe2b833b)
 
-     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`.
+     - The code snippet above was run on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`.
 
-2. Generate C code for swapping 2 numbers without using a temporary variable.<br> Here is what I entered: `C code for swapping 2 numbers`.
+2. Generate C code for swapping 2 numbers without using a temporary variable.<br> The input provided was: `C code for swapping 2 numbers`.
    ![image](https://github.com/user-attachments/assets/86fe9b4b-0684-45c0-a3da-c159121384ef)
 
-     - I ran this code on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`.
+     - The code snippet above was run on my local C environment and it ran without errors! Ofcourse I had to fix the first line (which was incomplete) as `#include <stdio.h>`.
 
-     **NOTE**: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br>
+     **NOTE**: AI-generated content may vary and may not always provide consistent answers. Your results may vary.
    Feel free to explore and try out more scenarios!
 
 ### Generate SQL query
@@ -227,7 +227,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
     
     ![image](https://github.com/user-attachments/assets/8576ca30-42b8-4647-bd92-e092d0c67aa8)
 
-    That's a decent explanation of the SQL query!
+    That's a decent explanation of the SQL query.
    
 5. Let's try one more example. Here I give it 2 conditions to match in the query.<br>
    NOTE: You don't have to repeat the whole schema in the prompt. LLMs can remember context.
@@ -252,7 +252,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
      - The last part of the SQL query `usertypeid='employee'` is ambiguous as the DB won't know which `usertypeid` column to reference.
      - The correct SQL query would have `u.usertypeid='employee'` so that the DB knows that its part of the USERS (aliased as `u` in the query) table.
 
-     **NOTE**: AI-generated content may vary and may not always provide consistent answers. Your response may be different than what I got.<br>
+     **NOTE**: AI-generated content may vary and may not always provide consistent answers. Your results may vary.<br>
    
 6. Re-iterating some of the points we learned in this lab:
    
