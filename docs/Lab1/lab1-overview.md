@@ -3,7 +3,7 @@
 Goal of this lab is to showcase the basics (and the ease) of deploying a LLM (also known as foundation models) on Power and how easy it is to switch to a different LLM.
 But before we do that, let's understand the ecosystem around LLMs (also known as foundation models or Generative AI) in the context of IBM Power.
 
-In this lab, we will deploy 2 LLMs from [Hugging Face (HF)](https://huggingface.co/){target="_blank"} on IBM Power10 using the on-prem lab environment that has been provisioned.
+In this lab, we will deploy 2 LLMs from [Hugging Face (HF)](https://huggingface.co/){target="_blank"} on IBM Power10 using the on-premises lab environment that has been provisioned.
 
 ## What is Hugging Face?
 
@@ -28,7 +28,7 @@ Watsonx is designed for the enterprise and is targeted for business domains, emp
 
 !!! danger "IBM watsonx support on IBM Power"
 
-    **NOTE**: At the time of writing this lab, IBM watsonx is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by watsonx on IBM Cloud or running stand-alone on-premise on IBM Power) to infuse and harness the power of (Gen)AI into their on-prem applications running on IBM Power.
+    **NOTE**: At the time of writing this lab, IBM watsonx is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by watsonx on IBM Cloud or running stand-alone on-premises on IBM Power) to infuse and harness the power of (Gen)AI into their on-premises applications running on IBM Power.
 
 ## IBM watsonx Vs Hugging Face
 
@@ -48,7 +48,7 @@ IBM watsonx and Hugging Face can work together by combining IBM's enterprise AI 
 
 - **Model Access**: IBM watsonx users can leverage Hugging Face's pre-trained models (like GPT, BERT, etc.) from its model hub to fine-tune or deploy in enterprise environments using Watsonx’s scalable infrastructure.
 - **Fine-Tuning and Customization**: Businesses can use Hugging Face models in Watsonx to fine-tune them with proprietary data while benefiting from watsonx’s AI governance and compliance tools.
-- **Deployment**: Hugging Face models can be integrated into IBM watsonx to deploy at scale on hybrid cloud or on-premise environments, ensuring enterprise-level security and performance.
+- **Deployment**: Hugging Face models can be integrated into IBM watsonx to deploy at scale on hybrid cloud or on-premises environments, ensuring enterprise-level security and performance.
 
 Together, Hugging Face provides the models, and watsonx offers the enterprise-ready infrastructure for secure, large-scale, compliant deployment.
 Read [this blog](https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-working-together-in-open-source/){target="_blank"} to understand more about how IBM and Hugging Face are working to bring open source communities together for enterprise AI.

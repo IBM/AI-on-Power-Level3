@@ -263,7 +263,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
        - IBM also offers enterprise grade code LLMs via its watsonx Code Assistant (WCA) family of product offerings.
 
 7. IBM Power servers are best used as system of record (SoR) servers which means they hold a lot of enterprise specific data in different DBs (for example: Oracle on AIX, DB2 on AIX / IBM i, PostgreSQL on Linux etc). From an IBM Power solution point of view, an end to end solution to query DB records using natural language can be easily implemented which can help clients immensely. They don't need to depend on experts to generate DB reports. Even executives (with authorized access to the DB) can generate reports and/or view data using natural language queries.
-    - Check this ~2min short [video demo](https://mediacenter.ibm.com/media/Infusing+AI+into+mission+critical+workloads+with+PowerVS+and+watsonx.ai/1_fzqutamr){target="_blank"} on "Infusing AI into mission critical workloads with PowerVS and watsonx.ai" which uses natural language to query fraudulent transactions and list high value customers. Although this demo is based on PowerVS use case the same is applicable to on-premise as well.
+    - Check this ~2min short [video demo](https://mediacenter.ibm.com/media/Infusing+AI+into+mission+critical+workloads+with+PowerVS+and+watsonx.ai/1_fzqutamr){target="_blank"} on "Infusing AI into mission critical workloads with PowerVS and watsonx.ai" which uses natural language to query fraudulent transactions and list high value customers. Although this demo is based on PowerVS use case the same is applicable to on-premises as well.
 
 **Summary**
 

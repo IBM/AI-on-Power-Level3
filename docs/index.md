@@ -34,7 +34,7 @@ IBM Power platform is a high-performance, enterprise-grade computing solution de
 
 * **Unmatched performance**: Optimized for data-intensive applications, AI, and large-scale analytics, delivering faster insights and better decision-making.
 
-* **Scalability**: Seamlessly scale workloads across on-prem, cloud, and hybrid environments to meet evolving business needs.
+* **Scalability**: Seamlessly scale workloads across on-premises, cloud, and hybrid environments to meet evolving business needs.
 
 * **Enterprise-grade security**: Built-in security features provide robust protection for sensitive data and critical operations.
 

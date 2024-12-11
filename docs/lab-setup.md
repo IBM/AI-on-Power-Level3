@@ -2,7 +2,7 @@
 
 ## Provisioning the environment
 
-For the hands-on labs, we will be using the OpenShift on Power10 on-prem environment which is optimized for AI workloads and hosted on IBM TechZone.
+For the hands-on labs, we will be using the OpenShift on Power10 on-premises environment which is optimized for AI workloads and hosted on IBM TechZone.
 
 Follow the steps below:
 
@@ -17,7 +17,7 @@ Follow the steps below:
 
 ## Accessing the environment
 
-1. As this is an on-prem environment, verify you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to [this](https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md){target="_blank"} link for more details.
+1. As this is an on-premises environment, verify you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to [this](https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md){target="_blank"} link for more details.
 2. In TechZone, open the [My Reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page.
 3. Click on your reservation, which will open up the details page.
 4. Scroll to the "Reservation Details" section of the page which has information on how to connect to OpenShift console
