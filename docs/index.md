@@ -15,7 +15,7 @@ There are 4 main parts to this demonstration as you can see on the left panel:
 
 ## Generative AI and LLMs overview
 
-Large language models (LLMs) and generative AI (gen AI) have revolutionized industries by enabling machines to understand, generate, and interact with human language in ways never seen before. They have disrupted the market by:
+Large language models (LLMs) and gen AI have revolutionized industries by enabling machines to understand, generate, and interact with human language in ways never seen before. They have disrupted the market by:
 
 * **Boosting productivity**: LLMs streamline workflows by handling complex tasks, like writing, summarizing, and translating, allowing professionals to focus on more strategic, creative efforts.
   
@@ -27,7 +27,7 @@ Large language models (LLMs) and generative AI (gen AI) have revolutionized indu
 
 In short, LLMs and gen AI are reshaping industries by enhancing efficiency, creativity, and customer engagement, making them indispensable tools in the modern business landscape.
 
-## Why IBM Power for gen AI
+## Why IBM Power for generative AI
 IBM Power platform is a high-performance, enterprise-grade computing solution designed to handle demanding workloads such as AI, analytics, cloud, and mission-critical applications. With unmatched processing power, scalability, and reliability, IBM Power enables organizations to optimize performance, lower costs, and ensure security.
 
 ### Key benefits
@@ -44,7 +44,7 @@ IBM Power is the platform of choice for businesses seeking to future-proof their
 
 ## IBM Power10 differentiation
 
-IBM Power10 offers several advantages for generative AI (gen AI) use cases, providing the computational power, security, and efficiency required to support the demanding workloads of AI-driven applications.
+IBM Power10 offers several advantages for gen AI use cases, providing the computational power, security, and efficiency required to support the demanding workloads of AI-driven applications.
 
 ### Key advantages
 
