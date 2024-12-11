@@ -20,7 +20,7 @@ Make sure you have the following items ready:
 
 !!! warning "Pre-requisite"
     
-    This lab assumes you have finished Lab1. This lab uses the OpenShift resources deployed in Lab1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab1!
+    This lab assumes you have finished Lab 1. This lab uses the OpenShift resources deployed in Lab 1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab 1!
     
 1. In this lab, we will deploy IBM's IBM Granite code LLM which is available on HF. Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
    ![image](https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c)
@@ -75,7 +75,7 @@ Make sure you have the following items ready:
 
     This verifies that we have indeed deployed IBM Granite code LLM.
 
-15. Let's access our model. As we did in Lab1, head to **Topology** view, click on the **Open URL** icon of your application.
+15. Let's access our model. As we did in Lab 1, head to **Topology** view, click on the **Open URL** icon of your application.
     ![image](https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f)
 16. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
     ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
