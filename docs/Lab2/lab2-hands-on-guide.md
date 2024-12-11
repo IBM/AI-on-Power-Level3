@@ -18,7 +18,7 @@ Make sure you have the following items ready:
 
 In this lab, we will focus on the below:
 
-  - Deploy a vector DB - milvus.
+  - Deploy a vector database (DB) - milvus.
     
   - Deploy a jupyter notebook where we will implement RAG pattern and learn about:
       - Index the milvus DB with a sample PDF.
@@ -52,7 +52,7 @@ In this lab, we will focus on the below:
      
        ![image](https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5)
 
-5. Make sure `oc CLI is pointing to the **lab2-demo** project.
+5. Make sure `oc` CLI is pointing to the **lab2-demo** project.
 
      `oc project lab2-demo `   
      

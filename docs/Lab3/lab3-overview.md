@@ -4,7 +4,7 @@ Goal of this lab is to acquire some hands-on experience with code LLMs and under
 In this lab, we will use a code LLM to convert a natural language query into a SQL statement which can be used to query DBs.
 We will also to generate some python and C++ code and understand how better prompting can generate code closer to your expectations.
 
-But before we do that, lets understand what code LLM is, its benefits, key use cases and IBM products around code LLMs.
+But before we do that, lets understand what code LLM is, its benefits, key use cases, and IBM products around code LLMs.
 
 ## What is code LLM?
 

@@ -61,10 +61,10 @@ Make sure you have the following items ready:
 
         This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
 
-11. If all goes well, you should see just 1 pod running.
+11. Provided the previous step completed without errors, you should see just 1 pod running.
     ![image](https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489)
 
-12. Let's verify that the model running is IBM Granite code LLM!. Click on the pod to enter the pod details view/page.
+12. Let us verify that the model running is IBM Granite code LLM!. Click on the pod to enter the pod details view/page.
     ![image](https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934)
 
 13. In the pod details page, click on the Logs tab to see the pod logs.
@@ -75,7 +75,7 @@ Make sure you have the following items ready:
 
     This verifies that we have indeed deployed IBM Granite code LLM.
 
-15. Let's access our model. As we did in Lab 1, head to **Topology** view, click on the **Open URL** icon of your application.
+15. Let us access our model. As we did in Lab 1, head to **Topology** view, click on the **Open URL** icon of your application.
     ![image](https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f)
 16. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
     ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)

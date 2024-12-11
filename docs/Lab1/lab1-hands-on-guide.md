@@ -334,11 +334,11 @@ In this section, let's deploy IBM's granite model.
 
         This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).
    
-8. If all goes well, you should see just 1 pod running.
+8. Provided the previous step completed without errors, you should see just 1 pod running.
     
     ![image](https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050)
    
-9. Let's verify that the model running is granite!. Click on the pod to enter the pod details view/page.
+9. Let us verify that the model running is IBM Granite. Click on the pod to enter the pod details view/page.
     
     ![image](https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f)
     
@@ -350,9 +350,9 @@ In this section, let's deploy IBM's granite model.
     
     ![image](https://github.com/user-attachments/assets/5ca4f0b1-8655-41df-85d2-8d740627989c)
 
-    This verifies that we have indeed deployed granite.   
+    This verifies that we have indeed deployed IBM Granite (granite-7b-lab) model.   
 
-12. Let's access the model now!. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the **Topology** view.
+12. Let's access the model now. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the **Topology** view.
 
     !!! note "Multiple ways to access public URL of your application"
 

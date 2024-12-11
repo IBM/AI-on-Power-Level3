@@ -1,7 +1,7 @@
 # Deploy Retrieval-Augmented Generation (RAG) on IBM Power10 - Lab education
 
 Goal of this lab is to get hands-on experience in deploying a RAG pattern on IBM Power10.
-Before we do that, lets understand what RAG is, its advantages, key use cases and how it fits in the IBM Power landscape.
+Before we do that, lets understand what RAG is, its advantages, key use cases, and how it fits in the IBM Power landscape.
 
 ## What is RAG?
 
@@ -27,7 +27,7 @@ RAG is a technique that uses vector databases to retrieve relevant information a
 
     Vector databases are used in RAG because they store data in a way that makes it easy to search and retrieve. Vector search techniques go beyond keyword matching and focus on semantic relationships, which improves the quality of the retrieved information.
 
-## Need & Advantages of RAG
+## Need & advantages of RAG
 
 The need for Retrieval-Augmented Generation (RAG) arises from the limitations of current large language models (LLMs) and the growing demands for factual accuracy and knowledge scalability in AI applications. 
 
@@ -75,31 +75,31 @@ Retrieval-Augmented Generation (RAG) is a generative AI framework that enhances 
 IBM Power Systems play exceptionally well with RAG due to the following reasons:
 
 1. **High-Performance Data Handling**
-      - Power Systems are designed for high-volume data transactions and processing. This makes them perfect for storing and managing systems of record, which RAG relies on to retrieve real-time, relevant information.
-      - When RAG retrieves data from a system of record stored on IBM Power, it benefits from the fast data access and throughput that Power Systems offer, ensuring quick and efficient retrieval of documents for AI processing.
+      - Power Systems are designed for high-volume data transactions and processing. This makes them perfect for storing and managing SOR, which RAG relies on to retrieve real-time, relevant information.
+      - When RAG retrieves data from a SOR stored on IBM Power, it benefits from the fast data access and throughput that Power Systems offer, ensuring quick and efficient retrieval of documents for AI processing.
 2. **Data Security and Compliance**
       - Power Systems are known for their robust security features, including end-to-end encryption and advanced data protection, making them ideal for storing sensitive data such as customer information, financial records, or healthcare data.
-      - In a RAG scenario, where retrieved data is used to generate answers, the ability of IBM Power Systems to ensure data privacy and regulatory compliance (for example, HIPAA, GDPR) is crucial, especially for enterprises dealing with sensitive or regulated data.
+      - In a RAG scenario, where retrieved data is used to generate answers, the ability of IBM Power Systems to ensure data privacy and regulatory compliance (for example, Health Insurance Portability and Accountability Act (HIPAA), General Data Protection Regulation (GDPR)) is crucial, especially for enterprises dealing with sensitive or regulated data.
 3. **Scalability and Reliability**
       - RAG applications require scalable infrastructure to handle varying levels of computational demand, especially when dealing with large-scale document retrieval and real-time AI processing. IBM Power Systems are built to scale seamlessly, allowing RAG to handle larger datasets and more complex queries without performance degradation.
-      - Reliability is critical for systems of record, and Power Systems have a proven track record of uptime and resilience, ensuring that the data RAG retrieves is always available when needed, without risk of downtime affecting the retrieval process.
+      - Reliability is critical for SOR, and Power Systems have a proven track record of uptime and resilience, ensuring that the data RAG retrieves is always available when needed, without risk of downtime affecting the retrieval process.
 4. **Integration with AI Workloads**
-      - IBM Power Systems are optimized for AI workloads, with features like accelerated AI processing (for example, Power10's Matrix Math Accelerator (MMA)) that boost the performance of both retrieval and generation tasks in RAG.
+      - IBM Power Systems are optimized for AI workloads, with features like accelerated AI processing (for example, Power10's MMA (Matrix Math Accelerator))) that boost the performance of both retrieval and generation tasks in RAG.
       - By running RAG-based applications on Power10, enterprises can take advantage of faster AI inference and improved data handling, resulting in more responsive and accurate AI systems.
 5. **Efficient Handling of Structured and Unstructured Data**
-      - Power Systems can efficiently handle both structured data (like databases) and unstructured data (such as documents and records), making them ideal for RAG, where both types of data may be retrieved from systems of record.
+      - Power Systems can efficiently handle both structured data (like databases) and unstructured data (such as documents and records), making them ideal for RAG, where both types of data may be retrieved from SOR.
       - RAG can retrieve structured data for quick reference (for example, customer records or transactions) and unstructured data (for example, reports, emails) for more complex, context-driven AI responses. Power Systems' capability to manage both types ensures efficient, accurate information retrieval.
 6. **Real-Time Analytics**
       - Real-time data analytics capabilities in IBM Power Systems enable quick access to up-to-date information, which is essential for RAG when generating responses based on current data.
-      - This feature allows the RAG model to provide contextualized answers based on the latest transactions or data updates from the system of record, improving the relevance of AI-driven outputs.
+      - This feature allows the RAG model to provide contextualized answers based on the latest transactions or data updates from the SOR, improving the relevance of AI-driven outputs.
         
 **Summary**
 
-IBM Power Systems provide the speed, security, and reliability needed to store and manage systems of record that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.
+IBM Power Systems provide the speed, security, and reliability needed to store and manage SOR that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.
 
-### RAG + IBM Power10 - solution architecture
+### RAG and IBM Power10 solution architecture
 
-Here is the high level solution architecture of a typical RAG use case on IBM Power10. This example is deployed on IBM Power10 end-to-end. The foundation model is simply downloaded from watsonx.ai or open-source repositories such as the Hugging Face model hub. The model does not require fine-tuning thanks to a domain adaptation technique called Retrieval Augmented Generation (RAG). 
+Here is the high level solution architecture of a typical RAG use case on IBM Power10. This example is deployed on IBM Power10 end-to-end. The foundation model is simply downloaded from watsonx.ai or open-source repositories such as the Hugging Face model hub. The model does not require fine-tuning thanks to a domain adaptation technique called RAG. 
 
 ![image](https://github.com/user-attachments/assets/3476cad1-a743-474f-8535-b70806d8c09f)
 
