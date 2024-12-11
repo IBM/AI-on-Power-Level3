@@ -291,7 +291,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     ![image](https://github.com/user-attachments/assets/c9fde420-3c8c-40bc-a48c-0ece97fc2248)
 
-    **Congratulations**, you were able to deploy a LLM, create a public endpoint to access it and take it for a run!
+    **Congratulations**, you successfully deployed an LLM model and provisioned a public-facing API endpoint to access it.
     In the next step, let's learn how to deploy a different LLM.
 
 ### Deploy second model
@@ -382,7 +382,7 @@ In this section, let's deploy IBM's granite model.
 
     ![image](https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c)
 
-    **Congratulations**, in this section you learned how easy it is to switch to a different LLM, access it and take it for a run!
+    **Congratulations**, in this section, you learned how straightforward it is to transition to a different LLM, access it, and utilize its capabilities.
     This completes the lab.
 
 
