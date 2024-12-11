@@ -87,7 +87,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 5. Click on **+Add** and select **Import YAML** option.
    ![image](https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462)
 
-6. In the resulting window, copy and paste the below deployment yaml into it and click **Create**
+6. In the resulting window, copy and paste the below deployment YAML into it and click **Create**
    ``` yaml linenums="1"
     apiVersion: apps/v1
     kind: Deployment
@@ -138,11 +138,11 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    ```
     ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
 
-7. Here is a quick explanation of the deployment yaml
+7. Here is a quick explanation of the deployment YAML
 
-    ??? info "Deployment yaml explanation"
+    ??? info "Deployment YAML explanation"
      
-        - **Line 2** says its a deployment yaml  
+        - **Line 2** says its a deployment YAML  
         - **Line 4** shows the name of this deployment resource (`lab-demo`)         
         - **Lines 7-9**: Defines the label selector to match Pods with the "app: lab1-demo" label         
         - **Lines 11-13**: Specifies the labels that the Pods will have.  
@@ -158,7 +158,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
                 - By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.   
             - **NOTE**: Container `llama-cpp` uses the same volume `llama-models` as initContainer for underlying storage and hence can access the model(s) downloaded by initContainer. **Lines 43-46** specifies the PVC (Persistent Volume Claim) `model-storage` used as the source of storage for the volume. Recall that we created this PVC at the beginning of this lab!
 
-7. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the yaml references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
+7. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the YAML references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
    ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
 8. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**
     ![image](https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa)
@@ -196,7 +196,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
   
     ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
 
-15. In the resulting Create Service yaml window, select all & delete everything. Then copy the below service yaml, paste it in the yaml window and click **Create**
+15. In the resulting Create Service YAML window, select all & delete everything. Then copy the below service YAML, paste it in the YAML window and click **Create**
     ``` yaml linenums="1"
     apiVersion: v1
     kind: Service
@@ -216,11 +216,11 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
 
-16. Here is a quick explanation of the Service yaml
+16. Here is a quick explanation of the Service YAML
 
-    ??? info "Service yaml explanation"
+    ??? info "Service YAML explanation"
     
-        - **Line 2** shows its a service yaml
+        - **Line 2** shows its a service YAML
           
         - **Line 4** shows the name of the service (`lab1-service`)
           
@@ -228,14 +228,14 @@ We will use ConfigMap to store the model URL and model name, both of which will 
           
         - **Lines 9-13** has the port details. `port: 8080` refers to the port for the incoming traffic of the service. `targetPort: 8080` refers to the port on the pod. This means that incoming traffic for the service on port 8080 will be forwarded to the pod on port 8080.
           
-        - **Lines 14-15** specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label `app: lab1-demo`, which is the label we assigned in the deployment yaml.
+        - **Lines 14-15** specifies the pod selector label. It defines which Pods the service will route traffic to. In this case, it matches Pods that have the label `app: lab1-demo`, which is the label we assigned in the deployment YAML.
       
 18. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
     ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
 
 19. Navigate to **Networking** -> **Routes** and click **Create Route**
       ![image](https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343)
-20. In the resulting Create Route window, select **YAML view** and clear everything from the yaml window. Copy the below yaml and paste it in the yaml window and click **Create**
+20. In the resulting Create Route window, select **YAML view** and clear everything from the YAML window. Copy the below YAML and paste it in the YAML window and click **Create**
     ``` yaml linenums="1"
     kind: Route
     apiVersion: route.openshift.io/v1
@@ -253,9 +253,9 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     ```
     ![image](https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090)
 
-21. Here is a quick explanation of the Route yaml. In OpenShift, a Route exposes a service to external clients by mapping an external URL to an internal OpenShift service.
+21. Here is a quick explanation of the Route YAML. In OpenShift, a Route exposes a service to external clients by mapping an external URL to an internal OpenShift service.
 
-    ??? info "Route yaml explanation"
+    ??? info "Route YAML explanation"
     
         - **Line 1**: This defines that you're creating an OpenShift Route resource.
           
