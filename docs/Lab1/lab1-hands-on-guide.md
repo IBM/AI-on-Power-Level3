@@ -308,11 +308,11 @@ In this section, let's deploy IBM's granite model.
    ![image](https://github.com/user-attachments/assets/a0d66be8-8ca3-4f18-b360-ee35a7843862)
 3. In the resulting form, edit the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**.
    
-     - Key: MODEL_NAME
-     - Value: granite-7b-lab.Q4_K_M.gguf
+     - **Key**: MODEL_NAME
+     - **Value**: granite-7b-lab.Q4_K_M.gguf
      - ---------
-     -  Key: MODEL_URL
-     -  Value: https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf
+     -  **Key**: MODEL_URL
+     -  **Value**: https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf
 
     ![image](https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052)
 

@@ -33,11 +33,11 @@ Make sure you have the following items ready:
    
 5. In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**.
    
-     - Key: MODEL_NAME
-     - Value: granite-8b-code-instruct.Q4_K_M.gguf
+     - **Key**: MODEL_NAME
+     - **Value**: granite-8b-code-instruct.Q4_K_M.gguf
      ---
-     - Key: MODEL_URL
-     - Value: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/resolve/main/granite-8b-code-instruct.Q4_K_M.gguf     
+     - **Key**: MODEL_URL
+     - **Value**: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/resolve/main/granite-8b-code-instruct.Q4_K_M.gguf     
      ---
      ![image](https://github.com/user-attachments/assets/395d95b2-bd4f-4163-980a-536acf9c4877)
      ---
