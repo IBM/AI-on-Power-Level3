@@ -1,7 +1,7 @@
 # Deploy Retrieval-Augmented Generation (RAG) on IBM Power10 - Lab education
 
 Goal of this lab is to get hands-on experience in deploying a RAG pattern on IBM Power10.
-Before we do that, lets understand what RAG is, its advantages, key usecases and how it fits in the IBM Power landscape.
+Before we do that, lets understand what RAG is, its advantages, key use cases and how it fits in the IBM Power landscape.
 
 ## What is RAG?
 
@@ -54,9 +54,9 @@ Here are the key reasons why RAG is necessary and its associated advantages:
 
 In summary, RAG addresses limitations in current LLMs by improving factual accuracy, scalability, and adaptability, making it particularly useful for knowledge-intensive tasks and dynamic environments.
 
-## Common usecases of RAG
+## Common use cases of RAG
 
-Below are some of the common usecases for RAG:
+Below are some of the common use cases for RAG:
 
 1. **Open-domain question answering**: Where models need to answer questions about a wide range of topics, potentially beyond the training data.
 2. **Customer support**: Providing accurate answers by retrieving relevant documents from knowledge bases.
