@@ -81,7 +81,7 @@ OpenShift CLIs are accessed using the `oc` command
       ![image](https://github.com/user-attachments/assets/770257da-8d44-4d21-9860-7c6200afd3b6)
 
 ### Logging in to OpenShift Cluster using `oc` CLI
-Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will execute some CLI commands as part of the lab steps.
+Login to the OpenShift cluster via the `oc` CLI. This is needed as we will execute some CLI commands as part of the lab steps.
 
 1. In the OpenShift console, top right section click on `cecuser` and select `Copy login command` option.
    
@@ -102,7 +102,7 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
      ![image](https://github.com/user-attachments/assets/a2753a4c-86d6-49ca-96c8-54f3ed7dbac5)
 8. You have successfully logged into the OpenShift cluster using the `oc` CLI.
 9. In case you lose access to the `oc` CLI, you will get an error as below, in which case you need to reauthenticate.<br>
-   Refer to the call-out in the section below, on how to reauthenticate.
+   Refer to the section below, on how to reauthenticate in CLI.
 
      ![image](https://github.com/user-attachments/assets/a1e8d00c-64d0-41ab-997c-540378df0544)
    
@@ -114,5 +114,4 @@ Let's login to the OpenShift cluster via the `oc` CLI. This is needed as we will
 
 ### Summary
 Efforts are made to keep the lab instructions simple and easy to follow to cater to audience of all skill levels.
-We strive to use OpenShift console as much possible, but in some scenarios OpenShift console doesn't yet support some functionality in which case we switch to the `oc` CLI. Hence this lab will use OpenShift console and `oc` CLI both as necessary.
-
+Both the OpenShift CLI and OpenShift web console are used in the lab guide as not all OpenShift capabilities are available in the OpenShift web console. 
