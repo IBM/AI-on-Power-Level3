@@ -52,7 +52,7 @@ WCA is powered by the IBM Granite foundation models that include state-of-the-ar
 
 !!! danger "IBM watsonx Code Assistant (WCA) support on IBM Power"
 
-    NOTE: At the time of writing this lab, IBM WCA is not available to run on IBM Power yet. However, clients can use code specific foundation models (either hosted by WCA on IBM Cloud or running stand-alone on-premises on IBM Power) to infuse and harness the power of code LLMs into their on-premises applications running on IBM Power.
+    NOTE: At the time of writing, IBM WCA is not yet available to run on IBM Power systems. However, the LLMs that support its functionality are fully compatible with IBM Power. Clients can leverage foundation models, including IBM-developed and open-source options, to integrate and utilize (gen)AI capabilities within their on-premises applications running on IBM Power. This course's labs demonstrate the use of such LLMs.
 
 ### IBM WCA architecture and offerings
 
