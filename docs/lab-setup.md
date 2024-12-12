@@ -35,15 +35,15 @@ Follow the steps below:
 ### Accessing OpenShift console
 
 1. In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link.
-     ![image](https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f)
+     ![image](https://github.com/user-attachments/assets/7fe3795a-9f89-4c7d-bc6d-e80df6f38bf2)
    
 3. This will open up a new browser tab/window and opens up the OpenShift console login page.
       - If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue. This is ok as we are in a lab/demo environment and using self-signed certificates.
-4. Using the user account and password from your reservation details page, login using the **htpasswd** option.
+4. Using the user account (**cecuser**) and password from your reservation details page, login using the **htpasswd** option.
    
-     !!! tip "How to copy user password?"
+    !!! tip "How to copy user password?"
 
-         Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.
+        Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.
      
      ![image](https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473)
 
