@@ -1,17 +1,17 @@
 # Introduction
 
 Welcome to the AI on Power - Level 3 course - seller enablement demonstration.
-This Level 3 course will provide hands-on enablement on how to use generative AI (gen AI) models on Power10 and will cover few use-cases to help understand the art of the possible.
+This Level 3 course provides hands-on enablement on how to use generative AI (gen AI) models on Power10 and covers several use cases to help understand the art of the possible.
 
 There are 4 main parts to this demonstration as you can see on the left panel:
 
 * Lab setup - How to provision and setup the lab environment for the hands-on demos.
 
-* Lab 1 – Deploy a Large Language Model (LLM) on Power10 - Deploy a LLM on Power10 and switch to a different LLM.
+* Lab 1 – Deploy a Large Language Model (LLM) on Power10 and switch between LLMs.
 
-* Lab 2 – Deploy Retrieval-Augmented Generation (RAG) on Power10 - RAG chatbot for domain specific question and answers.
+* Lab 2 – Deploy Retrieval-Augmented Generation (RAG) on Power10 and use it for domain specific question and answers
 
-* Lab 3 – Deploy code LLM Power10 - Generate python, C code and Sequential Query Language (SQL) query using natural language.
+* Lab 3 – Deploy code LLM Power10 - Generate python, C code, and Sequential Query Language (SQL) query using natural language.
 
 ## Generative AI and LLMs overview
 
@@ -52,7 +52,7 @@ IBM Power10 offers several advantages for gen AI use cases, providing the comput
    
     * **High bandwidth data-path:** As data fuels AI, a fast access to big data for training and inferencing is required. Most AI workloads are memory bandwith bound. IBM Power10's large memory capacity that, in general exceeds limited Graphics Processing Unit (GPU) memory and IBM Power10’s high memory bandwidth are optimal for such scenarios. In addition, the Double Data Rate 5 (DDR5) memory and faster Input/Output (I/O) bandwidth provide a significant performance boost, enabling large-scale gen AI models to run more efficiently.
       
-    * **4 Matrix Math Accelerator (MMA) engines per core:** MMA does matrix math and helps accelerate matrix multiplications, which are required for training, fine-tuning, and inferencing of AI models such as Neural Networks and foundation models. IBM is seeing strong evidence that it supersedes GPUs and improves consolidation when deploying AI at point of use. 
+    * **4 Matrix Math Accelerator (MMA) engines per core:** MMA does matrix math and helps accelerate matrix multiplications, which are required for training, fine-tuning, and inferencing of AI models such as neural networks and foundation models. IBM is seeing strong evidence that it supersedes GPUs and improves consolidation when deploying AI at point of use. 
 
     * **8 Single Instruction Multiple Data (SIMD) engines per core:** SIMD does vector math. Vectors are used in most AI algorithms. Vector processing can be highly parallelized using SIMD engines. A single inference request is often “just” a vector that is “send through” the LLM using SIMD acceleration. By batching multiple inference requests together, the workload can become MMA-bound where a whole matrix is "send through" the LLM, leading to improved throughputs.
 
@@ -61,8 +61,8 @@ IBM Power10 offers several advantages for gen AI use cases, providing the comput
     * The optimized AI software portfolio spans from enterprise options to supported open-source options; even hybrid approaches that mix enterprise and supported open-source are possible.
     * This flexibility allows solution architects to adapt the AI software portfolio to the unique requirements of their company. For example, if a company’s data scientists already use a set of open-source tools, they can continue to do so while benefitting from all optimizations in IBM Power10 and paving the road to integrations with the enterprise portfolio.
 
-3. **Support for AI ecosystems:** IBM Power10 works seamlessly with AI frameworks like TensorFlow, PyTorch and ONNX runtime, making it easier for developers to build, train, and deploy gen AI models without needing major infrastructure changes.
-    * These AI frameworks leverage some of the popular math libraries like OpenBLAS, libAten, Eigen and MLAS which provide reusable function for matrix multiplication.
+3. **Support for AI ecosystems:** IBM Power10 works seamlessly with AI frameworks like TensorFlow, PyTorch, and ONNX runtime, making it easier for developers to build, train, and deploy gen AI models without needing major infrastructure changes.
+    * These AI frameworks leverage some of the popular math libraries like OpenBLAS, libAten, Eigen, and MLAS which provide reusable function for matrix multiplication.
     * IBM has already integrated Power10's hardware acceleration capabilities into these math libraries, thus allowing AI workloads using these frameworks to automatically get the IBM Power10 speed-up without any code changes.
     * Support for container orchestration platforms like OpenShift and Kubernetes allows efficient orchestration of AI workloads.
       
