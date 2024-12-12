@@ -28,7 +28,7 @@ IBM watsonx is designed for the enterprise and is targeted for business domains,
 
 !!! danger "IBM watsonx support on IBM Power"
 
-    **NOTE**: At the time of writing this lab, IBM watsonx is not available to run on IBM Power yet. However, clients can use foundation models (either hosted by watsonx on IBM Cloud or running stand-alone on-premises on IBM Power) to infuse and harness the power of (gen)AI into their on-premises applications running on IBM Power.
+    **NOTE**: At the time of writing, IBM watsonx is not yet available to run on IBM Power systems. However, the large language models (LLMs) that support its functionality are fully compatible with IBM Power. Clients can leverage foundation models, including IBM-developed and open-source options, to integrate and utilize (gen)AI capabilities within their on-premises applications running on IBM Power. This course's labs demonstrate the use of such LLMs.
 
 ## IBM watsonx Vs Hugging Face
 
