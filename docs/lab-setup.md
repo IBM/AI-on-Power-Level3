@@ -14,7 +14,7 @@ Follow the steps below:
 
     !!! note "TechZone provisioning can take time"
 
-        It can take upto 3 hours for the provisioning to happen. Please allow adequate time for its completion and maintain patience during this period.
+        It can take upto 3 hours for the provisioning to happen. Please allow adequate time for its completion and maintain patience during this period. If you get into provisioning issues, refer to the [Support](https://ibm.github.io/AI-on-Power-Level3/support/){target="_blank"} section for assistance.
    
 5. Once provisioned, go to [my reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page to ensure its in "Ready" state.
 
