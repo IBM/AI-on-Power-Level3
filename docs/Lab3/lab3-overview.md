@@ -11,7 +11,7 @@ But before we do that, lets understand what code LLM is, its benefits, key use c
 A code LLM is a type of AI model specifically trained to understand, generate, and manipulate programming code.
 These models, built on architectures like GPT or similar transformers, are trained on vast datasets of code from various programming languages, enabling them to assist with coding tasks such as generating code snippets, debugging, refactoring, and even writing documentation.
 
-## Key Features of Code LLM
+## Key Features of code LLM
 
   - **Code Generation**: Code LLMs can generate new code based on prompts, such as writing functions, classes, or even entire programs.
   - **Code Completion**: Similar to how text-based LLMs suggest completions for sentences, code LLMs can suggest code completions in real-time, aiding developers in writing code faster.
@@ -26,7 +26,7 @@ These models, built on architectures like GPT or similar transformers, are train
   - **Debugging and Error Resolution**: Code LLMs can help identify issues in code and suggest potential fixes, streamlining the debugging process.
   - **Automated Documentation**: They can generate comments or documentation for code, reducing the manual effort required for explaining code logic.
 
-## Examples of Code LLMs
+## Examples of code LLMs
   
   Below are few examples of code LLMs:
   
@@ -60,13 +60,13 @@ Here is a high level architecture of IBM WCA:
 ![image](https://github.com/user-attachments/assets/71decd7c-fc8e-46a0-8765-ecfc38b897d4)
 At the bottom-most layer, WCA is powered by IBM Granite code models, specifically trained and fine-tuned by IBM for different programming languages.
 
-At the time of writing this lab, there are 2 products available under the IBM WCA offering family:
+At the time of writing this lab, there are 3 products available under the IBM WCA offering family:
+
+- **IBM watsonx Code Assistant**: IBM watsonx Code Assistant (WCA) is the flagship offering in a suite of generative AI code assistant products, which also include offerings for Ansible Automation Platform (via IBM watsonx Code Assistant for Red Hat Ansible Lightspeed) and IBM Z modernization (via IBM watsonx Code Assistant for Z).  IBM watsonx Code Assistant delivers enterprise-ready AI for code solutions to address skills gaps and increase developer productivity for targeted, business use cases. The WCA portfolio accelerates software development lifecycle (SDLC) tasks with AI-powered capabilities including context-aware code generation, explanation, documentation, translation, and unit test generation. It does so while maintaining the principles of trust, security, and compliance with regards to IBM client's data and intellectual property. WCA offerings are powered by IBM Granite foundation models that include state-of-the-art large language models (LLMs) designed for code. WCA empowers developers to accelerate software development lifecycles, enhance productivity, and improve code for over 116 languages — Java, Python, YAML, COBOL, and more.
 
 - **IBM watsonx Code Assistant for Red Hat Ansible Lightspeed**: The Ansible-tuned model forms the basis of this product. This is fine-tuned for Ansible use cases. In addition to x86 endpoints, this supports generating Ansible tasks/playbooks for IBM Power endpoints (running AIX, IBM i and Linux) as well.
   
 - **IBM watsonx Code Assistant for Z**: The Cobol to Java-tuned model forms the basis of this product. This is fine-tuned for COBOL to Java conversion. It can help with enterprise use cases around IBM Z application modernization.
-
-More and more programming languages support is being added to WCA over time.
 
 ### Key Features of IBM WCA
 
