@@ -10,10 +10,19 @@ Follow the steps below:
    
      ![image](https://github.com/user-attachments/assets/7e141798-b557-4584-928d-7ad0ecd24c8c)
    
-3. Watch your email for updates from TechZone and wait for your environment to be provisioned.   
-4. Once provisioned, go to [my reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page to ensure its in "Ready" state.
+3. Watch your email for updates from TechZone and wait for your environment to be provisioned.
+
+    !!! note "TechZone provisioning can take time"
+
+        It can take upto 3 hours for the provisioning to happen. Please allow adequate time for its completion and maintain patience during this period.
+   
+5. Once provisioned, go to [my reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page to ensure its in "Ready" state.
 
      ![image](https://github.com/user-attachments/assets/18e24261-143b-4912-b8ec-285fc6fce394)
+
+    !!! tip "Extend your reservation"
+
+        You can extend your reservation upto a maximum of 6 days. Click on the three dots seen on the top right of your reservation and select **Extend** option.
 
 ## Accessing the environment
 
