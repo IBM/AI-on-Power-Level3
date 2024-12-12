@@ -44,7 +44,8 @@ Follow the steps below:
     !!! tip "How to copy user password?"
 
         Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.
-     
+
+     ![image](https://github.com/user-attachments/assets/89393b07-7d3e-4bd7-9902-e7f30d4a33e9)
      ![image](https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473)
 
 7. You have successfully logged into the OpenShift cluster using the console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console. You should land in **Administrator** profile (or **Developer** profile if that was the last profile you were in when you logged off).
