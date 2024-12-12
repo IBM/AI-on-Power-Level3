@@ -35,15 +35,16 @@ Follow the steps below:
 ### Accessing OpenShift console
 
 1. In the "Reservation Details" section of the TechZone environment details page, click on the OpenShift console link.
-2. This will open up a new browser tab/window and opens up the OpenShift console login page.
+     ![image](https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f)
+   
+3. This will open up a new browser tab/window and opens up the OpenShift console login page.
       - If you encounter any security exception, navigate to the bottom of the browser page, acccept the exception under Advanced and continue. This is ok as we are in a lab/demo environment and using self-signed certificates.
-3. Using the user account and password from your reservation details page, login using the **htpasswd** option.
+4. Using the user account and password from your reservation details page, login using the **htpasswd** option.
    
      !!! tip "How to copy user password?"
 
          Click on the copy icon provided under 'User Password' in the Reservation Details page to copy the password and paste it in the OpenShift console window.
-
-     ![image](https://github.com/user-attachments/assets/b31a361a-b69a-4872-b5a7-a71db2f8f52f)
+     
      ![image](https://github.com/user-attachments/assets/2700ebb0-bf81-4f3f-938d-3ae8a48e7473)
 
 7. You have successfully logged into the OpenShift cluster using the console. You should be able to see the dashboard (or the page you were on before logging off) of your OpenShift console. You should land in **Administrator** profile (or **Developer** profile if that was the last profile you were in when you logged off).
