@@ -5,7 +5,7 @@ This Level 3 course will provide hands-on enablement on how to use generative AI
 
 There are 4 main parts to this demonstration as you can see on the left panel:
 
-* Lab setup - How to provision and setup the lab env for the hands-on demos.
+* Lab setup - How to provision and setup the lab environment for the hands-on demos.
 
 * Lab 1 – Deploy a Large Language Model (LLM) on Power10 - Deploy a LLM on Power10 and switch to a different LLM.
 
