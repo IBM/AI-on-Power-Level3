@@ -27,7 +27,7 @@ RAG is a technique that uses vector databases to retrieve relevant information a
 
     Vector databases are used in RAG because they store data in a way that makes it easy to search and retrieve. Vector search techniques go beyond keyword matching and focus on semantic relationships, which improves the quality of the retrieved information.
 
-## Need & advantages of RAG
+## Need and advantages of RAG
 
 The need for Retrieval-Augmented Generation (RAG) arises from the limitations of current large language models (LLMs) and the growing demands for factual accuracy and knowledge scalability in AI applications. 
 

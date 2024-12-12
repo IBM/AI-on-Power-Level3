@@ -40,7 +40,7 @@ IBM watsonx and Hugging Face both offer AI tools, but they serve different purpo
 
 In essence, IBM watsonx focuses on enterprise-grade AI with strong governance and scalability, while Hugging Face is designed for flexible, community-driven AI development with a focus on rapid prototyping and open access to pre-trained models.
 
-## IBM watsonx & Hugging Face
+## IBM watsonx and Hugging Face
 
 With IBM watsonx, clients can run not just IBM-trained foundation models, but also open source models and models from Hugging Face as well.
 

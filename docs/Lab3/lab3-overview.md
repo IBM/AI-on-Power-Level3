@@ -54,7 +54,7 @@ WCA is powered by the IBM Granite foundation models that include state-of-the-ar
 
     NOTE: At the time of writing this lab, IBM WCA is not available to run on IBM Power yet. However, clients can use code specific foundation models (either hosted by WCA on IBM Cloud or running stand-alone on-premises on IBM Power) to infuse and harness the power of code LLMs into their on-premises applications running on IBM Power.
 
-### IBM WCA architecture & offerings
+### IBM WCA architecture and offerings
 
 Here is a high level architecture of IBM WCA:
 ![image](https://github.com/user-attachments/assets/71decd7c-fc8e-46a0-8765-ecfc38b897d4)

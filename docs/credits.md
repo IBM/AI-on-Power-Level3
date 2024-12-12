@@ -6,4 +6,4 @@ Sincere and heartfelt thanks to the below people who helped in various stages of
 
   - **Jean Midot**: For the support he provided on the TechZone front.
   
-  - **Sebastian Lehrig**, **David Spurway** & **Daniel Casali**: For all the technical guidance and support provided during the course.
+  - **Sebastian Lehrig**, **David Spurway** and **Daniel Casali**: For all the technical guidance and support provided during the course.

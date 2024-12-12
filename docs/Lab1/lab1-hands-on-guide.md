@@ -19,7 +19,7 @@ Make sure you have the following items ready:
 ### Create project
 1. Go to OpenShift Administrator profile, click on **Home** -> **Projects** and click **Create Project**.
    ![image](https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f)
-2. Enter a project name: **lab1-demo** & click **Create**.
+2. Enter a project name: **lab1-demo** and click **Create**.
    ![image](https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320)
 
 ### Setup storage
@@ -196,7 +196,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
   
     ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
 
-15. In the resulting Create Service YAML window, select all & delete everything. Then copy the below service YAML, paste it in the YAML window and click **Create**.
+15. In the resulting Create Service YAML window, select all and delete everything. Then copy the below service YAML, paste it in the YAML window and click **Create**.
     ``` yaml linenums="1"
     apiVersion: v1
     kind: Service

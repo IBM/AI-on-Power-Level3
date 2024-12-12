@@ -4,7 +4,7 @@
 
 - [AI on IBM Power - Seismic sales kit](https://ibm.seismic.com/Link/Content/DC4HhmXXFPpFdGcTJJJb996JFR7V){target="_blank"}
 - [AI on IBM Power - One Pager](https://ibm.seismic.com/Link/Content/DCFbHqRHpq9d88cHj2dMWFffVP4P){target="_blank"}
-- [AI on Power - Conversation Starters & Opportunity Qualification Questions](https://ibm.seismic.com/Link/Content/DC3CbdBWFpgTX8CDCFmg9JWmbMpV){target="_blank"}
+- [AI on Power - Conversation Starters and Opportunity Qualification Questions](https://ibm.seismic.com/Link/Content/DC3CbdBWFpgTX8CDCFmg9JWmbMpV){target="_blank"}
 - [Choosing a generative AI model](https://www.ibm.com/docs/en/watsonx/saas?topic=models-choosing-model){target="_blank"}
 - Delivering an on-premises generative AI Chatbot with IBM Power - [Whitepaper](https://www.ibm.com/downloads/cas/YE3OVQNB){target="_blank"}
 - [Tutorial - Sizing and configuring an LPAR for AI workloads](https://community.ibm.com/community/user/powerdeveloper/blogs/sebastian-lehrig/2024/03/26/sizing-for-ai){target="_blank"}

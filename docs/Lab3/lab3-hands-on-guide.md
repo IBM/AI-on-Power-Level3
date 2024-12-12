@@ -256,7 +256,7 @@ Let's take an super simple example of a bank which has information stored in 2 t
    
 6. Re-iterating some of the points we learned in this lab:
    
-       - Code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed & tweaked to perfection by the developer.
+       - Code LLMs are not 100% correct, yet they can be immensely helpful for a developer as they can help generate near perfect code which can then be analyzed and tweaked to perfection by the developer.
 
        - There are many code LLMs available in HF with varied degree of accuracy and clients can choose the right one by experimenting with them in the context of their specific use case.
 
