@@ -17,23 +17,24 @@ Make sure you have the following items ready:
     Feel free to click on the images in the lab guide below to a view larger image.
     
 ### Create project
-1. Go to OpenShift Administrator profile, click on **Home** -> **Projects** and click **Create Project**.
-   ![image](https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f)
-2. Enter a project name: **lab1-demo** and click **Create**.
-   ![image](https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320)
+1. Go to OpenShift Administrator profile, click on **Home** **(A)** -> **Projects** **(B)** and click **Create Project** **(C)**.
+   ![image](https://github.com/user-attachments/assets/87c5fec4-e76d-4ca3-9845-77d25b8c7d46)
+
+2. Enter a project name: **lab1-demo** **(A)** and click **Create** **(B)**.
+   ![image](https://github.com/user-attachments/assets/6d1b6e5d-3cf6-4c3b-811a-6bd40a7a715e)
 
 ### Setup storage
 Let us setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
 In OpenShift, you first request for the storage (also known as PersistentVolumeClaim or PVC) and the actual storage (also known as PersistentVolume or PV) gets alloted based on your request and the storage availability in the storage pool (NFS in this case).
 
-1. Go to OpenShift Administrator profile, click on **Storage** -> **PersistentVolumeClaims** and click **Create PersistentVolumeClaim**.
-   ![image](https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2)
-2. In the resulting form, enter PVC name: **model-storage** and Size: **20** GB. Leave other fields as defaults and click **Create**.
-   ![image](https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c)
+1. Go to OpenShift Administrator profile, click on **Storage** **(A)** -> **PersistentVolumeClaims** **(B)** and click **Create PersistentVolumeClaim** **(C)**.
+   ![image](https://github.com/user-attachments/assets/23b17459-0bd3-4abd-8cd2-4bfd572efa0f)
+2. In the resulting form, enter PVC name: **model-storage** **(A)** and Size: **20** **(B)** GB. Leave other fields as defaults and click **Create** **(C)**.
+   ![image](https://github.com/user-attachments/assets/98571147-31a2-4e37-a063-c2d1c3929a64)
 3. Note that it shows PVC status as bound, which means storage was allotted.
    ![image](https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2)
-4. Navigate to **Storage** -> **PersistentVolumes** and view the actual storage (PV) bound to your storage request (PVC = **model-storage**).
-   ![image](https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e)
+4. Navigate to **Storage** **(A)** -> **PersistentVolumes** **(B)** and view the actual storage (PV) bound to your storage request (PVC = **model-storage** **(C)**).
+   ![image](https://github.com/user-attachments/assets/4209536d-a21a-42d0-b847-cc6ad15cd64d)
 
     This completes the storage setup.
 
@@ -43,14 +44,14 @@ In OpenShift, a ConfigMap is an object used to manage configuration data for app
 
 We will use ConfigMap to store the model URL and model name, both of which will be used when we deploy the model. Using ConfigMap will help us switch to a different model very easily.
 
-1. Navigate to **Workloads** -> **ConfigMaps** and select **lab1-demo** as the active Project.
-   ![image](https://github.com/user-attachments/assets/72e44e26-9f7e-4d85-a67b-47752ba6c983)
+1. Navigate to **Workloads** **(A)** -> **ConfigMaps** **(B)** and select **lab1-demo** **(C)** as the active Project.
+   ![image](https://github.com/user-attachments/assets/4b0f77a2-f5f5-4821-a073-bbc67ded39cf)
 
 5. Click **Create ConfigMap**.
-   ![image](https://github.com/user-attachments/assets/14b9433f-35ab-4042-8c37-5302756b8b6e)
+   ![image](https://github.com/user-attachments/assets/793a95ad-953a-49d9-8cec-8c7e321947cd)
 
 6. In the resulting form, Ensure **Form view** option is selected.
-   ![image](https://github.com/user-attachments/assets/5c156ef4-a314-47f5-9084-328a170f1d74)
+   ![image](https://github.com/user-attachments/assets/f0c6b9e0-f60d-4b92-b3c5-45252351e539)
 
 8. Enter a name: **model-params**, and fill the Key and Value fields as below:
    
