@@ -47,10 +47,10 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 1. Navigate to **Workloads** **(A)** -> **ConfigMaps** **(B)** and select **lab1-demo** **(C)** as the active Project.
    ![image](https://github.com/user-attachments/assets/4b0f77a2-f5f5-4821-a073-bbc67ded39cf)
 
-5. Click **Create ConfigMap**.
+5. Click **Create ConfigMap** **(A)**.
    ![image](https://github.com/user-attachments/assets/793a95ad-953a-49d9-8cec-8c7e321947cd)
 
-6. In the resulting form, Ensure **Form view** option is selected.
+6. In the resulting form, Ensure **Form view** **(A)** option is selected.
    ![image](https://github.com/user-attachments/assets/f0c6b9e0-f60d-4b92-b3c5-45252351e539)
 
 8. Enter a name: **model-params** **(A)**, and fill the Key and Value fields as below:
@@ -168,7 +168,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
     
         The ConfigMap currently points to the tinyLLaMa model. The LLaMA (Large Language Model Meta AI) model is a family of state-of-the-art large language models developed by Meta (formerly Facebook), specifically designed to perform various natural language processing tasks. TinyLLaMA is a compact variant of the LLaMA (Large Language Model Meta AI) model, designed for efficiency and accessibility, especially when deployed in smaller environments. Available via Hugging Face (HF), it focuses on reducing the size of large-scale language models while retaining strong performance across various natural language processing tasks.
     
-9. Switch back to **Pods** tab and you should see that a new pod has been launched by OpenShift as we changed the pod's environment, when we added ConfigMap.
+9. Switch back to **Pods** **(A)** tab and you should see that a new pod has been launched by OpenShift as we changed the pod's environment, when we added ConfigMap.
     ![image](https://github.com/user-attachments/assets/74c8a1f9-fa9d-42b8-a26b-f8ea873d1116)
 10. The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.
 
@@ -180,7 +180,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     **Congratulations!**, you have successfully deployed a LLM on Power10.
 
-11. Let's verify that the model running is tinyllama!. Click on the pod name to enter the pod details view/page.
+11. Let's verify that the model running is tinyllama!. Click on the pod name **(A)** to enter the pod details view/page.
     ![image](https://github.com/user-attachments/assets/5a6e4078-9047-4d2f-ab84-942f938b46b7)
 12. In the pod details page, click on the **Logs** **(A)** tab to see the pod logs.
     ![image](https://github.com/user-attachments/assets/c7bb75d5-6768-45fa-b51f-37fef4132218)
