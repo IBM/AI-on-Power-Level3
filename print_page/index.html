@@ -2331,30 +2331,30 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 </div>
 <ol>
 <li>
-<p>In this lab, we will deploy IBM Granite code LLM which is available on Hugging Face (HF). Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> project. Click <strong>Topology</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c"></a></p>
+<p>In this lab, we will deploy IBM Granite code LLM which is available on Hugging Face (HF). Navigate to OpenShift developer profile window and ensure you are in <strong>lab1-demo</strong> <strong>(A)</strong> project. Click <strong>Topology</strong> <strong>(B)</strong> and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/e64ca98b-4abc-4ba4-b483-57e38482073a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e64ca98b-4abc-4ba4-b483-57e38482073a"></a></p>
 </li>
 <li>
-<p>Select <strong>ConfigMaps</strong> and click <strong>model-params</strong>.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5"></a></p>
+<p>Select <strong>ConfigMaps</strong> <strong>(A)</strong> and click <strong>model-params</strong> <strong>(B)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/59e35af8-0b8a-4c3a-a085-4d6e3d6841f1" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/59e35af8-0b8a-4c3a-a085-4d6e3d6841f1"></a></p>
 </li>
 <li>
-<p>Click on <strong>Actions</strong> -&gt; <strong>Edit ConfigMap</strong>.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/e900c672-ee49-4f9d-94f2-f28bbe1aef20" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e900c672-ee49-4f9d-94f2-f28bbe1aef20"></a></p>
+<p>Click on <strong>Actions</strong> <strong>(A)</strong> -&gt; <strong>Edit ConfigMap</strong> <strong>(B)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/687cce4c-6d96-4693-883b-432b1d3bcae2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/687cce4c-6d96-4693-883b-432b1d3bcae2"></a></p>
 </li>
 <li>
-<p>In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click <strong>Save</strong>.</p>
+<p>In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click <strong>Save</strong> <strong>(E)</strong>.</p>
 <ul>
-<li><strong>Key</strong>: MODEL_NAME</li>
-<li><strong>Value</strong>: granite-8b-code-instruct.Q4_K_M.gguf</li>
+<li><strong>Key</strong>: <code>MODEL_NAME</code> <strong>(A)</strong></li>
+<li><strong>Value</strong>: <code>granite-8b-code-instruct.Q4_K_M.gguf</code> <strong>(B)</strong></li>
 </ul>
 <hr>
 <ul>
-<li><strong>Key</strong>: MODEL_URL</li>
-<li><strong>Value</strong>: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/resolve/main/granite-8b-code-instruct.Q4_K_M.gguf     </li>
+<li><strong>Key</strong>: <code>MODEL_URL</code> <strong>(C)</strong></li>
+<li><strong>Value</strong>: <code>https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/resolve/main/granite-8b-code-instruct.Q4_K_M.gguf</code> <strong>(D)</strong></li>
 </ul>
 <hr>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/395d95b2-bd4f-4163-980a-536acf9c4877" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/395d95b2-bd4f-4163-980a-536acf9c4877"></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/ed94d17e-283e-4f90-9cf5-9b11c6a4adb1" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ed94d17e-283e-4f90-9cf5-9b11c6a4adb1"></a></p>
 <hr>
 </li>
 <li>
@@ -2365,16 +2365,16 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 </div>
 </li>
 <li>
-<p>Navigate to the deployment view. Click <strong>Topology</strong>, then click "<strong>D lab1-demo</strong>" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "<strong>D lab1-demo</strong>" in that pane which will then open up the deployment details view for lab1-demo deployment.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead"></a></p>
+<p>Navigate to the deployment view. Click <strong>Topology</strong> <strong>(A)</strong>, then click "<strong>D lab1-demo</strong>" <strong>(B)</strong> part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "<strong>D lab1-demo</strong>" <strong>(C)</strong> in that pane which will then open up the deployment details view for lab1-demo deployment.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/07715c25-5b84-44d4-8e74-a1a989581d80" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/07715c25-5b84-44d4-8e74-a1a989581d80"></a></p>
 </li>
 <li>
-<p>Click <strong>Actions</strong> and select <strong>Restart rollout</strong>. This will restart the deployment which results in re-deployment of the pod. This ensure the pod will now see the new ConfigMap changes.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f"></a></p>
+<p>Click <strong>Actions</strong> <strong>(A)</strong> and select <strong>Restart rollout</strong> <strong>(B)</strong>. This will restart the deployment which results in re-deployment of the pod. This ensure the pod will now see the new ConfigMap changes.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/bca10454-1bd3-4e7a-ad7d-e3340aaedc73" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/bca10454-1bd3-4e7a-ad7d-e3340aaedc73"></a></p>
 </li>
 <li>
-<p>Click on <strong>Pods</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to IBM Granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
-    <a class="glightbox" href="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926"></a></p>
+<p>Click on <strong>Pods</strong> <strong>(A)</strong> tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to IBM Granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+    <a class="glightbox" href="https://github.com/user-attachments/assets/4299ccb0-9233-45f8-904e-9fdb4960ad12" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4299ccb0-9233-45f8-904e-9fdb4960ad12"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Model download will take time</p>
 <p>This process will take a few minutes (in my case it took around 3-4 mins as this is a fairly large model compared to tinyllama) and your results may vary. Remember, this is a demo environment and models are few GBs in size. Models once downloaded won't be downloaded again as long as you are using the same storage (PV).</p>
@@ -2385,12 +2385,12 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
     <a class="glightbox" href="https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489"></a></p>
 </li>
 <li>
-<p>Let us verify that the model running is IBM Granite code LLM!. Click on the pod to enter the pod details view/page.
-    <a class="glightbox" href="https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934"></a></p>
+<p>Let us verify that the model running is IBM Granite code LLM! Click on the pod name <strong>(A)</strong> to enter the pod details view/page.
+    <a class="glightbox" href="https://github.com/user-attachments/assets/f7ae35e7-808e-4a92-bbad-804a5284fffa" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f7ae35e7-808e-4a92-bbad-804a5284fffa"></a></p>
 </li>
 <li>
-<p>In the pod details page, click on the Logs tab to see the pod logs.
-    <a class="glightbox" href="https://github.com/user-attachments/assets/ac49a5bb-bbf0-4ac1-9050-a88327185c18" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ac49a5bb-bbf0-4ac1-9050-a88327185c18"></a></p>
+<p>In the pod details page, click on the <strong>Logs</strong> <strong>(A)</strong> tab to see the pod logs.
+    <a class="glightbox" href="https://github.com/user-attachments/assets/9e03dd0f-a3c4-457a-b735-03a8cfce48a2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9e03dd0f-a3c4-457a-b735-03a8cfce48a2"></a></p>
 </li>
 <li>
 <p>In the log window, scroll upwards to see the name of the model against the attribute <strong>llm_load_print_meta: general.name</strong>.</p>
@@ -2398,11 +2398,13 @@ At the bottom-most layer, WCA is powered by IBM Granite code models, specificall
 <p>This verifies that we have indeed deployed IBM Granite code LLM.</p>
 </li>
 <li>
-<p>Let us access our model. As we did in Lab 1, head to <strong>Topology</strong> view, click on the <strong>Open URL</strong> icon of your application.
-    <a class="glightbox" href="https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f"></a></p>
+<p>Let us access our model. As we did in Lab 1, head to <strong>Topology</strong> <strong>(A)</strong> view, click on the <strong>Open URL</strong> <strong>(B)</strong> icon of your application.
+    <a class="glightbox" href="https://github.com/user-attachments/assets/40a959ed-e233-4597-b904-5ea4dd9eb96d" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/40a959ed-e233-4597-b904-5ea4dd9eb96d"></a></p>
 </li>
-<li>A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
-    <a class="glightbox" href="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53"></a></li>
+<li>
+<p>A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
+    <a class="glightbox" href="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53"></a></p>
+</li>
 <li>
 <p>Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
     <a class="glightbox" href="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/82196cf5-d4c2-459d-af7e-c24650f1f6ce"></a></p>
