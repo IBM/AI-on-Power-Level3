@@ -1472,24 +1472,28 @@ Determine which factors are most important for you and your organization.</p>
 </div>
 <h3 id="lab1-lab1-hands-on-guide-create-project">Create project<a class="headerlink" href="#lab1-lab1-hands-on-guide-create-project" title="Permanent link">¶</a></h3>
 <ol>
-<li>Go to OpenShift Administrator profile, click on <strong>Home</strong> -&gt; <strong>Projects</strong> and click <strong>Create Project</strong>.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/27a3b2e6-414b-4ec9-b0b1-be90e0b3858f"></a></li>
-<li>Enter a project name: <strong>lab1-demo</strong> and click <strong>Create</strong>.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6e6f471c-43e5-491b-8bcb-8700dbe4b320"></a></li>
+<li>
+<p>Go to OpenShift Administrator profile, click on <strong>Home</strong> <strong>(A)</strong> -&gt; <strong>Projects</strong> <strong>(B)</strong> and click <strong>Create Project</strong> <strong>(C)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/87c5fec4-e76d-4ca3-9845-77d25b8c7d46" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/87c5fec4-e76d-4ca3-9845-77d25b8c7d46"></a></p>
+</li>
+<li>
+<p>Enter a project name: <strong>lab1-demo</strong> <strong>(A)</strong> and click <strong>Create</strong> <strong>(B)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/6d1b6e5d-3cf6-4c3b-811a-6bd40a7a715e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6d1b6e5d-3cf6-4c3b-811a-6bd40a7a715e"></a></p>
+</li>
 </ol>
 <h3 id="lab1-lab1-hands-on-guide-setup-storage">Setup storage<a class="headerlink" href="#lab1-lab1-hands-on-guide-setup-storage" title="Permanent link">¶</a></h3>
 <p>Let us setup storage for this lab which is needed for storing the downloaded AI models. This environment comes with NFS (file storage) pre-configured. 
 In OpenShift, you first request for the storage (also known as PersistentVolumeClaim or PVC) and the actual storage (also known as PersistentVolume or PV) gets alloted based on your request and the storage availability in the storage pool (NFS in this case).</p>
 <ol>
-<li>Go to OpenShift Administrator profile, click on <strong>Storage</strong> -&gt; <strong>PersistentVolumeClaims</strong> and click <strong>Create PersistentVolumeClaim</strong>.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e8d43c1e-2174-4976-b02b-e05ebfe37cc2"></a></li>
-<li>In the resulting form, enter PVC name: <strong>model-storage</strong> and Size: <strong>20</strong> GB. Leave other fields as defaults and click <strong>Create</strong>.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/56931cb0-f697-4a11-8038-db15f451168c"></a></li>
+<li>Go to OpenShift Administrator profile, click on <strong>Storage</strong> <strong>(A)</strong> -&gt; <strong>PersistentVolumeClaims</strong> <strong>(B)</strong> and click <strong>Create PersistentVolumeClaim</strong> <strong>(C)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/23b17459-0bd3-4abd-8cd2-4bfd572efa0f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/23b17459-0bd3-4abd-8cd2-4bfd572efa0f"></a></li>
+<li>In the resulting form, enter PVC name: <strong>model-storage</strong> <strong>(A)</strong> and Size: <strong>20</strong> <strong>(B)</strong> GB. Leave other fields as defaults and click <strong>Create</strong> <strong>(C)</strong>.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/98571147-31a2-4e37-a063-c2d1c3929a64" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/98571147-31a2-4e37-a063-c2d1c3929a64"></a></li>
 <li>Note that it shows PVC status as bound, which means storage was allotted.
    <a class="glightbox" href="https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ea19ae1f-899d-4ff5-a5e0-f97df1e97ea2"></a></li>
 <li>
-<p>Navigate to <strong>Storage</strong> -&gt; <strong>PersistentVolumes</strong> and view the actual storage (PV) bound to your storage request (PVC = <strong>model-storage</strong>).
-   <a class="glightbox" href="https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/9fbc41be-f900-4052-8ac0-810edf6bd17e"></a></p>
+<p>Navigate to <strong>Storage</strong> <strong>(A)</strong> -&gt; <strong>PersistentVolumes</strong> <strong>(B)</strong> and view the actual storage (PV) bound to your storage request (PVC = <strong>model-storage</strong> <strong>(C)</strong>).
+   <a class="glightbox" href="https://github.com/user-attachments/assets/4209536d-a21a-42d0-b847-cc6ad15cd64d" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4209536d-a21a-42d0-b847-cc6ad15cd64d"></a></p>
 <p>This completes the storage setup.</p>
 </li>
 </ol>
@@ -1498,16 +1502,16 @@ In OpenShift, you first request for the storage (also known as PersistentVolumeC
 <p>We will use ConfigMap to store the model URL and model name, both of which will be used when we deploy the model. Using ConfigMap will help us switch to a different model very easily.</p>
 <ol>
 <li>
-<p>Navigate to <strong>Workloads</strong> -&gt; <strong>ConfigMaps</strong> and select <strong>lab1-demo</strong> as the active Project.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/72e44e26-9f7e-4d85-a67b-47752ba6c983" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/72e44e26-9f7e-4d85-a67b-47752ba6c983"></a></p>
+<p>Navigate to <strong>Workloads</strong> <strong>(A)</strong> -&gt; <strong>ConfigMaps</strong> <strong>(B)</strong> and select <strong>lab1-demo</strong> <strong>(C)</strong> as the active Project.
+   <a class="glightbox" href="https://github.com/user-attachments/assets/4b0f77a2-f5f5-4821-a073-bbc67ded39cf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4b0f77a2-f5f5-4821-a073-bbc67ded39cf"></a></p>
 </li>
 <li>
 <p>Click <strong>Create ConfigMap</strong>.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/14b9433f-35ab-4042-8c37-5302756b8b6e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/14b9433f-35ab-4042-8c37-5302756b8b6e"></a></p>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/793a95ad-953a-49d9-8cec-8c7e321947cd" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/793a95ad-953a-49d9-8cec-8c7e321947cd"></a></p>
 </li>
 <li>
 <p>In the resulting form, Ensure <strong>Form view</strong> option is selected.
-   <a class="glightbox" href="https://github.com/user-attachments/assets/5c156ef4-a314-47f5-9084-328a170f1d74" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5c156ef4-a314-47f5-9084-328a170f1d74"></a></p>
+   <a class="glightbox" href="https://github.com/user-attachments/assets/f0c6b9e0-f60d-4b92-b3c5-45252351e539" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f0c6b9e0-f60d-4b92-b3c5-45252351e539"></a></p>
 </li>
 <li>
 <p>Enter a name: <strong>model-params</strong>, and fill the Key and Value fields as below:</p>
