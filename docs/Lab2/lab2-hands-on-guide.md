@@ -27,11 +27,11 @@ In this lab, we will focus on the below:
 
 ### Create project
 
-1. Let's create a new OpenShift project that will hold all resources of this lan. Navigate to your browser window/tab which has the **Administrator** profile. Select **Home** -> **Projects** and click **Create Project**.
-   ![image](https://github.com/user-attachments/assets/ec396478-05eb-4fa9-8862-c49c9321f21e)
+1. Let's create a new OpenShift project that will hold all resources of this lan. Navigate to your browser window/tab which has the **Administrator** profile. Select **Home** **(A)** -> **Projects** **(B)** and click **Create Project** **(C)**.
+   ![image](https://github.com/user-attachments/assets/839bbfd3-e4a0-4c19-9223-c01e6ce60221)
 
-2. In the resulting form, enter **lab2-demo** as the project name and click **Create**.
-   ![image](https://github.com/user-attachments/assets/6ece11da-db12-4ddb-ae79-9334004ccdd1)
+2. In the resulting form, enter **lab2-demo** **(A)** as the project name and click **Create** **(B)**.
+   ![image](https://github.com/user-attachments/assets/4bec3979-3d79-445e-88ff-3318c60123ea)
 
 ### Deploy milvus
 
@@ -42,62 +42,62 @@ In this lab, we will focus on the below:
         Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli){target="_blank"} to ensure `oc` is authenticated with the cluster.
 
 3. Make sure you are in the home directory and then run the command below to clone the github repository. Then switch to the newly cloned repository directory.
-     - `cd`
-     - `git clone https://github.com/dpkshetty/bcn-lab-2084`
-     - `cd bcn-lab-2084/`
+     - `cd` **(A)**
+     - `git clone https://github.com/dpkshetty/bcn-lab-2084` **(B)**
+     - `cd bcn-lab-2084/` **(C)**
 
-       ![image](https://github.com/user-attachments/assets/87e39369-ebbc-4fbd-a130-214f04ee4212)
+       ![image](https://github.com/user-attachments/assets/138af434-6b94-48ef-998f-b5bbe8fc86dd)
      
-       ![image](https://github.com/user-attachments/assets/ba5c7a65-25f2-4073-878d-1fcd5d72030a)
+       ![image](https://github.com/user-attachments/assets/82c6187a-7163-4fe6-b6c6-c62a7e036bb2)
      
-       ![image](https://github.com/user-attachments/assets/65fecf4b-0328-4df4-b28a-fd255db495f5)
+       ![image](https://github.com/user-attachments/assets/bcb3f05c-5352-4f0f-92ff-8521d6857bfe)
 
-5. Make sure `oc` CLI is pointing to the **lab2-demo** project.
+5. Make sure `oc` CLI is pointing to the lab2-demo project.
 
      `oc project lab2-demo `   
      
-     ![image](https://github.com/user-attachments/assets/721a4e9d-81db-48e8-b85c-c6491e96a8a1)
+     ![image](https://github.com/user-attachments/assets/50330a50-d662-4967-83a3-86e5618fc1ce)
 
 7. Run the below set of commands to deploy milvus DB.
      
-     `cd Part2-RAG/milvus-deployment`
+     `cd Part2-RAG/milvus-deployment` **(A)**
 
-     `oc create configmap milvus-config --from-file=./config/milvus.yaml`
+     `oc create configmap milvus-config --from-file=./config/milvus.yaml` **(B)**
 
-     `oc apply -f .`
+     `oc apply -f .` **(C)**
 
-     `cd ..`
+     `cd ..` **(D)**
           
-     ![image](https://github.com/user-attachments/assets/0b632d95-3af0-4b48-a883-31085455370f)
+     ![image](https://github.com/user-attachments/assets/38e7a10e-427d-4f22-97a7-8b421870723d)
 
-8. Monitor deployment using the below command until all pods are in **Running** state. <br>
+8. Monitor deployment using the below command until all pods are in Running state. <br>
    Hit Ctrl-C on the keyboard to exit and come back to the shell prompt.
 
-     `oc get pods -w`
+     `oc get pods -w` **(A)**
 
-      ![image](https://github.com/user-attachments/assets/5289e0ef-3322-4206-9da3-ef833db0608e)
+      ![image](https://github.com/user-attachments/assets/67a1498b-25f2-4e19-be32-530fec0ea62a)
 
 ### Deploy jupyter notebook
 
 1. Run the below set of commands to deploy jupyter notebook (NB).<br>Ignore any warnings if seen.
      
-     `cd nb-deployment`
+     `cd nb-deployment` **(A)**
 
-     `oc apply -f .`
+     `oc apply -f .` **(B)**
      
-     ![image](https://github.com/user-attachments/assets/6868a6eb-bcc8-4a34-8ed0-172fd536feb9)
+     ![image](https://github.com/user-attachments/assets/e668c714-2559-4df5-a595-e5c9c02bef20)
 
 2. Verify the notebook pod is running using the command below. Hit Ctrl-C on keyboard to exit and return back to shell prompt.
    
-     `oc get pods --selector=app=cpu-notebook -w`
+     `oc get pods --selector=app=cpu-notebook -w` **(A)**
 
-     ![image](https://github.com/user-attachments/assets/3b7b1764-2135-4192-854e-0144068673b0)
+     ![image](https://github.com/user-attachments/assets/d188af80-225a-45ff-b28d-f37c5d257dbf)
 
 4. Once the notebook pod is deployed you should be able to access it using the link retrieved from the below command:
    
-     `oc get route cpu-notebook -o jsonpath='{.spec.host}'`
+     `oc get route cpu-notebook -o jsonpath='{.spec.host}'` **(A)**
 
-     ![image](https://github.com/user-attachments/assets/be511e8a-15e9-44af-8e40-6079cc266af6)
+     ![image](https://github.com/user-attachments/assets/5d89416b-ff39-49ba-aaec-1155df45b9c7)
 
      In my case, the URL was: <br>
        `cpu-notebook-lab2-demo.apps.p1279.cecc.ihost.com` <br>
@@ -114,28 +114,28 @@ In this lab, we will focus on the below:
 7. Now let's copy the jupyter NB (.ipynb file) present in the git repository to the NB pod. <br>
    In your `oc` CLI terminal window, navigate to the root of your git repository which has the **RAG.ipynb** file.
 
-     `cd /home/cecuser/bcn-lab-2084`
+     `cd /home/cecuser/bcn-lab-2084` **(A)**
 
-     ![image](https://github.com/user-attachments/assets/3e7774f6-18c3-49bd-b2ff-dc36740fc121)
+     ![image](https://github.com/user-attachments/assets/706f1bbe-cbcc-492b-b65f-ca3c9820181b)
 
 8. List pods and copy the name of the cpu-notebook pod.
 
-     `oc get pods`
+     `oc get pods` **(A)**
 
-     ![image](https://github.com/user-attachments/assets/d6ac1e0d-408a-45e5-9262-c5217d08dd35)
+     ![image](https://github.com/user-attachments/assets/b6cd888d-31b1-4212-9a2f-7911c481941d)
 
 9. Use **oc cp ...** command to copy the NB file from bastion server to **/tmp/notebooks/** directory of the NB pod.
 
-     `oc cp ./RAG.ipynb cpu-notebook:/tmp/notebooks/`
+     `oc cp ./RAG.ipynb cpu-notebook:/tmp/notebooks/` **(A)**
     
-     ![image](https://github.com/user-attachments/assets/fb351616-347f-489f-890a-258fc4bea196)
+     ![image](https://github.com/user-attachments/assets/bdfa2804-3a18-4b31-b47d-e3dd8345eea2)
 
-10. Go back to the jupyter NB application in your browser and hit refresh (F5 shortcut in keyboard). You should be able to see the **RAG.ipynb** file listed.
+10. Go back to the jupyter NB application in your browser and hit **refresh** (F5 shortcut in keyboard) **(A)**. You should be able to see the **RAG.ipynb** **(B)** file listed.
 
-      ![image](https://github.com/user-attachments/assets/e7e52a0c-a840-4a3d-b2ad-954040ced4ad)
+      ![image](https://github.com/user-attachments/assets/c0c44ba3-88d8-40b0-850d-f57a78f16e64)
 
-11. Double-click on the **RAG.ipynb** file and it should open up in the right pane of the browser.
+11. **Double-click** **(A)** on the **RAG.ipynb** file and it should open up in the right pane of the browser.
     
-      ![image](https://github.com/user-attachments/assets/e5e26a7c-33d7-4c9f-acaf-fce3290d6b3d)
+      ![image](https://github.com/user-attachments/assets/aebc53e3-6a93-4378-b3dd-6d9b6c7ec180)
 
 11. You're all set! Follow the instructions given in the NB to finish this lab.
