@@ -22,24 +22,24 @@ Make sure you have the following items ready:
     
     This lab assumes you have finished Lab 1. This lab uses the OpenShift resources deployed in Lab 1 to optimize the usage of TechZone resources and to avoid re-deploying the same resources and re-learning the same concepts already taught in Lab 1!
     
-1. In this lab, we will deploy IBM Granite code LLM which is available on Hugging Face (HF). Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** project. Click **Topology** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
-   ![image](https://github.com/user-attachments/assets/999accf3-e5b2-4a38-85d3-458ec024247c)
+1. In this lab, we will deploy IBM Granite code LLM which is available on Hugging Face (HF). Navigate to OpenShift developer profile window and ensure you are in **lab1-demo** **(A)** project. Click **Topology** **(B)** and ensure that your application is healthy and running (has a blue circle) before proceeding further.
+   ![image](https://github.com/user-attachments/assets/e64ca98b-4abc-4ba4-b483-57e38482073a)
 
-2. Select **ConfigMaps** and click **model-params**.
-   ![image](https://github.com/user-attachments/assets/c00aaf7f-caf5-4e95-8706-895ade37aee5)
+2. Select **ConfigMaps** **(A)** and click **model-params** **(B)**.
+   ![image](https://github.com/user-attachments/assets/59e35af8-0b8a-4c3a-a085-4d6e3d6841f1)
 
-3. Click on **Actions** -> **Edit ConfigMap**.
-   ![image](https://github.com/user-attachments/assets/e900c672-ee49-4f9d-94f2-f28bbe1aef20)
+3. Click on **Actions** **(A)** -> **Edit ConfigMap** **(B)**.
+   ![image](https://github.com/user-attachments/assets/687cce4c-6d96-4693-883b-432b1d3bcae2)
    
-5. In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**.
+5. In the resulting form, the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save** **(E)**.
    
-     - **Key**: MODEL_NAME
-     - **Value**: granite-8b-code-instruct.Q4_K_M.gguf
+     - **Key**: `MODEL_NAME` **(A)**
+     - **Value**: `granite-8b-code-instruct.Q4_K_M.gguf` **(B)**
      ---
-     - **Key**: MODEL_URL
-     - **Value**: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/resolve/main/granite-8b-code-instruct.Q4_K_M.gguf     
+     - **Key**: `MODEL_URL` **(C)**
+     - **Value**: `https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k-GGUF/resolve/main/granite-8b-code-instruct.Q4_K_M.gguf` **(D)**
      ---
-     ![image](https://github.com/user-attachments/assets/395d95b2-bd4f-4163-980a-536acf9c4877)
+     ![image](https://github.com/user-attachments/assets/ed94d17e-283e-4f90-9cf5-9b11c6a4adb1)
      ---
 
 6. Use the deployment resource to restart the pods.
@@ -48,14 +48,14 @@ Make sure you have the following items ready:
    
         The existing pod won't see the ConfigMap changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart automatically. It needs to be done manually.
       
-8. Navigate to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "**D lab1-demo**" in that pane which will then open up the deployment details view for lab1-demo deployment.
-   ![image](https://github.com/user-attachments/assets/c1c50473-0673-48e9-a2b8-54611fd67ead)
+8. Navigate to the deployment view. Click **Topology** **(A)**, then click "**D lab1-demo**" **(B)** part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click "**D lab1-demo**" **(C)** in that pane which will then open up the deployment details view for lab1-demo deployment.
+   ![image](https://github.com/user-attachments/assets/07715c25-5b84-44d4-8e74-a1a989581d80)
    
-9. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in re-deployment of the pod. This ensure the pod will now see the new ConfigMap changes.
-   ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
+9. Click **Actions** **(A)** and select **Restart rollout** **(B)**. This will restart the deployment which results in re-deployment of the pod. This ensure the pod will now see the new ConfigMap changes.
+   ![image](https://github.com/user-attachments/assets/bca10454-1bd3-4e7a-ad7d-e3340aaedc73)
    
-10. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to IBM Granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
-    ![image](https://github.com/user-attachments/assets/3eb442b4-08a5-4bec-8e24-c4f2e1b57926)
+10. Click on **Pods** **(A)** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to IBM Granite code model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+    ![image](https://github.com/user-attachments/assets/4299ccb0-9233-45f8-904e-9fdb4960ad12)
    
     !!! info "Model download will take time"
 
@@ -64,19 +64,21 @@ Make sure you have the following items ready:
 11. Provided the previous step completed without errors, you should see just 1 pod running.
     ![image](https://github.com/user-attachments/assets/32fb028f-fef6-4abe-996c-b1bdfbe80489)
 
-12. Let us verify that the model running is IBM Granite code LLM!. Click on the pod to enter the pod details view/page.
-    ![image](https://github.com/user-attachments/assets/74893247-6c4b-444f-9163-97ec3eb3e934)
+12. Let us verify that the model running is IBM Granite code LLM! Click on the pod name **(A)** to enter the pod details view/page.
+    ![image](https://github.com/user-attachments/assets/f7ae35e7-808e-4a92-bbad-804a5284fffa)
 
-13. In the pod details page, click on the Logs tab to see the pod logs.
-    ![image](https://github.com/user-attachments/assets/ac49a5bb-bbf0-4ac1-9050-a88327185c18)
+13. In the pod details page, click on the **Logs** **(A)** tab to see the pod logs.
+    ![image](https://github.com/user-attachments/assets/9e03dd0f-a3c4-457a-b735-03a8cfce48a2)
+
 14. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
     
     ![image](https://github.com/user-attachments/assets/a84291e2-c952-4710-a2cd-88caed8b4dd2)
 
     This verifies that we have indeed deployed IBM Granite code LLM.
 
-15. Let us access our model. As we did in Lab 1, head to **Topology** view, click on the **Open URL** icon of your application.
-    ![image](https://github.com/user-attachments/assets/d48c3a0e-9d52-4a24-8fbf-8776b38ead5f)
+15. Let us access our model. As we did in Lab 1, head to **Topology** **(A)** view, click on the **Open URL** **(B)** icon of your application.
+    ![image](https://github.com/user-attachments/assets/40a959ed-e233-4597-b904-5ea4dd9eb96d)
+
 16. A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
     ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
 17. Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
