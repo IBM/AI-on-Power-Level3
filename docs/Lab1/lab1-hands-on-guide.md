@@ -53,25 +53,25 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 6. In the resulting form, Ensure **Form view** option is selected.
    ![image](https://github.com/user-attachments/assets/f0c6b9e0-f60d-4b92-b3c5-45252351e539)
 
-8. Enter a name: **model-params**, and fill the Key and Value fields as below:
+8. Enter a name: **model-params** **(A)**, and fill the Key and Value fields as below:
    
-     - **Key**: `MODEL_NAME`
+     - **Key**: `MODEL_NAME` **(B)**
 
-     - **Value**: `tinyllama-1.1b-chat-v1.0.Q8_0.gguf`
+     - **Value**: `tinyllama-1.1b-chat-v1.0.Q8_0.gguf` **(C)**
    
-     Click **Add key/value** which will open up one more Key/Value box.
+     Click **Add key/value** **(D)** which will open up one more Key/Value box.
    
-     ![image](https://github.com/user-attachments/assets/68614a1f-7a47-425d-8bd4-ebd291b7ee32)
+     ![image](https://github.com/user-attachments/assets/be119bf2-f37d-45f8-b9df-c8d4d7045e63)
    
 9. In the newly created Key/Value box, enter the values as below:
 
-     - **Key**: `MODEL_URL`
+     - **Key**: `MODEL_URL` **(A)**
      
-     - **Value**: `https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf`
+     - **Value**: `https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf` **(B)**
      
-     Click **Create**.
+     Click **Create** **(C)**.
      
-     ![image](https://github.com/user-attachments/assets/24be3e90-eab3-4961-8f7c-03980c95721a)
+     ![image](https://github.com/user-attachments/assets/5abc809b-0f3b-4356-9429-2d5159a561e7)
 
      This completes the ConfigMap setup.
 
@@ -85,10 +85,10 @@ We will use ConfigMap to store the model URL and model name, both of which will 
    
     ![type:video](./_attachments/switch-to-lab1-demo-project.mp4)
 
-5. Click on **+Add** and select **Import YAML** option.
-   ![image](https://github.com/user-attachments/assets/1f49bdcb-bf92-420b-993f-509a52446462)
+5. Click on **+Add** **(A)** and select **Import YAML** **(B)** option.
+   ![image](https://github.com/user-attachments/assets/72e28c16-590c-4acd-9c29-5dc91bc031d7)
 
-6. In the resulting window, copy and paste the below deployment YAML into it and click **Create**.
+6. In the resulting window, copy and paste the below deployment YAML into it and click **Create** **(A)**.
    ``` yaml linenums="1"
     apiVersion: apps/v1
     kind: Deployment
@@ -137,7 +137,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
               persistentVolumeClaim:
                 claimName: model-storage
    ```
-    ![image](https://github.com/user-attachments/assets/84a47fac-c4a6-49bc-b69d-3b89266b4d61)
+    ![image](https://github.com/user-attachments/assets/35195937-4df3-4263-9d4a-755b9bd67fce)
 
 7. Here is a quick explanation of the deployment YAML.
 
@@ -159,17 +159,17 @@ We will use ConfigMap to store the model URL and model name, both of which will 
                 - By facilitating the efficient execution and management of machine learning models, runtimes are essential for operationalizing AI and machine learning solutions in production.   
             - **NOTE**: Container `llama-cpp` uses the same volume `llama-models` as initContainer for underlying storage and hence can access the model(s) downloaded by initContainer. **Lines 43-46** specifies the PVC (Persistent Volume Claim) `model-storage` used as the source of storage for the volume. Recall that we created this PVC at the beginning of this lab!
 
-7. You should land in the Deployment details window. Click on **Pods** tab and you should see the Pod erroring out. This is expected as the YAML references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
-   ![image](https://github.com/user-attachments/assets/e25f5f53-0aa7-4f81-a51b-b3dee3bb7cf9)
-8. Navigate to **Environment** tab, select **fetch-model-data** container and select **model-params** ConfigMap and click **Save**.
-    ![image](https://github.com/user-attachments/assets/0b42cb07-97a2-4f70-82a2-9abc9c6113aa)
+7. You should land in the Deployment details window. Click on **Pods** **(A)** tab and you should see the Pod erroring out. This is expected as the YAML references MODEL_URL and MODEL_NAME environment variables which we haven't supplied yet! Remember we do have those in ConfigMap, so we use inject that in the next step.
+   ![image](https://github.com/user-attachments/assets/d6032ff5-03ba-4c2f-b733-ffb8a83fdf30)
+8. Navigate to **Environment** **(A)** tab, select **fetch-model-data** **(B)** container and select **model-params** **(C)** ConfigMap and click **Save** **(D)**.
+    ![image](https://github.com/user-attachments/assets/ef491f57-4908-427d-bf8b-c7e4a20c5a4e)
 
     !!! info "About LLama and tinyLLama models"
     
         The ConfigMap currently points to the tinyLLaMa model. The LLaMA (Large Language Model Meta AI) model is a family of state-of-the-art large language models developed by Meta (formerly Facebook), specifically designed to perform various natural language processing tasks. TinyLLaMA is a compact variant of the LLaMA (Large Language Model Meta AI) model, designed for efficiency and accessibility, especially when deployed in smaller environments. Available via Hugging Face (HF), it focuses on reducing the size of large-scale language models while retaining strong performance across various natural language processing tasks.
     
 9. Switch back to **Pods** tab and you should see that a new pod has been launched by OpenShift as we changed the pod's environment, when we added ConfigMap.
-    ![image](https://github.com/user-attachments/assets/55ba8b7c-3760-45f8-813b-99b90e026daf)
+    ![image](https://github.com/user-attachments/assets/74c8a1f9-fa9d-42b8-a26b-f8ea873d1116)
 10. The new pod will download the model and then start it. Since the configmap points to tinyllama model, it will be downloaded from HuggingFace and then started. When that happens the pod's status will change to Running.
 
     !!! info "Model download will take time"
@@ -180,24 +180,24 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 
     **Congratulations!**, you have successfully deployed a LLM on Power10.
 
-11. Let's verify that the model running is tinyllama!. Click on the pod to enter the pod details view/page.
-    ![image](https://github.com/user-attachments/assets/b96d318e-f6e8-48ea-9b19-88ca2813d0ca)
-12. In the pod details page, click on the **Logs** tab to see the pod logs.
-    ![image](https://github.com/user-attachments/assets/d01b6b9e-b1d7-4f5a-8dd1-a2bd54882aff)
+11. Let's verify that the model running is tinyllama!. Click on the pod name to enter the pod details view/page.
+    ![image](https://github.com/user-attachments/assets/5a6e4078-9047-4d2f-ab84-942f938b46b7)
+12. In the pod details page, click on the **Logs** **(A)** tab to see the pod logs.
+    ![image](https://github.com/user-attachments/assets/c7bb75d5-6768-45fa-b51f-37fef4132218)
 13. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
     ![image](https://github.com/user-attachments/assets/89536022-644a-497c-9225-9a08d68de52a)
 
     This verifies that we have indeed deployed tinyllama.
      
-14. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile and click **Networking** -> **Services** and click **Create Service**.
+14. Let's access our model and interact with it. In OpenShift, you need to create a service and a route which generates the cluster internal and publicly accessible HTTP endpoints, respectively. To do that, navigate to the OpenShift Administrator profile and click **Networking** **(A)** -> **Services** **(B)** and click **Create Service** **(C)**.
      
     !!! note ""
       
         If you are switching browser window/tab, make sure you are in the **lab1-demo** project in the new window/tab.
   
-    ![image](https://github.com/user-attachments/assets/d901813f-96f5-4c91-a5d5-1455adafff09)
+    ![image](https://github.com/user-attachments/assets/a4f691e2-f597-42c8-951f-6872d02d7713)
 
-15. In the resulting Create Service YAML window, select all and delete everything. Then copy the below service YAML, paste it in the YAML window and click **Create**.
+15. In the resulting Create Service YAML window, select all and delete everything. Then copy the below service YAML, paste it in the YAML window and click **Create** **(A)**.
     ``` yaml linenums="1"
     apiVersion: v1
     kind: Service
@@ -215,7 +215,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
       selector:
         app: "lab1-demo"
     ```
-    ![image](https://github.com/user-attachments/assets/6e76ac2d-bf80-41c2-895b-53050d4cbbbf)
+    ![image](https://github.com/user-attachments/assets/c53a1eaf-57c7-4fcd-8148-b0ab9fba77e4)
 
 16. Here is a quick explanation of the Service YAML.
 
@@ -234,9 +234,10 @@ We will use ConfigMap to store the model URL and model name, both of which will 
 18. You should land in service details view/page. You can see the ClusterIP which is accessible from inside the cluster only.
     ![image](https://github.com/user-attachments/assets/5b8b3385-44a7-4dec-bbfa-f384c5f784fb)
 
-19. Navigate to **Networking** -> **Routes** and click **Create Route**.
-      ![image](https://github.com/user-attachments/assets/7240eef0-b4af-4fde-abed-faae0234e343)
-20. In the resulting Create Route window, select **YAML view** and clear everything from the YAML window. Copy the below YAML and paste it in the YAML window and click **Create**.
+19. Navigate to **Networking** **(A)** -> **Routes** **(B)** and click **Create Route** **(C)**.
+      ![image](https://github.com/user-attachments/assets/4bf9bb4f-b017-43fe-ae12-99db103d001f)
+
+20. In the resulting Create Route window, select **YAML view** **(A)** and clear everything from the YAML window. Copy the below YAML and paste it in the YAML window and click **Create** **(B)**.
     ``` yaml linenums="1"
     kind: Route
     apiVersion: route.openshift.io/v1
@@ -252,7 +253,7 @@ We will use ConfigMap to store the model URL and model name, both of which will 
       port:
         targetPort: lab1-port
     ```
-    ![image](https://github.com/user-attachments/assets/f100a3dc-1286-4c6f-bd60-b534f1e84090)
+    ![image](https://github.com/user-attachments/assets/9f313dfd-c1a3-4ec7-8ebe-b1e2595b8ae6)
 
 21. Here is a quick explanation of the Route YAML. In OpenShift, a Route exposes a service to external clients by mapping an external URL to an internal OpenShift service.
 
@@ -303,33 +304,33 @@ In this section, let's deploy IBM's granite model.
 
     The IBM Granite model family is designed as enterprise-grade AI models tailored for business applications. Granite models are available both as open-source models on platforms like Hugging Face and through IBM's watsonx.ai for more enterprise-specific needs.
 
-1. Navigate to your OpenShift developer profile window. Click **ConfigMaps**, then click **model-params**. This should open up the ConfigMap details page.
-   ![image](https://github.com/user-attachments/assets/a26e875b-02d0-438e-84f3-9ed86347e650)
-2. In the model-params ConfigMap details page, click **Action** and select **Edit ConfigMap**.
-   ![image](https://github.com/user-attachments/assets/a0d66be8-8ca3-4f18-b360-ee35a7843862)
-3. In the resulting form, edit the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save**.
+1. Navigate to your OpenShift developer profile window. Click **ConfigMaps** **(A)**, then click **model-params** **(B)**. This should open up the ConfigMap details page.
+   ![image](https://github.com/user-attachments/assets/3f611c0a-e4b0-47fc-90e5-3fbedce627f3)
+2. In the model-params ConfigMap details page, click **Action** **(A)** and select **Edit ConfigMap** **(B)**.
+   ![image](https://github.com/user-attachments/assets/2e7d312c-fb9c-44a4-ae39-9c958b72403e)
+3. In the resulting form, edit the key/value fields for MODEL_NAME and MODEL_URL as below and click **Save** **(E)**.
    
-     - **Key**: MODEL_NAME
-     - **Value**: granite-7b-lab.Q4_K_M.gguf
+     - **Key**: `MODEL_NAME` **(A)**
+     - **Value**: `granite-7b-lab.Q4_K_M.gguf` **(B)**
      - ---------
-     -  **Key**: MODEL_URL
-     -  **Value**: https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf
+     -  **Key**: `MODEL_URL` **(C)**
+     -  **Value**: `https://huggingface.co/RichardErkhov/instructlab_-_granite-7b-lab-gguf/resolve/main/granite-7b-lab.Q4_K_M.gguf` **(D)**
 
-    ![image](https://github.com/user-attachments/assets/7347b269-c597-4570-9d5d-509474212052)
+    ![image](https://github.com/user-attachments/assets/9173fc4e-7dde-4afd-917b-aec289c42b5b)
 
 4. The existing pod won't see the changes right away as changing values of a ConfigMap doesn't cause a deployment (and hence pod) to restart. It needs to be done manually.
    
-5. Let's go to the deployment view. Click **Topology**, then click "**D lab1-demo**" part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click **D lab1-demo** in that pane which will then open up the deployment details view for lab1-demo deployment.
+5. Let's go to the deployment view. Click **Topology** **(A)**, then click "**D lab1-demo**" **(B)** part of the application icon, which will open up the deployment details pane (on the right hand side of the browser window). Click **D lab1-demo** **(C)** in that pane which will then open up the deployment details view for lab1-demo deployment.
    
-    ![image](https://github.com/user-attachments/assets/ecbbca24-682c-4480-a989-7a72f7398958)
+    ![image](https://github.com/user-attachments/assets/26ab79ec-d0f2-4d58-a1d3-e744326b4b91)
    
-6. Click **Actions** and select **Restart rollout**. This will restart the deployment which results in redeployment of the pod.
+6. Click **Actions** **(A)** and select **Restart rollout** **(B)**. This will restart the deployment which results in redeployment of the pod.
    
-    ![image](https://github.com/user-attachments/assets/51476c1a-52a2-4fbe-ae28-9dca9348ac4f)
+    ![image](https://github.com/user-attachments/assets/b12bf560-6689-4002-8c34-2bb936ef5931)
    
-7. Click on **Pods** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
+7. Click on **Pods** **(A)** tab, where you will see a new pod instantiated. The new pod will download the model and then start it. Since the configmap points to granite model, it will be downloaded from HuggingFace and then started. When that happens the new pod's status will change to Running and the existing pod will be terminated.
     
-    ![image](https://github.com/user-attachments/assets/b80de8ad-04b0-414b-bc2c-247dd83b089b)
+    ![image](https://github.com/user-attachments/assets/5d1d9b22-dfcd-4c6a-91cf-fbfc4a8a3384)
 
     !!! info "Model download will take time"
 
@@ -339,13 +340,13 @@ In this section, let's deploy IBM's granite model.
     
     ![image](https://github.com/user-attachments/assets/854703df-2ca4-42ce-825c-30c49a94a050)
    
-9. Let us verify that the model running is IBM Granite. Click on the pod to enter the pod details view/page.
+9. Let us verify that the model running is IBM Granite. Click on the pod name **(A)** to enter the pod details view/page.
     
-    ![image](https://github.com/user-attachments/assets/8a50c71b-4490-4bfe-8aaf-eafa25fdc05f)
+    ![image](https://github.com/user-attachments/assets/4c7c0139-3920-413c-bb20-c8ddeeab6fa3)
     
-10. In the pod details page, click on the Logs tab to see the pod logs.
+10. In the pod details page, click on the **Logs** **(A)** tab to see the pod logs.
     
-    ![image](https://github.com/user-attachments/assets/bd5aa047-9b86-4996-abb5-28c1ec091d75)
+    ![image](https://github.com/user-attachments/assets/4bec6d4d-8dd3-4b5f-823b-99342ca633a3)
     
 11. In the log window, scroll upwards to see the name of the model against the attribute **llm_load_print_meta: general.name**.
     
@@ -353,16 +354,16 @@ In this section, let's deploy IBM's granite model.
 
     This verifies that we have indeed deployed IBM Granite (granite-7b-lab) model.   
 
-12. Let's access the model now. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the **Topology** view.
+12. Let's access the model now. As we did in the previous section of this lab, we need to find the external public endpoint. The beauty of OpenShift is that the endpoint remains same inspite of the pod being restarted. So either you can refresh the earlier page (if you have it opened in the browser) or follow the steps below to access the public URL of your application via the Topology view.
 
     !!! note "Multiple ways to access public URL of your application"
 
         If you are in Administrator profile, you can navigate to **Networking** -> **Routes** to access your route resource and click on the URL to open your application, as we did in the previous section of this lab where we deployed our first model. Alternatively, if you are in Developer profile, you can go to **Topology** view and access the URL of your application as well. Let's use that method here:
 
-    - In Developer profile window, click **Topology** and you should see the icon representing your deployed application.
-      ![image](https://github.com/user-attachments/assets/a34df273-e29b-44e0-9cf3-90e94d8fdafb)
-    - Click on the arrow (in top right corner of the icon) that says "Open URL".
-      ![image](https://github.com/user-attachments/assets/7366146b-cf82-4dc3-9327-d51aa5944778)
+    - In Developer profile window, click **Topology** **(A)** and you should see the icon representing your deployed application.
+      ![image](https://github.com/user-attachments/assets/4dd6037e-1bfd-49b6-b190-f0096aae28b4)
+    - Click on the arrow (in top right corner of the icon) **(A)** that says "Open URL".
+      ![image](https://github.com/user-attachments/assets/5b7ecd28-8491-4b37-b64d-629563c7ae82)
     - A new browser window/tab where you will be able to interact with your newly deployed LLM. You should see a screen like this:
       ![image](https://github.com/user-attachments/assets/2237409c-7160-471f-aafa-f0e1254c5a53)
     - Scroll all the way down to the input field "Say something..." where you can interact with the LLM. You can ask any question you like!
