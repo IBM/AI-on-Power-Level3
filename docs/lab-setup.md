@@ -1,10 +1,10 @@
-# Lab Setup
+# Lab setup
 
 ## Provisioning the environment
 
-This hands-on labs will be using the Red Hat OpenShift on Power10 on-premises environment which is optimized for AI workloads and hosted on IBM TechZone.
+This hands-on lab uses Red Hat OpenShift on Power10 on-premises environment which is optimized for AI workloads and hosted on IBM TechZone.
 
-Follow the steps below:
+Follow these steps:
 
 1. Open [this](https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power/environments){target="_blank"} TechZone collection and provision the environment named "OpenShift ready for AI on IBM Power10 (Container PaaS)" by clicking on **Reserve** **(A)** and submitting the resulting form (select **Education** as purpose)
    
