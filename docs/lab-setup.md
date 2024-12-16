@@ -38,7 +38,7 @@ Follow these steps:
      ![image](https://github.com/user-attachments/assets/68c271a0-0077-4cf7-9080-b031b2070cb6)
    
 3. This action opens a new browser tab or window and navigates to the Red Hat OpenShift console login page.
-      - If you encounter any security exception, navigate to the bottom of the browser page, accept the exception under Advanced and continue. This action is permissible in a lab or demo environment, as self-signed certificates are being used.
+      - If you encounter any security exception, navigate to the bottom of the browser page, accept the exception under Advanced and continue. This action is acceptable since this is a lab or demo environment and it uses self-signed certificates.
 4. Using the user account (cecuser) and password from your reservation details page, login by using the **htpasswd** **(A)** option.
      ![image](https://github.com/user-attachments/assets/61c1015c-41ab-4400-9b83-ad8f6e2cba10)
    
@@ -94,7 +94,7 @@ Login to the Red Hat OpenShift cluster by using the `oc` CLI. This login is need
      ![image](https://github.com/user-attachments/assets/52c8e57b-d507-4b48-9eb8-d3843fc9d3d4)
    
 3. A new browser window (or tab, depending on your browser setting) opens up.
-      - If you encounter any security exception, navigate to the bottom of the browser page, accept the exception under Advanced and continue. This action is acceptable since it is a lab or demo environment and that uses self-signed certificates.
+      - If you encounter any security exception, navigate to the bottom of the browser page, accept the exception under Advanced and continue. This action is acceptable since this is a lab or demo environment and it uses self-signed certificates.
 4. You are presented with another login screen. Click **htpasswd** **(A)** option
    ![image](https://github.com/user-attachments/assets/1fb91841-e243-4d56-a4f1-1068fb3058df)
 
