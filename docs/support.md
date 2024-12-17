@@ -10,7 +10,6 @@ For issues with provisioning the ITZ environment for this lab (for example, a fa
 
 - Email: <a href="mailto:techzone.help@ibm.com" target="_blank">techzone.help@ibm.com</a>
 
-For issues related to specific steps found in the demonstration guide after the ITZ environment is provisioned, contact the author(s):
+For issues related to specific steps found in the demonstration guide after the ITZ environment is provisioned, contact the author:
 
-- Email: <a href="mailto:deepakcshetty@in.ibm.com" target="_blank">Author</a>
-
+- Email: deepakcshetty@in.ibm.com
