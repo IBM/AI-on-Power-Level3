@@ -2099,38 +2099,38 @@ Before that, let us understand what RAG is, its advantages, key use cases, and h
 <li>LLM generates the domain-specific answer.</li>
 </ol></div></section><section class="print-page" id="lab2-lab2-hands-on-guide"><div><h1 id="deploy-retrieval-augmented-generation-rag-on-ibm-power10-lab-guide">Deploy Retrieval-Augmented Generation (RAG) on IBM Power10 - lab guide<a class="headerlink" href="#lab2-lab2-hands-on-guide-deploy-retrieval-augmented-generation-rag-on-ibm-power10-lab-guide" title="Permanent link">¶</a></h1>
 <h2 id="lab2-lab2-hands-on-guide-lab-ready-check">Lab-ready check<a class="headerlink" href="#lab2-lab2-hands-on-guide-lab-ready-check" title="Permanent link">¶</a></h2>
-<p>Make sure you have the following items ready:</p>
+<p>Make sure that you have the following items ready:</p>
 <ul>
-<li>In your browser, you have logged in as cecuser in the OpenShift console.</li>
-<li>In your terminal, you have logged into the bastion server and authenticated to the OpenShift cluster using the OpenShift CLI oc.</li>
+<li>In your browser, you are logged in as cecuser in the Red Hat OpenShift console.</li>
+<li>In your terminal, you are logged in to the bastion server and authenticated to the Red Hat OpenShift cluster by using the Red Hat OpenShift CLI oc.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Do not proceed further unless the items mentioned above are ready. Please refer to "Lab setup instructions" section (see left hand side menu) to setup your browser and terminal windows.</p>
+<p>Proceed only after the above-mentioned items are ready. Refer to "Lab setup instructions" section (see left side menu) to setup your browser and terminal windows.</p>
 </div>
 <h2 id="lab2-lab2-hands-on-guide-lab-guide">Lab guide<a class="headerlink" href="#lab2-lab2-hands-on-guide-lab-guide" title="Permanent link">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Image zoom functionality</p>
-<p>Feel free to click on the images in the lab guide below to a view larger image.</p>
+<p>Click the images in the following lab guide to view a larger image.</p>
 </div>
-<p>In this lab, we will focus on the below:</p>
+<p>This lab focuses on the following aspects:</p>
 <ul>
 <li>
 <p>Deploy a vector database (DB) - milvus.</p>
 </li>
 <li>
-<p>Deploy a jupyter notebook where we will implement RAG pattern and learn about:</p>
+<p>Deploy a Jupyter Notebook which implements the RAG pattern and learn about:</p>
 <ul>
 <li>Index the milvus DB with a sample PDF.</li>
 <li>Query the DB to get relevant documents for the question asked.</li>
-<li>Create a prompt based on the relevant documents gotten from the previous step and send it to the LLM (IBM Granite model we deployed in Lab1) to get a domain specific answer.</li>
+<li>Create a prompt based on the relevant documents that are gotten from the previous step and send it to the LLM (IBM Granite model that was deployed in Lab1) to get a domain-specific answer.</li>
 </ul>
 </li>
 </ul>
-<h3 id="lab2-lab2-hands-on-guide-create-project">Create project<a class="headerlink" href="#lab2-lab2-hands-on-guide-create-project" title="Permanent link">¶</a></h3>
+<h3 id="lab2-lab2-hands-on-guide-create-a-project">Create a project<a class="headerlink" href="#lab2-lab2-hands-on-guide-create-a-project" title="Permanent link">¶</a></h3>
 <ol>
 <li>
-<p>Let's create a new OpenShift project that will hold all resources of this lan. Navigate to your browser window/tab which has the <strong>Administrator</strong> profile. Select <strong>Home</strong> <strong>(A)</strong> -&gt; <strong>Projects</strong> <strong>(B)</strong> and click <strong>Create Project</strong> <strong>(C)</strong>.
+<p>Create a new Red Hat OpenShift project that holds all resources of this lab. Navigate to your browser window/tab which has the <strong>Administrator</strong> profile. Select <strong>Home</strong> <strong>(A)</strong> -&gt; <strong>Projects</strong> <strong>(B)</strong> and click <strong>Create Project</strong> <strong>(C)</strong>.
    <a class="glightbox" href="https://github.com/user-attachments/assets/839bbfd3-e4a0-4c19-9223-c01e6ce60221" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/839bbfd3-e4a0-4c19-9223-c01e6ce60221"></a></p>
 </li>
 <li>
@@ -2141,14 +2141,14 @@ Before that, let us understand what RAG is, its advantages, key use cases, and h
 <h3 id="lab2-lab2-hands-on-guide-deploy-milvus">Deploy milvus<a class="headerlink" href="#lab2-lab2-hands-on-guide-deploy-milvus" title="Permanent link">¶</a></h3>
 <ol>
 <li>
-<p>Navigate to the terminal window where we had setup <code>oc</code> CLI on the bastion node.</p>
+<p>Navigate to the terminal window where the <code>oc</code> CLI was set up on the bastion node.</p>
 <div class="admonition warning">
-<p class="admonition-title">Ensure <code>oc</code> CLI is authenticated with the cluster</p>
-<p>Run a simple command: <code>oc project</code> and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in <a href="https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli" target="_blank">lab instructions</a> to ensure <code>oc</code> is authenticated with the cluster.</p>
+<p class="admonition-title">Make sure that <code>oc</code> CLI is authenticated with the cluster</p>
+<p>Run a simple command: <code>oc project</code> and if it gives an error, you need reauthenticate with the cluster. Follow the steps mentioned in <a href="https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli" target="_blank">lab instructions</a> to make sure that <code>oc</code> is authenticated with the cluster.</p>
 </div>
 </li>
 <li>
-<p>Make sure you are in the home directory and then run the command below to clone the github repository. Then switch to the newly cloned repository directory.</p>
+<p>Make sure that you are in the home directory and then run the following command to clone the GitHub repository. Then switch to the newly cloned repository directory.</p>
 <ul>
 <li><code>cd</code> <strong>(A)</strong></li>
 <li><code>git clone https://github.com/dpkshetty/bcn-lab-2084</code> <strong>(B)</strong></li>
@@ -2164,7 +2164,7 @@ Before that, let us understand what RAG is, its advantages, key use cases, and h
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/50330a50-d662-4967-83a3-86e5618fc1ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/50330a50-d662-4967-83a3-86e5618fc1ce"></a></p>
 </li>
 <li>
-<p>Run the below set of commands to deploy milvus DB.</p>
+<p>Run the following set of commands to deploy milvus DB.</p>
 <p><code>cd Part2-RAG/milvus-deployment</code> <strong>(A)</strong></p>
 <p><code>oc create configmap milvus-config --from-file=./config/milvus.yaml</code> <strong>(B)</strong></p>
 <p><code>oc apply -f .</code> <strong>(C)</strong></p>
@@ -2172,44 +2172,44 @@ Before that, let us understand what RAG is, its advantages, key use cases, and h
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/38e7a10e-427d-4f22-97a7-8b421870723d" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/38e7a10e-427d-4f22-97a7-8b421870723d"></a></p>
 </li>
 <li>
-<p>Monitor deployment using the below command until all pods are in Running state. <br>
-   Hit Ctrl-C on the keyboard to exit and come back to the shell prompt.</p>
+<p>Monitor deployment by using the following command until all pods are in Running state. <br>
+   Press Ctrl-C on the keyboard to exit and come back to the shell prompt.</p>
 <p><code>oc get pods -w</code> <strong>(A)</strong></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/67a1498b-25f2-4e19-be32-530fec0ea62a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/67a1498b-25f2-4e19-be32-530fec0ea62a"></a></p>
 </li>
 </ol>
-<h3 id="lab2-lab2-hands-on-guide-deploy-jupyter-notebook">Deploy jupyter notebook<a class="headerlink" href="#lab2-lab2-hands-on-guide-deploy-jupyter-notebook" title="Permanent link">¶</a></h3>
+<h3 id="lab2-lab2-hands-on-guide-deploy-jupyter-notebook">Deploy Jupyter Notebook<a class="headerlink" href="#lab2-lab2-hands-on-guide-deploy-jupyter-notebook" title="Permanent link">¶</a></h3>
 <ol>
 <li>
-<p>Run the below set of commands to deploy jupyter notebook (NB).<br>Ignore any warnings if seen.</p>
+<p>Run the following set of commands to deploy a Jupyter Notebook (NB).<br>Ignore any warnings if seen.</p>
 <p><code>cd nb-deployment</code> <strong>(A)</strong></p>
 <p><code>oc apply -f .</code> <strong>(B)</strong></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/e668c714-2559-4df5-a595-e5c9c02bef20" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e668c714-2559-4df5-a595-e5c9c02bef20"></a></p>
 </li>
 <li>
-<p>Verify the notebook pod is running using the command below. Hit Ctrl-C on keyboard to exit and return back to shell prompt.</p>
+<p>Verify that the notebook pod is running by using the following command. Press Ctrl-C on the keyboard to exit and return back to the shell prompt.</p>
 <p><code>oc get pods --selector=app=cpu-notebook -w</code> <strong>(A)</strong></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/d188af80-225a-45ff-b28d-f37c5d257dbf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d188af80-225a-45ff-b28d-f37c5d257dbf"></a></p>
 </li>
 <li>
-<p>Once the notebook pod is deployed you should be able to access it using the link retrieved from the below command:</p>
+<p>Once the notebook pod is deployed, you are able to access it using the link retrieved from the following command:</p>
 <p><code>oc get route cpu-notebook -o jsonpath='{.spec.host}'</code> <strong>(A)</strong></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/5d89416b-ff39-49ba-aaec-1155df45b9c7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/5d89416b-ff39-49ba-aaec-1155df45b9c7"></a></p>
-<p>In my case, the URL was: <br>
+<p>In this case, the URL was: <br>
    <code>cpu-notebook-lab2-demo.apps.p1279.cecc.ihost.com</code> <br>
  but yours can be different! <br></p>
 <div class="admonition note">
-<p class="admonition-title">Alternate way to get the jupyter NB URL</p>
-<p>You can also goto OpenShift <strong>Administrator</strong> profile console window in your browser, navigate to <strong>Networking</strong> -&gt; <strong>Routes</strong>, select <strong>cpu-notebook</strong> route and click on the URL mentioned under <strong>Location</strong> field.</p>
+<p class="admonition-title">Alternative way to get the Jupyter NB URL</p>
+<p>You can goto the Red Hat OpenShift <strong>Administrator</strong> profile console window in your browser, navigate to <strong>Networking</strong> -&gt; <strong>Routes</strong>, select <strong>cpu-notebook</strong> route, and click the URL mentioned under <strong>Location</strong> field.</p>
 </div>
 </li>
 <li>
-<p>Copy and paste the URL in the browser. You should see the jupyter screen as below:
+<p>Copy and paste the URL in the browser. You can see the Jupyter screen as shown in the following picture:
     <a class="glightbox" href="https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab"></a></p>
 </li>
 <li>
-<p>Now let's copy the jupyter NB (.ipynb file) present in the git repository to the NB pod. <br>
-   In your <code>oc</code> CLI terminal window, navigate to the root of your git repository which has the <strong>RAG.ipynb</strong> file.</p>
+<p>Copy the Jupyter NB (.ipynb file) present in the git repository to the NB pod. <br>
+   In the <code>oc</code> CLI terminal window, navigate to the root of your git repository which has the <strong>RAG.ipynb</strong> file.</p>
 <p><code>cd /home/cecuser/bcn-lab-2084</code> <strong>(A)</strong></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/706f1bbe-cbcc-492b-b65f-ca3c9820181b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/706f1bbe-cbcc-492b-b65f-ca3c9820181b"></a></p>
 </li>
@@ -2224,11 +2224,11 @@ Before that, let us understand what RAG is, its advantages, key use cases, and h
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/bdfa2804-3a18-4b31-b47d-e3dd8345eea2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/bdfa2804-3a18-4b31-b47d-e3dd8345eea2"></a></p>
 </li>
 <li>
-<p>Go back to the jupyter NB application in your browser and hit <strong>refresh</strong> (F5 shortcut in keyboard) <strong>(A)</strong>. You should be able to see the <strong>RAG.ipynb</strong> <strong>(B)</strong> file listed.</p>
+<p>Go back to the Jupyter NB application in your browser and press <strong>refresh</strong> (F5 shortcut in keyboard) <strong>(A)</strong>. You can see the <strong>RAG.ipynb</strong> <strong>(B)</strong> file listed.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/c0c44ba3-88d8-40b0-850d-f57a78f16e64" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/c0c44ba3-88d8-40b0-850d-f57a78f16e64"></a></p>
 </li>
 <li>
-<p><strong>Double-click</strong> <strong>(A)</strong> on the <strong>RAG.ipynb</strong> file and it should open up in the right pane of the browser.</p>
+<p><strong>Double-click</strong> <strong>(A)</strong> on the <strong>RAG.ipynb</strong> file and it opens up in the right pane of the browser.</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/aebc53e3-6a93-4378-b3dd-6d9b6c7ec180" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/aebc53e3-6a93-4378-b3dd-6d9b6c7ec180"></a></p>
 </li>
 <li>
