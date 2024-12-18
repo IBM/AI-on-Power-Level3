@@ -2,32 +2,32 @@
 
 ## Lab-ready check
 
-Make sure you have the following items ready:
+Make sure that you have the following items ready:
 
-  - In your browser, you have logged in as cecuser in the OpenShift console.
-  - In your terminal, you have logged into the bastion server and authenticated to the OpenShift cluster using the OpenShift CLI oc.
+  - In your browser, you are logged in as cecuser in the Red Hat OpenShift console.
+  - In your terminal, you are logged in to the bastion server and authenticated to the Red Hat OpenShift cluster by using the Red Hat OpenShift CLI oc.
 
 !!! warning "Warning"
-    Do not proceed further unless the items mentioned above are ready. Please refer to "Lab setup instructions" section (see left hand side menu) to setup your browser and terminal windows.
+    Proceed only after the above-mentioned items are ready. Refer to "Lab setup instructions" section (see left side menu) to setup your browser and terminal windows.
 
 ## Lab guide
 
 !!! note "Image zoom functionality"
 
-    Feel free to click on the images in the lab guide below to a view larger image.
+    Click the images in the following lab guide to view a larger image.
 
-In this lab, we will focus on the below:
+This lab focuses on the following aspects:
 
   - Deploy a vector database (DB) - milvus.
     
-  - Deploy a jupyter notebook where we will implement RAG pattern and learn about:
+  - Deploy a Jupyter Notebook which implements the RAG pattern and learn about:
       - Index the milvus DB with a sample PDF.
       - Query the DB to get relevant documents for the question asked.
-      - Create a prompt based on the relevant documents gotten from the previous step and send it to the LLM (IBM Granite model we deployed in Lab1) to get a domain specific answer.
+      - Create a prompt based on the relevant documents that are gotten from the previous step and send it to the LLM (IBM Granite model that was deployed in Lab1) to get a domain-specific answer.
 
-### Create project
+### Create a project
 
-1. Let's create a new OpenShift project that will hold all resources of this lan. Navigate to your browser window/tab which has the **Administrator** profile. Select **Home** **(A)** -> **Projects** **(B)** and click **Create Project** **(C)**.
+1. Create a new Red Hat OpenShift project that holds all resources of this lab. Navigate to your browser window/tab which has the **Administrator** profile. Select **Home** **(A)** -> **Projects** **(B)** and click **Create Project** **(C)**.
    ![image](https://github.com/user-attachments/assets/839bbfd3-e4a0-4c19-9223-c01e6ce60221)
 
 2. In the resulting form, enter **lab2-demo** **(A)** as the project name and click **Create** **(B)**.
@@ -35,13 +35,13 @@ In this lab, we will focus on the below:
 
 ### Deploy milvus
 
-1. Navigate to the terminal window where we had setup `oc` CLI on the bastion node.
+1. Navigate to the terminal window where the `oc` CLI was set up on the bastion node.
 
-    !!! warning "Ensure `oc` CLI is authenticated with the cluster"
+    !!! warning "Make sure that `oc` CLI is authenticated with the cluster"
 
-        Run a simple command: `oc project` and if it throws error you need re-authenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli){target="_blank"} to ensure `oc` is authenticated with the cluster.
+        Run a simple command: `oc project` and if it gives an error, you need reauthenticate with the cluster. Follow the steps mentioned in [lab instructions](https://ibm.github.io/AI-on-Power-Level3/lab-setup/#logging-in-to-openshift-cluster-using-oc-cli){target="_blank"} to make sure that `oc` is authenticated with the cluster.
 
-3. Make sure you are in the home directory and then run the command below to clone the github repository. Then switch to the newly cloned repository directory.
+3. Make sure that you are in the home directory and then run the following command to clone the GitHub repository. Then switch to the newly cloned repository directory.
      - `cd` **(A)**
      - `git clone https://github.com/dpkshetty/bcn-lab-2084` **(B)**
      - `cd bcn-lab-2084/` **(C)**
@@ -58,7 +58,7 @@ In this lab, we will focus on the below:
      
      ![image](https://github.com/user-attachments/assets/50330a50-d662-4967-83a3-86e5618fc1ce)
 
-7. Run the below set of commands to deploy milvus DB.
+7. Run the following set of commands to deploy milvus DB.
      
      `cd Part2-RAG/milvus-deployment` **(A)**
 
@@ -70,16 +70,16 @@ In this lab, we will focus on the below:
           
      ![image](https://github.com/user-attachments/assets/38e7a10e-427d-4f22-97a7-8b421870723d)
 
-8. Monitor deployment using the below command until all pods are in Running state. <br>
-   Hit Ctrl-C on the keyboard to exit and come back to the shell prompt.
+8. Monitor deployment by using the following command until all pods are in Running state. <br>
+   Press Ctrl-C on the keyboard to exit and come back to the shell prompt.
 
      `oc get pods -w` **(A)**
 
       ![image](https://github.com/user-attachments/assets/67a1498b-25f2-4e19-be32-530fec0ea62a)
 
-### Deploy jupyter notebook
+### Deploy Jupyter Notebook
 
-1. Run the below set of commands to deploy jupyter notebook (NB).<br>Ignore any warnings if seen.
+1. Run the following set of commands to deploy a Jupyter Notebook (NB).<br>Ignore any warnings if seen.
      
      `cd nb-deployment` **(A)**
 
@@ -87,32 +87,32 @@ In this lab, we will focus on the below:
      
      ![image](https://github.com/user-attachments/assets/e668c714-2559-4df5-a595-e5c9c02bef20)
 
-2. Verify the notebook pod is running using the command below. Hit Ctrl-C on keyboard to exit and return back to shell prompt.
+2. Verify that the notebook pod is running by using the following command. Press Ctrl-C on the keyboard to exit and return back to the shell prompt.
    
      `oc get pods --selector=app=cpu-notebook -w` **(A)**
 
      ![image](https://github.com/user-attachments/assets/d188af80-225a-45ff-b28d-f37c5d257dbf)
 
-4. Once the notebook pod is deployed you should be able to access it using the link retrieved from the below command:
+4. Once the notebook pod is deployed, you are able to access it using the link retrieved from the following command:
    
      `oc get route cpu-notebook -o jsonpath='{.spec.host}'` **(A)**
 
      ![image](https://github.com/user-attachments/assets/5d89416b-ff39-49ba-aaec-1155df45b9c7)
 
-     In my case, the URL was: <br>
+     In this case, the URL was: <br>
        `cpu-notebook-lab2-demo.apps.p1279.cecc.ihost.com` <br>
      but yours can be different! <br>
 
 
-    !!! note "Alternate way to get the jupyter NB URL"
+    !!! note "Alternative way to get the Jupyter NB URL"
 
-        You can also goto OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -> **Routes**, select **cpu-notebook** route and click on the URL mentioned under **Location** field.
+        You can goto the Red Hat OpenShift **Administrator** profile console window in your browser, navigate to **Networking** -> **Routes**, select **cpu-notebook** route, and click the URL mentioned under **Location** field.
 
-6. Copy and paste the URL in the browser. You should see the jupyter screen as below:
+6. Copy and paste the URL in the browser. You can see the Jupyter screen as shown in the following picture:
     ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
 
-7. Now let's copy the jupyter NB (.ipynb file) present in the git repository to the NB pod. <br>
-   In your `oc` CLI terminal window, navigate to the root of your git repository which has the **RAG.ipynb** file.
+7. Copy the Jupyter NB (.ipynb file) present in the git repository to the NB pod. <br>
+   In the `oc` CLI terminal window, navigate to the root of your git repository which has the **RAG.ipynb** file.
 
      `cd /home/cecuser/bcn-lab-2084` **(A)**
 
@@ -130,11 +130,11 @@ In this lab, we will focus on the below:
     
      ![image](https://github.com/user-attachments/assets/bdfa2804-3a18-4b31-b47d-e3dd8345eea2)
 
-10. Go back to the jupyter NB application in your browser and hit **refresh** (F5 shortcut in keyboard) **(A)**. You should be able to see the **RAG.ipynb** **(B)** file listed.
+10. Go back to the Jupyter NB application in your browser and press **refresh** (F5 shortcut in keyboard) **(A)**. You can see the **RAG.ipynb** **(B)** file listed.
 
       ![image](https://github.com/user-attachments/assets/c0c44ba3-88d8-40b0-850d-f57a78f16e64)
 
-11. **Double-click** **(A)** on the **RAG.ipynb** file and it should open up in the right pane of the browser.
+11. **Double-click** **(A)** on the **RAG.ipynb** file and it opens up in the right pane of the browser.
     
       ![image](https://github.com/user-attachments/assets/aebc53e3-6a93-4378-b3dd-6d9b6c7ec180)
 
