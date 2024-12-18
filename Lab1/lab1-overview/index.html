@@ -850,29 +850,29 @@
                   
 
 
-<div><h1 id="deploy-a-large-language-model-llm-on-ibm-power10-lab-education">Deploy a Large Language Model (LLM) on IBM Power10 - Lab Education<a class="headerlink" href="#deploy-a-large-language-model-llm-on-ibm-power10-lab-education" title="Permanent link">¶</a></h1>
-<p>Goal of this lab is to showcase the basics (and the ease) of deploying a LLM (also known as foundation models) on Power and how easy it is to switch to a different LLM.
-But before we do that, let's understand the ecosystem around LLMs (also known as foundation models or Generative AI) in the context of IBM Power.</p>
-<p>In this lab, we will deploy 2 LLMs from <a href="https://huggingface.co/" target="_blank">Hugging Face (HF)</a> on IBM Power10 using the on-premises lab environment that has been provisioned.</p>
+<div><h1 id="deploy-a-large-language-model-llm-on-ibm-power10-lab-education">Deploy a large language model (LLM) on IBM Power10 - Lab Education<a class="headerlink" href="#deploy-a-large-language-model-llm-on-ibm-power10-lab-education" title="Permanent link">¶</a></h1>
+<p>The goal of this lab is to showcase the basics (and the ease) of deploying an LLM (also known as foundation models) on Power and how easy it is to switch to a different LLM.
+Before proceeding, it is important to understand the ecosystem around LLMs (also known as foundation models or generative AI) in the context of IBM Power.</p>
+<p>This lab involves deploying two LLMs from <a href="https://huggingface.co/" target="_blank">Hugging Face (HF)</a> on IBM Power10 within the provisioned on-premises lab environment.</p>
 <h2 id="what-is-hugging-face">What is Hugging Face?<a class="headerlink" href="#what-is-hugging-face" title="Permanent link">¶</a></h2>
-<p>Hugging Face is an AI company that built an incredibly popular AI community around open source libraries, models, and data sets.
+<p>Hugging Face is an AI company that built an incredibly popular AI community around open source libraries, models, and datasets.
 It's an open source community with a large collection of AI models and datasets that are available for sharing and collaboration.
-The Hugging Face hub now hosts more than 950K models and over 210K data sets, and those numbers are growing quickly.</p>
+The Hugging Face hub now hosts more than 950 K models and over 210 K datasets, and those numbers are growing quickly.</p>
 <div class="admonition note">
 <p class="admonition-title">What is Hugging Face?</p>
-<p>Hugging Face is an AI company that has become a major hub for Natural Language Processing (NLP) and Machine Learning (ML) tools. It is widely known for its open-source library, Transformers, and its collaborative platform, which provides a vast collection of pre-trained models and datasets. Hugging Face has made it easy for developers, researchers, and businesses to access, fine-tune, and deploy state-of-the-art machine learning models, especially those related to NLP tasks like text classification, translation, summarization, and more.</p>
+<p>Hugging Face is an AI company that serves as a major hub for Natural Language Processing (NLP) and machine learning (ML) tools. It is widely known for its open source library, Transformers, and its collaborative platform, which provides a vast collection of pre-trained models and datasets. Hugging Face simplifies access, fine-tuning, and deployment of state-of-the-art machine learning models for developers, researchers, and businesses, particularly for NLP tasks such as text classification, translation, summarization, and more.</p>
 </div>
-<p>We use HF to access LLMs in this lab as it has a vast collection of pre-trained models which are hosted publicly and can be accessed for free.</p>
+<p>HF is used to access LLMs in this lab due to its extensive collection of publicly hosted pre-trained models that are available for free.</p>
 <h2 id="what-is-ibm-watsonx">What is IBM watsonx?<a class="headerlink" href="#what-is-ibm-watsonx" title="Permanent link">¶</a></h2>
-<p>Enterprise clients of IBM will use the <a href="https://www.ibm.com/watsonx" target="_blank">IBM watsonx platform</a>, an enterprise-ready AI and data platform.
+<p>Enterprise clients of IBM use <a href="https://www.ibm.com/watsonx" target="_blank">IBM watsonx platform</a>, an enterprise-ready AI, and data platform.
 IBM watsonx is designed for the enterprise and is targeted for business domains, empowering value creators to transform business applications into AI-first applications.</p>
 <div class="admonition note">
 <p class="admonition-title">What is IBM watsonx?</p>
-<p>IBM watsonx is IBM’s next-generation AI and data platform, designed to help enterprises build, train, fine-tune, and deploy large-scale AI models efficiently. IBM watsonx enables businesses to harness the power of artificial intelligence and machine learning (AI/ML) for various tasks like generative AI, predictive analytics, and decision-making. It integrates advanced capabilities for handling large language models (LLMs), machine learning workflows, and AI governance.</p>
+<p>IBM watsonx is IBM’s next-generation AI and data platform, which is designed to help enterprises build, train, fine-tune, and deploy large-scale AI models efficiently. IBM watsonx enables businesses to harness the power of artificial intelligence and machine learning (AI/ML) for various tasks like generative AI, predictive analytics, and decision-making. It integrates advanced capabilities for handling large language models (LLMs), machine learning workflows, and AI governance.</p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">IBM watsonx support on IBM Power</p>
-<p><strong>NOTE</strong>: At the time of writing, IBM watsonx is not yet available to run on IBM Power systems. However, the LLMs that support its functionality are fully compatible with IBM Power. Clients can leverage foundation models, including IBM-developed and open-source options, to integrate and utilize (gen)AI capabilities within their on-premises applications running on IBM Power. This course's labs demonstrate the use of such LLMs.</p>
+<p><strong>NOTE</strong>: At the time of writing, IBM watsonx is not yet available to run on IBM Power Systems. However, the LLMs that support its functions are fully compatible with IBM Power. Clients can leverage foundation models, including IBM-developed and open source options, to integrate and use (gen)AI capabilities within their on-premises applications running on IBM Power. This course's labs demonstrate the use of such LLMs.</p>
 </div>
 <h2 id="ibm-watsonx-vs-hugging-face">IBM watsonx Vs Hugging Face<a class="headerlink" href="#ibm-watsonx-vs-hugging-face" title="Permanent link">¶</a></h2>
 <p>IBM watsonx and Hugging Face both offer AI tools, but they serve different purposes:</p>
@@ -881,33 +881,38 @@ IBM watsonx is designed for the enterprise and is targeted for business domains,
 <p><strong>IBM watsonx</strong>: An enterprise-grade AI platform designed for large-scale AI model training, fine-tuning, and deployment. It focuses on governance, compliance, and custom AI models for business use, offering robust tools for data management and AI governance. Ideal for enterprises needing secure, scalable AI with industry-specific solutions.</p>
 </li>
 <li>
-<p><strong>Hugging Face</strong>: A community-driven platform offering pre-trained models (especially in NLP) and datasets for rapid experimentation and development. It's known for its open-source library and easy access to state-of-the-art models, making it great for research, startups, and developers.</p>
+<p><strong>Hugging Face</strong>: A community-driven platform offering pre-trained models (especially in NLP) and datasets for rapid experimentation and development. It is known for its open source library and easy access to state-of-the-art models, making it great for research, startups, and developers.</p>
 </li>
 </ul>
 <p>In essence, IBM watsonx focuses on enterprise-grade AI with strong governance and scalability, while Hugging Face is designed for flexible, community-driven AI development with a focus on rapid prototyping and open access to pre-trained models.</p>
 <h2 id="ibm-watsonx-and-hugging-face">IBM watsonx and Hugging Face<a class="headerlink" href="#ibm-watsonx-and-hugging-face" title="Permanent link">¶</a></h2>
-<p>With IBM watsonx, clients can run not just IBM-trained foundation models, but also open source models and models from Hugging Face as well.</p>
+<p>With IBM watsonx, clients can run not only IBM-trained foundation models, but also open source models and models from Hugging Face.</p>
 <p>IBM watsonx and Hugging Face can work together by combining IBM's enterprise AI capabilities with Hugging Face's vast collection of pre-trained models and tools for rapid AI development:</p>
 <ul>
-<li><strong>Model Access</strong>: IBM watsonx users can leverage Hugging Face's pre-trained models from its model hub to fine-tune or deploy in enterprise environments using watsonx’s scalable infrastructure.</li>
+<li><strong>Model Access</strong>: IBM watsonx users can leverage Hugging Face's pre-trained models from its model hub to fine-tune or deploy in enterprise environments by using watsonx’s scalable infrastructure.</li>
 <li><strong>Fine-Tuning and Customization</strong>: Businesses can use Hugging Face models in watsonx to fine-tune them with proprietary data while benefiting from watsonx’s AI governance and compliance tools.</li>
 <li><strong>Deployment</strong>: Hugging Face models can be integrated into IBM watsonx to deploy at scale on hybrid cloud or on-premises environments, ensuring enterprise-level security and performance.</li>
 </ul>
 <p>Together, Hugging Face provides the models, and watsonx offers the enterprise-ready infrastructure for secure, large-scale, compliant deployment.
 Read <a href="https://developer.ibm.com/blogs/awb-hugging-face-and-ibm-working-together-in-open-source/" target="_blank">this blog</a> to understand more about how IBM and Hugging Face are working to bring open source communities together for enterprise AI.</p>
 <h2 id="ai-and-watsonx-with-ibm-power">AI and watsonx with IBM Power<a class="headerlink" href="#ai-and-watsonx-with-ibm-power" title="Permanent link">¶</a></h2>
-<p>Here is a quick 1-slider on what you can do with AI and watsonx on IBM Power, today.
+<p>This 1-slide overview highlights the capabilities of AI and watsonx on IBM Power available today.
 <a class="glightbox" href="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/f3e6a66d-e418-4e3c-8315-08e125ad8149"></a></p>
 <p>Clients can get started with AI and watsonx with IBM Power today. 
-IBM has made it simple by aligning the common use cases around 4 key areas that we see within our pilots and client activations.</p>
+IBM simplifies the process by aligning common use cases with four key areas that are observed in pilots and client activations.</p>
 <ul>
-<li><strong>Pattern 1</strong>: Securely tune, deploy and manage foundation models. When it comes to task-specific use cases, it is a good idea to work with large open-source models in your own workspace that are under your control. Hugging Face is a large repository with over 950K pre-trained ML models and a platform where the AI ecosystem collaborates on models, datasets and applications. Download any model from Hugging Face and securely deploy at scale on IBM Power. Then, use best-of-breed software to help you tune, deploy and manage as many models as you need. Some examples of what enterprises can use this capability for: Customer service, knowledge workers to augment staff and fraud reporting.
- </li>
-<li><strong>Pattern 2</strong>: There are many new and existing business apps that are using foundation models integrated into the workflows. Deploy your foundation models anywhere, on Power, x86, cloud, and use the watsonx.ai software development kit (SDK) available in Python and embed directly into applications. On Power, enterprises can do this quickly so that services can be released to clients faster on a resilient 24/7 environment. Some examples of clients can embed AI into apps are generating the first draft of reports, citizen services for government end-clients and knowledge management.
- </li>
-<li><strong>Pattern 3</strong>: The ecosystem is important to enterprises that have long-standing investments in software that drives their core business workflows. Consume watsonx services from clients customized ecosystem apps. Enterprises can generate code for Ansible playbooks for IBM i or AIX to enhance the Ansible IT management experience. Additionally, SAP applications can be embedded with watsonx services within the SAP ABAP (Advanced Business Application Programming) environments. These custom apps help clients deliver services much faster while taking advantage of existing and familiar investments, making this an attractive proposition for many. Some example use cases include asset management, code generation, accounting automation. 
- </li>
-<li><strong>Pattern 4</strong>: Lastly, we are bringing a full suite of AI capabilities to the Power platform to help clients train, tune and deploy models without purchasing GPUs. The lead time for GPUs is somewhere around a year and clients will miss out on opportunity if they can’t get started today. Some of the popular use cases that enterprises will use are fraud detection, risk underwriting, and demand forecasting.</li>
+<li>
+<p><strong>Pattern 1</strong>: Securely tune, deploy, and manage foundation models. When it comes to task-specific use cases, it is a good idea to work with large open source models in your own workspace that are under your control. Hugging Face is a large repository with over 950 K pre-trained ML models and a platform where the AI ecosystem collaborates on models, datasets, and applications. Download any model from Hugging Face and securely deploy at scale on IBM Power. Then, use high-quality software to help you tune, deploy, and manage as many models as you need. Some examples of what enterprises can use this capability for: Customer service, knowledge workers to augment staff and fraud reporting.</p>
+</li>
+<li>
+<p><strong>Pattern 2</strong>: There are many new and existing business apps that are using foundation models that are integrated into the workflows. Deploy your foundation models anywhere, on Power, x86, cloud, and use the watsonx.ai software development kit (SDK) available in Python and embed directly into applications. On Power, enterprises can do this quickly so that services can be released to clients faster on a resilient 24/7 environment. Some examples of clients can embed AI into apps are generating the first draft of reports, citizen services for government end-clients and knowledge management.</p>
+</li>
+<li>
+<p><strong>Pattern 3</strong>: The ecosystem is important to enterprises that have long-standing investments in software that drives their core business workflows. Consume watsonx services from clients customized ecosystem apps. Enterprises can generate code for Ansible playbooks for IBM i or AIX to enhance the Ansible IT management experience. Also, SAP applications can be embedded with watsonx services within the SAP ABAP (Advanced Business Application Programming) environments. These custom apps enable faster service delivery, leverage existing investments, and offer an appealing solution for many. Some example use cases include asset management, code generation, accounting automation. </p>
+</li>
+<li>
+<p><strong>Pattern 4</strong>: A comprehensive suite of AI capabilities is being introduced to the Power platform, enabling clients to train, tune, and deploy models without the need for purchasing GPUs. The lead time for GPUs is somewhere around a year and clients can miss an opportunity if they can’t get started today. Some of the popular use cases that enterprises use are fraud detection, risk underwriting, and demand forecasting.</p>
+</li>
 </ul>
 <h2 id="choosing-a-foundation-model">Choosing a foundation model<a class="headerlink" href="#choosing-a-foundation-model" title="Permanent link">¶</a></h2>
 <p>There are many factors to consider when you choose a foundation model to use for inferencing from a generative AI project.
@@ -920,7 +925,7 @@ Determine which factors are most important for you and your organization.</p>
 <li>Model attributes, such as size, architecture, and context window length</li>
 </ul>
 <p>After you have a short list of models that best fit your needs, you can test the models to see which ones consistently return the results you want.</p>
-<p>For more details on choosing a foundation model that support your use case / language / other factors, refer to <a href="https://www.ibm.com/docs/en/watsonx/saas?topic=models-choosing-model" target="_blank">this document</a>. Although this document is part of the watsonx.ai product documentation, the information provided includes both IBM-trained models and open-source models as watsonx.ai support both types of models.</p></div>
+<p>For more details on choosing a foundation model that supports your use case / language / other factors, refer to <a href="https://www.ibm.com/docs/en/watsonx/saas?topic=models-choosing-model" target="_blank">this document</a>. Although this document is part of the watsonx.ai product documentation, the information that is provided includes both IBM-trained models and open source models as watsonx.ai support both types of models.</p></div>
 
 
 
