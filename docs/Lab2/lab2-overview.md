@@ -1,23 +1,23 @@
 # Deploy Retrieval-Augmented Generation (RAG) on IBM Power10 - Lab education
 
-Goal of this lab is to get hands-on experience in deploying a RAG pattern on IBM Power10.
-Before we do that, lets understand what RAG is, its advantages, key use cases, and how it fits in the IBM Power landscape.
+The goal of this lab is to get hands-on experience in deploying a RAG pattern on IBM Power10.
+Before that, let us understand what RAG is, its advantages, key use cases, and how it fits in the IBM Power landscape.
 
 ## What is RAG?
 
-RAG (Retrieval-Augmented Generation) is an advanced technique that combines retrieval-based and generation-based approaches to improve the performance of large language models, especially in question-answering and knowledge-intensive tasks. In layman terms, clients can use RAG pattern to generate factually accurate output from LLMs, that is grounded in information in a knowledge base.
+RAG (Retrieval-Augmented Generation) is an advanced technique that combines retrieval-based and generation-based approaches to improve the performance of large language models, especially in question-answering and knowledge-intensive tasks. In layman terms, clients can use RAG pattern to generate factually accurate output from LLMs that is grounded in information in a knowledge base.
 
 Key Components of RAG:
 
-1. **Retrieval**: The model first retrieves relevant documents or information from a large knowledge base (like Wikipedia or custom databases) based on the user's query. This helps provide the model with factual and up-to-date information that it may not have learned during training.
-2. **Augmented Generation**: Once the relevant documents are retrieved, the model then generates a response based on the query and the retrieved documents. This ensures the generated answer is both relevant and factual, combining the reasoning power of the language model with the accuracy of external knowledge.
+1. **Retrieval**: The model first retrieves relevant documents or information from a large knowledge base (like Wikipedia or custom databases) based on the user's query. This step provides the model with factual and up-to-date information that it might not have learned during training.
+2. **Augmented Generation**: Once the relevant documents are retrieved, the model then generates a response based on the query and the retrieved documents. This approach ensures that the generated answer is both relevant and factual, combining the reasoning power of the language model with the accuracy of external knowledge.
 
 ## How RAG works?
 
-RAG is a technique that uses vector databases to retrieve relevant information and improve the accuracy of Large Language Models (LLMs):
+RAG is a technique that uses vector databases to retrieve relevant information and improve the accuracy of large language models (LLMs):
 
-1. **Vector database storage**: Text data is converted into vector embeddings using pre-trained models like BERT or GPT. These embeddings are then stored in a vector database.
-     - In this lab, we use **all-MiniLM-L6-v2** model from HF to convert text data into embeddings which are then stored in a **Milvus** vector DB.
+1. **Vector database storage**: Text data is converted into vector embeddings by using pre-trained models like BERT or GPT. These embeddings are then stored in a vector database.
+     - This lab uses the **all-MiniLM-L6-v2** model from HF to convert text data into embeddings which are then stored in a **Milvus** vector DB.
 3. **Query conversion**: When a query is posed to the AI system, it is also converted into a vector.
 4. **Vector search**: The vector database performs a vector search to find relevant embeddings from the stored dataset.
 5. **Information retrieval**: The retrieved information is then integrated into the LLM's query input.
@@ -25,13 +25,13 @@ RAG is a technique that uses vector databases to retrieve relevant information a
 
 !!! info "Why use vector database in RAG?"
 
-    Vector databases are used in RAG because they store data in a way that makes it easy to search and retrieve. Vector search techniques go beyond keyword matching and focus on semantic relationships, which improves the quality of the retrieved information.
+    Vector databases are used in RAG because they store data in a way that makes it easy to search and retrieve. Vector search techniques go beyond keyword matching and focus on semantic relationships, which improve the quality of the retrieved information.
 
 ## Need and advantages of RAG
 
 The need for Retrieval-Augmented Generation (RAG) arises from the limitations of current large language models (LLMs) and the growing demands for factual accuracy and knowledge scalability in AI applications. 
 
-Here are the key reasons why RAG is necessary and its associated advantages:
+Key reasons why RAG is necessary and its associated advantages:
 
 1. **Handling Knowledge Gaps**
     - **LLMs are static**: Traditional language models, once trained, cannot access new or external information. They can only generate text based on the data they were trained on, which means they might miss important or up-to-date knowledge.
@@ -41,7 +41,7 @@ Here are the key reasons why RAG is necessary and its associated advantages:
     - **RAG grounds responses in real data**: Since RAG retrieves factual documents before generating a response, it ensures that the output is based on real, verifiable information, reducing the risk of false or misleading content.
 3. **Scalability in Knowledge**
     - **LLMs are limited by training data**: Even the largest models have limitations on how much they can remember from their training data, which might become outdated or incomplete.
-    - **RAG scales with external data**: By leveraging vast external knowledge bases or documents, RAG allows for almost unlimited knowledge expansion without retraining the model. This is particularly useful for enterprises or specific domains where continuous data updates are essential.
+    - **RAG scales with external data**: By leveraging vast external knowledge bases or documents, RAG allows for almost unlimited knowledge expansion without retraining the model. This approach is useful for enterprises or specific domains where continuous data updates are essential.
 4. **Improved Performance in Specific Domains**
     - **Specialized knowledge is often needed**: Many applications require access to niche or domain-specific information, such as legal texts, scientific papers, or proprietary company data.
     - **RAG retrieves domain-specific documents**: The retrieval step allows RAG to pull in domain-specific or proprietary documents, making the output more relevant for specialized tasks.
@@ -52,11 +52,11 @@ Here are the key reasons why RAG is necessary and its associated advantages:
     - **Complex queries require precise answers**: In tasks like open-domain question answering, general models might struggle to provide precise answers for complex or rare questions.
     - **RAG enhances accuracy**: By combining retrieval with generation, RAG can provide more accurate, context-rich answers, drawing from a wide range of documents.
 
-In summary, RAG addresses limitations in current LLMs by improving factual accuracy, scalability, and adaptability, making it particularly useful for knowledge-intensive tasks and dynamic environments.
+In summary, RAG addresses limitations in current LLMs by improving factual accuracy, scalability, and adaptability, making it useful for knowledge-intensive tasks and dynamic environments.
 
 ## Common use cases of RAG
 
-Below are some of the common use cases for RAG:
+The following are common use cases for RAG:
 
 1. **Open-domain question answering**: Where models need to answer questions about a wide range of topics, potentially beyond the training data.
 2. **Customer support**: Providing accurate answers by retrieving relevant documents from knowledge bases.
@@ -75,7 +75,7 @@ Retrieval-Augmented Generation (RAG) is a generative AI framework that enhances 
 IBM Power Systems play exceptionally well with RAG due to the following reasons:
 
 1. **High-Performance Data Handling**
-      - Power Systems are designed for high-volume data transactions and processing. This makes them perfect for storing and managing SOR, which RAG relies on to retrieve real-time, relevant information.
+      - Power Systems are designed for high-volume data transactions and processing. This capability makes them perfect for storing and managing SOR, which RAG relies on to retrieve real-time, relevant information.
       - When RAG retrieves data from a SOR stored on IBM Power, it benefits from the fast data access and throughput that Power Systems offer, ensuring quick and efficient retrieval of documents for AI processing.
 2. **Data Security and Compliance**
       - Power Systems are known for their robust security features, including end-to-end encryption and advanced data protection, making them ideal for storing sensitive data such as customer information, financial records, or healthcare data.
@@ -95,17 +95,16 @@ IBM Power Systems play exceptionally well with RAG due to the following reasons:
         
 **Summary**
 
-IBM Power Systems provide the speed, security, and reliability needed to store and manage SOR that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.
+IBM Power Systems provide the speed, security, and reliability that is needed to store and manage SOR that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.
 
 ### RAG and IBM Power10 solution architecture
 
-Here is the high level solution architecture of a typical RAG use case on IBM Power10. This example is deployed on IBM Power10 end-to-end. The foundation model is simply downloaded from watsonx.ai or open-source repositories such as the Hugging Face model hub. The model does not require fine-tuning thanks to a domain adaptation technique called RAG. 
+Here is the high-level solution architecture of a typical RAG use case on IBM Power10. This example is deployed on IBM Power10 end-to-end. The foundation model is simply downloaded from watsonx.ai or open source repositories such as the Hugging Face model hub. The model does not require fine-tuning due to the use of a domain adaptation technique called RAG. 
 
 ![image](https://github.com/user-attachments/assets/3476cad1-a743-474f-8535-b70806d8c09f)
 
-1. User asks a domain specific question in natural language.
-2. Q&A app looksup in the knowledge base repository.
-3. Documents relevant to the question is retrieved from the repository.
+1. A user asks a domain-specific question in natural language.
+2. Q&A app looks up in the knowledge base repository.
+3. Documents relevant to the question are retrieved from the repository.
 4. "Question + Documents" is passed as the context in a prompt to LLM.
 5. LLM generates the domain-specific answer.
-
