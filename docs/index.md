@@ -11,7 +11,7 @@ This course has 4 main parts as you can see on the left window:
 
 * Lab 2 – Deploy Retrieval-Augmented Generation (RAG) on Power10 and use it for domain-specific question and answers
 
-* Lab 3 – Deploy code LLM Power10 - Generate Python, C code, and Sequential Query Language (SQL) query by using natural language.
+* Lab 3 – Deploy code LLM on Power10 - Generate Python, C code, and Sequential Query Language (SQL) query by using natural language.
 
 ## Generative AI and LLMs overview
 
