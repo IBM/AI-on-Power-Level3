@@ -89,11 +89,6 @@ IBM Power Systems play exceptionally well with RAG due to the following reasons:
 5. **Efficient Handling of Structured and Unstructured Data**
       - Power Systems can efficiently handle both structured data (like databases) and unstructured data (such as documents and records), making them ideal for RAG, where both types of data may be retrieved from SOR.
       - RAG can retrieve structured data for quick reference (for example, customer records or transactions) and unstructured data (for example, reports, emails) for more complex, context-driven AI responses. Power Systems' capability to manage both types ensures efficient, accurate information retrieval.
-6. **Real-Time Analytics**
-      - Real-time data analytics capabilities in IBM Power Systems enable quick access to up-to-date information, which is essential for RAG when generating responses based on current data.
-      - This feature allows the RAG model to provide contextualized answers based on the latest transactions or data updates from the SOR, improving the relevance of AI-driven outputs.
-        
-**Summary**
 
 IBM Power Systems provide the speed, security, and reliability that is needed to store and manage SOR that RAG models depend on for data retrieval. Power Systems’ advanced capabilities in data handling, AI optimization, scalability, and security make them an ideal infrastructure for supporting RAG-based AI applications, ensuring that retrieved data is accurate, current, and secure, thus enhancing the quality of generative AI outputs.
 
