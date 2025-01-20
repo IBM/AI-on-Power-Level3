@@ -269,4 +269,4 @@ Let's take a super simple example of a bank which has information that is stored
 
 **Summary**
 
-Code LLMs democratize coding by making it more accessible to noncoders, accelerating the development process for smaller teams, and assisting both beginners and experienced developers in learning and improving productivity. By reducing technical barriers, they are transforming who can engage in software development and how innovation happens across industries.
+Code LLMs are democratizing coding by making it more accessible to noncoders, accelerating the development process for smaller teams, and assisting both beginners and experienced developers in learning and improving productivity. By reducing technical barriers, they are transforming who can engage in software development and how innovation happens across industries.
