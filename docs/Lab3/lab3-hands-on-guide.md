@@ -18,7 +18,7 @@ Make sure that you have the following items ready:
 
 ### Deploy IBM Granite code LLM
 
-!!! warning "Pre-requisite"
+!!! warning "Prerequisite"
     
     This lab assumes that Lab 1 is completed. This lab uses the Red Hat OpenShift resources that are deployed in Lab 1 to optimize the usage of TechZone resources and to avoid redeploying the same resources and relearning the same concepts that have been taught in Lab 1!
     
