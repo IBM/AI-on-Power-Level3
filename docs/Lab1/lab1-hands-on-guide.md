@@ -384,6 +384,6 @@ In this section, IBM's Granite model is deployed.
 
     ![image](https://github.com/user-attachments/assets/e0a23318-e2bc-4778-8c12-84643a8f530c)
 
-    **Well done!** In this lab, you learned how straightforward it is to transition to a different LLM, access it, and use its capabilities.
+    **Well done!** In this lab, you learned how straightforward it is to deploy a LLM and transition to a different LLM, access it, and use its capabilities.
 
     This concludes the lab.
