@@ -178,7 +178,7 @@ ConfigMap is used to store the model URL and model name, both of which are requi
     
     ![image](https://github.com/user-attachments/assets/06801c61-7ec4-46c6-b5d7-1f9f4af660dc)
 
-    ** Well done!** The LLM is successfully deployed on Power10.
+    **Well done!** The LLM is successfully deployed on Power10.
 
 11. Verify that the model running is indeed tinyllama! Click the pod name **(A)** to enter the pod details view/page.
     ![image](https://github.com/user-attachments/assets/5a6e4078-9047-4d2f-ab84-942f938b46b7)
