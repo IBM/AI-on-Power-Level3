@@ -111,7 +111,7 @@ This lab focuses on the following aspects:
 6. Copy and paste the URL in the browser. You can see the Jupyter screen as shown in the following picture:
     ![image](https://github.com/user-attachments/assets/ee5cf9c5-8f3f-48d4-8741-08d7ae5617ab)
 
-7. Copy the Jupyter NB (.ipynb file) present in the git repository to the NB pod. <br>
+7. The next step is to copy the Jupyter NB (.ipynb file) present in the git repository to the NB pod. <br>
    In the `oc` CLI terminal window, navigate to the root of your git repository which has the **RAG.ipynb** file.
 
      `cd /home/cecuser/bcn-lab-2084` **(A)**
