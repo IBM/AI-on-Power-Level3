@@ -911,7 +911,7 @@
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/50330a50-d662-4967-83a3-86e5618fc1ce" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/50330a50-d662-4967-83a3-86e5618fc1ce"></a></p>
 </li>
 <li>
-<p>Run the following set of commands to deploy milvus DB.</p>
+<p>Run the following set of commands to deploy milvus DB. This not just deploys milvus, but also deploys etcd and minio components. MinIO is an S3-compatible object storage system used by milvus to store large vector data and indexes. etcd is a key-value store used by milvus for metadata storage and cluster management. Both components are essential for milvus to function efficiently in a distributed setup.</p>
 <p><code>cd Part2-RAG/milvus-deployment</code> <strong>(A)</strong></p>
 <p><code>oc create configmap milvus-config --from-file=./config/milvus.yaml</code> <strong>(B)</strong></p>
 <p><code>oc apply -f .</code> <strong>(C)</strong></p>
