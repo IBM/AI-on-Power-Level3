@@ -58,7 +58,7 @@ This lab focuses on the following aspects:
      
      ![image](https://github.com/user-attachments/assets/50330a50-d662-4967-83a3-86e5618fc1ce)
 
-7. Run the following set of commands to deploy milvus DB.
+7. Run the following set of commands to deploy milvus DB. This not just deploys milvus, but also deploys etcd and minio components. MinIO is an S3-compatible object storage system used by milvus to store large vector data and indexes. etcd is a key-value store used by milvus for metadata storage and cluster management. Both components are essential for milvus to function efficiently in a distributed setup.
      
      `cd Part2-RAG/milvus-deployment` **(A)**
 
