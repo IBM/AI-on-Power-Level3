@@ -78,8 +78,8 @@ markdown_extensions:
 
 nav:
   - Introduction: 'index.md'
-  - Helpful tips: helpful-tips.md
   - Prerequisites: 'pre-req.md'
+  - Helpful tips: helpful-tips.md
   - Lab setup instructions: 'lab-setup.md'
   - Lab 1 - Deploy a LLM on Power10:
     - 'Lab education': 'Lab1/lab1-overview.md'
