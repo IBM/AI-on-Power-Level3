@@ -17,6 +17,6 @@ The following are the prerequisites for this course:
 
 Since Lab2 includes working with python code in a Jupyter notebook environment, there were a few inquiries asking to include some recommendation on where to learn python basics for those who are new to python. So here they are:
 
-* The official python tutorial from the folks who created python - [Official Tutorial](https://docs.python.org/2/tutorial/)
-* Google's python class - [Google's class](https://developers.google.com/edu/python)
-* Python for everybody - [PY4E](https://www.py4e.com/lessons)
+* The official python tutorial from the folks who created python - [Official Tutorial](https://docs.python.org/2/tutorial/){target="_blank"}
+* Google's python class - [Google's class](https://developers.google.com/edu/python){target="_blank"}
+* Python for everybody - [PY4E](https://www.py4e.com/lessons){target="_blank"}
