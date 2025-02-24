@@ -13,7 +13,7 @@ The following are the prerequisites for this course:
  	- Windows: PowerShell has ssh preinstalled. PuTTY tool can also be used.
     - Mac/Linux: ssh is already available.
 
-# Python beginner courses
+## Python beginner courses
 
 Since Lab2 includes working with python code in a Jupyter notebook environment, there were a few inquiries asking to include some recommendation on where to learn python basics for those who are new to python. So here they are:
 
