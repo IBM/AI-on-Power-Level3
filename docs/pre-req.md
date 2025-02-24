@@ -1,4 +1,4 @@
-# Prerequisites for the course
+## Prerequisites for the course
 
 The following are the prerequisites for this course:
 
