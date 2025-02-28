@@ -27,9 +27,16 @@ Follow these steps:
 ## Accessing the environment
 
 1. This lab uses an on-premises environment. Verify that you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to [this](https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md){target="_blank"} link for more details.
-2. In TechZone, open the [My Reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page.
-3. Click your reservation, which opens up the details page.
-4. Scroll to the "Reservation Details" section of the page which has information on how to connect to the Red Hat OpenShift console.
+
+   !!! warning "VPN connectivity issues and solution"
+
+       Some IBM folks from EU have reported that the TechZone environment is not accessible when using Mac OS specific VPN profiles.
+       For example: "EUROPE-MEA (macOS)" or "AMERICA (macOS) are not working.
+       Solution is to use the non Mac OS profiles. For example: "EUROPE-MEA" or "AMERICA " seem to work      
+   
+3. In TechZone, open the [My Reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page.
+4. Click your reservation, which opens up the details page.
+5. Scroll to the "Reservation Details" section of the page which has information on how to connect to the Red Hat OpenShift console.
    ![image](https://github.com/user-attachments/assets/9e7df820-6a8b-4cc6-9ca3-b2a8cdc7decb)
 
 ### Accessing Red Hat OpenShift console
