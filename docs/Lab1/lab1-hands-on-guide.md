@@ -16,6 +16,11 @@ Make sure that you have the following items ready:
 
     Click the images in the following lab guide to view them in a larger format.
     
+!!! note "Recommendation on the naming conventions"
+
+    While you have the flexibility to create your own naming conventions throughout this lab, it is **strongly recommended** to use the exact names specified in this document. This ensures seamless continuity in subsequent labs, as they rely on the services and configurations established in previous exercises.
+    
+
 ### Create a project
 1. Navigate to the Red Hat OpenShift Administrator profile. Click **Home** **(A)** -> **Projects** **(B)** and click **Create Project** **(C)**.
    ![image](https://github.com/user-attachments/assets/87c5fec4-e76d-4ca3-9845-77d25b8c7d46)
