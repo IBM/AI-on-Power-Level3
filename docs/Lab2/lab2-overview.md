@@ -66,10 +66,10 @@ To summarize, RAG allows models to perform better in knowledge-intensive tasks b
 
 ## IBM Power and RAG
 
-### IBM Power servers as Systems of Record
+### IBM Power servers as systems of record
 IBM Power servers are renowned for their performance, reliability, and scalability, making them ideal for handling systems of record. A system of record (SOR) refers to a trusted source of truth that stores essential business data and transactions, such as financial systems, customer data, and inventory management. IBM Power servers are often used for mission-critical applications in industries like banking, healthcare, and government due to their ability to manage large volumes of secure, transactional data.
 
-### How IBM Power servers Plays Well with RAG
+### How IBM Power servers plays well with RAG
 Retrieval-Augmented Generation (RAG) is a generative AI framework that enhances the performance of AI models by retrieving relevant documents from external knowledge bases before generating a response. This retrieval step ensures that the generated output is more accurate and fact-based, as it is grounded in real-time data from a reliable source.
 
 IBM Power servers play exceptionally well with RAG due to the following reasons:
