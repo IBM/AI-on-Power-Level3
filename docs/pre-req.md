@@ -4,6 +4,8 @@ The following are the prerequisites for this course:
 
 * AI on Power - Level 2 course - [IBM](https://yourlearning.ibm.com/activity/PLAN-95E47B97CBB5){target="_blank"} | [BP](https://learn.ibm.com/course/view.php?id=16329){target="_blank"}
 
+* Basic understanding of SSH (Secure Shell) and how to use `ssh` tool to login into a remote system.
+  
 * Basic understanding of Generative AI (gen AI) and large language models (LLM).
 
 * Basic understanding of Red Hat OpenShift and working with Yet Another Markup Language (YAML) files. 
