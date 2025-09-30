@@ -26,7 +26,7 @@ Follow these steps:
 
 ## Accessing the environment
 
-1. This lab uses an on-premises environment. Verify that you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to [this](https://github.com/IBM/itz-support-public/blob/main/IBM-On-premise/IBM-On-premise-Runbooks/configure-vpn.md){target="_blank"} link for more details.
+1. This lab uses an on-premises environment. Verify that you are connected to the IBM Virtual Private Network (VPN) to access the environment. Refer to [this](https://www.ibm.com/support/pages/configuring-vpn-poughkeepsie-access){target="_blank"} link for more details.
 
     !!! warning "VPN connectivity issues and solution"
 
