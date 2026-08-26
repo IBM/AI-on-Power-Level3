@@ -6,9 +6,7 @@ This hands-on lab uses Red Hat OpenShift on Power10 on-premises environment whic
 
 Follow these steps:
 
-1. Open [this](https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power/environments){target="_blank"} TechZone collection and provision the environment named "OpenShift ready for AI on IBM Power10 (Container PaaS)" by clicking **Reserve** **(A)** and submitting the resulting form (select **Education** as purpose)
-   
-     ![image](https://github.com/user-attachments/assets/9c5c4702-509b-4757-b91e-2098ae818454)
+1. Open [this TechZone collection](https://techzone.ibm.com/collection/on-premises-red-hat-open-shift-on-ibm-power/journey-ocp-on-power-for-ai-workloads){target="_blank"} and provision the **AI-Ready OpenShift on IBM Power** environment. Select **Learning** as the purpose.
    
 3. Watch your email for updates from TechZone and wait for your environment to be provisioned.
 
