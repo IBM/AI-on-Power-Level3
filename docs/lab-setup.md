@@ -6,17 +6,15 @@ This hands-on lab uses Red Hat OpenShift on Power10 on-premises environment whic
 
 Follow these steps:
 
-1. Open [this](https://techzone.ibm.com/collection/generative-ai-demos-on-ibm-power/environments){target="_blank"} TechZone collection and provision the environment named "OpenShift ready for AI on IBM Power10 (Container PaaS)" by clicking **Reserve** **(A)** and submitting the resulting form (select **Education** as purpose)
+1. Open [this TechZone collection](https://techzone.ibm.com/collection/on-premises-red-hat-open-shift-on-ibm-power/journey-ocp-on-power-for-ai-workloads){target="_blank"} and provision the **AI-Ready OpenShift on IBM Power** environment. Select **Learning** as the purpose.
    
-     ![image](https://github.com/user-attachments/assets/9c5c4702-509b-4757-b91e-2098ae818454)
-   
-3. Watch your email for updates from TechZone and wait for your environment to be provisioned.
+2. Watch your email for updates from TechZone and wait for your environment to be provisioned.
 
     !!! note "TechZone provisioning can take time"
 
         It can take up to 3 hours for the provisioning to happen. Allow adequate time for its completion and maintain patience during this period. If you get into provisioning issues, refer to the [Support](https://ibm.github.io/AI-on-Power-Level3/support/){target="_blank"} section for assistance.
    
-5. After provisioning is complete, go to [my reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page to verify it's in "Ready" **(A)** state.
+3. After provisioning is complete, go to [my reservations](https://techzone.ibm.com/my/reservations){target="_blank"} page to verify it's in "Ready" **(A)** state.
 
      ![image](https://github.com/user-attachments/assets/46640f65-545e-4dca-aa7a-6c0b6ca771f8)
 
